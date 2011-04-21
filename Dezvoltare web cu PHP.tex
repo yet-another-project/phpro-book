@@ -162,25 +162,35 @@ extendedchars}[keywords]
 \fancyhead[RO,R]{}
 
 \pagestyle{fancy}
+
+%intro
 \include{cap00/index}
-%retelistica
 %\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
 \fancyhead[RO,R]{\rightmark}
 
+%retelistica
 \include{cap01/index}
-%php I - variabile, controlul fluxului de executie, input formulare GET
+
+%variabile, controlul fluxului de executie, input formulare GET
 \include{cap02/index}
-%php II - functii, modularizare, separare, securitate, practic: guestbook
-%TODO Instead of assuming things are secure until proven otherwise, assume things are INSECURE, because eventually, they are
+
+%php functii, modularizare, separare, securitate, practic: guestbook
 \include{cap03/index}
-%php III baze de date, mysql
-%include{cap04/index}
-%php IV - OOP
-%\include{cap05/index}
-%php V - ajax, json, xml, curl, alte extensii
+
+%php baze de date, mysql, lucrul în echipă
+\include{cap04/index}
+
+% securitate
+%TODO Instead of assuming things are secure until proven otherwise, assume things are INSECURE, because eventually, they are
+\include{cap05/index}
+
+%php OOP, patterns, practices
+\include{cap06/index}
+
+%php ajax, json, xml, curl, alte extensii; web services - REST, SOAP.
 %TODO daca ajung aici, atunci adapteaza "Primul exerciţiu de hacking"
-%\include{cap06/index}
+\include{cap07/index}
 
 %\printindex{en-ro}{Indexul expresiilor En-Ro}
 %\listofexercises

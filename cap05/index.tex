@@ -1,17 +1,48 @@
-\chapter{Subiecte avansate. Scule}
-\section{Folosirea unui framework}
-\subsection{Principii}
-OOP patterns, MVC
-\section{cURL}
-\section{XML}
-\section{Servicii: REST, SOAP}
-\section{Documentarea}
-PhpDocumentor
-\section{Revision control system}
-SVN
-\section{Unit testing}
-PHPUnit
-\section{Orizonturi}
-key-based db (couchdb), frameworks
+\chapter{Securitate}
+\vskip -25pt
+\textit{Intro}
+\vskip 5em
 
-extinderea PHP (C), parser
+% Despre vectori de atac, ce înseamnă securitate, accent pe securitatea din perspectiva programatorului.
+
+\section{Ce înseamnă securitate}
+Securitatea este un subiect dificil deoarece nu există o reţetă
+universal valabilă pentru a crea ceva sigur.
+
+Dar de ce nu există
+o astfel de armă secretă?
+Pentru a înţelege asta, trebuie să înţelegem natura conceptului de
+\textit{a fi sigur}. 
+
+Pentru noi ca programatori, ne interesează în special securitatea
+aplicaţiei. Însă aplicaţia noastră nu este de sine stătătoare: ea
+se află pe un server care are un sistem de operare, care este conectat
+la Internet, şi deseori la o reţea locală centrului de date în
+care se află acest server, iar la acest server unele persoane
+din cadrul firmei ce deţine centrul de date pot avea acces fizic.
+
+Şi cum ceva ori este sigur, ori nu este, 
+%TODO finish me
+\section{Securitatea la nivelul aplicaţiei}
+%TODO write me
+verificarea inputului, POST forms don't make your app secure,
+security by obscurity
+
+includerea fişierelor, definirea unei constante "guard",
+punerea fişierelor în afara \texttt{htdocs/}
+
+XSS şi CSRF
+
+%TODO exerciţiu: Al doilea exerciţiu de hacking
+TODO: exerciţii de hacking. O infrastructură exactă răm\^ane să fie inventată
+pentru scenarii mai complexe. Cel mai probabil cursanţii vor primi un
+{\glqq}private key{\grqq}, a.\^i. toate atacurile (simulative, desigur, nu reale)
+vor putea fi traced back.
+
+TODO: exerciţii de securizare a scripturilor trecute.
+
+TODO: ne trebuie o evaluare serioasă a vectorilor de atac dacă oferim
+{\glqq}attack gates{\grqq}. Cu siguranţă vom verifica IP-ul, şi doar către
+IP-ul care foloseşte private key se vor trimite atacurile (i.e. cursantul
+va folosi serverul phpro pentru a-şi ataca propriul server -- proper NAT has to be
+in place on his side).
