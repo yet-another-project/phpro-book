@@ -3,4 +3,4 @@ pdf:
 clean:
 	rm -rf *.{aux,log,out}
 	rm -rf *~
-	rm -rf "Dezvoltare web cu PHP.pdf"
+	rm -rf Dezvoltare\ web\ cu\ PHP.{toc,pdf}

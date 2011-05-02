@@ -1,4 +1,4 @@
-*.log
+*.{log,out,pdf}
 *~
 *.aux
 *.backup
