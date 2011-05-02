@@ -26,7 +26,8 @@ stare să studiezi singur mai departe, doar spunându-ţi-se termeni, şi din c�
 în când explicându-ţi-se concepte, atunci când nu le înţelegi singur.
 
 *Mediu* eşti până la absolvirea capitolului 5, "Securitatea aplicaţiilor web".
-În această perioadă vei lucra în echipă cu alţi cursanţi, veţi crea aplicaţii
+În această perioadă vei lucra în echipă cu alţi cursanţi, veţi [crea aplicaţii]
+(../HALL_OF_FAME.md)
 de o complexitate mai mare, vei învăţa design-ul bazelor de date şi
 cum să creezi aplicaţii sigure.
 
