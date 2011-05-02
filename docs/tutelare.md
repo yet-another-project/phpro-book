@@ -11,6 +11,7 @@ Nu toţi cursanţii au acelaşi statut. Există următoarele statuturi:
 * începător
 * mediu
 * avansat
+* expert
 
 *Novice* eşti până ai absolvit exerciţiul "Sintaxa HTML" din capitolul 2.
 În această perioadă
@@ -32,6 +33,8 @@ cum să creezi aplicaţii sigure.
 *Avansat* eşti începând cu capitolul 6, "OOP, patterns, practices", iar această
 perioadă este una de explorare neîntreruptă. De îndată ce ai ajuns aici,
 te vei opri din învăţat programare abia când ajungi la pensie.
+
+*Expert* eşti atunci când îi tutelezi pe alţii :-)
 
 TODOs
 =====

@@ -2,7 +2,7 @@ Hall of Fame
 ============
 După încheierea capitolului 3, cursanţii vor lucra în echipe la proiecte,
 deci nu mai avem simple "soluţii" la exerciţii, aşa cum există în
-subdirectorul *solutii/*, ci vor scrie programe functionale.
+subdirectorul *solutii/*, ci cursanţii vor scrie programe functionale.
 
 Acest document prezintă lista proiectelor şi participanţilor (cursanţilor)
 
