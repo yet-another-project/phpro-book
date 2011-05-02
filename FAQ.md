@@ -21,3 +21,16 @@
 	putem, să inventăm un curs "ultimativ", ştim asta, şi
 	de aceea scopul este unul mai realist: *să îţi deschidă
 	cât mai larg porţile către profesionalism*.
+
+*	Dar ai uitat să spui atâtea lucruri importante despre reţelistică/etc,
+	cum de îţi permiţi să vorbeşti despre profesionalism.
+
+	Această carte este o carte despre programare. Ating puţin domenii
+	tangenţiale cu programarea, tocmai deoarece consider că şi aceste
+	domenii "conexe" sunt importante pentru un viitor profesionist,
+	ÎNSĂ această carte este despre programare. Nu dispunem de timpul
+	şi de energia de a scrie despre absolut tot ce trebuie scris.
+	Cu toate acestea, încercăm să deschidem porţi, unele le deschidem
+	mai larg, cum ar fi poarta către programare, alte porţi le
+	deschidem mai puţin, cum ar fi cele către reţelistică, administrarea
+	sistemelor, baze de date, ş.a.m.d.
