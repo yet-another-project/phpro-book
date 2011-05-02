@@ -13,7 +13,8 @@ Nu toţi cursanţii au acelaşi statut. Există următoarele statuturi:
 * avansat
 
 *Novice* eşti până ai absolvit exerciţiul "Sintaxa HTML" din capitolul 2.
-În această perioadă vei învăţa
+În această perioadă
+
 * vei învăţa cum funcţionează 
 * îţi vom spune dacă ai sau nu ai potenţialul de a deveni profesionist
 
