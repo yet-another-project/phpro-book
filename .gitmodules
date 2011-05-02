@@ -1,3 +1,6 @@
 [submodule "solutii/007blak"]
 	path = solutii/007blak
 	url = git://gist.github.com/951784.git
+[submodule "solutii/sovy"]
+	path = solutii/sovy
+	url = git://gist.github.com/952397.git
