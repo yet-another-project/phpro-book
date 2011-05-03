@@ -4,3 +4,6 @@
 [submodule "solutii/sovy"]
 	path = solutii/sovy
 	url = git://gist.github.com/952397.git
+[submodule "solutii/flavius"]
+	path = solutii/flavius
+	url = git@gist.github.com:174d6b0ad00c754360b9.git
