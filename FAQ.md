@@ -34,3 +34,16 @@
 	mai larg, cum ar fi poarta către programare, alte porţi le
 	deschidem mai puţin, cum ar fi cele către reţelistică, administrarea
 	sistemelor, baze de date, ş.a.m.d.
+
+*	*Pentru a deveni profesionist, trebuie să înveţi engleză. Nu este un
+	conflict între acest fapt, şi faptul că această carte este scrisă
+	în română?*
+	
+	Nu. Deşi cartea este scrisă în română, ea conţine şi link-uri către
+	resurse web în engleză. Acele articole în engleză **fac parte** din
+	această carte. Trebuie să citeşti şi să înţelegi articolele respective
+	pentru a face faţă tutelării noastre.
+	
+	În plus, după capitolul 4, atunci când lucrezi în echipă cu alţi
+	cursanţi, ţi se cere să faci totul în engleză: de la documentarea
+	codului până la înregistrarea de buguri într-un *bug tracker*.
