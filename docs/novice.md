@@ -6,11 +6,11 @@ să investim timp şi energie în educaţia ta. Şi o facem, chiar gratis.
 * nu ne pierdem timpul degeaba
 * ai potenţial în mod real
 
-trebuie să ne asigurăm mai întâi dispui de unele aptitudini:
+trebuie să ne asigurăm mai întâi că dispui de unele aptitudini:
 
 * ştii să citeşti şi să înţelegi atât texte lungi, cât şi cerinţe scurte
 * ne respecţi timpul şi efortul pe care le investim gratuit în tine
-* tratezi programul de tutelare cel puţin cu aceeaşi seriozitate cu care o tratăm şi noi
+* tratezi programul de tutelare cel puţin cu aceeaşi seriozitate cu care îl tratăm şi noi
 
 În acest stadiu de "novice", noi vom decide dacă vei intra în tutelarea permanentă sau
 nu. De aceea te sfătuim să ne tratezi cu o seriozitate foarte mare, să fii atent la
