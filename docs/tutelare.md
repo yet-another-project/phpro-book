@@ -8,7 +8,7 @@ o soluţie acceptabilă pentru noi, tutorii, din punct de vedere calitativ.
 Nu toţi cursanţii au acelaşi statut. Există următoarele statuturi:
 
 * [novice](novice.md)
-* începător
+* [începător](începător.md)
 * mediu
 * avansat
 * expert
