@@ -9,9 +9,9 @@
 	gândirea algoritmică despre care învaţă. Am ales PHP
 	deoarece de asta este atras tineretul, şi deoarece
 	am considerat că branşa PHP are cea mai mare nevoie
-	de puţin mai mult profesionişti adevăraţi.
+	de puţin mai mulţi profesionişti adevăraţi.
 
-*	*De ce vorbeşti despre *formarea profesioniştilor*, când
+*	*De ce vorbeşti despre "formarea profesioniştilor", când
 	acest curs nu te învaţă lucruri avansate precum algoritmi
 	mai complecşi, sau alte lucruri?*
 	
