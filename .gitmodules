@@ -7,3 +7,6 @@
 [submodule "solutii/flavius"]
 	path = solutii/flavius
 	url = git@gist.github.com:174d6b0ad00c754360b9.git
+[submodule "solutii/paullik"]
+	path = solutii/paullik
+	url = git://gist.github.com/960680.git
