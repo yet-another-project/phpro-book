@@ -1,3 +1,14 @@
+1. Crează-ţi cont pe github.com
+2. Intră pe gist.github.com, asigurându-te că eşti autentificat (colţul dreapta sus) pentru ca ceea ce urmează să creezi chiar să-ţi aparţină
+3. Crează un nou gist cu descrierea "soluţiile mele pentru yap-phpro-book (<aici nickname-ul tău de pe IRC>)"
+4. Denumeşte fişierul după titlul exerciţiului, aici: "What is my IP Address?.txt"
+5. Pune-ţi soluţia în acel fişier. Ai grijă ca liniile să nu depăşească o lăţime de 80 de caractere, şi să conţiă ceea ce-ţi cere exerciţiul: o deducţie logică.
+6. După ce ai creat gist-ul (privat sau public, tu alegi), trimite-i URL-ul lui Flavius, pentru ca el să te înregistreze ca şi cursant.
+7. Salvează acest URL (bookmark) pentru că aici vei pune toate soluţiile tale la exerciţiile ulterioare (edit -> add another file).
+
+Indiciu
+=======
+
 Răspunsul tău trebuie să fie de forma:
 
 Din faptul că site-ul extern reţelei mele afişează (aceeaşi adresă IP/o adresă IP diferită) (faţă de/ca şi) sistemul meu de operare, deduc că ... la Internet
