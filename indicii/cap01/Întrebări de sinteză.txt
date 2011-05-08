@@ -1,0 +1,2 @@
+Răspunsurile trebuie să fie de forma
+"... are semantica de ... în contextul semantic ..."
