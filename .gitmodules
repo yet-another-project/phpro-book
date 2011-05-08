@@ -13,3 +13,6 @@
 [submodule "solutii/jazz7787"]
 	path = solutii/jazz7787
 	url = git://gist.github.com/961326.git
+[submodule "solutii/Hotice"]
+	path = solutii/Hotice
+	url = git@gist.github.com:2427745021a73ad983a9.git
