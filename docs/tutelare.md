@@ -16,7 +16,7 @@ Nu toţi cursanţii au acelaşi statut. Există următoarele statuturi:
 *Novice* eşti până ai absolvit exerciţiul "Sintaxa HTML" din capitolul 2.
 În această perioadă
 
-* vei învăţa cum funcţionează 
+* vei învăţa cum funcţionează programul de tutelare
 * îţi vom spune dacă ai sau nu ai potenţialul de a deveni profesionist
 
 *Începător* eşti până la absolvirea capitolului 3, "Reutilizarea şi modularizarea

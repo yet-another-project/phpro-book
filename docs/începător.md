@@ -12,7 +12,7 @@ trecând la următorul exerciţiu după ce un tutore ţi-a spus că
 soluţia ta e perfectă.
 
 Dacă nu e nimeni disponibil care să-ţi trimită cartea, încearcă
-să generezi singur codul. Va trebui să înveţi să foloseşti
+să generezi singur PDF-ul. Va trebui să înveţi să foloseşti
 git şi să accesezi clonezi repo-ul cu sursa cărţii
 
     git://github.com/OriginalCopy/yap-phpro-book.git
@@ -46,4 +46,4 @@ s-a cristalizat un fangroup [ArchLinux](http://archlinux.org/),
 deci cu această distribuţie te putem ajuta şi noi.
 
 Dacă alegi o altă distribuţie, simte-te liber să apelezi la
-canalelul său de suport, de exemplu #debian sau #ubuntu, pe freenode.
+channel-ul său de suport, de exemplu #debian sau #ubuntu, pe freenode.
