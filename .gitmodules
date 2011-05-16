@@ -16,3 +16,6 @@
 [submodule "solutii/Hotice"]
 	path = solutii/Hotice
 	url = git@gist.github.com:2427745021a73ad983a9.git
+[submodule "solutii/lispmachines"]
+	path = solutii/lispmachines
+	url = git@gist.github.com:47789aea3615e7b6180b.git
