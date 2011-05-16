@@ -777,7 +777,7 @@ apache2. În directorul în care ai instalat apache este un subdirector de confi
 numit sugestiv \texttt{conf/}, unde rezidă toate fişierele de configurare
 pentru apache.
 
-Fişierul principal de configurare se numeşte \texttt{httpd.conf}. Este singurul
+Fişierul principal de configurare  al apache se numeşte \texttt{httpd.conf}. Este singurul
 fişier încărcat automat de apache pentru a citi configuraţia, celelalte fişiere
 trebuie incluse folosind directiva \texttt{Include} din acest fişier
 principal (en. \textsl{the master configuration file}). Liniile care încep
@@ -845,4 +845,16 @@ Acum intră pe adresa \url{http://localhost/info.php}. Ar trebui să vezi ceva s
 \end{figure}
 
 Felicitări, acum ai PHP instalat şi poţi învăţa programare, fie folosindu-l pentru programare web
-ca modul apache, fie folosindu-l ca limbaj de scripting universal folosind SAPI-ul CLI. În capitolul următor ne vom uita mai îndeaproape la limbajul PHP.
+ca modul apache, fie folosindu-l ca limbaj de scripting universal folosind SAPI-ul CLI (programul \texttt{php.exe}).
+
+SAPI-urile există tocmai pentru a uşura integrarea lui PHP în toate aceste medii: pentru web putem folosi
+un SAPI specific daemonului folosit, de exemplu pentru apache avem SAPI-ul php5apache2\_2.dll.
+Acest fişier DLL reprezintă însă doar interfaţa (SAPI-ul, aşa cum îi spune şi numele de \textsl{interface})
+de comunicare dintre apache şi "adevăratul PHP".
+
+Pe acelaşi calapod, \texttt{php.exe} reprezintă interfaţa de comunicare dintre promptul ms-dos
+(sau shell, într-un sistem *NIX) şi acelaşi "adevărat PHP" ca şi în cazul apache. Altfel spus,
+ambele, atât \texttt{php.exe}, cât şi \texttt{php5apache2\_2.dll} sunt două SAPI-uri,
+fiecare destinate integrării lui PHP în mediile lor specifice de execuţie a scripturilor PHP.
+
+În capitolul următor ne vom uita mai îndeaproape la limbajul PHP.
