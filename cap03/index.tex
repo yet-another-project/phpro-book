@@ -2887,7 +2887,7 @@ Warning: session_start(): Cannot send session cookie - headers already sent
 
 După ce am pornit sesiunea, putem salva informaţii \^in array-ul superglobal
 \texttt{\$\_SESSION}. Dar dacă informaţiile nu vor fi salvate \^in cookie-ul
-cu numele-ul \texttt{session\_name()}, atunci unde vor fi salvate? Răspunsul:
+cu numele \texttt{session\_name()}, atunci unde vor fi salvate? Răspunsul:
 \^in fişiere. Directiva php.ini \texttt{session.save\_path} ne spune unde se află
 aceste fişiere. Fişierele vor fi numite după ID-ul sesiunii. Hai să vedem practic
 cum funcţionează acest mecanism:
@@ -2938,7 +2938,7 @@ secret{\grqq} va avea un fişier \texttt{uploads/<nume secret>/users.csv}
 ce va conţine o listă de usernames. La crearea unui nou \texttt{<nume secret>}
 userul va trebui să uploadeze acel fişier \texttt{users.csv}. Nu vor exista
 drepturi de acces, deci toată lumea va putea interzice accesul tuturor celorlalţi
-de \^indată ce are credentials \^in \texttt{users.txt}.
+de \^indată ce are credentials \^in \texttt{users.csv}.
 
 Partea II: identifică toţi vectorii de atac.
 
