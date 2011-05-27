@@ -24,4 +24,4 @@ Apoi, după conectare, în tabul nou creat numit "freenode", introdu comanda:
 
 Acum vei putea vorbi cu noi live, cei din lista de pseudonime din stânga. O practică bună
 e să saluţi la intrare, aşa vezi şi dacă cineva e atent la canal, şi mai şi arăţi
-că ştii să de porţi :D
+că ştii să te porţi :D
