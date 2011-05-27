@@ -4,11 +4,107 @@
 cu toate uneltele necesare şi unele \textit{soft skills} de care are nevoie un programator.}
 \vskip 5em
 
-\section{Istoria unui proiect}
+\section{Git}
+\subsection{Istoria unui proiect}
+Probabil că până acum te-ai confruntat deja cu următorul scenariu: vrei
+să testezi ceva în programul tău, dar nu eşti sigur că schimbarea
+va deveni permanentă.
 
-%TODO vorbeşte despre RCS-uri, despre cum se foloseşte unul, despre github
-%exerciţiu: învaţă să lucrezi cu git şi github, point to progit.org, crează-ţi un repo cu acelaşi nume ca username-ul tău şi exersează acolo
-%exerciţiu: fork yap-phpro-book, cum să trimiţi issues, patches, pull requests
+Cel mai probabil te-ai folosit de comentarii în astfel de cazuri: ai comentat
+o parte din codul sursă şi ai scris o nouă implementaţie dedesubt. Dacă a
+fost vorba de modificări prin mai multe fişiere, probabil ai repetat acelaşi
+procedeu pentru fiecare dintre acestea.
+
+Dacă ai avut noroc, schimbările tale au fost bune, şi tot ce a trebuit să
+faci în cele din urmă a fost să ştergi implementaţia veche, comentată,
+şi să o laşi doar pe cea nouă în loc.
+
+Dacă nu ai avut noroc, ţi-ai dat seama că ideea ta nu a fost cea mai grozavă,
+şi a trebuit să restaurezi versiunea veche. În urma restaurării, probabil ai
+avut noroc şi ai reuşit să revii la versiunea veche fără probleme.
+
+Însă cel mai probabil, nu ai avut noroc deloc.
+
+Ei bine, mulţumită unor programe numite \textsl{revision control systems}
+(abv. RCS),
+nu ai nevoie de noroc atunci când codul sursă al proiectului tău evoluează,
+sau când doar vrei să testezi lucruri noi.
+
+Cu un RCS, nu mai e nevoie să laşi la voia întâmplării modificările
+aduse codului -- tot ceea ce faci este înregistrat, fiecare schimbare,
+fie ea şi cât de mică. Partea bună e că poţi reveni la orice versiune
+a codului, oricând, oricum!
+
+Deşi ai multe avantaje atunci când foloseşti un RCS ca un programator singur,
+RCS-urile îşi dezvoltă adevărata putere atunci când lucrezi în echipă
+cu alţi programatori.
+
+Printre cele mai cunoscute RCS-uri se numără \textit{subversion},
+\textit{mercurial}, \textit{bazaar}, \textit{BitKeeper} şi \textit{git}.
+
+În acest curs, vei folosi Git. Git s-a născut din necesitatea
+programatorilor kernelului Linux de a-şi controla mai organizat
+procesul de dezvoltare.
+
+Spre deosebire de subversion, cu git nu există un server central,
+de aceea git se numeşte şi DRCS, D venind de la \textsl{distributed}.
+
+Pentru o listă a termenilor cei mai importanţi citeşte despre
+\href{http://en.wikipedia.org/wiki/Revision_control}{revision control}.
+
+\subsection{Getting started}
+Sub GNU/Linux, instalarea este destul de simplă: foloseşte
+package manager-ul distribuţiei tale pentru a instala pachetul "git".
+
+Pentru Microsoft Windows,
+intră pe pagina oficială\footnote{\url{http://code.google.com/p/msysgit/}}
+şi instalează \textit{Full installer for official Git}. La pasul
+\textit{Adjusting your PATH environment}, selectează \textit{Run
+Git from the windows command prompt}. Restul opţiunilor ar trebui
+să fie bune aşa cum ţi le prezintă installer-ul. Pe desktop ar trebui
+să-ţi apară simbolul "git bash".
+
+După ce ai instalat git, urmează cartea ProGit\footnote{\url{http://progit.org}},
+capitolele 1-3. Aceasta îţi va prezenta mai toate noţiunile elementare
+despre git.
+
+\begin{Exercise}[title={A taste of git}]
+Dacă eşti în programul de tutelare, ai deja cont pe github.com.
+Acest site îţi oferă hosting pentru proiectele tale. Intră
+în contact cu noi pe IRC pentru a fi îndrumat.
+
+Crează un nou proiect pe github.com denumit la fel ca username-ul
+tău de pe github.com, iar apoi clonează-l local şi experimentează
+cu el.
+
+Pentru lucrul cu repozitoriile hostate pe github, citeşte instrucţiunile
+de configurare de pe github\footnote{\url{http://help.github.com/}}.
+
+Întreabă-i pe ceilalţi cursanţi ce lucruri interesante mai poţi face
+cu git.
+
+Încearcă să te joci cât mai mult cu acest utilitar, deoarece de acum
+încolo toate proiectele tale vor fi puse sub revision control în git.
+
+Îţi aminteşti probabil şi de "gist-ul" unde ţi-ai salvat toate soluţiile
+la exerciţii până acum. Ei bine, un "gist" nu este nimic altceva decât
+un repozitoriu git. Îl poţi clona bine mersi, şi opera pe el
+din confortul consolei tale -- nu e nevoie să accesezi interfaţa
+web pentru a posta ceva.
+
+Crează un fork al cărţii, fă mici corecturi acolo unde vezi necesar,
+dacă ai găsit greşeli în carte, învaţă să faci pull
+requests, să trimiţi patchuri, să deschizi issues pe interfaţa web
+a proiectelor tale pusă la dispoziţie de github.
+
+Investeşte în jur de 40 de ore de lectură şi de experimente pentru
+a deveni cât de cât rutinat în folosirea acestor sisteme: git
+ca utilitar de sine stătător pe de o parte, şi github.com ca
+hosting pentru proiectele tale.
+\end{Exercise}
+
+
+
 
 \section{Norme de comunicare}
 %- atunci când salvezi informaţii în repo, îi comunici ceva echipei
