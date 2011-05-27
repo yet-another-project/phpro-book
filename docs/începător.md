@@ -22,6 +22,14 @@ stadiul următor [mediu](mediu.md), deci timpul nu ţi l-ai
 pierde degeaba.
 
 Adiţional vei avea nevoie de LaTeX şi GNU Make.
+Întreabă pe canalul de suport al distribuţiei tale
+cum instalezi LaTeX (texlive) şi GNU Make.
+
+Sub ArchLinux (vei mai jos pentru detalii) aceste
+pachete se numesc make şi texlive-core, deci instalarea
+se face aşa:
+
+    pacman -Syu make texlive-core --noconfirm
 
 În shell, scrie
 
