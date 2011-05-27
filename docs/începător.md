@@ -29,7 +29,7 @@ Sub ArchLinux (vei mai jos pentru detalii) aceste
 pachete se numesc make şi texlive-core, deci instalarea
 se face aşa:
 
-    pacman -Syu make texlive-core --noconfirm
+    pacman -Syu make texlive-most
 
 În shell, scrie
 
