@@ -2361,7 +2361,7 @@ function foobar() {
 }
 \end{lstlisting}
 
-Toate fişierele sunt incluse prin prisma fişierului
+atunci toate fişierele sunt incluse prin prisma fişierului
 \texttt{index.php}, deci CWD-ul este directorul
 în care se află acest fişier. Asta nu este
 o problemă pentru linia 2 din \texttt{index.php},
@@ -2395,7 +2395,7 @@ echo PHP_EOL;
 
 \begin{lstlisting}[title=functions/foo.php]
 <?php
-% require_once APP_ROOT . '/functions/foo/foobar.php';
+require_once APP_ROOT . '/functions/foo/foobar.php';
 function foo() {
         echo __DIR__;
 }
@@ -2457,6 +2457,15 @@ function foo() {
 function foobar() {
 }
 \end{lstlisting}
+
+\good{Includerea fişierelor ar trebui să o faci mereu folosind
+căi absolute, precum o constantă globală aplicaţiei sau cu
+constanta magică \texttt{\_\_DIR\_\_}.
+
+Atunci când foloseşti căi absolute, PHP nu trebuie să ia
+la rând căile din \texttt{include\_path}, ceea ce îl absolvă
+pe PHP de multe accese ale hard-disk-ului - aceste accese
+fiind destul de costisitoare.}
 
 \section{Formulare II. File uploads}
 Cu PHP, poţi oferi utilizatorului posibilitatea de a salva fişierele
@@ -2921,38 +2930,67 @@ care va fi salvat în două locuri: într-un cookie pe client, şi pe
 server, de obicei în numele fişierului din interiorul directorului
 \texttt{session\_save\_path()}.
 
-%TODO write me
+Deşi repet, ţin să subliniez încă o dată cât de \textit{fragilă} este această
+autentificare: un simplu string de câteva zeci de caractere
+(session ID) face diferenţa dintre a fi autentificat sau nu ... sau
+a fi autentificat ca altcineva.
 
-Poate vedea automat şi neajunsurile (i.e. nu poţi
-fi sigur că autentifici pe cine trebuie, din moment
-ce asocierea dintre client şi fişierul de pe server
-se face printr-un simplu cookie, dar mai ales, nu poţi
-autentifica, dacă clientul nu are cookies -- cum e telnetul
-nostru de exemplu).
+Dacă cineva reuşeşte să facă rost de ID-ul unei sesiuni al unui
+alt utilizator, e ca şi autentificat ca acel utilizator.
 
-exerciţiu:
+Ţi-ai putea imagina că a face rost de acest ID este ceva destul de
+complicat, şi că nu "oricine" ar putea face asta. Din fericire\footnote{"din
+fericire" deoarece este încă un motiv în plus să acordăm o atenţie
+deosebită securităţii aplicaţiilor noastre} pentru noi, acest lucru este
+relativ trivial  -- în capitolul 5 vei vedea cum o singură greşeală
+banală îi poate oferi atacatorului site-ului tău să injecteze cod HTML
+şi Javascript care să îi trimită acest ID\footnote{Atacul se numeşte
+XSS - cross-site scripting}.
 
-Partea I: extinde {\glqq}remote file storage{\grqq} cu autentificare.
+Pentru a face lucrurile mai dificile, o măsură adiţională ar putea
+fi identificarea şi după adresa IP (\texttt{\$\_SERVER['REMOTE\_ADDR']}),
+însă acest lucru are un dezavantaj: dacă îţi aduci bine aminte din
+capitolul \textit{Reţelistică}, mai mulţi utilizatori care "împart"
+accesul la Internet printr-un router au aceeaşi adresă IP publică.
+
+Făcând autentificarea şi\footnote{nu "doar", ci "şi", conjunctiv: atât
+după sesiune, cât şi după IP} după adresa IP, aplicaţia ta ar putea
+deveni "confuză" deoarece vede o singură adresă IP şi mai multe
+ID-uri de sesiune.
+
+Adresa IP şi ID-ul unic din cookie nu sunt însă singurele elemente
+ce pot fi luate în considerare la autentificarea unui utilizator.
+Majoritatea browserelor, numite şi \textsl{agenţi}, trimit un string
+la fiecare cerere, pe care îl poţi accesa prin \texttt{\$\_SERVER['HTTP\_USER\_AGENT']}.
+
+\begin{Exercise}[title={O schemă de autentificare ieşită din comun},difficulty=2]
+Extinde {\glqq}remote file storage{\grqq} cu autentificare.
 Parola va fi acel {\glqq}<nume secret>{\grqq}, iar fiecare {\glqq}nume
 secret{\grqq} va avea un fişier \texttt{uploads/<nume secret>/users.csv}
-ce va conţine o listă de usernames. La crearea unui nou \texttt{<nume secret>}
+ce va conţine o listă de usernames. La crearea unui nou \texttt{<nume secret>},
+proces numit "înregistrare" pe site-urile pe care le cunoşti deja,
 userul va trebui să uploadeze acel fişier \texttt{users.csv}. Nu vor exista
 drepturi de acces, deci toată lumea va putea interzice accesul tuturor celorlalţi
 de \^indată ce are credentials \^in \texttt{users.csv}.
+\end{Exercise}
 
-Partea II: identifică toţi vectorii de atac.
+\begin{Exercise}[title={Remote file storage cu galerie de imagini}]
+Extinde aplicaţia de la exerciţiul anterior astfel încât să detecteze
+dacă un {\glqq}<nume secret>{\grqq} are doar imagini în el, şi dacă
+da, să afişeze acel director ca pe o galerie de imagini.
+\end{Exercise}
 
+\begin{Exercise}[title={Guestbook I}]
+Crează un guestbook simplu, cu autentificarea unui singur
+administrator. Intrările din guestbook trebuiesc salvate (serializate)
+într-un format la alegere (json, csv, sau un format propriu), dar
+nu trebuie să fie HTML.
 
-\section{Exerciţii}
-\begin{enumerate}
-	\item guestbook
-	\item remote file browser \& image viewer
-\end{enumerate}
-Ambele cu zonă de administrare
+Utilizatorii care vor să lase un mesaj vor introduce nume, adresă e-mail,un 
+URL opţional şi mesajul care poate conţine doar tagurile HTML B, I, P.
 
-% \section{Operaţii de bază cu bazele de date}
-% Folosirea unei baze de date, normalizare, optimizari de baza
-% \section{Studiu de caz: guestbook cu DB}
+Adiţional, o linie goală poate delimita paragrafe.
+\end{Exercise}
 
 \section{Felicitări}
 În aceste capitole ai învăţat să lucrezi cu conceptele fundamentale
