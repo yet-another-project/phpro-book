@@ -112,12 +112,127 @@ ca utilitar de sine stătător pe de o parte, şi github.com ca
 hosting pentru proiectele tale.
 \end{Exercise}
 
-
-
-
-
-
 \section{Baze de date relaţionale}
+Bazele de date sunt folosite pentru a salva informaţii structurate.
+După structura datelor, există două cele mai răspândite forme de
+baze de date:
+\begin{itemize}
+\item relaţionale
+\item orientate pe obiecte
+\end{itemize}
+Bazele de date relaţionale (abv. \textsl{RDBMS}) se pretează pentru informaţii "tabelare"
+ce pot avea relaţii între ele. Cele orientate pe obiecte se pretează
+pentru informaţii arborescente -- gândeşte-te la arborescenţa
+(şi recursivitatea) unui document HTML.
+
+
+
+În funcţie de modul de acces, pentru ambele tipuri de mai sus există
+iarăşi două categorii:
+\begin{itemize}
+\item de sine stătătoare
+\item după arhitectura server-client
+\end{itemize}
+
+Pentru a folosi o bază de date de sine stătătoare nu ai nevoie de un
+server. Baza de date constă într-un fişier care conţine toate datele
+şi metadatele. Aceste baze de date pot fi trimise uşor altcuiva
+şi nu este nevoie decât de un program care ştie să opereze pe acea
+bază de date. Un exemplu consacrat pentru astfel de baze de date
+este SQLite.
+
+Bazele de date cu server-client au în mare trei componente:
+\begin{itemize}
+\item fişierul\footnote{în funcţie de RDBMS şi de alţi
+factori, pot fi mai multe fişiere} efectiv în care sunt salvate
+informaţiile
+\item daemonul care aşteaptă conexiuni de pe internet şi
+deserveşte informaţii din acele fişiere
+\item clientul care se conectează la server şi cere informaţii
+\end{itemize}
+
+Atunci când clientul cere informaţii de la un server, clientul
+nu primeşte toate informaţiile, pentru a-şi putea alege ce vrea.
+Clientul trimite o cerere într-un limbaj special, cerere pe baza
+căreia serverul generează un răspuns care conţine deja informaţiile
+dorite de client.
+
+Deşi nu este relevant pentru folosirea bazelor de date, e important
+să clarificăm cum funcţionează aceste componente, şi vom încerca
+să o facem pe baza cunoştinţelor pe care le avem deja despre
+protocolul HTTP şi programele care îl folosesc.
+
+Clientul DB se conectează la serverul DB printr-un protocol
+de transfer al informaţiilor precum TCP/IP, similar cu
+felul în care şi un browser se conectează la un daemon HTTP.
+
+Transferul de informaţii efectiv se face într-un limbaj înţeles
+de aceste două programe -- un protocol -- din nou: analog cu HTTP.
+
+Una dintre diferenţele cruciale este însă că acest client nu se
+conectează, trimite o cerere, primeşte un răspuns, şi apoi se
+deconectează. Nu. Acest lucru se întâmplă în cazul protocoalelor
+\textit{stateless} precum HTTP. DBMS-urile în schimb au de obicei
+protocoale \textsl{stateful}, adică se conectează la daemon, şi
+aceasta este menţinută până la întreruperea ei explicită.
+
+Odată conectat, clientul e pregătit să trimită cereri formulate
+într-un limbaj specific. În cazul RDBMS-urilor, predominant este
+limbajul SQL (en. \textsl{Structural Query Language}
+, citit \texttt{\textipa{si:kw@l}}).% IPA: siːkwəl
+
+Această cerere formulată în limbajul SQL este apoi codată în
+protocolul specific DBMS-ului şi trimisă acestuia.
+Faptul că fiecare\footnote{aproape fiecare} DBMS are un protocol
+specific este cauza imposibilităţii comunicării cu un daemon
+de un tip folosind un client de alt tip\footnote{De exemplu,
+clientul mysql.exe nu poate comunica cu un daemon postgresql.}
+-- în ciuda faptului că limbajul în care e formulată cererea, SQL,
+este acelaşi\footnote{Există şi aici diferenţe între sisteme,
+dar limbajul în sinea lui este acelaşi, este standardizat.}.
+
+În acest capitol vei folosi RDBMS-ul MySQL, deoarece este
+cel mai des folosit în conjuncţie cu PHP.
+
+\begin{Exercise}[title={Primii paşi în baze de date}]
+\ExePart
+
+Instalează-ţi daemonul şi clientul MySQL. Sub Microsoft
+Windows poţi descărca installerul de pe site-ul
+oficial\footnote{Se numeşte \textit{MySQL Community Server} şi se găseşte
+la adresa \url{http://dev.mysql.com/}.}.
+
+\ExePart
+
+Operaţiile de bază se numesc \textit{create}, \textit{retrieve},
+\textit{update}, \textit{delete}, de aici acronimul \textsl{CRUD}.
+
+Accesează manualul MySQL\footnote{\url{http://dev.mysql.com/doc/}}
+şi urmează capitolul \textit{Tutorial}. Sub Windows te vei conecta la daemon
+cu clientul \texttt{mysql.exe}.
+
+Rezervă-ţi 40-80 de ore de lucru pentru a învăţa să faci operaţii CRUD.
+\end{Exercise}
+
+\section{Comunicarea cu MySQL din runtime-ul PHP}
+%TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
+%TODO lifecycle of a mysql connection in the PHP runtime
+
+\section{Designul bazelor de date}
+
+%TODO instalează phpMyAdmin
+
+\subsection{1st NS}
+%TODO write me
+
+\subsection{2nd NF}
+%TODO write me
+
+\subsection{3rd NF}
+%TODO write me
+
+
+
 %TODO fill me
 
 % Articole, de citit cu atenţie:
