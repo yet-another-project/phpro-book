@@ -364,6 +364,13 @@ echo $foo;
 \attention{Nu uita că introducerea de noi variabile ar trebui făcută doar
 atunci când avem de gând să refolosim acele variabile.}
 
+\good{Atunci când creezi o funcţie care returnează valori numerice
+ca "statusuri de eroare", crează constante simbolice în afara funcţiei
+pentru aceste statusuri şi returnează acele constante simbolice în
+loc de numerele efective. Astfel poţi schimba valorile efective returnate,
+însă cei care îţi apelează funcţia o vor folosi aşa cum au folosit-o mereu,
+deoarece numele constantelor simbolice nu se schimbă.}
+
 În exemplul de mai sus, aşa cum e el, introducerea variabilei \texttt{\$foo}
 este o practică proastă, era suficient să îi pasăm retval-ul
 funcţiei direct lui \texttt{echo}:
