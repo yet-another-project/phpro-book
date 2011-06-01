@@ -21,4 +21,4 @@
 	url = git@gist.github.com:47789aea3615e7b6180b.git
 [submodule "solutii/starlays"]
 	path = solutii/starlays
-	url = git://gist.github.com/979341.git
+	url = git://gist.github.com:980282.git
