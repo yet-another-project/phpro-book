@@ -8,4 +8,5 @@
 *.idx
 *.ilg
 *.ind
-solutii
+*.loe
+solutii/
