@@ -24,5 +24,5 @@ Nu uita că ai nevoie şi de:
   HTML sunt o premiză pentru participare
 
 Dacă îndeplineşti aceste premize, urmează instrucţiunile de pe
-[cum să intri în tutelare](cum_să_intri_în_tutelare.md).
+[cum să intri în tutelare](cum_sa_intri_in_tutelare.md).
 

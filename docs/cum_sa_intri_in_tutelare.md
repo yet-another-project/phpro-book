@@ -1,3 +1,6 @@
+Cum să intri în programul de tutelare
+=====================================
+
 Spune-i tutorului care te îndrumă dacă totul e clar, şi dacă nu e totul
 clar până aici, întreabă ACUM. Asta ne va economisi tuturor timp.
 
@@ -22,7 +25,7 @@ să renunţi singur la idee.
 
 Ce trebuie să faci, în ordine:
 
-  * citeşte cu atenţie capitolul Introducere şi spune-i toturului
+  * citeşte cu atenţie capitolul Introducere şi spune-i tutorului
   "da, am înţeles totul despre cum funcţionează treaba" sau
   "nu am înţeles totul", şi întreabă tot ce nu ai înţeles. *Notă*:
   tutorele nu te va îndruma la primul exerciţiu dacă nu ai făcut asta
