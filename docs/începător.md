@@ -1,4 +1,4 @@
-Începător eşti în timpul parcurgerii celui de-al doilea capitol
+începător eşti în timpul parcurgerii celui de-al doilea capitol
 (cu excepţia primelor trei exerciţii, care fac parte din
 [novice](novice.md)).
 
@@ -39,7 +39,7 @@ se face aşa:
 
 Mediul în care poţi instala cel mai uşor aceste scule este GNU/Linux.
 Oricum majoritatea serverelor web de producţie, adevărate,
-folosesc o formă sau alta de *NIX, deci nu vei învăţa degeaba să
+folosesc o formă sau alta de \*NIX, deci nu vei învăţa degeaba să
 lucrezi cu el.
 
 Dacă deţii toate aceste cunoştinţe, îţi va lua cel mult 5 minute
