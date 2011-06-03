@@ -215,7 +215,85 @@ Rezervă-ţi 40-80 de ore de lucru pentru a învăţa să faci operaţii CRUD.
 \end{Exercise}
 
 \section{Comunicarea cu MySQL din runtime-ul PHP}
+În loc de clientul \texttt{mysql.exe} putem folosi PHP în
+calitate de client mysql. 
+
+Desigur, PHP nu ştie de unul singur cum să comunice cu daemonul mysql,
+pentru asta fiind nevoie de un modul, o extensie PHP.
+Verifică dacă ai modulul \texttt{mysqli} instalat cu comanda:
+\begin{verbatim}
+php -m
+\end{verbatim}
+Sub MS Windows, poţi găsi această extensie pe site-ul PECL\footnote{\url{http://windows.php.net/download/} says "PECL extensions for Windows is being worked on."
+%TODO check this periodically
+}.
+
+\lstinputlisting[label=lst:mysqli connect,caption={Conectarea
+la MySQL}]{cap04/1-mysqli-connect.php}
+
+Codul este destul de expresiv. Pe linia 2 obţinem o conexiune.
+Pe linia 4, formulăm cererea SQL şi o trimitem conexiunii create.
+Având rezultatul, îl putem citi pe tot într-un array bidimensional
+cu funcţia \texttt{mysqli\_fetch\_all()} sau l-am putea citi într-o
+buclă cu \texttt{mysqli\_fetch\_array()}, ceea ce ar consuma
+mai puţină memorie, dar mai mult timp de procesare.
+
+Într-un final, închidem conexiunea creată. Am fi putut totuşi să
+trimitem mai multe cereri cu \texttt{mysqli\_query()} dacă am fi
+avut nevoie.
+
+Cererea SQL efectivă trimisă ţine de MySQL. Numele funcţiilor,
+parametrii şi ordinea lor, cât şi tipurile de date returnate de
+acestea ţin de extensia mysqli pe care ai activat-o în \texttt{php.ini}.
+
+Dacă explorezi manualul pentru aceste funcţii, vei vedea că au
+două variante, una \textit{object-oriented style} şi una
+\textit{procedural style}. Noi vom folosi doar interfaţa procedurală
+deocamdată, urmând ca într-un
+%TODO spune care
+capitol viitor să vedem cum funcţionează şi cea obiectuală.
+
+Deşi funcţiile precum \texttt{mysqli\_connect()} returnează obiecte,
+gândeşte-te deocamdată la ele ca la tipuri de date opace.
+Atunci când le vezi în semnăturile funcţiilor, înseamnă că trebuie
+să le pasezi ca parametri returnaţi de alte funcţii. În exemplul
+nostru, un \textit{query} are nevoie de o conexiune şi returnează
+un \textit{rezultat}, un \textit{fetch} are nevoie de un \textit{rezultat}
+şi returnează ceva ce ştii deja cum să manipulezi: un array.
+
+\begin{Exercise}[title={Databases explorer}]
+Crează un script care primeşte de la utilizator informaţiile necesare
+pentru a se conecta la un daemon MySQL şi care afişează bazele
+de date deservite de acel daemon într-un tabel.
+
+Utilizatorul va putea da click pe numele bazei de date şi va vedea
+apoi un tabel cu toate tabelele din baza de date selectată.
+
+În continuare utilizatorul va putea urma câte un link pentru fiecare
+tabel pentru a vedea structura concretă a tabelului respectiv,
+prezentată deasemenea în format tabelar.
+
+Pentru generarea tabelelor foloseşte o versiune îmbunătăţită a funcţiei
+\texttt{array\_table()} din exerciţiul \textit{Afişarea unui array
+bidimensional}, putând astfel să reutilizezi funcţia pentru
+toate tabelele generate de aplicaţia ta.
+
+Separă view logic de business logic ca şi până acum, folosind funcţia
+\texttt{render()} din exerciţiul \textit{O funcţie render()}.
+
+Observi cum aceste funcţii te ajută să devii mai productiv? Trăiască
+modularizarea codului!
+\end{Exercise}
+
+În exerciţiul anterior ai observat şi care e avantajul folosirii lui
+PHP ca client mysql: poţi construi dinamic cererile SQL pe baza
+inputului de la utilizator.
+
+
+
+
 %TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
+%TODO http://forum.softpedia.com/index.php?showtopic=779610
 %TODO lifecycle of a mysql connection in the PHP runtime
 
 \section{Designul bazelor de date}
@@ -288,3 +366,34 @@ Rezervă-ţi 40-80 de ore de lucru pentru a învăţa să faci operaţii CRUD.
 %proiect eşuează, atunci şi tu porţi o vină, chiar şi pentru simplul fapt că nu
 %ai observat greşeli tehnice sau organizatorice în cadrul echipei voastre, sau
 %dacă le-ai observat, pentru că nu ai discutat despre ele cu partenerii tăi de lucru
+
+%nu mai eşti responsabil faţă de tutori, ci faţă de colegii tăi de echipă. tutorii doar
+%vă consiliază, ca echipă
+
+\subsection{Development cycle}
+% (ciclul iniţial) idea  => scenarii de utilizare => feature list
+% db design => function design (without implementation)
+% => implementation => major release
+
+% important: nu poţi face ceva în implementarea unei funcţii care încalcă
+% designul funcţiei (semnătura de parametri). Atunci când ai făcut designul ei,
+% ai luat nişte decizii din anumite motive bine puse la punct.
+% dacă ceva nu se poate implementa cu design-ul actual, atunci trebuie aruncat la gunoi
+% întreg designul, şi refăcut, apoi se trece la o nouă implementare. Astfel se evită
+% buguri introduse de schimbări făcute din mers (aşa apar majoritatea bugurilor)
+% De aceea e important să faci un design bun (perfect) din start. Statistic, îţi
+% poate economisi chiar şi până la 60% din resurse (timp, bani).
+
+% after major release:
+% hotfixes sunt integrate cât mai repede
+% new features trec prin ciclul iniţial
+
+%TODO: această secţiune e doar un mic sprijin pentru exerciţiul următor, nu
+% o lecţie "completă" despre moduri organizatorice ale ciclului de programare
+
+\section{Exerciţiu}
+% descrierea particularităţilor exerciţiului, rolul tutorilor (doar consilieri)
+% ex: găseşte-ţi colegi de echipă, găsiţi idei împreună, prezentaţi
+% ideile în 2-3 pagini A4 (fontsize 12pt)
+
+% metode de comunicare: IRC, mailing list, live voice (e.g. skype)

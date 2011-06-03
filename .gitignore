@@ -5,3 +5,8 @@
 *~
 *.aux
 *.backup
+*.idx
+*.ilg
+*.ind
+*.loe
+solutii/

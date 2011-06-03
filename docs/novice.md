@@ -22,3 +22,7 @@ Nu uita că ai nevoie şi de:
   la scris în engleză trebuie să te pricepi doar "cât de cât" DOAR DACĂ eşti încă elev
 * cunoştinţe bune de HTML; în acest curs înveţi programare şi doar programare. Cunoştinţele
   HTML sunt o premiză pentru participare
+
+Dacă îndeplineşti aceste premize, urmează instrucţiunile de pe
+[cum să intri în tutelare](cum_sa_intri_in_tutelare.md).
+
