@@ -2987,16 +2987,21 @@ dacă un {\glqq}<nume secret>{\grqq} are doar imagini în el, şi dacă
 da, să afişeze acel director ca pe o galerie de imagini.
 \end{Exercise}
 
-\begin{Exercise}[title={Guestbook I}]
+\begin{Exercise}[title={Guestbook I},difficulty=2]
 Crează un guestbook simplu, cu autentificarea unui singur
 administrator. Intrările din guestbook trebuiesc salvate (serializate)
 într-un format la alegere (json, csv, sau un format propriu), dar
 nu trebuie să fie HTML.
 
-Utilizatorii care vor să lase un mesaj vor introduce nume, adresă e-mail,un 
-URL opţional şi mesajul care poate conţine doar tagurile HTML B, I, P.
+Utilizatorii care vor să lase un mesaj vor introduce nume, adresă e-mail, un 
+URL opţional şi mesajul care poate conţine doar tagurile HTML:
+\texttt{<b>}, \texttt{<i>}, \texttt{<p>}.
 
 Adiţional, o linie goală poate delimita paragrafe.
+
+Crează şi o interfaţă de administrare, sistemul va avea un singur utilizator:
+administratorul. Prin interfaţa de administrare acesta va putea şterge sau edita
+intrările din guestbook sau bana adrese IP.
 \end{Exercise}
 
 \section{Felicitări}
