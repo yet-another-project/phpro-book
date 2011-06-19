@@ -25,3 +25,8 @@ Apoi, după conectare, în tabul nou creat numit "freenode", introdu comanda:
 Acum vei putea vorbi cu noi live, cei din lista de pseudonime din stânga. O practică bună
 e să saluţi la intrare, aşa vezi şi dacă cineva e atent la canal, şi mai şi arăţi
 că ştii să te porţi :D
+
+Ce este freenode?
+-----------------
+
+Freenode este cea mai mare reţea de comunicare peer-to-peer pentru proiectele open-source din lume.
