@@ -82,9 +82,9 @@ Dacă eşti în programul de tutelare, ai deja cont pe github.com.
 Acest site îţi oferă hosting pentru proiectele tale. Intră
 în contact cu noi pe IRC pentru a fi îndrumat.
 
-Crează un nou proiect pe github.com denumit la fel ca username-ul
-tău de pe github.com, iar apoi clonează-l local şi experimentează
-cu el.
+Crează un nou proiect pe github.com denumit după username-ul tău
+de pe github.com astfel \texttt{<username>.github.com}, iar apoi
+clonează-l local şi experimentează cu el.
 
 Pentru lucrul cu repozitoriile hostate pe github, citeşte instrucţiunile
 de configurare de pe github\footnote{\url{http://help.github.com/}}.
@@ -93,7 +93,7 @@ de configurare de pe github\footnote{\url{http://help.github.com/}}.
 cu git.
 
 Încearcă să te joci cât mai mult cu acest utilitar, deoarece de acum
-încolo toate proiectele tale vor fi puse sub revision control în git.
+încolo toate proiectele tale vor fi puse sub \textsl{revision control} în git.
 
 Îţi aminteşti probabil şi de "gist-ul" unde ţi-ai salvat toate soluţiile
 la exerciţii până acum. Ei bine, un "gist" nu este nimic altceva decât
@@ -110,6 +110,12 @@ Investeşte în jur de 40-80 de ore de lectură şi de experimente pentru
 a deveni cât de cât rutinat în folosirea acestor sisteme: git
 ca utilitar de sine stătător pe de o parte, şi github.com ca
 hosting pentru proiectele tale.
+
+Un loc ideal de a experimenta cu aceste lucruri este site-ul tău
+personal de pe \texttt{http://<username>.github.com/}. Încearcă
+să-ţi creezi propriul site static. Cu această ocazie poţi învăţa
+şi despre \textsl{sass} şi \textsl{haml} pe care le vei folosi
+prin prisma \textsl{jekyll}.
 \end{Exercise}
 
 \section{Baze de date relaţionale}
@@ -124,8 +130,6 @@ Bazele de date relaţionale (abv. \textsl{RDBMS}) se pretează pentru informaţi
 ce pot avea relaţii între ele. Cele orientate pe obiecte se pretează
 pentru informaţii arborescente -- gândeşte-te la arborescenţa
 (şi recursivitatea) unui document HTML.
-
-
 
 În funcţie de modul de acces, pentru ambele tipuri de mai sus există
 iarăşi două categorii:
@@ -224,7 +228,9 @@ Verifică dacă ai modulul \texttt{mysqli} instalat cu comanda:
 \begin{verbatim}
 php -m
 \end{verbatim}
-Sub MS Windows, poţi găsi această extensie pe site-ul PECL\footnote{\url{http://windows.php.net/download/} says "PECL extensions for Windows is being worked on."
+Sub MS Windows, poţi găsi această extensie pe site-ul
+PECL\footnote{\url{http://windows.php.net/download/} says
+"PECL extensions for Windows is being worked on."
 %TODO check this periodically
 }.
 
@@ -289,17 +295,34 @@ modularizarea codului!
 PHP ca client mysql: poţi construi dinamic cererile SQL pe baza
 inputului de la utilizator.
 
+Atunci când vrei să interacţionezi cu baza de date într-un anumit fel,
+să filtrezi rezultatele după anumite criterii, să le ordonezi sau să
+le grupezi, sau să faci calcule în masă pe date, încearcă pe cât posibil
+să faci asta folosind cereri SQL, şi nu PHP. Runtime-ul PHP consumă
+multă memorie, iar daemonul SQL este gândit exact pentru asta: manipularea
+şi salvarea datelor. Deci mergi pe mottoul \textsl{the right tool for
+the job}.
 
-
-
-%TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
-%TODO http://forum.softpedia.com/index.php?showtopic=779610
-%TODO lifecycle of a mysql connection in the PHP runtime
+%TODO lifecycle of a mysql connection in the PHP runtime -- what did I want to say??? useless, dd it
 
 \section{Designul bazelor de date}
 
 %TODO instalează phpMyAdmin
 
+%TODO despre normalizare, mentioneaza cel putin algebra relationala
+
+%TODO: spune despre domenii
+
+%TODO de ce si cum, cand sa denormalizezi si cum, point to profiling mai jos
+
+%TODO 1, 2 si 3rd NF, referinte la wikipedia
+
+%TODO foreign keys, referential integrity, PKs, indexes
+
+%TODO mysql-specific: database engine InnoDB
+
+%TODO: ne-ar lua cateva carti ca aceasta ca sa acoperim cum trebuie subiectul
+% cum trebuie, asta a fost doar o introducere
 \subsection{1st NS}
 %TODO write me
 
@@ -397,3 +420,5 @@ inputului de la utilizator.
 % ideile în 2-3 pagini A4 (fontsize 12pt)
 
 % metode de comunicare: IRC, mailing list, live voice (e.g. skype)
+
+WRITE ME
