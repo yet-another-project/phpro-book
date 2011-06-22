@@ -8,6 +8,6 @@
 * nu ii mai spui de "acum urmeaza <cum sa intri...>"
 * naiba, citeste si el singur :D
 * iar la novice, daca nu e sigur ca indeplineste conditia cu HTML, il intrebi:
-* spune-ti ce termeni tehnici iti trec prin minte cand vezi acest cod "html": <foo bar="test">
+* spune-ti ce termeni tehnici iti trec prin minte cand vezi acest cod "html": \<foo bar="test"\>
 * daca spune "foo e tag/eticheta, bar e atribut, test e valoarea sa", atunci stie HTML
 * altfel il trimiti pe w3schools si wikipedia
