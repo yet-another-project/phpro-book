@@ -11,5 +11,5 @@ Acest document prezintă lista proiectelor şi participanţilor (cursanţilor)
 	An interactive to do list (a learning project)
 
 	Programatori:
-	* [Vladu Emilian Sorin](https://github.com/vladuemilian)
+	* [Florin](https://github.com/starlays)
 	* [PauLLiK](https://github.com/paullik)
