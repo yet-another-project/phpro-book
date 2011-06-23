@@ -29,7 +29,7 @@ dar cu gistul vin abia după o săpt sau mai mult şi tu pierzi timpul degeaba
 * "cât timp poţi investi în medie săpt"
 * "care sunt aşteptările tale de la acest curs şi în general"
 * adică ... să vadă omul că vorbim serios :)
-* flavius | chiar dacă "suntem pe mirc" cum ar zice unii cârcotaşi paraleli cu open-source (deci nu ştiu că freenode e mecca open-source-ului)
+* chiar dacă "suntem pe mirc" cum ar zice unii cârcotaşi paraleli cu open-source (deci nu ştiu că freenode e mecca open-source-ului)
 * dacă vine unul d-ăsta, ignoră-l :)
 * adică frumos elegant "salut", apoi când a deraiat aşa, nu mai scrii nimic :)
 * absolut nimic :P
