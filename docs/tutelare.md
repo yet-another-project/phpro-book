@@ -1,4 +1,4 @@
-Tutelare
+Programul de tutelare
 ========
 În cadrul tutelării, comunitatea noastră te sprijină la rezolvarea exerciţiilor.
 Noi îţi dăm indicii la exerciţiile din carte, până când tu singur ajungi la
