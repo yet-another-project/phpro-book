@@ -6,4 +6,4 @@ clean:
 	find . -type f -name "*~" -exec rm {} \;
 	rm -rf Dezvoltare\ web\ cu\ PHP.{toc,pdf}
 push:
-	git co master && git push && git co integration && git merge master && git push
+	git co stable && git push && git co integration && git merge stable && git push
