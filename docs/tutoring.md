@@ -34,3 +34,6 @@ dar cu gistul vin abia după o săpt sau mai mult şi tu pierzi timpul degeaba
 * adică frumos elegant "salut", apoi când a deraiat aşa, nu mai scrii nimic :)
 * absolut nimic :P
 
+IMPORTANT: la crearea submodulului, mai exact la commit zici: "[STUDENT] added new student <nickname>/<real name>"
+* submodulul va fi initializat in directorul /solutii/<nickname> de pe branch-ul "student"
+
