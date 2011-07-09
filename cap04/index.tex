@@ -163,6 +163,7 @@ să o facem pe baza cunoştinţelor pe care le avem deja despre
 protocolul HTTP şi programele care îl folosesc.
 
 Clientul DB se conectează la serverul DB printr-un protocol
+%FIXME contradiction here: client connects
 de transfer al informaţiilor precum TCP/IP, similar cu
 felul în care şi un browser se conectează la un daemon HTTP.
 
@@ -171,9 +172,12 @@ de aceste două programe -- un protocol -- din nou: analog cu HTTP.
 
 Una dintre diferenţele cruciale este însă că acest client nu se
 conectează, trimite o cerere, primeşte un răspuns, şi apoi se
+%FIXME pai ori se conecteaza ori nu se conecteaza? see line 165
+% client doesn't connect
 deconectează. Nu. Acest lucru se întâmplă în cazul protocoalelor
 \textit{stateless} precum HTTP. DBMS-urile în schimb au de obicei
 protocoale \textsl{stateful}, adică se conectează la daemon, şi
+%FIXME contradiction again, client connects
 aceasta este menţinută până la întreruperea ei explicită.
 
 Odată conectat, clientul e pregătit să trimită cereri formulate
