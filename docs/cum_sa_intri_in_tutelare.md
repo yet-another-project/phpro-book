@@ -31,6 +31,11 @@ Ce trebuie să faci, în ordine:
   tutorele nu te va îndruma la primul exerciţiu dacă nu ai făcut asta
   mai întâi. Punem preţ pe aceste lucruri, deoarece, după cum ştii deja,
   te aştepţi ca noi să investim timp în tine
+  * *Atenţie*: link-urile din carte către alte articole de pe web
+  *fac parte din carte*, deci trebuiesc citite şi înţelese.
+  Asta înseamnă că nu e exclus să trebuiască să investeşti chiar şi
+  câteva ore bune sau chiar zile în studierea unui singur paragraf
+  din carte.
   * rezolvă exerciţiul "What is my IP Address?", scrie soluţia într-un
   fişier text (extensia .txt)
   * înregistrează-te pe http://github.com/ dacă nu ai un cont deja.
