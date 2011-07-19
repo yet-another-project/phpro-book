@@ -1,11 +1,12 @@
 Contributing to the book
 ------------------------
-github -> fork
-git clone git@github.com:<USERNAME>/yap-phpro-book.git
 
-git remote add flavius git@github.com:OriginalCopy/yap-phpro-book.git
-git fetch flavius
-git checkout -b flavius flavius/master
+    github -> fork
+    git clone git@github.com:<USERNAME>/yap-phpro-book.git
+
+    git remote add flavius git@github.com:OriginalCopy/yap-phpro-book.git
+    git fetch flavius
+    git checkout -b flavius flavius/master
 
 before any change:
 git checkout master
