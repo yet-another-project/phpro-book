@@ -15,7 +15,7 @@ Fişierul pe care tocmai l-ai descărcat nu este versiunea actuală
 a întregului curs, este doar un preview, este partea aceea din curs
 necesară şi suficientă în urma căreia vom determina dacă ai potenţialul
 de a deveni BUN în domeniu sau nu. Ţi se vor da instrucţiuni cu
-cum să obţii ultima versiune de îndată ce ai trecut de stadul de novice
+cum să obţii ultima versiune de îndată ce ai trecut de stadiul de novice
 şi am decis că meriţi să investim timp în tine.
 
 Până una alta, PDF-ul pe care tocmai l-ai descărcat te va însoţi
@@ -45,7 +45,7 @@ Ce trebuie să faci, în ordine:
   următorul pas ceea ce vei crea nu va fi al tău şi doar al tău.
   * Crează un nou gist. La descrierea gistului pune
   `soluţiile mele pentru yap-phpro-book (<nickname IRC aici>)`. La
-  numele fişierului pune titlul exericiţiului exact aşa cum îl vezi
+  numele fişierului pune titlul exerciţiului exact aşa cum îl vezi
   în carte, aici "What is my IP Address?", plus extensia fişierului.
   La acest exerciţiu ţi se cere să dai doar explicaţii sub formă de
   text, deci pune extensia ".txt". La majoritatea exerciţiilor
