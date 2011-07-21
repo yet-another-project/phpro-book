@@ -6,7 +6,16 @@ carte ce are ca scop predarea corectă a noţiunilor fundamentale de
 algoritmică şi a noţiunilor necesare de programare PHP pentru dezvoltarea
 de aplicaţii sigure şi flexibile în cadrul unei echipe de programare.
 
-Cursul te ia de la zero în domeniul programării.
+Cursul te ia de la zero în domeniul programării. La sfârşitul cursului:
+
+* vei deţine cunoştinţe tehnice despre programare
+* vei cunoaşte modul de lucru al unui programator, cu unele scule şi
+metodologii de programare din viaţa reală a unui programator
+* **cel mai important**: vei gândi ca un programator
+
+Faptul că este folosit PHP ca limbaj prin prisma căruia înveţi aceste
+lucruri este un lucru marginal, scopul cursului nefiind să te înveţe
+PHP în primul şi primul rând. Doar "întâmplător" vei şti şi PHP.
 
 Cartea în sinea sa este aproape inutilă fără sprijinul comunităţii. Noi nu
 oferim doar o simplă carte, ci un program *gratuit* de tutelare care
