@@ -26,8 +26,10 @@ să renunţi singur la idee.
 Ce trebuie să faci, în ordine:
 
   * citeşte cu atenţie capitolul Introducere şi spune-i tutorului
-  "da, am înţeles totul despre cum funcţionează treaba" sau
-  "nu am înţeles totul", şi întreabă tot ce nu ai înţeles. *Notă*:
+  "Am citit capitolul Introducere şi am înţeles tot" sau
+  "nu am înţeles totul din capitolul Introducere", şi întreabă
+  tot ce nu ai înţeles.
+  *Notă*:
   tutorele nu te va îndruma la primul exerciţiu dacă nu ai făcut asta
   mai întâi. Punem preţ pe aceste lucruri, deoarece, după cum ştii deja,
   te aştepţi ca noi să investim timp în tine
