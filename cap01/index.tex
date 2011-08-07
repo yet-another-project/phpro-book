@@ -60,7 +60,7 @@ Deschide interfața CLI a sistemului tău și introdu comanda
 \texttt{tracert google.com} pentru Windows sau \texttt{traceroute google.com} pentru 
 GNU/Linux. Figura \ref{fig:cli traceroute} îţi dă un exemplu de \textsl{output}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=300px]{cap01/traceroute.png}
   \caption{Ruta către un nod}
@@ -547,7 +547,7 @@ timpul este bine să alegi ultima versiune, cea stabilă.}.
 %Data notata mai sus este data scrierii articolului, nu data publicarii versiunii apache
 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=400px]{cap01/Screenshot.png}
   \caption{Pagina oficială Apache HTTPD}
@@ -565,7 +565,7 @@ apropiat ţie din punct de vedere geografic, pentru ca descărcarea să fie mai
 rapidă.} şi apasă \texttt{change}. Mirror-ul selectat automat ar trebui să fie unul
 dintre cele mai bune. Apoi selectează versiunea {\glqq}Win32 Binary without crypto{\grqq}.
 
-%\begin{figure}[h!]
+%\begin{figure}[ht!]
 %  \centering
 %    \includegraphics[width=400px]{cap01/Screenshot-1.png}
 %  \caption{Setarea iniţială apache httpd}
@@ -574,7 +574,7 @@ dintre cele mai bune. Apoi selectează versiunea {\glqq}Win32 Binary without cry
 
 Introdu datele ca în figura \ref{fig:httpd setup} şi treci la pasul următor.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=300px]{cap01/Screenshot-2.png}
   \caption{Setarea iniţială apache httpd}
@@ -584,7 +584,7 @@ Introdu datele ca în figura \ref{fig:httpd setup} şi treci la pasul următor.
 Alege modul de instalare \texttt{custom}, deoarece vrem să decidem exact unde şi ce
 se instalează, ca în \ref{fig:httpd check custom setup}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=250px]{cap01/Screenshot-3.png}
   \caption{Setare personalizată}
@@ -595,7 +595,7 @@ se instalează, ca în \ref{fig:httpd check custom setup}.
 este părintele tuturor componentelor. Selectează-l şi apasă pe butonul
 \texttt{Change...} pentru a schimba locul de instalare.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=248px]{cap01/Screenshot-4.png}
   \caption{Setare httpd - Componentele instalate}
@@ -607,7 +607,7 @@ unde vor fi instalate toate sculele
 de programare web, introducând manual calea \texttt{C:{\textbackslash}webdev{\textbackslash}apache}
 exact ca în \ref{fig:httpd custom path}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=253px]{cap01/Screenshot-5.png}
   \caption{Setare httpd - Calea instalării}
@@ -626,11 +626,10 @@ PHP\footnote{\url{http://php.net}} şi urmează linkul de download,
 sub \texttt{Windows binaries}\footnote{În părţile ce urmează se foloseşte
 versiunea 5.3.6, dar tu trebuie să alegi ultima versiune stabilă. Important este 
 doar să selectezi versiunea compilată cu VC9, care este thread-safe.} (Figura \ref{fig:php win bin}).
-
 Selectează tipul de executabil \texttt{VC9 x86 Thread Safe} pentru
 versiunea PHP 5.3, ca în \ref{fig:php build type}, apoi
 descarcă arhiva .zip care conţine PHP, salvând-o în \texttt{C:{\textbackslash}webdev\textbackslash}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=150px]{cap01/Screenshot-7.png}
   \caption{PHP - Tipul \textsl{build}-ului PHP}
@@ -644,7 +643,7 @@ descarcă arhiva .zip care conţine PHP, salvând-o în \texttt{C:{\textbackslas
 
 După dezarhivare, conţinutul său va arăta ca în Figura \ref{fig:php what you get}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=200px]{cap01/Screenshot-9.png}
   \caption{PHP - What you get}
@@ -691,7 +690,7 @@ Sub Windows 7, în \texttt{start} -> \texttt{run} introdu comanda:
 
 Alege tabul \texttt{Advanced}, apoi click pe \texttt{Environment Variables} în partea de jos
 a dialogului, aşa cum vezi în Figura \ref{fig:win adv props}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=200px]{cap01/Screenshot-12.png}
   \caption{Proprietăţile avansate ale sistemului Windows XP}
@@ -699,7 +698,7 @@ a dialogului, aşa cum vezi în Figura \ref{fig:win adv props}.
 \end{figure}
 
 Se va deschide un dialog similar cu cel din Figura \ref{img:win env vars}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=180px]{cap01/Screenshot-13.png}
   \caption{Variabilele de mediu ale unui sistem Windows}
@@ -709,7 +708,7 @@ Se va deschide un dialog similar cu cel din Figura \ref{img:win env vars}.
 Click pe \texttt{New} sub \texttt{System variables}, şi introdu datele ca în
 Figura \ref{img:win new env var}. Această nouă variabilă de mediu
 îl va ajuta pe PHP să-şi găsească fişierul de configurare \texttt{php.ini}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=180px]{cap01/Screenshot-14.png}
   \caption{Variabilele de mediu ale unui sistem Windows}
@@ -725,7 +724,7 @@ poate deveni obositor cu timpul. Însă putem integra \texttt{php.exe}
 Pentru ca asta să
 se întâmple, identifică
 variabila systemului numită \texttt{Path}
-%\begin{figure}[h!]
+%\begin{figure}[ht!]
 %  \centering
 %    \includegraphics[width=180px]{cap01/Screenshot-20.png}
 %  \caption{Variabila de mediu PATH}
@@ -734,7 +733,7 @@ variabila systemului numită \texttt{Path}
 şi adaugă-i la sfârşit:
 \texttt{;C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}}, ca în
 Figura \ref{img:win env path}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=180px]{cap01/Screenshot-21.png}
   \caption{Variabila de mediu PATH}
@@ -829,7 +828,7 @@ Pentru a verifica instalarea şi configurarea lui PHP ca modul apache, crează u
 
 Acum intră pe adresa \url{http://localhost/info.php}. Ar trebui să vezi ceva similar cu Figura \ref{img:php phpinfo}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=300px]{cap01/Screenshot-15.png}
   \caption{Informaţii afişate de un apel la phpinfo()}
