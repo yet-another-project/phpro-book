@@ -728,7 +728,7 @@ Figura \ref{img:win new env var}. Această nouă variabilă de mediu
 
 În acest moment, PHP este setat şi l-am putea lansa în execuţie folosind
 calea absolută
-\texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.1{\textbackslash}php.exe}, ceea ce
+\texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.exe}, ceea ce
 poate deveni obositor cu timpul. Însă putem integra \texttt{php.exe}
 în sistem astfel încât să fie recunoscut ca comandă.
 
@@ -742,7 +742,7 @@ variabila systemului numită \texttt{Path}
 %  \label{img:win env path}
 %\end{figure}
 şi adaugă-i la sfârşit:
-\texttt{;C:{\textbackslash}webdev{\textbackslash}php-5.3.1{\textbackslash}}, ca în
+\texttt{;C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}}, ca în
 Figura \ref{img:win env path}.
 \begin{figure}[h!]
   \centering
@@ -765,7 +765,7 @@ Testează dacă ai setat totul cum trebuie deschizând o nouă instanţă
 a promptului ms-dos.
 Acolo introdu comanda \texttt{php --ini}.
 Totul este corect dacă php este găsit de sistem, iar comanda de mai sus îţi
-arată \texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.1{\textbackslash}php.ini}
+arată \texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.ini}
 ca \textit{Loaded Configuration File}.
 
 %Mai multe informaţii despre PHP ca limbaj de scripting CLI găseşti pe
@@ -791,9 +791,9 @@ Deschide \texttt{httpd.conf} cu notepad++ şi adaugă-i la sfârşit
 \texttt{Include conf/extra/httpd-php.conf}
 apoi crează un nou fişier cu \keystroke{CTRL+N} cu acest conţinut:
 \begin{verbatim}
-LoadModule php5_module "C:/webdev/php-5.3.1/php5apache2_2.dll"
+LoadModule php5_module "C:/webdev/php-5.3.6/php5apache2_2.dll"
 AddType application/x-httpd-php .php
-PHPIniDir "C:/webdev/php-5.3.1"
+PHPIniDir "C:/webdev/php-5.3.6"
 
 <IfModule dir_module>
     DirectoryIndex index.php index.html
