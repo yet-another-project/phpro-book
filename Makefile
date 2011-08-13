@@ -11,7 +11,3 @@ clean:
 	rm -rf *.{toc,pdf}
 push:
 	git co stable && git push && git co integration && git merge stable && git push
-
-starter-pdf:
-	pdflatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP-start.tex && \
-	pdflatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP-start.tex
