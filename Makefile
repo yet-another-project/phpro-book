@@ -8,6 +8,6 @@ preview:
 clean:
 	rm -rf *.{aux,log,out,loe,ilg,ind,idx}
 	find . -type f -name "*~" -exec rm {} \;
-	rm -rf Dezvoltare\ web\ cu\ PHP.{toc,pdf}
+	rm -rf *.{toc,pdf}
 push:
 	git co stable && git push && git co integration && git merge stable && git push
