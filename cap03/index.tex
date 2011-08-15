@@ -2204,6 +2204,15 @@ Pentru a afişa diferite pagini, nu trebuie decât să acceptăm un
 parametru prin \texttt{\$\_GET} în funcţie de care să
 decidem care dintre pagini trebuie afişată.
 
+\attention{Fișierul de configurare \texttt{pages.php} constituie
+ceea ce putem numi \textsl{configuration logic}. În interiorul lui
+putem genera chiar și programatic configurația, folosind condiții,
+bucle, și orice altceva ce ține de controlul fluxului de execuție.
+Trebuie însă să fim atenți să nu denaturăm natura acelor informații
+care urmează a fi returnate. Iar de îndată ce am returnat o configurație,
+este bine să nu ne mai atingem de ea. Altfel riscăm să alergăm după
+greșeli de programare greu de identificat.}
+
 Vom modifica corespunzător \texttt{index.php}:
 
 \begin{lstlisting}[title=index.php]
