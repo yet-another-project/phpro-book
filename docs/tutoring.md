@@ -2,10 +2,10 @@ New-comers
 ==========
 * la indrumarea celor noi cel mai bine procedezi astfel, sistematic:
 * ii spui sa citeasca readme, si sa-ti spuna cand a terminat
-* cand a terminat, nu il intrebi daca are nelamuriri, il faci sa vorbeasca mai mult, deci intrebi "CE nelamuriri ai?"
+* cand a terminat, nu il intrebi daca are nelamuriri, il faci sa vorbeasca mai mult, deci intrebi "CE nelamuriri ai in legatura cu ceea ce ai citit acum?"
 * apoi ii spui sa urmeze "programul de tutelare"
-* tot, apoi aceeasi intrebare: "CE nelamuriri ai?"
-* apoi "novice", "CE nelamuriri ai?"
+* tot, apoi aceeasi intrebare: "CE nelamuriri ai in legatura cu ceea ce ai citit acum?"
+* apoi "novice", "CE nelamuriri ai in legatura cu ceea ce ai citit acum?"
 * si dupa ce totul e clar: bun, deci stii ce ai de facut ca sa intri in programul de tutelare
 * nu ii mai spui de "acum urmeaza <cum sa intri...>"
 * naiba, citeste si el singur :D
