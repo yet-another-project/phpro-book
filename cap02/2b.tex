@@ -2361,9 +2361,9 @@ o şi validezi, deci nu este o {\glqq}copie perfectă{\grqq}.
 memorie RAM degeaba, care de obicei e limitată.
 
 \subsection{Breaking down the logic}
-Fie conjuncţia \texttt{A \&\& B}. Avem următorul tabel de adevăr:
+Fie conjuncţia \texttt{A \&\& B} cu tabelul de adevăr \ref{tbl:truth table and}.
 
-\begin{table}[ht!]
+\begin{table}[htp]
   \begin{center}
   \begin{tabular}{cccc}
   Cazul nr & \textbf{A} & \textbf{B} & \textbf{A $\land$ B}\\
@@ -2379,9 +2379,10 @@ Fie conjuncţia \texttt{A \&\& B}. Avem următorul tabel de adevăr:
 
 Însă această conjuncţie folosită cu constructele \texttt{if} şi
 \texttt{else} nu poate face diferenţa între ultimele 3 cazuri dintre
-cele 4 din tabelul anterior: toate vor fi acoperite de ramura \texttt{else}:
+cele 4 din tabelul anterior: toate vor fi acoperite de ramura \texttt{else}, după
+cum se poate vedea în listarea \ref{lst:contracted conjunction}.
 
-\begin{lstlisting}[mathescape]
+\begin{lstlisting}[float=htp,mathescape,label=lst:contracted conjunction,caption=O singură conjuncție]
 if(A && B) {
   //cazul T $\land$ T = T
 }
@@ -2389,10 +2390,12 @@ else {
   //cazurile 2, 3, 4
 }
 \end{lstlisting}
+
 Ce facem însă dacă vrem să tratăm fiecare dintre cele 4 cazuri individual?
 Simplu: ne folosim de faptul că \textit{dacă A şi B} este acelaşi lucru ca
-\textit{dacă A şi dacă B}, rescriind exemplul nostru astfel:
-\begin{lstlisting}[mathescape]
+\textit{dacă A şi dacă B}, rescriind exemplul nostru ca în listarea \ref{lst:expanded conjunction}.
+
+\begin{lstlisting}[float=htp,mathescape,label=lst:expanded conjunction,caption=După extinderea conjuncției]
 if(A) {
   if(B) {
     //cazul T $\land$ T = T (cazul 1)
