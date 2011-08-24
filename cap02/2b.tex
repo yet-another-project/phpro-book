@@ -2428,9 +2428,41 @@ Există câteva standarde larg răspândite, majoritatea având diferite viziuni
 despre ce înseamnă {\glqq}cod uşor de înţeles şi mentenat{\grqq}.
 
 Şi \textit{Yet Another Project}\footnote{\url{https://github.com/OriginalCopy/yap-phpro-book}}
-are un astfel de standard. Acesta
-%FIXME finish this
+are un astfel de standard. Acesta a fost deja folosit în mod consistent în codurile
+sursă prezentate până acum. În continuare ne vom uita mai îndeaproape la această
+convenție.
 
+\begin{enumerate}
+\item identificatorii variabilelor sunt scriși cu litere mici, și ale constantelor cu litere mari
+\item pentru contoare se folosesc identificatori scurți precum \texttt{i} sau \texttt{j}
+\item acolada de deschidere a unui bloc de instrucțiuni este precedată de un spațiu și de o linie nouă;
+ea se află mereu pe aceeași linie cu constructul (precum \texttt{if}, \texttt{else}, \texttt{do}) căruia îi aparține
+\item codul din interiorul unui bloc este indentat cu un tab
+\item mărimea unui tab este de 4 spații
+\item acolada care închide un bloc de instrucțiuni este aliniată vertical cu constructul corespunzător
+\item după virgula care separă diferite elemente (membrii unui array de exemplu) se află un spațiu
+\end{enumerate}
+
+Un \textit{coding standard} real ar avea o anvergură mult mai mare. Aceste mici reguli există pentru
+a face codul mai lizibil. În special punctul 6 are un impact mare:
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[scale=.5]{cap02/code_align.png}
+  \caption{Alinierea codului}
+  \label{fig:code_align}
+\end{figure}
+
+Observi cum liniile 125 și 142 sunt aliniate vertical. La fel și 126 și 141. Astfel ochiului uman (cu puțin de antrenament)
+îi este foarte ușor să își dea seama care acoladă cui aparține.
+
+În continuare, toate listările vor respecta în continuare aceeași convenție de formatare a codului
+în mod consistent. Nu vor mai fi introduse explicit unele convenții, însă este bine să fii atent
+la aceste detalii pe măsură ce avansezi.
+
+Încă o mică convenție nescrisă: identificatorii \texttt{foo} și \texttt{bar} sunt folosiți ca înlocuitori
+pentru ceva fără semnificație. În cazul lor, programatorul vrea să sublinieze că nu variabilele respective
+în sinea lor sunt importante, ci alte concepte atașate lor.
 
 \section{Input şi formulare}
 Atunci când utilizatorul introduce date, pe care le numim colectiv \textsl{input},
