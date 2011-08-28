@@ -26,7 +26,7 @@ să renunţi singur la idee.
 
 Ce trebuie să faci, în ordine:
 
-  * citeşte cu atenţie capitolul Introducere şi spune-i tutorului
+  * citeşte cu atenţie capitolul Introducere şi spune-i tutorelui
   "Am citit capitolul Introducere şi am înţeles tot" sau
   "nu am înţeles totul din capitolul Introducere", şi întreabă
   tot ce nu ai înţeles.
