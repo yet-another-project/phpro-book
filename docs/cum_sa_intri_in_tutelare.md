@@ -53,7 +53,8 @@ Ce trebuie să faci, în ordine:
   text, deci pune extensia ".txt". La majoritatea exerciţiilor
   următoare (după ce ai trecut de stadiul "novice"), ţi se va cere
   cod PHP, deci vei pune extensia ".php", şi eventualele explicaţii
-  ca şi comentarii.
+  ca şi comentarii. **ATENŢIE**, pt. a evita un bug al gist-ului te rugăm, temporar, să-ţi
+  numeşti fişierele exact ca în carte, dar **fără spaţii**, exemplu: *WhatIsMyIPAdress* şi extensia.
   * Gistul creat poate fi public sau privat, poţi alege orice. Atenţie
   totuşi: gistul public va putea fi văzut de oricine.
   * Spune-i în privat (nu pe canal, în văzul tuturor) unui tutore
