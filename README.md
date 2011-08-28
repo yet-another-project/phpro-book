@@ -11,6 +11,8 @@ Cursul te ia de la zero în domeniul programării. La sfârşitul cursului:
 * vei deţine cunoştinţe tehnice despre programare
 * vei cunoaşte modul de lucru al unui programator, cu unele scule şi
 metodologii de programare din viaţa reală a unui programator
+* vei deține *soft skills*: capacitatea de a căuta și a te ajuta singur atunci când te-ai blocat (terminologia specifică în engleză), de a lucra în echipă, vei avea o gândire analitică și vei putea sintetiza noțiuni
+* vei avea un portofoliu cu **proiecte proprii**, necesare pentru angajatorii care cer experiență
 * **cel mai important**: vei gândi ca un programator
 
 Faptul că este folosit PHP ca limbaj prin prisma căruia înveţi aceste
