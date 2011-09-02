@@ -15,7 +15,7 @@ care este ultimul.
 Fişierul pe care tocmai l-ai descărcat nu este versiunea actuală
 a întregului curs, este doar un preview, este partea aceea din curs
 necesară şi suficientă în urma căreia vom determina dacă ai potenţialul
-de a deveni BUN în domeniu sau nu. Ţi se vor da instrucţiuni cu
+de a deveni BUN în domeniu sau nu. Ţi se vor da instrucţiuni 
 cum să obţii ultima versiune de îndată ce ai trecut de stadiul de novice
 şi am decis că meriţi să investim timp în tine.
 
