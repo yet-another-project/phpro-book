@@ -11,7 +11,8 @@ New-comers
 * naiba, citeste si el singur :D
 * iar la novice, daca nu e sigur ca indeplineste conditia cu HTML, il intrebi:
 * spune-ti ce termeni tehnici iti trec prin minte cand vezi acest cod "html": \<foo bar="test"\>
-* dacă răspunde corect, atunci ştie HTML, altfel îl trimiţi pe w3schools şi wikipedia
+* dacă răspunde daca spune "foo e tag/eticheta, bar e atribut, test e valoarea sa", atunci ştie HTML,
+ altfel îl trimiţi pe w3schools şi wikipedia
 
 La predarea gist-ului
 =====================
