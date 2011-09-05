@@ -718,7 +718,8 @@ Foloseşte-ţi intuiţia pentru a determina ce ar trebui
 să facă un astfel de algoritm şi ce nu, pe baza outputului.
 
 \ExePart
-Desenează două scheme logice, una pentru pseudocodul (greşit)
+Desenează două scheme logice\footnote{Poţi folosi programul
+\href{http://projects.gnome.org/dia/}{Dia}.}, una pentru pseudocodul (greşit)
 din partea I a exerciţiului, şi una pentru varianta corectă
 a pseudocodului pe care ai găsit-o ca soluţie în partea I.
 \end{Exercise}
@@ -1053,7 +1054,7 @@ astfel încât doar din alinierea constructelor, ochiul să poată
 fiecare instrucţiune, fără a fi nevoit să citeşti cu atenţie
 fiecare LOC.}
 
-Aceste constructe decizionale pot fi puse unul în altul (en. \textsl{nested}),
+Aceste constructe decizionale pot fi puse unele în altele (en. \textsl{nested}),
 formând algoritmi şi mai complecşi. De exemplu, să ne imaginăm cum
 ar arăta codul unei aplicaţii în care vizitatorii pot fi autentificaţi
 sau nu, iar unii din utilizatorii autentificaţi au drepturi speciale:
@@ -2831,8 +2832,10 @@ Liniile 14-16 sunt foarte repetitive, şi deşi putem proceda ca în exemplul de
 checkbox, un label, şi o intrare în array-ul \$fructe care conţine informaţiile efective, acest lucru e foarte
 ineficient şi mănâncă timp dacă vrem să personalizăm acest script.
 
-\bad{Când ai linii de cod repetitive, foarte asemănătoare, cel mai probabil poţi face acele
-lucruri într-o buclă.}
+\good{Când ai linii de cod repetitive foarte asemănătoare din punct de verede structural,
+cel mai probabil poţi face acele lucruri într-o buclă. Folosește aceste bucle pentru a
+reduce costurile de mentenanță (și modificare) a codului, deci implicit și pentru
+economisirea timpului. Astfel devii mai productiv.}
 
 Ce se întâmplă dacă vrem să adăugăm sau
 să ştergem un fruct? Trebuie să o facem în trei locuri!
