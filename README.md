@@ -18,6 +18,7 @@ metodologii de programare din viaţa reală a unui programator
 Faptul că este folosit PHP ca limbaj prin prisma căruia înveţi aceste
 lucruri este un lucru marginal, scopul cursului nefiind să te înveţe
 PHP în primul şi primul rând. Doar "întâmplător" vei şti şi PHP.
+Și îl vei ști BINE.
 
 Cartea în sinea sa este aproape inutilă fără sprijinul comunităţii. Noi nu
 oferim doar o simplă carte, ci un program *gratuit* de tutelare care
