@@ -8,6 +8,7 @@ Network: irc.freenode.net
 
 Cum să intri pe IRC
 -------------------
+####v. 1
 
 Ai nevoie de un client IRC. Unul dintre ele este [Chatzilla](https://addons.mozilla.org/en-US/firefox/addon/chatzilla/),
 o extensie Firefox.
@@ -25,6 +26,21 @@ Apoi, după conectare, în tabul nou creat numit "freenode", introdu comanda:
 Acum vei putea vorbi cu noi live, cei din lista de pseudonime din stânga. O practică bună
 e să saluţi la intrare, aşa vezi şi dacă cineva e atent la canal, şi mai şi arăţi
 că ştii să te porţi :D
+
+Detaliile canalului se află în partea de sus a ferestrei Chatzilla.
+
+Cum să intri pe IRC
+-------------------
+####v. 2
+
+Instalarea Chatzilla sau a oricarui client de IRC nu este obligatorie, ai putea face acelaşi lucru 
+şi daca accesezi clientul online specific freenode: http://webchat.freenode.net/
+
+După ce ai intrat pe acea pagina trebuie să iţi setezi un nickname, să ii spui clientului pe ce canal(e) să intre,
+deci să completezi câmpul corespunzător cu `#yet-another-project`, apoi să completezi corect codul de verificare 
+şi să apeşi pe butonul Connect.
+
+Lista de pseudonime se află în partea dreaptă, iar detaliile canalului în partea de sus.
 
 Ce este freenode?
 -----------------
