@@ -34,11 +34,11 @@ Cum să intri pe IRC
 ####v. 2
 
 Instalarea Chatzilla sau a oricarui client de IRC nu este obligatorie, ai putea face acelaşi lucru 
-şi daca accesezi clientul online specific freenode: http://webchat.freenode.net/
+şi dacă accesezi clientul online specific freenode: http://webchat.freenode.net/
 
-După ce ai intrat pe acea pagina trebuie să iţi setezi un nickname, să ii spui clientului pe ce canal(e) să intre,
+După ce ai intrat pe acea pagină trebuie să iţi setezi un nickname, să ii spui clientului pe ce canal(e) să intre,
 deci să completezi câmpul corespunzător cu `#yet-another-project`, apoi să completezi corect codul de verificare 
-şi să apeşi pe butonul Connect.
+şi să apeşi pe butonul *Connect*.
 
 Lista de pseudonime se află în partea dreaptă, iar detaliile canalului în partea de sus.
 
