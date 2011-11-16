@@ -42,6 +42,10 @@ deci să completezi câmpul corespunzător cu `#yet-another-project`, apoi să c
 
 Lista de pseudonime se află în partea dreaptă, iar detaliile canalului în partea de sus.
 
+*ATENTIE!*
+Cursanţii care intră în tutelare ar trebui să folosească un client de IRC dedicat, care salvează log-uri, 
+deci prima variantă de conectare ar fi mai indicată.
+
 Ce este freenode?
 -----------------
 
