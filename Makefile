@@ -1,11 +1,11 @@
 R-CEDILLA=$(shell ./diacritice.sh)
 
-pdf:
-	$(R-CEDILLA)
+.PHONY: clean push cedilla
+
+pdf: cedilla
 	xelatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP.tex && \
 	xelatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP.tex
-preview:
-	$(R-CEDILLA)
+preview: cedilla
 	xelatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP\-preview.tex && \
 	xelatex -halt-on-error -interaction=nonstopmode Dezvoltare\ web\ cu\ PHP\-preview.tex && \
 	mv Dezvoltare\ web\ cu\ PHP\-preview.pdf "dezvoltare_web_cu_php-$(shell date +'%d_%m_%Y').pdf"
