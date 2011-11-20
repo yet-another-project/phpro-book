@@ -1,10 +1,10 @@
 \section{O altfel de reîmprospătare}
 %\linenumbers
 
-Vreau să stabilesc nişte lucruri care probabil nu sunt evidente
+Vreau să stabilesc niște lucruri care probabil nu sunt evidente
 pentru tine, sau asupra cărora nu ai insistat prea mult
-când ai început să înveţi să creezi \textit{site}-uri statice
-cu HTML, eventual cu CSS sau poate chiar cu interacţiune
+când ai început să înveți să creezi \textit{site}-uri statice
+cu HTML, eventual cu CSS sau poate chiar cu interacțiune
 în interiorul browserului cu JavaScript.
 
 HTML este un \engl{limbaj de formatare}{markup language}.
@@ -15,12 +15,12 @@ semantic (\href{http://en.wikipedia.org/wiki/Semantic_HTML}{semantic HTML}),
 pentru a putea fi interpretat mai bine de motoarele de căutare web
 (en. \textsl{search engine}).
 
-Există multe formate de fişiere, şi chiar în capitolul anterior ai
-lucrat cu două astfel de formate -- formatul de configurare specific apache, şi protocolul
-HTTP. Dacă îţi aminteşti,
-ţi-am explicat pe rând ce înseamnă directive precum \texttt{Include}.
-Semnificaţia acestor directive, sau general spus, semnificaţia oricărei
-entităţi specifice unui limbaj (fie el de markup -- HTML, de configurare
+Există multe formate de fișiere, și chiar în capitolul anterior ai
+lucrat cu două astfel de formate -- formatul de configurare specific apache, și protocolul
+HTTP. Dacă îți amintești,
+ți-am explicat pe rând ce înseamnă directive precum \texttt{Include}.
+Semnificația acestor directive, sau general spus, semnificația oricărei
+entități specifice unui limbaj (fie el de markup -- HTML, de configurare
 -- \texttt{httpd.conf}, de programare -- PHP, sau un protocol de
 comunicare -- HTTP) constituie \textsl{semantica}
 acelui limbaj.
@@ -29,33 +29,33 @@ Semantica unui anumit construct al unui limbaj (de orice natură
 ar fi el) este strâns legată de \textit{contextul} în care se află acel
 construct.
 De exemplu, pentru a cere o resursă cu HTTP, am văzut că
-poţi începe cererea cu GET, urmat
+poți începe cererea cu GET, urmat
 de o cale absolută (care începe cu {\glqq}/{\grqq}) din cadrul \texttt{Host}-ului
-în cauză. Calea respectivă are semnificaţia pe care o vrem
+în cauză. Calea respectivă are semnificația pe care o vrem
 doar în contextul lui {\glqq}GET{\grqq}, ca dovadă că atunci când vedem
 căi de genul \texttt{/script.php} pe site-uri web,
-acestea nu sunt interpretate automat ca parametri GET, şi
-deci browserul nostru nu este redirecţionat către acele pagini.
+acestea nu sunt interpretate automat ca parametri GET, și
+deci browserul nostru nu este redirecționat către acele pagini.
 
 \textsl{Contextul} a ceva înseamnă în ce punem acel ceva pentru a
 avea o anumită semantică. De exemplu, sarea pusă în contextul
 gătitului are semantica de \textit{condiment}, dar dacă
 o pui pe o rană, are semantica de \textit{ceva care provoacă durere}.
 Cu alte cuvinte, \textsl{context} înseamnă
-\textsl{circumstanţe} sau \textsl{mediul înconjurător}. 
+\textsl{circumstanțe} sau \textsl{mediul înconjurător}. 
 
-Analog, {\glqq}HTTP/1.1{\grqq} are semantica de {\glqq}protocolul şi versiunea folosită{\grqq}
+Analog, {\glqq}HTTP/1.1{\grqq} are semantica de {\glqq}protocolul și versiunea folosită{\grqq}
 în contextul \textit{request line}-ului HTTP al unui \textit{request HTTP}.
 
 \begin{Exercise}[title={Întrebări de sinteză},difficulty=2]
-Însă şi GET însuşi are semnificaţia pe care ai întâlnit-o în capitolul
+Însă și GET însuși are semnificația pe care ai întâlnit-o în capitolul
 trecut doar într-un anumit context semantic.
 
 \Question Care este acest context semantic?
 \Question În ce context semantic are semantica întâlnită constructul \texttt{Include}?
 \Question În ce context semantic are sens comunicarea în limbajul (în protocolul) HTTP?
 \ExeText Determină contextul semantic în care următoarele constructe au semantica pe
-care o intuieşti ca cunoscător al limbajului HTML:
+care o intuiești ca cunoscător al limbajului HTML:
 \Question <td>
 \Question <tr>
 \Question <body>
@@ -64,58 +64,58 @@ care o intuieşti ca cunoscător al limbajului HTML:
 \end{Exercise}
 
 
-\attention{Dacă ai avut dificultăţi majore la
+\attention{Dacă ai avut dificultăți majore la
 răspunderea întrebărilor de sinteză, te rog ia atitudine. În primul
-rând, plec de la premiza că citeşti cu atenţie, şi că reţii tot
-ce-ţi povestesc. Toate noţiunile pe care le introduc, le introduc
+rând, plec de la premiza că citești cu atenție, și că reții tot
+ce-ți povestesc. Toate noțiunile pe care le introduc, le introduc
 pentru că astfel voi putea explica lucruri destul de complicate
-mai târziu, pe baza celor spuse aici. \textit{Asta îţi va permite să
-ştii multe învăţând cât mai puţin}. {\glqq}Dezavantajul{\grqq} este că
-va trebui să fii concentrat la ce citeşti, şi să sintetizezi
-singur mult. Sinteza aceasta este un exerciţiu perfect pentru
+mai târziu, pe baza celor spuse aici. \textit{Asta îți va permite să
+știi multe învățând cât mai puțin}. {\glqq}Dezavantajul{\grqq} este că
+va trebui să fii concentrat la ce citești, și să sintetizezi
+singur mult. Sinteza aceasta este un exercițiu perfect pentru
 tine ca viitor programator, deoarece atunci când vei programa
 vei fi confruntat cu această nevoie de a sintetiza lucruri.
-Metoda mea de predare, deşi dură, te pregăteşte foarte bine pentru
-cariera ta de programator. Deci dacă simţi că nu eşti stăpân
-pe ce ai învăţat până acum despre reţelistică
-şi despre semantică, reciteşte acum, până nu te pierzi definitiv.
-Când reciteşti, urmează link-urile menţionate -- după cum am spus
-în capitolul Introducere, acestea nu sunt lectură opţională.}
+Metoda mea de predare, deși dură, te pregătește foarte bine pentru
+cariera ta de programator. Deci dacă simți că nu ești stăpân
+pe ce ai învățat până acum despre rețelistică
+și despre semantică, recitește acum, până nu te pierzi definitiv.
+Când recitești, urmează link-urile menționate -- după cum am spus
+în capitolul Introducere, acestea nu sunt lectură opțională.}
 
-Pe lângă semantică, un limbaj mai are şi o \textsl{sintaxă}. Regulile sintactice
+Pe lângă semantică, un limbaj mai are și o \textsl{sintaxă}. Regulile sintactice
 ale limbajelor sunt necesare pentru a crea contextul semantic în
 care vor exista constructele acelui limbaj.
 
 Vreau să ilustrez asta cu un exemplu: în protocolul HTTP, GET trebuie
-să fie separat de cale printr-un spaţiu. Asta este o regulă sintactică
+să fie separat de cale printr-un spațiu. Asta este o regulă sintactică
 a limbajului, standardizată prin
 RFC-uri,
 însă practic separatorul ar putea fi orice altceva.
 Însă un separator trebuie să fie acolo, altfel calculatorul (browser-ul
 sau daemon-ul) nu ar putea decide unde începe cuvântul cheie {\glqq}GET{\grqq}, unde
-se termină, şi unde începe calea către resursa pe care o dorim.
+se termină, și unde începe calea către resursa pe care o dorim.
 Aceste reguli sintactice
-permit programelor precum daemon-uri şi clienţi HTTP
-să parseze (să {\glqq}înţeleagă{\grqq}) datele comunicate reciproc.
+permit programelor precum daemon-uri și clienți HTTP
+să parseze (să {\glqq}înțeleagă{\grqq}) datele comunicate reciproc.
 
-Există multe posibilităţi de a exprima sintaxa unui limbaj, însă acestea
+Există multe posibilități de a exprima sintaxa unui limbaj, însă acestea
 sunt mult prea complexe pentru noi. Însă există un standard nescris
 pentru a specifica sintaxa unor constructe simple, într-o singură linie.
 Ea se leagă de necesitatea unui anumit parametru.
 
 De exemplu, sintaxa constructului GET ar putea fi:\\
 \begin{verbatim}'GET ' <RESOURCE> ' HTTP/1.1'\end{verbatim}
-\texttt{RESOURCE} este pus între < şi >, ceea ce denotă că
+\texttt{RESOURCE} este pus între < și >, ceea ce denotă că
 este un parametru necesar, care trebuie specificat.
-'GET ' (inclusiv spaţiul) şi ' HTTP/1.1' sunt puse
+'GET ' (inclusiv spațiul) și ' HTTP/1.1' sunt puse
 între apostrofuri pentru a arăta că sunt lucruri
-ce trebuie scrise exact aşa cum sunt. \texttt{RESOURCE}
+ce trebuie scrise exact așa cum sunt. \texttt{RESOURCE}
 este numele simbolic al parametrului, pe care îl putem
-refolosi în documentaţia limbajului (în cazul nostru,
+refolosi în documentația limbajului (în cazul nostru,
 documentarea limbajului HTTP, sau mai bine spus, a unei
 cereri HTTP de bază).
 
-Pentru a specifica că un parametru e opţional, îl punem între [ şi ].
+Pentru a specifica că un parametru e opțional, îl punem între [ și ].
 Astfel, sintaxa unei cereri HTTP ca cea pe care am făcut-o în capitolul
 anterior, împreună cu descrierea ei, ar putea arăta astfel:
 \begin{verbatim}
@@ -129,58 +129,58 @@ anterior, împreună cu descrierea ei, ar putea arăta astfel:
 	- enter    = press return once
 \end{verbatim}
 
-Pe lângă lucrurile evidente pe care ni le spune această specificaţie
-sintactică, ne mai spune şi un lucru care probabil ţi-a scăpat:
-câmpul \texttt{Host} este opţional, dar dacă îl specificăm, atunci
-trebuie să specificăm şi parametrul \texttt{name}, şi să şi apăsăm o dată enter.
+Pe lângă lucrurile evidente pe care ni le spune această specificație
+sintactică, ne mai spune și un lucru care probabil ți-a scăpat:
+câmpul \texttt{Host} este opțional, dar dacă îl specificăm, atunci
+trebuie să specificăm și parametrul \texttt{name}, și să și apăsăm o dată enter.
 
-Cu siguranţă ai realizat că astfel de reguli pot fi incluse una în alta,
+Cu siguranță ai realizat că astfel de reguli pot fi incluse una în alta,
 creând reguli destul de complexe.
 
-Un limbaj precum cel de mai sus, care foloseşte <,>,[,] pentru a specifica
-un alt limbaj se numeşte un \textsl{metalimbaj}. \textit{Meta} înseamnă
+Un limbaj precum cel de mai sus, care folosește <,>,[,] pentru a specifica
+un alt limbaj se numește un \textsl{metalimbaj}. \textit{Meta} înseamnă
 \textit{care descrie} - \textit{un limbaj care descrie limbajul}.
 
 
 
 Cel mai probabil ai întâlnit deja \textsl{tag}-ul HTML \texttt{<meta>}, de aici
-îi provine numele. Diferenţa este că \texttt{<meta>} nu se referă la limbaj (HTML
-în cazul de faţă), ci la informaţii. Ceea ce \texttt{<meta>} ne spune despre
-documentul HTML în care se află se numesc \textsl{metainformaţii} - \textit{informaţii
-care descriu informaţiile din documentul curent}.
+îi provine numele. Diferența este că \texttt{<meta>} nu se referă la limbaj (HTML
+în cazul de față), ci la informații. Ceea ce \texttt{<meta>} ne spune despre
+documentul HTML în care se află se numesc \textsl{metainformații} - \textit{informații
+care descriu informațiile din documentul curent}.
 
 Probabil ai folosit deja un forum pe web. Probabil că acel forum
-îţi spunea la un moment dat că autorul unei intrări (al unui \textsl{topic}
-sau \textsl{thread}) se numeşte Xulescu. Ei bine, în timp ce
-intrarea propriu-zisă constituie informaţia, numele autorului
-este o \engl{metainformaţie}{metadata} - o informaţie despre
-informaţie.
-%Vom reveni mai târziu asupra conceptului de metainformaţie.
+îți spunea la un moment dat că autorul unei intrări (al unui \textsl{topic}
+sau \textsl{thread}) se numește Xulescu. Ei bine, în timp ce
+intrarea propriu-zisă constituie informația, numele autorului
+este o \engl{metainformație}{metadata} - o informație despre
+informație.
+%Vom reveni mai târziu asupra conceptului de metainformație.
 
 \attention{
-La ce îţi foloseşte această cunoaştere despre metadate, metalimbaje, sintaxă
-şi semantică? În primul rând, ai învăţat primul cel mai important
-lucru pragmatic din viitoarea ta carieră de programator: să citeşti manualul
+La ce îți folosește această cunoaștere despre metadate, metalimbaje, sintaxă
+și semantică? În primul rând, ai învățat primul cel mai important
+lucru pragmatic din viitoarea ta carieră de programator: să citești manualul
 (PHP sau orice altceva) -- chiar dacă încă
-nu eşti conştient de asta.
+nu ești conștient de asta.
 
 \smallskip
 
-În al doilea rând, meta-ceva-urile te vor însoţi
-în toate aplicaţiile pe care le vei programa. Uită-te
-la toate aplicaţiile pe care le foloseşti, vei vedea
-că toate au nişte metadate. Singurul lucru care
-te-ar împiedica să vezi asta este că datele şi
+În al doilea rând, meta-ceva-urile te vor însoți
+în toate aplicațiile pe care le vei programa. Uită-te
+la toate aplicațiile pe care le folosești, vei vedea
+că toate au niște metadate. Singurul lucru care
+te-ar împiedica să vezi asta este că datele și
 metadatele se întretaie atât de mult încât e
 greu să le identifici pe fiecare.
 
 \smallskip
 
-Şi în al treilea rând, pentru a te pregăti pentru
-exerciţiile următoare care au menirea de a te dezgheţa la minte puţin,
-deoarece, din păcate, nu ştiu nimic despre cititorul meu, însă trebuie
-să mă asigur cumva că este pe aceeaşi lungime de undă ca mine, ceea ce-i
-permite să asimileze cât mai eficient cunoaşterea prezentată
+Și în al treilea rând, pentru a te pregăti pentru
+exercițiile următoare care au menirea de a te dezgheța la minte puțin,
+deoarece, din păcate, nu știu nimic despre cititorul meu, însă trebuie
+să mă asigur cumva că este pe aceeași lungime de undă ca mine, ceea ce-i
+permite să asimileze cât mai eficient cunoașterea prezentată
 în continuare, fără risipă de cuvinte.}
 
 %TODO spune că e un pattern, că 'aba' este potrivit de X Y X, deoarece respectă 'modelul'
@@ -200,67 +200,67 @@ Care dintre următoarele inputuri o respectă?
 \Question AAAC % da
 \Question AAABC % da
 \ExePart
-Detaşează-te de nivelul abstract al acestei reguli sintactice, şi fă o afirmaţie
-\textit{pragmatică} despre B. Afirmaţia începe aşa:
+Detașează-te de nivelul abstract al acestei reguli sintactice, și fă o afirmație
+\textit{pragmatică} despre B. Afirmația începe așa:
 \textit{Într-un input valid, B este mereu \ldots} % este mereu precedat de cel putin 3, de maxim 6 A-uri
 \end{Exercise}
 
 Metalimbajul prezentat nu este bătut în cuie. În primul rând,
-caracterele speciale ale limbajului <,>,[,] şi ' pot fi schimbate
+caracterele speciale ale limbajului <,>,[,] și ' pot fi schimbate
 în orice, atâta timp cât documentezi aceste schimbări aduse de tine.
 
-Deasemenea, nu este decât un standard nescris, şi îl poţi
+Deasemenea, nu este decât un standard nescris, și îl poți
 extinde în ce fel ai nevoie. Din nou, important este doar
 să documentezi {\glqq}extensiile{\grqq} aduse metalimbajului astfel
-încât ceilalţi programatori să îţi înţeleagă specificaţia
+încât ceilalți programatori să îți înțeleagă specificația
 limbajului pe care îl descrii cu ajutorul acelei
 extensii proprii a metalimbajului.
 
 De exemplu, să zicem că vrem să introducem un nou
 construct în acest metalimbaj care să însemne \textit{simbolul
-din stânga mea poate apărea o dată sau de mai multe ori}, şi
+din stânga mea poate apărea o dată sau de mai multe ori}, și
 ne decidem să folosim simbolul '+' pentru asta.
 
 Astfel o regulă de genul:
 \begin{verbatim}
 	<FOO+> [BAR+]
 \end{verbatim}
-S-ar putea citi ca: \textit{Unul sau mai mulţi \texttt{FOO} urmat de zero sau mai
-mulţi \texttt{BAR}}. Un astfel de simbol precum '+' se numeşte \textsl{cuantificator}.
-Ar fi la îndemână să stabilim, în documentaţia extensiei noastre adusă metalimbajului,
+S-ar putea citi ca: \textit{Unul sau mai mulți \texttt{FOO} urmat de zero sau mai
+mulți \texttt{BAR}}. Un astfel de simbol precum '+' se numește \textsl{cuantificator}.
+Ar fi la îndemână să stabilim, în documentația extensiei noastre adusă metalimbajului,
 că '+' poate cuantifica orice entitate din stânga sa, inclusiv o grupare <> sau [].
 
-Documentaţia ar suna aşa:
+Documentația ar suna așa:
 \begin{verbatim}
 + = repeat the entity on its left once or multiple times (a quantifier)
     the entity can be any SYMBOL, <required parameter> or
 	[optional parameter]
 \end{verbatim}
-Iar exemplul de mai sus, în care vrem ca \texttt{FOO} şi \texttt{BAR}
-să fie separaţi de un eventual spaţiu, ar deveni:
+Iar exemplul de mai sus, în care vrem ca \texttt{FOO} și \texttt{BAR}
+să fie separați de un eventual spațiu, ar deveni:
 \begin{verbatim}
 	<FOO ' '>+ [BAR ' ']+
 \end{verbatim}
 
-Până acum definiţiile noastre sintactice se limitau doar la
+Până acum definițiile noastre sintactice se limitau doar la
 o singură regulă (o singură linie), însă am putea introduce
 constructe în metalimbaj care ne-ar da voie să atribuim nume
-acestor reguli, şi să refolosim acele nume în definiţiile altor
-reguli sintactice, creând astfel interdependenţe între reguli,
-şi deci crea specificaţiile unor limbaje foarte complexe.
+acestor reguli, și să refolosim acele nume în definițiile altor
+reguli sintactice, creând astfel interdependențe între reguli,
+și deci crea specificațiile unor limbaje foarte complexe.
 
 \attention{Majoritatea limbajelor de programare, inclusiv
 PHP, sunt definite în astfel de limbaje.}
 
 \begin{Exercise}[title={Sintaxa HTML},label={ex:sintaxa_html},difficulty=3]
-Acum hai să aplicăm ce am învăţat asupra limbajului HTML. În HTML avem
-tag-uri (ex. \texttt{<html>}) care au atribute şi valori.
+Acum hai să aplicăm ce am învățat asupra limbajului HTML. În HTML avem
+tag-uri (ex. \texttt{<html>}) care au atribute și valori.
 
-\Question Crează o specificaţie sintactică a limbajului HTML folosind
-doar cuvintele cheie TAG, ATTRIBUTE şi VALUE, care combinate
-cu [] şi <> să reflecte cât mai corect sintaxa limbajului.
+\Question Crează o specificație sintactică a limbajului HTML folosind
+doar cuvintele cheie TAG, ATTRIBUTE și VALUE, care combinate
+cu [] și <> să reflecte cât mai corect sintaxa limbajului.
 
-Specificaţia trebuie să valideze orice text HTML valid.
+Specificația trebuie să valideze orice text HTML valid.
 Un exemplu de input ar fi:
 \begin{verbatim}
 <form method="get">
@@ -272,21 +272,21 @@ Un exemplu de input ar fi:
 Note:
 \begin{itemize}
 \item Regula creată \textit{nu} trebuie să ia în calcul sintaxa
-specifică XHTML (în care de exemplu '<img>' ar fi greşit, doar '<img />' este valid).
+specifică XHTML (în care de exemplu '<img>' ar fi greșit, doar '<img />' este valid).
 \item Se pleacă de la premiza că inputul este cel mai curat HTML posibil, că
 sunt folosite " pentru a delimita valorile atributelor (dacă acestea există), că
-nu e mai mult de un spaţiu acolo unde e nevoie de spaţiu, ş.a.m.d. Pe scurt:
-foloseşte-ţi intuiţia pentru a decide ce înseamnă {\glqq}cel mai curat HTML posibil{\grqq}.
-\item Deoarece caracterele < şi > au o semnificaţie specială în limbajul HTML, pe
+nu e mai mult de un spațiu acolo unde e nevoie de spațiu, ș.a.m.d. Pe scurt:
+folosește-ți intuiția pentru a decide ce înseamnă {\glqq}cel mai curat HTML posibil{\grqq}.
+\item Deoarece caracterele < și > au o semnificație specială în limbajul HTML, pe
 care încerci să-l descrii sintactic folosind printre altele
-şi caracterele < şi > înseşi, va trebui să le pui între apostrofuri, pentru a face
-diferenţa între <,> care ne spun în metalimbajul nostru
-că acel parametru este necesar, şi '<' sau '>' care
+și caracterele < și > înseși, va trebui să le pui între apostrofuri, pentru a face
+diferența între <,> care ne spun în metalimbajul nostru
+că acel parametru este necesar, și '<' sau '>' care
 ne spun că ne referim la caracterul '<' respectiv '>' în limbajul pe care
-vrem să-l descriem (adică HTML însuşi).
-\item Va trebui să extinzi metalimbajul (nu uita să şi documentezi extensiile aduse)
-pentru a ajunge la o rezolvare cât mai corectă şi completă
-\item Exerciţiul este destul de dificil. Încearcă să te apropii cât mai mult de soluţia
-cea mai corectă şi completă.
+vrem să-l descriem (adică HTML însuși).
+\item Va trebui să extinzi metalimbajul (nu uita să și documentezi extensiile aduse)
+pentru a ajunge la o rezolvare cât mai corectă și completă
+\item Exercițiul este destul de dificil. Încearcă să te apropii cât mai mult de soluția
+cea mai corectă și completă.
 \end{itemize}
 \end{Exercise}
