@@ -1,180 +1,180 @@
-\chapter{Baze de date şi lucrul în echipă}
+\chapter{Baze de date și lucrul în echipă}
 \vskip -25pt
-\textit{În acest capitol vei învăţa fundamentele bazelor de date şi lucrul într-o echipă de programatori,
-cu toate uneltele necesare şi unele \textit{soft skills} de care are nevoie un programator.
+\textit{În acest capitol vei învăța fundamentele bazelor de date și lucrul într-o echipă de programatori,
+cu toate uneltele necesare și unele \textit{soft skills} de care are nevoie un programator.
 \vskip 1em
-Scopul acestui capitol este să te pregătească pentru exerciţiul de la sfârşitul capitolului
+Scopul acestui capitol este să te pregătească pentru exercițiul de la sfârșitul capitolului
 care constă într-un proiect pe care îl vei face într-o echipă.
 Începând cu acest capitol, tutorii {\phpro} mai mult te vor îndruma, te vor consilia, atât
 pe tine individual, doar atunci când ai absolut nevoie, dar mai ales pe întreaga echipă.
 \vskip 1em
-Prin urmare, vei fi mult mai independent, dar vei şi avea o responsabilitate mai mare --
-cel puţin faţă de colegii de echipă.
+Prin urmare, vei fi mult mai independent, dar vei și avea o responsabilitate mai mare --
+cel puțin față de colegii de echipă.
 }
 \vskip 5em
 
 \section{Git}
 \subsection{Istoria unui proiect}
 Probabil că până acum te-ai confruntat deja cu următorul scenariu: vrei
-să testezi ceva în programul tău, dar nu eşti sigur că schimbarea
+să testezi ceva în programul tău, dar nu ești sigur că schimbarea
 va deveni permanentă.
 
 Cel mai probabil te-ai folosit de comentarii în astfel de cazuri: ai comentat
-o parte din codul sursă şi ai scris o nouă implementaţie dedesubt. Dacă a
-fost vorba de modificări prin mai multe fişiere, probabil ai repetat acelaşi
+o parte din codul sursă și ai scris o nouă implementație dedesubt. Dacă a
+fost vorba de modificări prin mai multe fișiere, probabil ai repetat același
 procedeu pentru fiecare dintre acestea.
 
-Dacă ai avut noroc, schimbările tale au fost bune, şi tot ce a trebuit să
-faci în cele din urmă a fost să ştergi implementaţia veche, comentată,
-şi să o laşi doar pe cea nouă în loc.
+Dacă ai avut noroc, schimbările tale au fost bune, și tot ce a trebuit să
+faci în cele din urmă a fost să ștergi implementația veche, comentată,
+și să o lași doar pe cea nouă în loc.
 
-Dacă nu ai avut noroc, ţi-ai dat seama că ideea ta nu a fost cea mai grozavă,
-şi a trebuit să restaurezi versiunea veche. În urma restaurării, probabil ai
-avut noroc şi ai reuşit să revii la versiunea veche fără probleme.
+Dacă nu ai avut noroc, ți-ai dat seama că ideea ta nu a fost cea mai grozavă,
+și a trebuit să restaurezi versiunea veche. În urma restaurării, probabil ai
+avut noroc și ai reușit să revii la versiunea veche fără probleme.
 
 Însă cel mai probabil, nu ai avut noroc deloc.
 
-Ei bine, mulţumită unor programe numite \textsl{revision control systems}
+Ei bine, mulțumită unor programe numite \textsl{revision control systems}
 (abv. RCS),
 nu ai nevoie de noroc atunci când codul sursă al proiectului tău evoluează,
 sau când doar vrei să testezi lucruri noi.
 
-Cu un RCS, nu mai e nevoie să laşi la voia întâmplării modificările
+Cu un RCS, nu mai e nevoie să lași la voia întâmplării modificările
 aduse codului -- tot ceea ce faci este înregistrat, fiecare schimbare,
-fie ea şi cât de mică. Partea bună e că poţi reveni la orice versiune
+fie ea și cât de mică. Partea bună e că poți reveni la orice versiune
 a codului, oricând, oricum!
 
-Deşi ai multe avantaje atunci când foloseşti un RCS ca un programator singur,
-RCS-urile îşi dezvoltă adevărata putere atunci când lucrezi în echipă
-cu alţi programatori.
+Deși ai multe avantaje atunci când folosești un RCS ca un programator singur,
+RCS-urile își dezvoltă adevărata putere atunci când lucrezi în echipă
+cu alți programatori.
 
 Printre cele mai cunoscute RCS-uri se numără \textit{subversion},
-\textit{mercurial}, \textit{bazaar}, \textit{BitKeeper} şi \textit{git}.
+\textit{mercurial}, \textit{bazaar}, \textit{BitKeeper} și \textit{git}.
 
 În acest curs, vei folosi Git. Git s-a născut din necesitatea
-programatorilor kernelului Linux de a-şi controla mai organizat
+programatorilor kernelului Linux de a-și controla mai organizat
 procesul de dezvoltare.
 
 Spre deosebire de subversion, cu git nu există un server central,
-de aceea git se numeşte şi DRCS, D venind de la \textsl{distributed}.
+de aceea git se numește și DRCS, D venind de la \textsl{distributed}.
 
-Pentru o listă a termenilor cei mai importanţi citeşte despre
+Pentru o listă a termenilor cei mai importanți citește despre
 \href{http://en.wikipedia.org/wiki/Revision_control}{revision control}.
 
 \subsection{Getting started}
-Sub GNU/Linux, instalarea este destul de simplă: foloseşte
-package manager-ul distribuţiei tale pentru a instala pachetul "git".
+Sub GNU/Linux, instalarea este destul de simplă: folosește
+package manager-ul distribuției tale pentru a instala pachetul "git".
 
 Pentru Microsoft Windows,
 intră pe pagina oficială\footnote{\url{http://code.google.com/p/msysgit/}}
-şi instalează \textit{Full installer for official Git}. La pasul
+și instalează \textit{Full installer for official Git}. La pasul
 \textit{Adjusting your PATH environment}, selectează \textit{Run
-Git from the windows command prompt}. Restul opţiunilor ar trebui
-să fie bune aşa cum ţi le prezintă installer-ul. Pe desktop ar trebui
-să-ţi apară simbolul "git bash".
+Git from the windows command prompt}. Restul opțiunilor ar trebui
+să fie bune așa cum ți le prezintă installer-ul. Pe desktop ar trebui
+să-ți apară simbolul "git bash".
 
 După ce ai instalat git, urmează cartea ProGit\footnote{\url{http://progit.org}},
-capitolele 1-3. Aceasta îţi va prezenta mai toate noţiunile elementare
+capitolele 1-3. Aceasta îți va prezenta mai toate noțiunile elementare
 despre git.
 
 \begin{Exercise}[title={A taste of git}]
-Dacă eşti în programul de tutelare, ai deja cont pe github.com.
-Acest site îţi oferă hosting pentru proiectele tale. Intră
+Dacă ești în programul de tutelare, ai deja cont pe github.com.
+Acest site îți oferă hosting pentru proiectele tale. Intră
 în contact cu noi pe IRC pentru a fi îndrumat.
 
 Crează un nou proiect pe github.com denumit la fel ca username-ul
-tău de pe github.com, iar apoi clonează-l local şi experimentează
+tău de pe github.com, iar apoi clonează-l local și experimentează
 cu el.
 
-Pentru lucrul cu repozitoriile hostate pe github, citeşte instrucţiunile
+Pentru lucrul cu repozitoriile hostate pe github, citește instrucțiunile
 de configurare de pe github\footnote{\url{http://help.github.com/}}.
 
-Întreabă-i pe ceilalţi cursanţi ce lucruri interesante mai poţi face
+Întreabă-i pe ceilalți cursanți ce lucruri interesante mai poți face
 cu git.
 
 Încearcă să te joci cât mai mult cu acest utilitar, deoarece de acum
 încolo toate proiectele tale vor fi puse sub revision control în git.
 
-Îţi aminteşti probabil şi de "gist-ul" unde ţi-ai salvat toate soluţiile
-la exerciţii până acum. Ei bine, un "gist" nu este nimic altceva decât
-un repozitoriu git. Îl poţi clona bine mersi, şi opera pe el
-din confortul consolei tale -- nu e nevoie să accesezi interfaţa
+Îți amintești probabil și de "gist-ul" unde ți-ai salvat toate soluțiile
+la exerciții până acum. Ei bine, un "gist" nu este nimic altceva decât
+un repozitoriu git. Îl poți clona bine mersi, și opera pe el
+din confortul consolei tale -- nu e nevoie să accesezi interfața
 web pentru a posta ceva.
 
-Crează un fork al cărţii, fă mici corecturi acolo unde vezi necesar,
-dacă ai găsit greşeli în carte, învaţă să faci pull
-requests, să trimiţi patchuri, să deschizi issues pe interfaţa web
-a proiectelor tale pusă la dispoziţie de github.
+Crează un fork al cărții, fă mici corecturi acolo unde vezi necesar,
+dacă ai găsit greșeli în carte, învață să faci pull
+requests, să trimiți patchuri, să deschizi issues pe interfața web
+a proiectelor tale pusă la dispoziție de github.
 
-Investeşte în jur de 40-80 de ore de lectură şi de experimente pentru
+Investește în jur de 40-80 de ore de lectură și de experimente pentru
 a deveni cât de cât rutinat în folosirea acestor sisteme: git
-ca utilitar de sine stătător pe de o parte, şi github.com ca
+ca utilitar de sine stătător pe de o parte, și github.com ca
 hosting pentru proiectele tale.
 \end{Exercise}
 
-\section{Baze de date relaţionale}
-Bazele de date sunt folosite pentru a salva informaţii structurate.
+\section{Baze de date relaționale}
+Bazele de date sunt folosite pentru a salva informații structurate.
 După structura datelor, există două cele mai răspândite forme de
 baze de date:
 \begin{itemize}
-\item relaţionale
+\item relaționale
 \item orientate pe obiecte
 \end{itemize}
-Bazele de date relaţionale (abv. \textsl{RDBMS}) se pretează pentru informaţii "tabelare"
-ce pot avea relaţii între ele. Cele orientate pe obiecte se pretează
-pentru informaţii arborescente -- gândeşte-te la arborescenţa
-(şi recursivitatea) unui document HTML.
+Bazele de date relaționale (abv. \textsl{RDBMS}) se pretează pentru informații "tabelare"
+ce pot avea relații între ele. Cele orientate pe obiecte se pretează
+pentru informații arborescente -- gândește-te la arborescența
+(și recursivitatea) unui document HTML.
 
 
 
-În funcţie de modul de acces, pentru ambele tipuri de mai sus există
-iarăşi două categorii:
+În funcție de modul de acces, pentru ambele tipuri de mai sus există
+iarăși două categorii:
 \begin{itemize}
 \item de sine stătătoare
 \item după arhitectura server-client
 \end{itemize}
 
 Pentru a folosi o bază de date de sine stătătoare nu ai nevoie de un
-server. Baza de date constă într-un fişier care conţine toate datele
-şi metadatele. Aceste baze de date pot fi trimise uşor altcuiva
-şi nu este nevoie decât de un program care ştie să opereze pe acea
+server. Baza de date constă într-un fișier care conține toate datele
+și metadatele. Aceste baze de date pot fi trimise ușor altcuiva
+și nu este nevoie decât de un program care știe să opereze pe acea
 bază de date. Un exemplu consacrat pentru astfel de baze de date
 este SQLite.
 
 Bazele de date cu server-client au în mare trei componente:
 \begin{itemize}
-\item fişierul\footnote{în funcţie de RDBMS şi de alţi
-factori, pot fi mai multe fişiere} efectiv în care sunt salvate
-informaţiile
-\item daemonul care aşteaptă conexiuni de pe internet şi
-deserveşte informaţii din acele fişiere
-\item clientul care se conectează la server şi cere informaţii
+\item fișierul\footnote{în funcție de RDBMS și de alți
+factori, pot fi mai multe fișiere} efectiv în care sunt salvate
+informațiile
+\item daemonul care așteaptă conexiuni de pe internet și
+deservește informații din acele fișiere
+\item clientul care se conectează la server și cere informații
 \end{itemize}
 
-Atunci când clientul cere informaţii de la un server, clientul
-nu primeşte toate informaţiile, pentru a-şi putea alege ce vrea.
+Atunci când clientul cere informații de la un server, clientul
+nu primește toate informațiile, pentru a-și putea alege ce vrea.
 Clientul trimite o cerere într-un limbaj special, cerere pe baza
-căreia serverul generează un răspuns care conţine deja informaţiile
+căreia serverul generează un răspuns care conține deja informațiile
 dorite de client.
 
-Deşi nu este relevant pentru folosirea bazelor de date, e important
-să clarificăm cum funcţionează aceste componente, şi vom încerca
-să o facem pe baza cunoştinţelor pe care le avem deja despre
-protocolul HTTP şi programele care îl folosesc.
+Deși nu este relevant pentru folosirea bazelor de date, e important
+să clarificăm cum funcționează aceste componente, și vom încerca
+să o facem pe baza cunoștințelor pe care le avem deja despre
+protocolul HTTP și programele care îl folosesc.
 
 Clientul DB se conectează la serverul DB printr-un protocol
-de transfer al informaţiilor precum TCP/IP, similar cu
-felul în care şi un browser se conectează la un daemon HTTP.
+de transfer al informațiilor precum TCP/IP, similar cu
+felul în care și un browser se conectează la un daemon HTTP.
 
-Transferul de informaţii efectiv se face într-un limbaj înţeles
+Transferul de informații efectiv se face într-un limbaj înțeles
 de aceste două programe -- un protocol -- din nou: analog cu HTTP.
 
-Una dintre diferenţele cruciale este însă că acest client nu se
-conectează, trimite o cerere, primeşte un răspuns, şi apoi se
+Una dintre diferențele cruciale este însă că acest client nu se
+conectează, trimite o cerere, primește un răspuns, și apoi se
 deconectează. Nu. Acest lucru se întâmplă în cazul protocoalelor
 \textit{stateless} precum HTTP. DBMS-urile în schimb au de obicei
-protocoale \textsl{stateful}, adică se conectează la daemon, şi
-aceasta este menţinută până la întreruperea ei explicită.
+protocoale \textsl{stateful}, adică se conectează la daemon, și
+aceasta este menținută până la întreruperea ei explicită.
 
 Odată conectat, clientul e pregătit să trimită cereri formulate
 într-un limbaj specific. În cazul RDBMS-urilor, predominant este
@@ -182,36 +182,36 @@ limbajul SQL (en. \textsl{Structural Query Language}
 , citit \texttt{\textipa{si:kw@l}}).% IPA: siːkwəl
 
 Această cerere formulată în limbajul SQL este apoi codată în
-protocolul specific DBMS-ului şi trimisă acestuia.
+protocolul specific DBMS-ului și trimisă acestuia.
 Faptul că fiecare\footnote{aproape fiecare} DBMS are un protocol
-specific este cauza imposibilităţii comunicării cu un daemon
+specific este cauza imposibilității comunicării cu un daemon
 de un tip folosind un client de alt tip\footnote{De exemplu,
 clientul mysql.exe nu poate comunica cu un daemon postgresql.}
 -- în ciuda faptului că limbajul în care e formulată cererea, SQL,
-este acelaşi\footnote{Există şi aici diferenţe între sisteme,
-dar limbajul în sinea lui este acelaşi, este standardizat.}.
+este același\footnote{Există și aici diferențe între sisteme,
+dar limbajul în sinea lui este același, este standardizat.}.
 
 În acest capitol vei folosi RDBMS-ul MySQL, deoarece este
-cel mai des folosit în conjuncţie cu PHP.
+cel mai des folosit în conjuncție cu PHP.
 
-\begin{Exercise}[title={Primii paşi în baze de date}]
+\begin{Exercise}[title={Primii pași în baze de date}]
 \ExePart
 
-Instalează-ţi daemonul şi clientul MySQL. Sub Microsoft
-Windows poţi descărca installerul de pe site-ul
-oficial\footnote{Se numeşte \textit{MySQL Community Server} şi se găseşte
+Instalează-ți daemonul și clientul MySQL. Sub Microsoft
+Windows poți descărca installerul de pe site-ul
+oficial\footnote{Se numește \textit{MySQL Community Server} și se găsește
 la adresa \url{http://dev.mysql.com/}.}.
 
 \ExePart
 
-Operaţiile de bază se numesc \textit{create}, \textit{retrieve},
+Operațiile de bază se numesc \textit{create}, \textit{retrieve},
 \textit{update}, \textit{delete}, de aici acronimul \textsl{CRUD}.
 
 Accesează manualul MySQL\footnote{\url{http://dev.mysql.com/doc/}}
-şi urmează capitolul \textit{Tutorial}. Sub Windows te vei conecta la daemon
+și urmează capitolul \textit{Tutorial}. Sub Windows te vei conecta la daemon
 cu clientul \texttt{mysql.exe}.
 
-Rezervă-ţi 40-80 de ore de lucru pentru a învăţa să faci operaţii CRUD.
+Rezervă-ți 40-80 de ore de lucru pentru a învăța să faci operații CRUD.
 \end{Exercise}
 
 \section{Comunicarea cu MySQL din runtime-ul PHP}
@@ -220,150 +220,150 @@ Rezervă-ţi 40-80 de ore de lucru pentru a învăţa să faci operaţii CRUD.
 %TODO lifecycle of a mysql connection in the PHP runtime
 
 \section{Designul bazelor de date}
-Pentru a-ţi uşura munca atunci când creezi baze de date, poţi folosi o interfaţă grafică
-pentru a interacţiona cu serverul. O astfel de aplicaţie este phpMyAdmin.
-Aceasta este o aplicaţie web scrisă în PHP.
-Urmează paşii
-din documentaţia sa oficială pentru a o instala.
+Pentru a-ți ușura munca atunci când creezi baze de date, poți folosi o interfață grafică
+pentru a interacționa cu serverul. O astfel de aplicație este phpMyAdmin.
+Aceasta este o aplicație web scrisă în PHP.
+Urmează pașii
+din documentația sa oficială pentru a o instala.
 
-Înainte de a te apuca de creat baze de date, trebuie să te gândeşti puţin
-la structura informaţiilor pe care urmează să le salvezi în baza de date.
-Ţin să subliniez: a informaţiilor, care nu înseamnă neapărat a bazei de date.
+Înainte de a te apuca de creat baze de date, trebuie să te gândești puțin
+la structura informațiilor pe care urmează să le salvezi în baza de date.
+Țin să subliniez: a informațiilor, care nu înseamnă neapărat a bazei de date.
 
-Să zicem că lucrăm la o aplicaţie pentru administrarea unei firme. Primul
-lucru de care avem nevoie sunt angajaţi. Aceşti angajaţi sunt oameni, deci
-au un nume, o zi de naştere, o adresă şi un număr de telefon.
+Să zicem că lucrăm la o aplicație pentru administrarea unei firme. Primul
+lucru de care avem nevoie sunt angajați. Acești angajați sunt oameni, deci
+au un nume, o zi de naștere, o adresă și un număr de telefon.
 
-Ca şi concept, cam acestea sunt datele, însă trebuie să ne gândim şi la cum
+Ca și concept, cam acestea sunt datele, însă trebuie să ne gândim și la cum
 vom dori să lucrăm cu aceste date.
 
-Să zicem că firma noastră pune la dispoziţie un mijloc de transport pentru
-a-i aduce pe angajaţii săi la lucru. Teoretic avem adresa, însă va fi dificil
-să extragem informaţiile din ea: avem nevoie de stradă şi număr. În funcţie de
+Să zicem că firma noastră pune la dispoziție un mijloc de transport pentru
+a-i aduce pe angajații săi la lucru. Teoretic avem adresa, însă va fi dificil
+să extragem informațiile din ea: avem nevoie de stradă și număr. În funcție de
 ele putem calcula apoi care sunt cele mai bune puncte de întâlnire, deoarece
 evident acest mijloc de transport nu va putea trece pe la fiecare acasă, dacă
 acea adresă nu este în drum.
 
-Concluzia logică e că ceea ce am numit "adresă" trebuie împărţit în două câmpuri:
-stradă şi număr. Acest fapt ne duce la \textsl{principiul atomicităţii}
+Concluzia logică e că ceea ce am numit "adresă" trebuie împărțit în două câmpuri:
+stradă și număr. Acest fapt ne duce la \textsl{principiul atomicității}
 %TODO point to Codd
 datelor: fiecare
-câmp trebuie să conţină o singură informaţie indivizibilă. Acelaşi principiu îl
-putem aplica şi numelui şi numărului de telefon.
+câmp trebuie să conțină o singură informație indivizibilă. Același principiu îl
+putem aplica și numelui și numărului de telefon.
 
 În exemplul nostru de mai sus, aceste coloane reprezintă \textsl{domenii}. După
 cum observi, fiecare domeniu are un anumit tip de date, mai ales acum că am
-respectat principiul atomicităţii: strada este un string, iar numărul este un
+respectat principiul atomicității: strada este un string, iar numărul este un
 număr. Ba mai mult, este un număr pozitiv.
 
-Este important să stabilim domeniile şi tipul lor de date. Dacă este vorba despre
+Este important să stabilim domeniile și tipul lor de date. Dacă este vorba despre
 un domeniu pentru numere, trebuie să stabilim exact intervalul de numere. Dacă
-este vorba despre un string, atunci trebuie să stabilim lungimea maximă, ş.a.m.d.
-În acest fel, chiar dacă un domeniu apare în diferite tabele, toate informaţiile
+este vorba despre un string, atunci trebuie să stabilim lungimea maximă, ș.a.m.d.
+În acest fel, chiar dacă un domeniu apare în diferite tabele, toate informațiile
 din baza de date vor fi consistente.
 
-Un alt principiu este cel al evitării redundanţei. Redundanţa datelor nu este
-bună. Ce se întâmplă dacă primăria oraşului decide să redenumească o stradă?
-Va trebui să redenumim toate rândurile din tabelul nostru cu angajaţi care
-conţin acea stradă. În acest caz, redundanţa putea fi evitată uşor dacă
+Un alt principiu este cel al evitării redundanței. Redundanța datelor nu este
+bună. Ce se întâmplă dacă primăria orașului decide să redenumească o stradă?
+Va trebui să redenumim toate rândurile din tabelul nostru cu angajați care
+conțin acea stradă. În acest caz, redundanța putea fi evitată ușor dacă
 cream un nou tabel "străzi" în care puneam toate numele de străzi unice.
 
-Tabelul cu angajaţi nu mai conţine deci numele străzilor, care acum se află
-în acest nou tabel. Dar cum facem legătura între un angajat şi strada pe care
-locuieşte? Pentru acest lucru avem la dispoziţie două arme: \textsl{foreign key}
-şi \textsl{primary key}.
+Tabelul cu angajați nu mai conține deci numele străzilor, care acum se află
+în acest nou tabel. Dar cum facem legătura între un angajat și strada pe care
+locuiește? Pentru acest lucru avem la dispoziție două arme: \textsl{foreign key}
+și \textsl{primary key}.
 
 Aceste \textit{keys} sunt numere întregi. Tabelul cu străzi ar trebui să aibe
 un PK unic numelui de stradă aferent. Teoretic, am putea folosi direct
 numele străzii, este un PK la fel de valid, deoarece acest nume este oricum unic --
-nu există două străzi cu acelaşi nume. Însă practic, calculatoarele lucrează
-mai uşor cu numere, care întâmplător ocupă şi mai puţin spaţiu, deci baza de date
+nu există două străzi cu același nume. Însă practic, calculatoarele lucrează
+mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baza de date
 ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
-şi cererile ar deveni mai rapide.
+și cererile ar deveni mai rapide.
 
 Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care îl facem
-PK, şi pentru a fi unic, îl facem şi \texttt{AUTO\_INCREMENT}.
+PK, și pentru a fi unic, îl facem și \texttt{AUTO\_INCREMENT}.
 
-Acum că străzile au un PK, putem reveni la tabelul cu angajaţi şi pune acolo
+Acum că străzile au un PK, putem reveni la tabelul cu angajați și pune acolo
 în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
-această coloană este un FK, şi că referenţiem datele dintr-un alt tabel.
+această coloană este un FK, și că referențiem datele dintr-un alt tabel.
 
-Însă bazele de date relaţionale ştiu şi mai multe. Misiunea unei baze de date
-nu este numai de a salva, ordona, căuta sau grupa informaţii, ci şi de a ne
-garanta integritatea datelor. Ce se întâmplă dacă ştergem din greşeală (sau nu)
-o stradă pe care încă locuieşte un angajat? FK-ul acelui angajat va deveni
+Însă bazele de date relaționale știu și mai multe. Misiunea unei baze de date
+nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
+garanta integritatea datelor. Ce se întâmplă dacă ștergem din greșeală (sau nu)
+o stradă pe care încă locuiește un angajat? FK-ul acelui angajat va deveni
 invalid. Cu baze de date putem asigura această integritate prin ceea ce numim
 \textsl{referential integrity}.
 
-În MySQL, atunci când creezi tabelul care va trebui să ştie despre integritate
-referenţială, va trebui să-i setezi ca \textsl{ENGINE} \textsl{InnoDB}.
+În MySQL, atunci când creezi tabelul care va trebui să știe despre integritate
+referențială, va trebui să-i setezi ca \textsl{ENGINE} \textsl{InnoDB}.
 
-Referenţierea o vei crea pentru tabelul care face referenţierea, deci în scenariul
-de mai sus pentru tabelul "angajaţi".
+Referențierea o vei crea pentru tabelul care face referențierea, deci în scenariul
+de mai sus pentru tabelul "angajați".
 
 \begin{Exercise}[title={Referential Integrity}]
-Crează o bază de date cu integritate referenţială, \textit{primary keys} şi
+Crează o bază de date cu integritate referențială, \textit{primary keys} și
 \textit{foreign keys}, ca în scenariul de mai sus. Documentează mai întâi domeniile
-folosite. Setează ca indecşi coloanele după care vei căuta în cererile tale
+folosite. Setează ca indecși coloanele după care vei căuta în cererile tale
 SQL (deci folosind \texttt{SELECT}).
 
-Crează câteva intrări în această bază de date şi export-o în format SQL din phpMyAdmin.
+Crează câteva intrări în această bază de date și export-o în format SQL din phpMyAdmin.
 \end{Exercise}
 
 \subsection{Database Normalization}
 %TODO linkuri către wiki
-%TODO de ce normalizarea e bună, când denormalizăm şi cum
+%TODO de ce normalizarea e bună, când denormalizăm și cum
 %TODO point to profiling mai jos
 
 
 %TODO fill me
 
-% Articole, de citit cu atenţie:
+% Articole, de citit cu atenție:
 % 
 % http://en.wikipedia.org/wiki/Relational_database
 % 
-% http://en.wikipedia.org/wiki/Database_normalization - şi articolele despre
-% 1NF, 2NF şi 3NF - doar atât e suficient pentru orice programator
+% http://en.wikipedia.org/wiki/Database_normalization - și articolele despre
+% 1NF, 2NF și 3NF - doar atât e suficient pentru orice programator
 % 
 
 \section{Debugging and profiling}
-% Exerciţiu: rescrie o aplicaţie anterioară pe baze de date, cu installer, fă debugging şi profiling
+% Exercițiu: rescrie o aplicație anterioară pe baze de date, cu installer, fă debugging și profiling
 
 \section{Lucrul în echipă}
 % Pentru lucrul în echipă:
 % 
-% - învaţă să lucrezi cu git: http://www.ralfebert.de/tutorials/git/
+% - învață să lucrezi cu git: http://www.ralfebert.de/tutorials/git/
 % 
 % 
-% - apelează la echipa YAP pentru următorii paşi (IRC: irc.freenode.net / #yet-another-project)
-%TODO exerciţiu: găseşte 1-2 cursanţi pe IRC de acelaşi nivel, formaţi o echipă şi creaţi un proiect mai amplu
-%tutorul va fi mediatorul vostru, dar nu se va băga peste ideile voastre (cel puţin nu în mod abuziv, ci doar ca să vă prevină greşelile sau să vi le îmbunătăţească)
+% - apelează la echipa YAP pentru următorii pași (IRC: irc.freenode.net / #yet-another-project)
+%TODO exercițiu: găsește 1-2 cursanți pe IRC de același nivel, formați o echipă și creați un proiect mai amplu
+%tutorul va fi mediatorul vostru, dar nu se va băga peste ideile voastre (cel puțin nu în mod abuziv, ci doar ca să vă prevină greșelile sau să vi le îmbunătățească)
 %dacă e nevoie, fă schimb de numere de telefon sau alte mijloace de comunicare prin voce (ex: skype) cu membrii echipei tale, pentru a înlesni comunicarea
 
 
 \subsection{Norme de comunicare}
-%- atunci când salvezi informaţii în repo, îi comunici ceva echipei
-% nu numai mesajul, ci şi schimbările înseşi
+%- atunci când salvezi informații în repo, îi comunici ceva echipei
+% nu numai mesajul, ci și schimbările înseși
 % mesajul trebuie să reflecte exact schimbarea
 %- iar schimbarea trebuie să fie una atomară:
-% fie ea cât de mică, chiar şi repararea unei greşeli de exprimare, trebuie să fie salvată
-% într-un commit. Dacă însă ai convenit cu colegii de echipă că vei repara toate greşelile
-% de gramatică dintr-un fişier, sau ai văzut mai multe greşeli în lungul şi-n latul proiectului,
+% fie ea cât de mică, chiar și repararea unei greșeli de exprimare, trebuie să fie salvată
+% într-un commit. Dacă însă ai convenit cu colegii de echipă că vei repara toate greșelile
+% de gramatică dintr-un fișier, sau ai văzut mai multe greșeli în lungul și-n latul proiectului,
 % atunci toate aceste schimbări reprezintă o "schimbare atomară"
 %- un commit nu ar trebui să facă codul neparsabil (invalid dpv. sintactic), iar
-% un push nici atât. De ce? Dacă faci o greşelă sintactică printre acele îmbunătăţiri
-% trimise cu push, coechipierii tăi vor trebui să repare greşeala TA pentru a-şi putea
-% continua munca la părţile de care sunt EI responsabili - iar asta e frustrant pentru ei.
-%- gândeşte-te mereu ce vor trebui să facă colegii tăi în urma acţiunilor tale, şi fă-le
-% munca cât mai plăcută. VREI ca ei să fie fericiţi, nu frustraţi, pentru că frustrările
+% un push nici atât. De ce? Dacă faci o greșelă sintactică printre acele îmbunătățiri
+% trimise cu push, coechipierii tăi vor trebui să repare greșeala TA pentru a-și putea
+% continua munca la părțile de care sunt EI responsabili - iar asta e frustrant pentru ei.
+%- gândește-te mereu ce vor trebui să facă colegii tăi în urma acțiunilor tale, și fă-le
+% munca cât mai plăcută. VREI ca ei să fie fericiți, nu frustrați, pentru că frustrările
 % lor se vor întoarce împotriva ta!
 %-
 
 \subsection{Norme comportamentale}
-%- nu uita că acum nu mai eşti singur. Dacă echipa eşuează, sau mai rău, întregul
-%proiect eşuează, atunci şi tu porţi o vină, chiar şi pentru simplul fapt că nu
-%ai observat greşeli tehnice sau organizatorice în cadrul echipei voastre, sau
+%- nu uita că acum nu mai ești singur. Dacă echipa eșuează, sau mai rău, întregul
+%proiect eșuează, atunci și tu porți o vină, chiar și pentru simplul fapt că nu
+%ai observat greșeli tehnice sau organizatorice în cadrul echipei voastre, sau
 %dacă le-ai observat, pentru că nu ai discutat despre ele cu partenerii tăi de lucru
 
-%nu mai eşti responsabil faţă de tutori, ci faţă de colegii tăi de echipă. tutorii doar
+%nu mai ești responsabil față de tutori, ci față de colegii tăi de echipă. tutorii doar
 %vă consiliază, ca echipă

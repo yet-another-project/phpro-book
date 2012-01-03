@@ -1,24 +1,24 @@
 \chapter{Programare orientată pe obiecte}
 \section{Principii OOP de bază}
 \textsl{Programarea orientată pe obiecte} (en. \textsl{object-oriented programming}, abv. \textsl{OOP})
-ne permite simularea realităţii folosind aşa-numitele obiecte.
+ne permite simularea realității folosind așa-numitele obiecte.
 
-Aceste obiecte au \textsl{proprietăţi} şi \textsl{metode}. O pisică de exemplu poate avea
-proprietăţile \textit{nume}, \textit{vârstă}, \textit{culoare}, \textit{greutate}.
+Aceste obiecte au \textsl{proprietăți} și \textsl{metode}. O pisică de exemplu poate avea
+proprietățile \textit{nume}, \textit{vârstă}, \textit{culoare}, \textit{greutate}.
 
-O metodă a unui obiect reprezintă o acţiune pe care o poate face acel obiect. O pisică
-poate mieuna, mânca, dormi sau se uita pe fereastră. Pentru fiecare acţiune,
+O metodă a unui obiect reprezintă o acțiune pe care o poate face acel obiect. O pisică
+poate mieuna, mânca, dormi sau se uita pe fereastră. Pentru fiecare acțiune,
 pisica noastră va avea o metodă.
 
-PHP poate crea un obiect pe baza unui \textit{plan de construcţie} numit \textsl{clasă}.
-Deci înainte de a crea un obiect, trebuie să îi definim acest \textit{plan de construcţie}.
-Spunem că \textit{implementăm o clasă}, la fel cum spuneam şi despre funcţii
+PHP poate crea un obiect pe baza unui \textit{plan de construcție} numit \textsl{clasă}.
+Deci înainte de a crea un obiect, trebuie să îi definim acest \textit{plan de construcție}.
+Spunem că \textit{implementăm o clasă}, la fel cum spuneam și despre funcții
 că le-am implementat.
 
 Asta se face folosind cuvântul cheie \texttt{class}, iar în interiorul unui bloc înconjurat
-de acolade (la fel ca o funcţie) scriem definiţia acelei clase.
+de acolade (la fel ca o funcție) scriem definiția acelei clase.
 
-Haideţi să definim un posibil plan de construcţie al unei pisici:
+Haideți să definim un posibil plan de construcție al unei pisici:
 
 \begin{lstlisting}[title=An empty class]
 <?php
@@ -30,20 +30,20 @@ $hiscat = new Cat;
 \end{lstlisting}
 
 Liniile 2-4 definesc o nouă clasă numită \texttt{Cat}, iar această clasă este goală.
-Pe liniile 5 şi 6 creăm două obiecte de tip \texttt{Cat} şi salvăm aceste obiecte
-în variabilele \texttt{\$mycat} şi respectiv \texttt{\$hiscat}.
+Pe liniile 5 și 6 creăm două obiecte de tip \texttt{Cat} și salvăm aceste obiecte
+în variabilele \texttt{\$mycat} și respectiv \texttt{\$hiscat}.
 
 Crearea de obiecte se face folosind cuvântul cheie \texttt{new} urmat de numele clasei.
-Mai spunem şi că am \textsl{instanţiat} clasa \texttt{Cat}.
+Mai spunem și că am \textsl{instanțiat} clasa \texttt{Cat}.
 
-Acest concept al instanţierii se potriveşte cu ceea ce facem în viaţa reală:
-de îndată ce ai planul de construcţie al unei case, poţi crea oricâte case
-absolut identice. Toate casele vor avea aceleaşi facilităţi şi aceleaşi
-proprietăţi cum sunt stabilite de arhitect în acel \textit{plan de construcţie}
+Acest concept al instanțierii se potrivește cu ceea ce facem în viața reală:
+de îndată ce ai planul de construcție al unei case, poți crea oricâte case
+absolut identice. Toate casele vor avea aceleași facilități și aceleași
+proprietăți cum sunt stabilite de arhitect în acel \textit{plan de construcție}
 de pe hârtie.
 
-Haideţi să ne uităm mai întâi puţin la cum adăugăm proprietăţi unui plan de construcţie
-şi cum folosim aceste proprietăţi după ce am creat instanţe concrete după acel plan.
+Haideți să ne uităm mai întâi puțin la cum adăugăm proprietăți unui plan de construcție
+și cum folosim aceste proprietăți după ce am creat instanțe concrete după acel plan.
 
 \begin{lstlisting}[title=Public Class Properties]
 <?php
@@ -56,16 +56,16 @@ class Cat {
 $mycat = new Cat;
 \end{lstlisting}
 
-Acum am adăugat trei proprietăţi planului de construcţie al clasei \texttt{Cat}. Toate
-instanţele acestei clase vor avea aceste proprietăţi. Nu vor exista pisici fără un
-nume, o vârstă, şi o culoare.
+Acum am adăugat trei proprietăți planului de construcție al clasei \texttt{Cat}. Toate
+instanțele acestei clase vor avea aceste proprietăți. Nu vor exista pisici fără un
+nume, o vârstă, și o culoare.
 
-Aceste proprietăţi sunt \textsl{publice}. Vom reveni mai târziu asupra acestui aspect,
-însă ţine minte: \texttt{public} este un specificator de acces (en. \textsl{access specifier})
-care ne permite accesarea din exteriorul instanţelor a proprietăţilor sau metodelor pe 
+Aceste proprietăți sunt \textsl{publice}. Vom reveni mai târziu asupra acestui aspect,
+însă ține minte: \texttt{public} este un specificator de acces (en. \textsl{access specifier})
+care ne permite accesarea din exteriorul instanțelor a proprietăților sau metodelor pe 
 care le califică.
 
-Haideţi să vedem ce înseamnă asta în cod, concret:
+Haideți să vedem ce înseamnă asta în cod, concret:
 \begin{lstlisting}[firstnumber=9,title={Public Class Properties}]
 $mycat->name = 'Cherry';
 $mycat->age = 3;
@@ -79,34 +79,34 @@ echo 'His cat is called "',$hiscat->name,'"';
 \end{lstlisting}
 
 Cu operatorul \texttt{->} (en. \textsl{object operator}) accesăm
-proprietăţile\footnote{Mai târziu vom vedea că acelaşi operator este
-folosit şi pentru a apela metodele unui obiect} din interiorul unei instanţe.
-Dacă acele proprietăţi nu ar fi fost publice, nu le-am fi putut accesa din exterior
+proprietățile\footnote{Mai târziu vom vedea că același operator este
+folosit și pentru a apela metodele unui obiect} din interiorul unei instanțe.
+Dacă acele proprietăți nu ar fi fost publice, nu le-am fi putut accesa din exterior
 cu acest operator.
 
-Pe linia 16 creăm o nouă instanţă a acestei clase. După cum vezi, cele două pisici sunt complet
-separate, fiecare cu proprietăţile sale. De aceea, şi pentru
-că nu am iniţializat nicăieri \texttt{\$hiscat->name}, aceasta este \texttt{NULL}.
+Pe linia 16 creăm o nouă instanță a acestei clase. După cum vezi, cele două pisici sunt complet
+separate, fiecare cu proprietățile sale. De aceea, și pentru
+că nu am inițializat nicăieri \texttt{\$hiscat->name}, aceasta este \texttt{NULL}.
 
-\attention{Fiecare instanţă a unei clase este independentă de celelalte instanţe, fie
-ele şi din aceeaşi clasă.}
+\attention{Fiecare instanță a unei clase este independentă de celelalte instanțe, fie
+ele și din aceeași clasă.}
 
-Haideţi să vedem ce se întâmplă atunci când o proprietate nu este publică.
-Schimbă accesul proprietăţii \texttt{age} din \texttt{public}
-în \texttt{private}. Vei vedea că nu mai poţi accesa acea proprietate din exteriorul planului
-de construcţie (al clasei).
+Haideți să vedem ce se întâmplă atunci când o proprietate nu este publică.
+Schimbă accesul proprietății \texttt{age} din \texttt{public}
+în \texttt{private}. Vei vedea că nu mai poți accesa acea proprietate din exteriorul planului
+de construcție (al clasei).
 
-De fapt, este şi de dorit ca proprietăţi ca \texttt{age} să fie privată. După cum vezi,
-aceste proprietăţi pot fi suprascrise cu orice fel de informaţii. Însă fiecare proprietate
+De fapt, este și de dorit ca proprietăți ca \texttt{age} să fie privată. După cum vezi,
+aceste proprietăți pot fi suprascrise cu orice fel de informații. Însă fiecare proprietate
 are specificul său. Proprietatea \texttt{age} de exemplu trebuie să fie mereu un număr pozitiv.
 
 Dar cum setăm \texttt{age}, dacă proprietatea rămâne privată? Aici intervine al doilea lucru
-pe care îl poate conţine un astfel de \textit{plan de construcţie}: \textsl{metodele}.
+pe care îl poate conține un astfel de \textit{plan de construcție}: \textsl{metodele}.
 
-O metodă nu este nimic altceva decât o funcţie. Însă implementarea acestei funcţii se află
-în interiorul definiţiei clasei, aşa cum era de aşteptat.
+O metodă nu este nimic altceva decât o funcție. Însă implementarea acestei funcții se află
+în interiorul definiției clasei, așa cum era de așteptat.
 
-Deci haideţi să introducem două metode noi pentru citirea din şi scrierea în proprietatea
+Deci haideți să introducem două metode noi pentru citirea din și scrierea în proprietatea
 \texttt{age} a fiecărui obiect de tip \texttt{Cat}.
 
 \begin{lstlisting}[title=Getters and Setters]
@@ -137,55 +137,55 @@ echo 'My kitty is ',$mycat->getAge(),' years old.';
 \end{lstlisting}
 
 În interiorul unei clase avem acces la variabila \texttt{\$this} pe care
-după cum vezi o şi folosim în interiorul metodelor. Această variabilă
-este creată atunci când fluxul de execuţie ajunge pe linia 20, unde instanţiem
-o clasă cu operatorul \texttt{new}. \texttt{\$this} face referire la acelaşi obiect la care face
-referire şi \texttt{\$mycat} în exteriorul clasei.
+după cum vezi o și folosim în interiorul metodelor. Această variabilă
+este creată atunci când fluxul de execuție ajunge pe linia 20, unde instanțiem
+o clasă cu operatorul \texttt{new}. \texttt{\$this} face referire la același obiect la care face
+referire și \texttt{\$mycat} în exteriorul clasei.
 
-În interiorul clasei însă nu ştim şi nu ne pasă cum este numită variabila
-în care salvăm această instanţă în exterior (aici: \texttt{\$mycat}).
-În \texttt{\$this} avem instanţa curentă,
-şi prin ea, avem acces la toate metodele şi proprietăţile instanţei.
+În interiorul clasei însă nu știm și nu ne pasă cum este numită variabila
+în care salvăm această instanță în exterior (aici: \texttt{\$mycat}).
+În \texttt{\$this} avem instanța curentă,
+și prin ea, avem acces la toate metodele și proprietățile instanței.
 
 Deoarece proprietatea \texttt{age} este privată, nu o putem accesa direct,
 fie că vrem să salvăm ceva în ea, fie că vrem să citim din ea.
 
 Din acest motiv, pe linia 21 apelăm metoda responsabilă pentru salvarea
-de informaţii în \texttt{age}. Atunci când apelăm o metodă a unei instanţe,
-mai spunem şi că îi trimitem un mesaj acelei instanţe/obiect.
+de informații în \texttt{age}. Atunci când apelăm o metodă a unei instanțe,
+mai spunem și că îi trimitem un mesaj acelei instanțe/obiect.
 
-Deşi obiectul primeşte acest mesaj pe care i-l transmitem, proprietatea
-\texttt{age} nu este setată deoarece planul de construcţie (implementarea clasei)
-este în aşa fel făcut încât nu acceptă decât numere.
+Deși obiectul primește acest mesaj pe care i-l transmitem, proprietatea
+\texttt{age} nu este setată deoarece planul de construcție (implementarea clasei)
+este în așa fel făcut încât nu acceptă decât numere.
 
-În acest fel ne asigurăm că informaţiile salvate în obiect sunt mereu valide,
-indiferent de ce mesaje primim din exterior. Mai spunem şi că astfel
+În acest fel ne asigurăm că informațiile salvate în obiect sunt mereu valide,
+indiferent de ce mesaje primim din exterior. Mai spunem și că astfel
 impunem integritatea datelor.
 
-Pe linia 24 apelăm metoda obiectului pentru citirea proprietăţii \texttt{age}.
+Pe linia 24 apelăm metoda obiectului pentru citirea proprietății \texttt{age}.
 
-După cum ţi-ai dat seama, pentru fiecare proprietate pe care vrem să
-o facem accesibilă cumva din exterior, dar în acelaşi timp să îi garatăm
+După cum ți-ai dat seama, pentru fiecare proprietate pe care vrem să
+o facem accesibilă cumva din exterior, dar în același timp să îi garatăm
 integritatea, trebuie să creăm o pereche de astfel de două metode: una
 pentru a salva date, alta pentru a primi date de la obiect.
 
-La modul general, o metodă care setează valoarea unei proprietăţi se numeşte
-\textsl{setter}, iar o metodă care returnează valoarea unei proprietăţi se
-numeşte \textsl{getter}.
+La modul general, o metodă care setează valoarea unei proprietăți se numește
+\textsl{setter}, iar o metodă care returnează valoarea unei proprietăți se
+numește \textsl{getter}.
 
-Bineînţeles că nu este musai ca o clasă să aibă câte o pereche
-de getteri şi setteri pentru fiecare proprietate.
+Bineînțeles că nu este musai ca o clasă să aibă câte o pereche
+de getteri și setteri pentru fiecare proprietate.
 E foarte posibil de exemplu să creăm o clasă care are doar setter pentru
-o anumită proprietate, iar această clasă va funcţiona ca un sac
-fără fund, deoarece nu putem prelua informaţia din instanţe
+o anumită proprietate, iar această clasă va funcționa ca un sac
+fără fund, deoarece nu putem prelua informația din instanțe
 de acel tip, ci doar {\glqq}pune în sac{\grqq}. Sau invers, doar
 un getter, fără setter. Sau chiar o proprietate care nu este în
 niciun fel expusă exteriorului.
 
 \begin{Exercise}[title={A complete Kitty}]
 \ExePart
-Completează implementaţia clasei \texttt{Cat} cu getteri şi setteri
-pentru celelalte două proprietăţi. Setterii trebuie să valideze
+Completează implementația clasei \texttt{Cat} cu getteri și setteri
+pentru celelalte două proprietăți. Setterii trebuie să valideze
 mesajele primite: un nume valid este constituit din doar un cuvânt
 de lungime maximă 32 (de caractere), iar culoarea trebuie
 să fie una din opt culori valide.
@@ -196,13 +196,13 @@ care le-a avut pisica de-a lungul timpului.
 \end{Exercise}
 
 
-Retrospectiv putem spune: o clasă este definiţia unui nou tip de date
-care înglobează proprietăţi (informaţii salvate în variabile) şi
-metode (cod executabil sub formă de funcţii) ce operează pe aceste
-proprietăţi.
+Retrospectiv putem spune: o clasă este definiția unui nou tip de date
+care înglobează proprietăți (informații salvate în variabile) și
+metode (cod executabil sub formă de funcții) ce operează pe aceste
+proprietăți.
 
 %TODO constructor
-%TODO self-containment: o clasă nu poate accesa proprietăţile bicicletei adăpostite în ea, îi poate doar trimite mesaje
+%TODO self-containment: o clasă nu poate accesa proprietățile bicicletei adăpostite în ea, îi poate doar trimite mesaje
 
 
 
