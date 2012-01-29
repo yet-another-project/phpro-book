@@ -16,3 +16,4 @@ intră în legătură cu noi pe [IRC](https://github.com/OriginalCopy/yap-phpro-
 Există nenumărate posibilităţi de a ne ajuta, fie cu corecturi aduse cărţii,
 fie tutelând, fie devenind co-autor, fie cu donaţii. Citeşte
 [cum să contribui](docs/contribute.md) pentru detalii.
+
