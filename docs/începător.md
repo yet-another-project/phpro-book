@@ -15,7 +15,7 @@ Dacă nu e nimeni disponibil care să-ţi trimită cartea, încearcă
 să generezi singur PDF-ul. Va trebui să înveţi să foloseşti
 git şi să accesezi clonezi repo-ul cu sursa cărţii
 
-    git://github.com/OriginalCopy/yap-phpro-book.git
+    git://github.com/flavius/yap-phpro-book.git
 
 Cu git oricum vei fi forţat de împrejurări să lucrezi în
 stadiul următor [mediu](mediu.md), deci timpul nu ţi l-ai

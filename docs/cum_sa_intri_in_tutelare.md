@@ -4,7 +4,7 @@ Cum să intri în programul de tutelare
 Spune-i tutorelui care te îndrumă dacă totul e clar, şi dacă nu e totul
 clar până aici, întreabă ACUM. Asta ne va economisi tuturor timp.
 
-După ce ai citit [README](https://github.com/OriginalCopy/yap-phpro-book/blob/master/README.md),
+După ce ai citit [README](https://github.com/flavius/yap-phpro-book/blob/master/README.md),
 [programul de tutelare](tutelare.md), şi
 [novice](novice.md), urmează link-ul "Downloads" din dreapta sus
 şi descarcă ultimul fişier .pdf.

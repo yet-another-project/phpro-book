@@ -25,10 +25,10 @@ oferim doar o simplă carte, ci un program *gratuit* de tutelare care
 s-a dovedit eficient de-a lungul timpului.
 
 Dacă vrei să participi ca şi cursant la programul de tutelare,
-[intră în legătură](https://github.com/OriginalCopy/yap-phpro-book/wiki/Contact) cu noi pe IRC şi noi te vom îndruma.
+[intră în legătură](https://github.com/flavius/yap-phpro-book/wiki/Contact) cu noi pe IRC şi noi te vom îndruma.
 
 Există nenumărate posibilităţi de a ne ajuta, fie cu corecturi aduse cărţii,
 fie tutelând, fie devenind co-autor, fie cu donaţii. Citeşte
 [cum să contribui](docs/contribute.md) pentru detalii.
 
-Pentru clauzele legale, vezi [licenţa](https://raw.github.com/OriginalCopy/yap-phpro-book/384cff5d2047b246415efdbce93a49e2f0f39823/LICENSE.txt)
+Pentru clauzele legale, vezi [licenţa](https://raw.github.com/flavius/yap-phpro-book/384cff5d2047b246415efdbce93a49e2f0f39823/LICENSE.txt)

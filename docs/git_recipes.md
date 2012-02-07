@@ -4,7 +4,7 @@ Contributing to the book
     github -> fork
     git clone git@github.com:<USERNAME>/yap-phpro-book.git
 
-    git remote add flavius git@github.com:OriginalCopy/yap-phpro-book.git
+    git remote add flavius git@github.com:flavius/yap-phpro-book.git
     git fetch flavius
     git checkout -b flavius flavius/master
 
