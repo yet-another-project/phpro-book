@@ -16,4 +16,4 @@ Redistribuirea sa, de orice natură ar fi ea, trebuie să se facă integral
 şi fără modificări aduse lucrării.
 
 Flavius Aspra, <flavius@php.net>
-URL: https://github.com/OriginalCopy/yap-phpro-book
+URL: https://github.com/flavius/yap-phpro-book
