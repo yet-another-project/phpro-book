@@ -1,7 +1,7 @@
 # Dezvoltare web cu PHP --	*Pentru începătorii în programare şi în PHP
 				care vor să devină profesionişti*
 
-Copyright (C) 2010-2011 Flavius Aspra
+Copyright (C) 2010-2012 Flavius Aspra
 
 Toate drepturile rezervate lui Flavius Aspra.
 
@@ -16,4 +16,4 @@ Redistribuirea sa, de orice natură ar fi ea, trebuie să se facă integral
 şi fără modificări aduse lucrării.
 
 Flavius Aspra, <flavius@php.net>
-URL: https://github.com/flavius/yap-phpro-book
+URL: https://github.com/yet-another-project/phpro-book
