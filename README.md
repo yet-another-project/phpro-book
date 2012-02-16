@@ -10,9 +10,12 @@ Cursul te ia de la zero în domeniul programării. La sfârşitul cursului:
 
 * vei deţine cunoştinţe tehnice despre programare
 * vei cunoaşte modul de lucru al unui programator, cu unele scule şi
-metodologii de programare din viaţa reală a unui programator
-* vei deține *soft skills*: capacitatea de a căuta și a te ajuta singur atunci când te-ai blocat (terminologia specifică în engleză), de a lucra în echipă, vei avea o gândire analitică și vei putea sintetiza noțiuni
-* vei avea un portofoliu cu **proiecte proprii**, necesare pentru angajatorii care cer experiență
+  metodologii de programare din viaţa reală a unui programator
+* vei deține *soft skills*: capacitatea de a căuta și a te ajuta singur atunci
+  când te-ai blocat(terminologia specifică în engleză), de a lucra în echipă,
+  vei avea o gândire analitică și vei putea sintetiza noțiuni
+* vei avea un portofoliu cu **proiecte proprii**, necesare pentru angajatorii
+  care cer experiență
 * **cel mai important**: vei gândi ca un programator
 
 Faptul că este folosit PHP ca limbaj prin prisma căruia înveţi aceste
@@ -25,10 +28,12 @@ oferim doar o simplă carte, ci un program *gratuit* de tutelare care
 s-a dovedit eficient de-a lungul timpului.
 
 Dacă vrei să participi ca şi cursant la programul de tutelare,
-[intră în legătură](https://github.com/flavius/yap-phpro-book/wiki/Contact) cu noi pe IRC şi noi te vom îndruma.
+urmează [ghidul](https://github.com/yet-another-project/phpro-book/wiki/Ghid),
+în timp ce stai pe [IRC](https://github.com/yet-another-project/phpro-book/wiki/IRC) de vorbă cu noi.
 
 Există nenumărate posibilităţi de a ne ajuta, fie cu corecturi aduse cărţii,
-fie tutelând, fie devenind co-autor, fie cu donaţii. Citeşte
-[cum să contribui](docs/contribute.md) pentru detalii.
+fie tutelând, fie devenind co-autor, fie cu donaţii. Intră în
+[contact](https://github.com/yet-another-project/phpro-book/wiki/Contact)
+cu noi pentru detalii.
 
-Pentru clauzele legale, vezi [licenţa](https://raw.github.com/flavius/yap-phpro-book/384cff5d2047b246415efdbce93a49e2f0f39823/LICENSE.txt)
+Pentru clauzele legale, vezi [licenţa](https://github.com/yet-another-project/phpro-book/blob/master/LICENSE.txt)
