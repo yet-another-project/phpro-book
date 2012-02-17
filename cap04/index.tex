@@ -226,7 +226,15 @@ Pentru a comunica cu daemonul MySQL, folosim extensia mysqli.
 
 În exemplul \ref{lst:mysqli-connect} poți vedea cum ne conectăm la
 baza de date și cum trimitem o cerere SQL și preluăm rezultatele
-generate de acea cerere. Metadatele dicționarelor returnate (aici probabil
+generate de acea cerere.
+
+Pentru conectare am folosit un fișier \texttt{dbconn.php}.
+\begin{lstlisting}[caption={dbconn.php}]
+<?php
+return mysqli_connect('localhost', 'username', 'password', 'dbase');
+\end{lstlisting}
+
+Metadatele dicționarelor returnate (aici probabil
 doar \texttt{Database}) sunt exact numele coloanelor cum le-ai fi
 văzut dacă ai fi folosit clientul mysql din linia de comandă.
 
@@ -364,12 +372,14 @@ mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baz
 ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
 și cererile ar deveni mai rapide.
 
-Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care îl facem
-PK, și pentru a fi unic, îl facem și \texttt{AUTO\_INCREMENT}.
+Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care o facem
+PK, și pentru a fi unic, o facem și \texttt{AUTO\_INCREMENT} și îi adăugăm
+\texttt{UNIQUE}.
 
-Acum că străzile au un PK, putem reveni la tabelul cu angajați și pune acolo
+Cum străzile au acum un PK, putem reveni la tabelul cu angajați și pune acolo
 în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
 această coloană este un FK, și că referențiem datele dintr-un alt tabel.
+Din acest motiv, bazele de date SQL se numesc baze de date \textsl{relaționale}.
 
 Însă bazele de date relaționale știu și mai multe. Misiunea unei baze de date
 nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
@@ -391,23 +401,31 @@ folosite. Setează ca indecși coloanele după care vei căuta în cererile tale
 SQL (deci folosind \texttt{SELECT}).
 
 Crează câteva intrări în această bază de date și export-o în format SQL din phpMyAdmin.
+
+Crează câteva cereri SQL care demonstrează integritatea referențială.
 \end{Exercise}
 
 \subsection{Database Normalization}
-%TODO linkuri către wiki
-%TODO de ce normalizarea e bună, când denormalizăm și cum
-%TODO point to profiling mai jos
+Normalizarea bazelor de date\footnote{\url{http://en.wikipedia.org/wiki/Database_normalization}}
+este o categorisire formală și o 
+extindere a principiilor expuse anterior în designul bazelor de date.
 
 
-%TODO fill me
+\begin{Exercise}[title={Database Normalization}]
+Crează o bază de date normalizată în 3rd NF cu cel puțin 5 tabele. Crează indecși unici
+și integritate referențială după necesitățile domeniului aplicației pe care îl
+descrii în mod relațional.
 
-% Articole, de citit cu atenție:
-% 
-% http://en.wikipedia.org/wiki/Relational_database
-% 
-% http://en.wikipedia.org/wiki/Database_normalization - și articolele despre
-% 1NF, 2NF și 3NF - doar atât e suficient pentru orice programator
-% 
+Introdu în toate tabelele date de testare.
+
+Demonstrează folosirea a 1-2 \textsl{compound keys}, fie \textsl{primary},
+fie \textsl{unique}, fie ambele.
+
+Crează cereri SQL mai complexe care implică operațiile \texttt{JOIN},
+\texttt{GROUP BY} și \texttt{HAVING} - ultimele două într-un singur query.
+Descrie textual scenariile în care fiecare dintre aceste cereri ar
+fi folosite într-o aplicație care ar face uz de această bază de date.
+\end{Exercise}
 
 \section{Debugging and profiling}
 % Exercițiu: instalează xdebug și eclipse PDT și fă debugging și profiling
