@@ -267,11 +267,40 @@ valoarea variabilei \texttt{\$name} - în cererea SQL. MySQLi permite
 însă separarea cererii efective de datele care parametrizează cererea
 SQL. Acest lucru se face folosind \textsl{prepared statements}.
 
+\lstinputlisting[caption={MySQLi Prepared Statements}, label={lst:mysqli-prep-stmt}]{cap04/2-mysqli-prep-stmt.php}.
 
+Semnele de întrebare din cererea SQL sunt legate (en. \textsl{bounded})
+de variabile cu funcția \texttt{mysqli\_stmt\_bind\_param()}, iar
+cererea rezultată este executată apoi.
 
-%TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
-%TODO http://forum.softpedia.com/index.php?showtopic=779610
-%TODO lifecycle of a mysql connection in the PHP runtime
+\textit{Prepared statements} ne oferă o securitate mai bună, dar și flexibilitate:
+poți reutiliza același \textit{statement}, fiind nevoie doar să schimbi
+valoarea variabilei, și să execuți din nou aceeași secvență de cod. Astfel
+nu mai este nevoie de regenerarea de la zero a cererii SQL, după cum
+vezi pe liniile 14-18 din listingul \ref{lst:mysqli-prep-stmt}.
+
+Ca programatori PHP, am fi tentați să facem mai multe operații
+de cât sunt necesare în PHP. Greșit. Ar trebui să facem toate
+operațiile ce țin de criterii de căutare, sortări, ordonări, grupări,
+folosind SQL. Sistemele de baze de date sunt optimizate pentru aceste
+operații, și trebuie să profităm de asta.
+
+Deasemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
+unde este posibil. De exemplu, suma prețurilor produselor dintr-un
+coș de cumpărături poate fi făcută folosind cereri precum
+
+\begin{lstlisting}
+SELECT SUM(`price`) FROM `cart` WHERE `customer_id` = 42
+\end{lstlisting}
+
+În mod normal o astfel de cerere este mai rapidă decât cererea
+întregii liste de produse și calcularea "manuală" a sumei totale
+în PHP, într-o buclă. Asta bineînțeles numai dacă nu afișezi
+oricum lista de produse, ci efectiv strict prețul total.
+
+\attention{Este important să ne gândim în ce contexte vor fi
+folosite cererile SQL pe care le creăm,
+și în funcție de asta să ne concepem cererile SQL.}
 
 \section{Designul bazelor de date}
 Pentru a-ți ușura munca atunci când creezi baze de date, poți folosi o interfață grafică
