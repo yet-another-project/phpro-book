@@ -215,9 +215,100 @@ Rezervă-ți 40-80 de ore de lucru pentru a învăța să faci operații CRUD.
 \end{Exercise}
 
 \section{Comunicarea cu MySQL din runtime-ul PHP}
-%TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
-%TODO http://forum.softpedia.com/index.php?showtopic=779610
-%TODO lifecycle of a mysql connection in the PHP runtime
+În acest moment știi să faci operații pe baze de date MySQL în limbajul SQL.
+De îndată ce ai o cerere SQL care funcționează direct în clientul MySQL,
+aceasta poate fi trimisă așa cum este către server, iar răspunsul poate fi
+procesat.
+
+Pentru a comunica cu daemonul MySQL, folosim extensia mysqli.
+
+\lstinputlisting[caption={Cereri SQL statice}, label={lst:mysqli-connect}]{cap04/1-mysqli-connect.php}.
+
+În exemplul \ref{lst:mysqli-connect} poți vedea cum ne conectăm la
+baza de date și cum trimitem o cerere SQL și preluăm rezultatele
+generate de acea cerere.
+
+Pentru conectare am folosit un fișier \texttt{dbconn.php}.
+\begin{lstlisting}[caption={dbconn.php}]
+<?php
+return mysqli_connect('localhost', 'username', 'password', 'dbase');
+\end{lstlisting}
+
+Metadatele dicționarelor returnate (aici probabil
+doar \texttt{Database}) sunt exact numele coloanelor cum le-ai fi
+văzut dacă ai fi folosit clientul mysql din linia de comandă.
+
+În general, în PHP, vei dori să generezi dinamic, programatic, stringul
+care conține cererea SQL. Acest lucru se face de obicei pe baza inputului
+provenit direct sau indirect de la utilizator.
+
+De exemplu, am putea avea
+
+\begin{lstlisting}
+$SQL = 'SELECT * FROM `products` WHERE `name` LIKE "%'.$name.'%"';
+\end{lstlisting}
+
+unde variabila \texttt{\$name} are o valoare pusă la dispoziție de utilizator.
+Stringul \texttt{\$SQL} ar putea fi trimis apoi daemonului cu aceeași
+funcție \texttt{mysqli\_query()}.
+
+Putem spune că astfel am \textsl{parametrizat} cererea SQL cu variabila
+\texttt{\$name}.
+
+Dacă ai o greșeală în cererea generată, atunci poți fi
+confruntat cu două tipuri de probleme: fie cererea în sinea sa este corectă
+din punct de vedere sintactic, însă MySQL îți returnează o eroare, fie
+modul în care ai generat cererea este greșit.
+
+În primul caz, problema și rezolvarea sa nu țin de PHP, ci de MySQL.
+Exemplul unei astfel de situații poate fi atunci când încerci să
+selectezi elemente dintr-un tabel inexistent.
+
+În al doilea caz, problema ține de codul PHP pe care l-ai scris
+pentru a genera acea cerere.
+
+De obicei îți poți da seama cu ce fel de problemă te confrunți uitându-te
+la eroarea generată de mysqli, folosind funcția \texttt{mysqli\_error()}.
+
+Până acum am construit cererile SQL integrând valorile concrete - de exemplu
+valoarea variabilei \texttt{\$name} - în cererea SQL. MySQLi permite
+însă separarea cererii efective de datele care parametrizează cererea
+SQL. Acest lucru se face folosind \textsl{prepared statements}.
+
+\lstinputlisting[caption={MySQLi Prepared Statements}, label={lst:mysqli-prep-stmt}]{cap04/2-mysqli-prep-stmt.php}.
+
+Semnele de întrebare din cererea SQL sunt legate (en. \textsl{bounded})
+de variabile cu funcția \texttt{mysqli\_stmt\_bind\_param()}, iar
+cererea rezultată este executată apoi.
+
+\textit{Prepared statements} ne oferă o securitate mai bună, dar și flexibilitate:
+poți reutiliza același \textit{statement}, fiind nevoie doar să schimbi
+valoarea variabilei, și să execuți din nou aceeași secvență de cod. Astfel
+nu mai este nevoie de regenerarea de la zero a cererii SQL, după cum
+vezi pe liniile 14-18 din listingul \ref{lst:mysqli-prep-stmt}.
+
+Ca programatori PHP, am fi tentați să facem mai multe operații
+de cât sunt necesare în PHP. Greșit. Ar trebui să facem toate
+operațiile ce țin de criterii de căutare, sortări, ordonări, grupări,
+folosind SQL. Sistemele de baze de date sunt optimizate pentru aceste
+operații, și trebuie să profităm de asta.
+
+Deasemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
+unde este posibil. De exemplu, suma prețurilor produselor dintr-un
+coș de cumpărături poate fi făcută folosind cereri precum
+
+\begin{lstlisting}
+SELECT SUM(`price`) FROM `cart` WHERE `customer_id` = 42
+\end{lstlisting}
+
+În mod normal o astfel de cerere este mai rapidă decât cererea
+întregii liste de produse și calcularea "manuală" a sumei totale
+în PHP, într-o buclă. Asta bineînțeles numai dacă nu afișezi
+oricum lista de produse, ci efectiv strict prețul total.
+
+\attention{Este important să ne gândim în ce contexte vor fi
+folosite cererile SQL pe care le creăm,
+și în funcție de asta să ne concepem cererile SQL.}
 
 \section{Designul bazelor de date}
 Pentru a-ți ușura munca atunci când creezi baze de date, poți folosi o interfață grafică
@@ -281,12 +372,14 @@ mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baz
 ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
 și cererile ar deveni mai rapide.
 
-Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care îl facem
-PK, și pentru a fi unic, îl facem și \texttt{AUTO\_INCREMENT}.
+Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care o facem
+PK, și pentru a fi unic, o facem și \texttt{AUTO\_INCREMENT} și îi adăugăm
+\texttt{UNIQUE}.
 
-Acum că străzile au un PK, putem reveni la tabelul cu angajați și pune acolo
+Cum străzile au acum un PK, putem reveni la tabelul cu angajați și pune acolo
 în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
 această coloană este un FK, și că referențiem datele dintr-un alt tabel.
+Din acest motiv, bazele de date SQL se numesc baze de date \textsl{relaționale}.
 
 Însă bazele de date relaționale știu și mai multe. Misiunea unei baze de date
 nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
@@ -301,33 +394,43 @@ referențială, va trebui să-i setezi ca \textsl{ENGINE} \textsl{InnoDB}.
 Referențierea o vei crea pentru tabelul care face referențierea, deci în scenariul
 de mai sus pentru tabelul "angajați".
 
-\begin{Exercise}[title={Referential Integrity}]
+\begin{Exercise}[title={Referential Integrity},difficulty=1]
 Crează o bază de date cu integritate referențială, \textit{primary keys} și
 \textit{foreign keys}, ca în scenariul de mai sus. Documentează mai întâi domeniile
 folosite. Setează ca indecși coloanele după care vei căuta în cererile tale
 SQL (deci folosind \texttt{SELECT}).
 
 Crează câteva intrări în această bază de date și export-o în format SQL din phpMyAdmin.
+
+Crează câteva cereri SQL care demonstrează integritatea referențială.
 \end{Exercise}
 
 \subsection{Database Normalization}
-%TODO linkuri către wiki
-%TODO de ce normalizarea e bună, când denormalizăm și cum
-%TODO point to profiling mai jos
+Normalizarea bazelor de date\footnote{\url{http://en.wikipedia.org/wiki/Database_normalization}}
+este o categorisire formală și o 
+extindere a principiilor expuse anterior în designul bazelor de date.
 
+Este suficientă respectarea primelor trei forme normale în aplicaţiile
+fără necesităţi speciale.
 
-%TODO fill me
+\begin{Exercise}[title={Database Normalization}, difficulty=3]
+Crează o bază de date normalizată în 3rd NF cu cel puțin 5 tabele. Crează indecși unici
+și integritate referențială după necesitățile domeniului aplicației pe care îl
+descrii în mod relațional.
 
-% Articole, de citit cu atenție:
-% 
-% http://en.wikipedia.org/wiki/Relational_database
-% 
-% http://en.wikipedia.org/wiki/Database_normalization - și articolele despre
-% 1NF, 2NF și 3NF - doar atât e suficient pentru orice programator
-% 
+Introdu în toate tabelele date de testare.
+
+Demonstrează folosirea a 1-2 \textsl{compound keys}, fie \textsl{primary},
+fie \textsl{unique}, fie ambele.
+
+Crează cereri SQL mai complexe care implică operațiile \texttt{JOIN},
+\texttt{GROUP BY} și \texttt{HAVING} - ultimele două într-un singur query.
+Descrie textual scenariile în care fiecare dintre aceste cereri ar
+fi folosite într-o aplicație care ar face uz de această bază de date.
+\end{Exercise}
 
 \section{Debugging and profiling}
-% Exercițiu: instalează xdebug şi eclipse PDT şi fă debugging şi profiling
+% Exercițiu: instalează xdebug și eclipse PDT și fă debugging și profiling
 
 \section{Lucrul în echipă}
 % Pentru lucrul în echipă:

@@ -1,11 +1,11 @@
 \documentclass[a4paper,11pt,oneside]{book}
 \usepackage[T1]{fontenc}
-\usepackage{times}
+%\usepackage[utf8x]{inputenc}
+\usepackage{bookman}
 \usepackage{tipa}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{alltt}
 \usepackage{keystroke}
-%\usepackage[utf8x]{inputenc}
 \usepackage[romanian]{babel}
 \usepackage{multind}
 %\makeindex{en-ro}
@@ -26,7 +26,7 @@
 \usepackage{eurosym}
 \usepackage{titlesec}
 \usepackage{needspace}
-%\usepackage{thumbpdf}
+\usepackage{thumbpdf}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{fancyvrb}
@@ -42,27 +42,13 @@
 
 %fancy chars
 \usepackage{dingbat}
-% \lstset{language=php,
-% 	numbers=left,
-% 	stepnumber=1,
-% 	showspaces=false,
-% 	showtabs=false,
-% 	frame=single,
-% 	showstringspaces=false,
-% 	tabsize=2,
-% 	basicstyle=\ttfamily,
-% 	keywordstyle=\color{red},
-% 	stringstyle=\color{OliveGreen},
-% 	identifierstyle=\color{Blue}
-% }
 
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
-\usepackage{courier}
- \lstdefinelanguage{pseudocod}{%
+\lstdefinelanguage{pseudocod}{%
 keywords={daca,atunci,altfel,start,sfarsit,citeste,afiseaza},%
 basicstyle=\ttfamily,%
 keywordstyle=\bfseries,%
@@ -145,7 +131,7 @@ extendedchars}[keywords]
     \hss (#1) \kern3pt}}
 \makeatother
 
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{14.2pt}
 
 \begin{document}
 \pagestyle{empty}
