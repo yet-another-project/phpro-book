@@ -215,6 +215,60 @@ Rezervă-ți 40-80 de ore de lucru pentru a învăța să faci operații CRUD.
 \end{Exercise}
 
 \section{Comunicarea cu MySQL din runtime-ul PHP}
+În acest moment știi să faci operații pe baze de date MySQL în limbajul SQL.
+De îndată ce ai o cerere SQL care funcționează direct în clientul MySQL,
+aceasta poate fi trimisă așa cum este către server, iar răspunsul poate fi
+procesat.
+
+Pentru a comunica cu daemonul MySQL, folosim extensia mysqli.
+
+\lstinputlisting[caption={Cereri SQL statice}, label={lst:mysqli-connect}]{cap04/1-mysqli-connect.php}.
+
+În exemplul \ref{lst:mysqli-connect} poți vedea cum ne conectăm la
+baza de date și cum trimitem o cerere SQL și preluăm rezultatele
+generate de acea cerere. Metadatele dicționarelor returnate (aici probabil
+doar \texttt{Database}) sunt exact numele coloanelor cum le-ai fi
+văzut dacă ai fi folosit clientul mysql din linia de comandă.
+
+În general, în PHP, vei dori să generezi dinamic, programatic, stringul
+care conține cererea SQL. Acest lucru se face de obicei pe baza inputului
+provenit direct sau indirect de la utilizator.
+
+De exemplu, am putea avea
+
+\begin{lstlisting}
+$SQL = 'SELECT * FROM `products` WHERE `name` LIKE "%'.$name.'%"';
+\end{lstlisting}
+
+unde variabila \texttt{\$name} are o valoare pusă la dispoziție de utilizator.
+Stringul \texttt{\$SQL} ar putea fi trimis apoi daemonului cu aceeași
+funcție \texttt{mysqli\_query()}.
+
+Putem spune că astfel am \textsl{parametrizat} cererea SQL cu variabila
+\texttt{\$name}.
+
+Dacă ai o greșeală în cererea generată, atunci poți fi
+confruntat cu două tipuri de probleme: fie cererea în sinea sa este corectă
+din punct de vedere sintactic, însă MySQL îți returnează o eroare, fie
+modul în care ai generat cererea este greșit.
+
+În primul caz, problema și rezolvarea sa nu țin de PHP, ci de MySQL.
+Exemplul unei astfel de situații poate fi atunci când încerci să
+selectezi elemente dintr-un tabel inexistent.
+
+În al doilea caz, problema ține de codul PHP pe care l-ai scris
+pentru a genera acea cerere.
+
+De obicei îți poți da seama cu ce fel de problemă te confrunți uitându-te
+la eroarea generată de mysqli, folosind funcția \texttt{mysqli\_error()}.
+
+Până acum am construit cererile SQL integrând valorile concrete - de exemplu
+valoarea variabilei \texttt{\$name} - în cererea SQL. MySQLi permite
+însă separarea cererii efective de datele care parametrizează cererea
+SQL. Acest lucru se face folosind \textsl{prepared statements}.
+
+
+
 %TODO mention: criterii, sortări, ordonări, grupări, se fac mereu pe DB.
 %TODO http://forum.softpedia.com/index.php?showtopic=779610
 %TODO lifecycle of a mysql connection in the PHP runtime
@@ -327,7 +381,7 @@ Crează câteva intrări în această bază de date și export-o în format SQL 
 % 
 
 \section{Debugging and profiling}
-% Exercițiu: instalează xdebug şi eclipse PDT şi fă debugging şi profiling
+% Exercițiu: instalează xdebug și eclipse PDT și fă debugging și profiling
 
 \section{Lucrul în echipă}
 % Pentru lucrul în echipă:
