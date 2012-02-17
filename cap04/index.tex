@@ -430,7 +430,23 @@ fi folosite într-o aplicație care ar face uz de această bază de date.
 \end{Exercise}
 
 \section{Debugging and profiling}
-% Exercițiu: instalează xdebug și eclipse PDT și fă debugging și profiling
+Până acum, atunci când ai avut o problemă, a trebuit să inspectezi
+fluxul de execuţie afişând \texttt{\_\_FILE\_\_} şi \texttt{\_\_LINE\_\_}
+şi fluxul de date afişând valorile variabilelor cu \texttt{var\_dump()}.
+
+După ce ai terminat de inspectat ce se întâmplă în secvenţa de cod cu probleme,
+a trebuit să ştergi apelurile la funcţiile acestea de "debugging".
+
+Pentru a nu mai fi nevoie de aceste adăugiri şi ştergeri de cod temporar,
+poţi folosi un debugger. Unul din ele este \textsl{xdebug} şi poate
+fi adăugat în PHP ca extensie.
+
+Pentru a-l putea folosi uşor, instalează-ţi şi
+\textsl{IDE}-ul\footnote{\url{http://en.wikipedia.org/wiki/Integrated_development_environment}}
+Netbeans, iar pentru a porni uşor o nouă sesiune de debugging în firefox,
+add-on-ul \textit{easy Xdebug}\footnote{\url{https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug/}}.
+
+%TODO: profiling
 
 \section{Lucrul în echipă}
 % Pentru lucrul în echipă:
@@ -440,6 +456,7 @@ fi folosite într-o aplicație care ar face uz de această bază de date.
 % 
 % - apelează la echipa YAP pentru următorii pași (IRC: irc.freenode.net / #yet-another-project)
 %TODO exercițiu: găsește 1-2 cursanți pe IRC de același nivel, formați o echipă și creați un proiect mai amplu
+
 %tutorul va fi mediatorul vostru, dar nu se va băga peste ideile voastre (cel puțin nu în mod abuziv, ci doar ca să vă prevină greșelile sau să vi le îmbunătățească)
 %dacă e nevoie, fă schimb de numere de telefon sau alte mijloace de comunicare prin voce (ex: skype) cu membrii echipei tale, pentru a înlesni comunicarea
 
