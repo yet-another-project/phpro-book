@@ -293,7 +293,7 @@ operațiile ce țin de criterii de căutare, sortări, ordonări, grupări,
 folosind SQL. Sistemele de baze de date sunt optimizate pentru aceste
 operații, și trebuie să profităm de asta.
 
-Deasemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
+De asemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
 unde este posibil. De exemplu, suma prețurilor produselor dintr-un
 coș de cumpărături poate fi făcută folosind cereri precum
 
@@ -317,7 +317,7 @@ Aceasta este o aplicație web scrisă în PHP.
 Urmează pașii
 din documentația sa oficială pentru a o instala.
 
-Înainte de a te apuca de creat baze de date, trebuie să te gândești puțin
+Înainte de a te apuca de creat baze de date trebuie să te gândești puțin
 la structura informațiilor pe care urmează să le salvezi în baza de date.
 Țin să subliniez: a informațiilor, care nu înseamnă neapărat a bazei de date.
 
@@ -361,8 +361,9 @@ cream un nou tabel "străzi" în care puneam toate numele de străzi unice.
 
 Tabelul cu angajați nu mai conține deci numele străzilor, care acum se află
 în acest nou tabel. Dar cum facem legătura între un angajat și strada pe care
-locuiește? Pentru acest lucru avem la dispoziție două arme: \textsl{foreign key}
-și \textsl{primary key}.
+locuiește? Pentru acest lucru avem la dispoziție două arme: \textsl{foreign key
+(FK)}
+și \textsl{primary key (PK)}.
 
 Aceste \textit{keys} sunt numere întregi. Tabelul cu străzi ar trebui să aibe
 un PK unic numelui de stradă aferent. Teoretic, am putea folosi direct
@@ -372,16 +373,16 @@ mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baz
 ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
 și cererile ar deveni mai rapide.
 
-Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care o facem
-PK, și pentru a fi unic, o facem și \texttt{AUTO\_INCREMENT} și îi adăugăm
-\texttt{UNIQUE}.
+Deci adăugăm o nouă coloană tabelului străzi numită \texttt{ID}, pe care o facem
+PK și pentru ca intrările din această coloană să fie unice o facem 
+\texttt{AUTO\_INCREMENT} și îi adăugăm \texttt{UNIQUE}.
 
 Cum străzile au acum un PK, putem reveni la tabelul cu angajați și pune acolo
 în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
-această coloană este un FK, și că referențiem datele dintr-un alt tabel.
+această coloană este un FK și că referențiem datele dintr-un alt tabel.
 Din acest motiv, bazele de date SQL se numesc baze de date \textsl{relaționale}.
 
-Însă bazele de date relaționale știu și mai multe. Misiunea unei baze de date
+Însă bazele de date relaționale știu mai multe. Misiunea unei baze de date
 nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
 garanta integritatea datelor. Ce se întâmplă dacă ștergem din greșeală (sau nu)
 o stradă pe care încă locuiește un angajat? FK-ul acelui angajat va deveni
@@ -431,14 +432,14 @@ fi folosite într-o aplicație care ar face uz de această bază de date.
 
 \section{Debugging and profiling}
 Până acum, atunci când ai avut o problemă, a trebuit să inspectezi
-fluxul de execuție afișând \texttt{\_\_FILE\_\_} și \texttt{\_\_LINE\_\_}
-și fluxul de date afișând valorile variabilelor cu \texttt{var\_dump()}.
+fluxul de execuție afișând \texttt{\_\_FILE\_\_} și \texttt{\_\_LINE\_\_},
+iar fluxul de date afișând valorile variabilelor cu \texttt{var\_dump()}.
 
 După ce ai terminat de inspectat ce se întâmplă în secvența de cod cu probleme,
 a trebuit să ștergi apelurile la funcțiile acestea de "debugging".
 
-Pentru a nu mai fi nevoie de aceste adăugiri și ștergeri de cod temporar,
-poți folosi un debugger. Unul din ele este \textsl{xdebug} și poate
+Pentru a nu mai fi nevoie de aceste modificări, poți folosi un debugger. 
+Unul din ele este \textsl{xdebug} și poate
 fi adăugat în PHP ca extensie.
 
 Pentru a-l putea folosi ușor, instalează-ți și
