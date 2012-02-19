@@ -293,7 +293,7 @@ operațiile ce țin de criterii de căutare, sortări, ordonări, grupări,
 folosind SQL. Sistemele de baze de date sunt optimizate pentru aceste
 operații, și trebuie să profităm de asta.
 
-Deasemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
+De asemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
 unde este posibil. De exemplu, suma prețurilor produselor dintr-un
 coș de cumpărături poate fi făcută folosind cereri precum
 
@@ -317,7 +317,7 @@ Aceasta este o aplicație web scrisă în PHP.
 Urmează pașii
 din documentația sa oficială pentru a o instala.
 
-Înainte de a te apuca de creat baze de date, trebuie să te gândești puțin
+Înainte de a te apuca de creat baze de date trebuie să te gândești puțin
 la structura informațiilor pe care urmează să le salvezi în baza de date.
 Țin să subliniez: a informațiilor, care nu înseamnă neapărat a bazei de date.
 
@@ -372,16 +372,16 @@ mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baz
 ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
 și cererile ar deveni mai rapide.
 
-Deci adăugăm o nouă coloană tabelului străzi numit \texttt{ID}, pe care o facem
-PK, și pentru a fi unic, o facem și \texttt{AUTO\_INCREMENT} și îi adăugăm
-\texttt{UNIQUE}.
+Deci adăugăm o nouă coloană tabelului străzi numită \texttt{ID}, pe care o facem
+PK și pentru ca intrările din această coloană să fie unice o facem 
+\texttt{AUTO\_INCREMENT} și îi adăugăm \texttt{UNIQUE}.
 
 Cum străzile au acum un PK, putem reveni la tabelul cu angajați și pune acolo
 în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
-această coloană este un FK, și că referențiem datele dintr-un alt tabel.
+această coloană este un FK și că referențiem datele dintr-un alt tabel.
 Din acest motiv, bazele de date SQL se numesc baze de date \textsl{relaționale}.
 
-Însă bazele de date relaționale știu și mai multe. Misiunea unei baze de date
+Însă bazele de date relaționale știu mai multe. Misiunea unei baze de date
 nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
 garanta integritatea datelor. Ce se întâmplă dacă ștergem din greșeală (sau nu)
 o stradă pe care încă locuiește un angajat? FK-ul acelui angajat va deveni
@@ -410,8 +410,8 @@ Normalizarea bazelor de date\footnote{\url{http://en.wikipedia.org/wiki/Database
 este o categorisire formală și o 
 extindere a principiilor expuse anterior în designul bazelor de date.
 
-Este suficientă respectarea primelor trei forme normale în aplicaţiile
-fără necesităţi speciale.
+Este suficientă respectarea primelor trei forme normale în aplicațiile
+fără necesități speciale.
 
 \begin{Exercise}[title={Database Normalization}, difficulty=3]
 Crează o bază de date normalizată în 3rd NF cu cel puțin 5 tabele. Crează indecși unici
@@ -430,7 +430,23 @@ fi folosite într-o aplicație care ar face uz de această bază de date.
 \end{Exercise}
 
 \section{Debugging and profiling}
-% Exercițiu: instalează xdebug și eclipse PDT și fă debugging și profiling
+Până acum, atunci când ai avut o problemă, a trebuit să inspectezi
+fluxul de execuție afișând \texttt{\_\_FILE\_\_} și \texttt{\_\_LINE\_\_},
+iar fluxul de date afișând valorile variabilelor cu \texttt{var\_dump()}.
+
+După ce ai terminat de inspectat ce se întâmplă în secvența de cod cu probleme,
+a trebuit să ștergi apelurile la funcțiile acestea de "debugging".
+
+Pentru a nu mai fi nevoie de aceste modificări, poți folosi un debugger. 
+Unul din ele este \textsl{xdebug} și poate
+fi adăugat în PHP ca extensie.
+
+Pentru a-l putea folosi ușor, instalează-ți și
+\textsl{IDE}-ul\footnote{\url{http://en.wikipedia.org/wiki/Integrated_development_environment}}
+Netbeans, iar pentru a porni ușor o nouă sesiune de debugging în firefox,
+add-on-ul \textit{easy Xdebug}\footnote{\url{https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug/}}.
+
+%TODO: profiling
 
 \section{Lucrul în echipă}
 % Pentru lucrul în echipă:
@@ -440,6 +456,7 @@ fi folosite într-o aplicație care ar face uz de această bază de date.
 % 
 % - apelează la echipa YAP pentru următorii pași (IRC: irc.freenode.net / #yet-another-project)
 %TODO exercițiu: găsește 1-2 cursanți pe IRC de același nivel, formați o echipă și creați un proiect mai amplu
+
 %tutorul va fi mediatorul vostru, dar nu se va băga peste ideile voastre (cel puțin nu în mod abuziv, ci doar ca să vă prevină greșelile sau să vi le îmbunătățească)
 %dacă e nevoie, fă schimb de numere de telefon sau alte mijloace de comunicare prin voce (ex: skype) cu membrii echipei tale, pentru a înlesni comunicarea
 
