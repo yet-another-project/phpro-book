@@ -949,7 +949,30 @@ Formalismul matematic pentru aceeași situație ca mai sus ar arăta astfel:
 Simbolurile matematice pentru disjuncții și conjuncții sunt $\lor$ respectiv $\land$, și se citesc
 {\glqq}sau{\grqq} respectiv {\glqq}și{\grqq}. În PHP, aceste operații sunt făcute de operatorii {\glqq}||{\grqq}, respectiv {\glqq}\&\&{\grqq}.
 
-Toate combinațiile de TRUE și FALSE sunt reprezentate într-un tabel de adevăr \label{tbl:truth table and or}\url{http://en.wikipedia.org/wiki/Truth_table} (en. truth table)
+Toate combinațiile de TRUE și FALSE sunt reprezentate într-un tabel de
+adevăr (en. truth
+table)\footnote{\url{http://en.wikipedia.org/wiki/Truth_table}}, de exemplu
+tabelul \ref{tbl:truth table and or}.
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{| c | c | c | c|}
+    \hline
+    A & B & A $\land$ B & A $\lor$ B\\
+    \hline
+    T & T & T & T\\
+    \hline
+    T & F & F & T\\
+    \hline
+    F & T & F & T\\
+    \hline
+    F & F & F & F\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \caption{Tabel de adevăr}
+    \label{tbl:truth table and or}
+\end{table}
 
 După cum observi, conjuncțiile și disjuncțiile sunt comutative -- ceea ce înseamnă
 că ordinea lor nu contează, rezultatul va fi același. Acest lucru este adevărat,
