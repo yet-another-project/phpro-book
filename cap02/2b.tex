@@ -3161,7 +3161,7 @@ const AUTH_DELETE = 0x04;
 
 $drepturile_mele = AUTH_READ|AUTH_WRITE|AUTH_DELETE;
 
-if($drepturile_mele & (AUTH_READ|AUTH_WRITE)) {
+if($drepturile_mele & AUTH_READ && $drepturile_mele & AUTH_WRITE) {
   echo 'poti citi si scrie<br>';
 }
 \end{lstlisting}
