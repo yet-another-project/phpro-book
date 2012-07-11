@@ -3074,7 +3074,7 @@ for($i=8*PHP_INT_SIZE-1;$i>=0;$i--) {
 
 \attention{În urma operației \textit{shift to right} cu X biți, se pierd cei mai din
 dreapta X biți, iar în partea din stânga X biți (care apar {\glqq}noi{\grqq}) sunt inițializați
-cu zero.}
+cu zero în cazul numerelor pozitive, iar în cazul numerelor negative cu unu.}
 
 \begin{Exercise}[difficulty=3,title={Cum funcționează afișarea bit cu bit a unui int?}]
 Explică cum funcționează codul din listingul \ref{lst:bitbybit}.
@@ -3161,7 +3161,7 @@ const AUTH_DELETE = 0x04;
 
 $drepturile_mele = AUTH_READ|AUTH_WRITE|AUTH_DELETE;
 
-if($drepturile_mele & (AUTH_READ|AUTH_WRITE)) {
+if($drepturile_mele & AUTH_READ && $drepturile_mele & AUTH_WRITE) {
   echo 'poti citi si scrie<br>';
 }
 \end{lstlisting}
@@ -3171,7 +3171,7 @@ au fiecare biții doar câte un bit setat, de la dreapta la stânga, 1 are primu
 între cele patru niveluri de acces. Folosim constante
 deoarece acei biți nu se schimbă niciodată.
 
-Linia 7 unește conjunctiv toate drepturile de acces, ceea ce rezultă practic în șirul
+Linia 7 unește disjunctiv toate drepturile de acces, ceea ce rezultă practic în șirul
 de biți \texttt{00000111}.
 
 Linia 9 verifică conjunctiv dacă drepturile utilizatorului care vizitează
