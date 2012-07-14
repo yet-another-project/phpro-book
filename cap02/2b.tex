@@ -21,7 +21,8 @@ unde \texttt{EXPR}  trebuie să fie o expresie care evaluată, se reduce la o va
 \attention{Nu te speria dacă nu înțelegi totul, voi reveni asupra subiectului. Deocamdată urmează pur și simplu pașii prezentați de mine, respectând sintaxa.
 Simte-te liber să faci modificări, să experimentezi. Dacă faci ceva ce generează
 o avertizare sau o eroare nu te impacienta, citește-o cu atenție, încearcă
-să o înțelegi, și cere lămuriri pe wiki-ul proiectului.
+să o înțelegi, și cere lămuriri comunității fie prin IRC, fie
+prin \textit{mailing list}-ul proiectului.
 }
 
 Hai să-l învățăm pe PHP să ne salute. În notepad++ crează un nou fișier
@@ -949,7 +950,30 @@ Formalismul matematic pentru aceeași situație ca mai sus ar arăta astfel:
 Simbolurile matematice pentru disjuncții și conjuncții sunt $\lor$ respectiv $\land$, și se citesc
 {\glqq}sau{\grqq} respectiv {\glqq}și{\grqq}. În PHP, aceste operații sunt făcute de operatorii {\glqq}||{\grqq}, respectiv {\glqq}\&\&{\grqq}.
 
-Toate combinațiile de TRUE și FALSE sunt reprezentate într-un tabel de adevăr \label{tbl:truth table and or}\url{http://en.wikipedia.org/wiki/Truth_table} (en. truth table)
+Toate combinațiile de TRUE și FALSE sunt reprezentate într-un tabel de
+adevăr (en. truth
+table)\footnote{\url{http://en.wikipedia.org/wiki/Truth_table}}, de exemplu
+tabelul \ref{tbl:truth table and or}.
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{| c | c | c | c|}
+    \hline
+    A & B & A $\land$ B & A $\lor$ B\\
+    \hline
+    T & T & T & T\\
+    \hline
+    T & F & F & T\\
+    \hline
+    F & T & F & T\\
+    \hline
+    F & F & F & F\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \caption{Tabel de adevăr}
+    \label{tbl:truth table and or}
+\end{table}
 
 După cum observi, conjuncțiile și disjuncțiile sunt comutative -- ceea ce înseamnă
 că ordinea lor nu contează, rezultatul va fi același. Acest lucru este adevărat,
@@ -2439,7 +2463,7 @@ convenție.
 \begin{enumerate}
 \item identificatorii variabilelor sunt scriși cu litere mici, și ale constantelor cu litere mari
 \item pentru contoare se folosesc identificatori scurți precum \texttt{i} sau \texttt{j}
-\item acolada de deschidere a unui bloc de instrucțiuni este precedată de un spațiu și de o linie nouă;
+\item acolada de deschidere a unui bloc de instrucțiuni este precedată de un spațiu;
 ea se află mereu pe aceeași linie cu constructul (precum \texttt{if}, \texttt{else}, \texttt{do}) căruia îi aparține
 \item codul din interiorul unui bloc este indentat cu un tab
 \item mărimea unui tab este de 4 spații
@@ -2460,7 +2484,7 @@ a face codul mai lizibil. În special punctul 6 are un impact mare:
 Observi cum liniile 125 și 142 sunt aliniate vertical. La fel și 126 și 141. Astfel ochiului uman (cu puțin de antrenament)
 îi este foarte ușor să își dea seama care acoladă cui aparține.
 
-În continuare, toate listările vor respecta în continuare aceeași convenție de formatare a codului
+În continuare, toate listările vor respecta aceeași convenție de formatare a codului
 în mod consistent. Nu vor mai fi introduse explicit unele convenții, însă este bine să fii atent
 la aceste detalii pe măsură ce avansezi.
 
@@ -3051,7 +3075,7 @@ for($i=8*PHP_INT_SIZE-1;$i>=0;$i--) {
 
 \attention{În urma operației \textit{shift to right} cu X biți, se pierd cei mai din
 dreapta X biți, iar în partea din stânga X biți (care apar {\glqq}noi{\grqq}) sunt inițializați
-cu zero.}
+cu zero în cazul numerelor pozitive, iar în cazul numerelor negative cu unu.}
 
 \begin{Exercise}[difficulty=3,title={Cum funcționează afișarea bit cu bit a unui int?}]
 Explică cum funcționează codul din listingul \ref{lst:bitbybit}.
@@ -3138,7 +3162,7 @@ const AUTH_DELETE = 0x04;
 
 $drepturile_mele = AUTH_READ|AUTH_WRITE|AUTH_DELETE;
 
-if($drepturile_mele & (AUTH_READ|AUTH_WRITE)) {
+if($drepturile_mele & AUTH_READ && $drepturile_mele & AUTH_WRITE) {
   echo 'poti citi si scrie<br>';
 }
 \end{lstlisting}
@@ -3148,7 +3172,7 @@ au fiecare biții doar câte un bit setat, de la dreapta la stânga, 1 are primu
 între cele patru niveluri de acces. Folosim constante
 deoarece acei biți nu se schimbă niciodată.
 
-Linia 7 unește conjunctiv toate drepturile de acces, ceea ce rezultă practic în șirul
+Linia 7 unește disjunctiv toate drepturile de acces, ceea ce rezultă practic în șirul
 de biți \texttt{00000111}.
 
 Linia 9 verifică conjunctiv dacă drepturile utilizatorului care vizitează
