@@ -7,6 +7,7 @@ PROJECT="Dezvoltare web cu PHP"
 
 pdf: cedilla
 	$(PDFLATEX) $(PDFFLAGS) $(PROJECT).tex > error.log 2>&1 && \
+	$(PDFLATEX) $(PDFFLAGS) $(PROJECT).tex > error2.log 2>&1
 	$(PDFLATEX) $(PDFFLAGS) $(PROJECT).tex | ./filter.sh 2>&1
 preview: cedilla
 	$(PDFLATEX) $(PDFFLAGS) $(PROJECT)-preview.tex && \
