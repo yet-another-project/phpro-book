@@ -16,6 +16,7 @@ preview: cedilla
 clean:
 	rm -rf *.{aux,log,out,loe,ilg,ind,idx}
 	find . -type f -name "*~" -exec rm {} \;
+	find . -type f -name "*.aux" -exec rm {} \;
 	rm -rf *.{toc,pdf}
 push:
 	git co stable && git push && git co integration && git merge stable && git push
