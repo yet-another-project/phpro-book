@@ -2,7 +2,7 @@
 
 \begin{chapsummary}
 Cu PHP controlezi ce se întâmplă pe server,\footnote{În acest
-capitol vei vedea că termenul {\glqq}server{\grqq} este deseori folosit greșit,
+capitol vei vedea că termenul ``server'' este deseori folosit greșit,
 ca și în acest paragraf.} server care
 este conectat la Internet.
 Deci folosirea PHP este strâns legată
@@ -70,7 +70,7 @@ GNU/Linux. Figura \ref{fig:cli traceroute} îți dă un exemplu de \textsl{outpu
 După cum vezi, tot ceea ce îi trimit eu lui google.com și ce îmi trimite
 el înapoi trece prin alte 11 noduri din rețea. Dacă un \engl{infractor}{cracker}
 deține controlul asupra unuia dintre aceste noduri,
-poate vedea absolut orice {\glqq}vorbesc{\grqq} eu cu \texttt{google.com}. Un astfel de atac
+poate vedea absolut orice ``vorbesc'' eu cu \texttt{google.com}. Un astfel de atac
 se numește \href{http://en.wikipedia.org/wiki/Man-in-the-middle_attack}{man in the middle},
 deoarece atacatorul se află la mijloc, între
 cele două \engl{capete}{endpoints}.
@@ -117,8 +117,8 @@ la Internet decât un singur calculator, care avea adresa IP \texttt{84.43.53.12
 \sloppy Există deci două tipuri de adrese IP, cele interne rețelei mele, precum \texttt{192.168.2.1}
 sau \texttt{192.168.2.6} și cele externe rețelei, publice, precum \texttt{84.43.53.126} sau una
 dintre adresele lui \texttt{google.com}, \texttt{74.125.87.104}.
-Cele dintâi se numesc \textsl{adrese private}\footnote{le poți numi și {\glqq}intranet{\grqq},
-analog cu cele publice, {\glqq}internet{\grqq}.}
+Cele dintâi se numesc \textsl{adrese private}\footnote{le poți numi și ``intranet'',
+analog cu cele publice, ``internet''.}
 sau adrese LAN, cele din urmă sunt în schimb \textsl{adrese publice}.
 
 \attention{Internetul este o rețea de LAN-uri și \engl{WAN-uri}{wide area network} interconectate.
@@ -177,7 +177,7 @@ Este deci posibil să afli atât adresele IP pornind de la un nume precum
 \texttt{google.com}, însă și numele, pornind de la o adresă IP de Internet
 (nu de intranet).
 Deși este posibil ca mai multe domenii să \textsl{pointeze} către aceeași
-adresă IP, o adresă IP nu poate {\glqq}pointa{\grqq} (prin \textsl{reverse DNS})
+adresă IP, o adresă IP nu poate ``pointa'' (prin \textsl{reverse DNS})
 decât spre un domeniu.\footnote{Tehnic este posibil, însă practic poate
 cauza probleme.}
 
@@ -193,14 +193,14 @@ registrar}. Pentru a învăța PHP nu ai nevoie de un domeniu, poți
 face totul pe calculatorul tău personal, așa cum vei vedea în acest capitol.
 
 \section{Protocoale}
-Internetul este {\glqq}făcut{\grqq} din așa-numite \textsl{servicii}. Cele mai cunoscute servicii sunt
+Internetul este ``făcut'' din așa-numite \textsl{servicii}. Cele mai cunoscute servicii sunt
 web-ul pentru documente interconectate,\footnote{Prin link-uri.}
 \textsl{pop3} sau \textsl{imap} pentru e-mail,
 \textsl{irc} (en. \textsl{internet relay chat}) pentru chat, sau
 \textsl{ftp} (en. \textsl{file transfer protocol}) pentru transferul de fișiere.
 
 Pentru a folosi unul dintre aceste servicii, ai nevoie de un program
-special numit \textsl{client}. Nu există un client care să {\glqq}știe{\grqq} 
+special numit \textsl{client}. Nu există un client care să ``știe'' 
 să acceseze toate serviciile, pentru
 că fiecare serviciu este diferit de celelalte. Vom vedea mai târziu de ce.
 
@@ -226,7 +226,7 @@ corect din punct de vedere tehnic.
 unui browser de la un server.
 
 Imaginează-ți că un calculator stă conectat la rețea și
-nu face nimic din {\glqq}proprie inițiativă{\grqq}.
+nu face nimic din ``proprie inițiativă''.
 Acest calculator se numește \textsl{server}. Pe server, care este
 \textit{mașina fizică}, rulează \textit{un program} numit \textsl{daemon}.
 Acesta așteaptă conexiuni din
@@ -251,7 +251,7 @@ clientului meu cu informații utile, trebuie să comunice unul cu celălalt.
 Această comunicare dintre cele două programe se va desfășura într-un limbaj comun numit
 \textsl{protocol}. Fiecare serviciu are un protocol specific lui. Astfel avem un
 protocol irc pentru serviciul irc, protocolul ftp pentru serviciul ftp,
-sau protocolul http pentru serviciul web, ș.a.m.d. De aici vine acel {\glqq}http://{\grqq} care precede
+sau protocolul http pentru serviciul web, ș.a.m.d. De aici vine acel ``http://'' care precede
 orice adresă web. Această adresă se numește
 \engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Locator}{URL}}{uniform resource locator},
 o formă de \engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Identifier}{URI}}{uniform resource identifier}.
@@ -259,18 +259,18 @@ o formă de \engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 De obicei pe un server rulează mai multe \textit{daemon}-uri în paralel și care
 așteaptă să deservească cereri. Dar cum să știe sistemul de operare al serverului
 pentru ce daemon este destinat un anumit pachet de date? Din câte știm până acum,
-nu are cum, pentru că OS-ul nu înțelege noțiunea de {\glqq}protocol{\grqq}. Totuși OS-ul trebuie
+nu are cum, pentru că OS-ul nu înțelege noțiunea de ``protocol''. Totuși OS-ul trebuie
 să paseze datele primite pachet cu pachet daemon-ului corect.
 
-Pentru a rezolva această problemă fiecare pachet de date este {\glqq}însemnat{\grqq} cu un \textsl{port}.
+Pentru a rezolva această problemă fiecare pachet de date este ``însemnat'' cu un \textsl{port}.
 Un port este un număr între 1 și 65535 care îi permite sistemului de operare să
 paseze pachetul de date procesului\footnote{Un program care este executat. Gândește-te
-la ce listează {\glqq}task manager{\grqq}.} corect.
+la ce listează ``task manager''.} corect.
 
 Atunci când \engl{administratorul serverului}{sysadmin} lansează în execuție un daemon,
 acesta îi spune OS-ului că \engl{ascultă}{listen}
 pe un anumit port. Din acel moment, OS-ul
-{\glqq}știe{\grqq} că acel port îi {\glqq}aparține{\grqq} acelui daemon. Astfel, sysadmin-ul poate rula
+``știe'' că acel port îi ``aparține'' acelui daemon. Astfel, sysadmin-ul poate rula
 pe sistemul său mai mulți daemoni concomitent, chiar și pentru servicii diferite, fără
 a-și face griji că pachetele de date ar putea ajunge la daemon-urile greșite.
 
@@ -302,7 +302,7 @@ anterioare doar ți-au prezentat sumar niște concepte de bază.
 
 În al doilea rând, pentru a-mi crea ocazia de a explica termenul de hacker.
 În zilele noastre, \textsl{mass-media}, în încercarea sa de a crea\footnote{În
-sensul de {\glqq}a inventa{\grqq}} senzaționalul,
+sensul de ``a inventa''} senzaționalul,
 a redefinit \textsl{hacker} ca \textit{infractor}. Însă nu asta este semnificația
 originală a cuvântului. Un hacker este o persoană care înțelege foarte bine ce
 face. Poți fi un hacker în orice domeniu, dar atunci când devii un hacker într-un domeniu,
@@ -358,7 +358,7 @@ Imaginează-ți că două endpoints comunică prin plicuri.
 Programul care inițiază conexiunea (numit client), scrie datele pe
 care urmează să le trimită într-un plic.
 
-Dacă clientul și daemonul doar schimbă date {\glqq}așa cum sunt{\grqq},
+Dacă clientul și daemonul doar schimbă date ``așa cum sunt'',
 așa cum am face cu telnet, atunci doar acest plic este necesar.
 Însă dacă aplicațiile vor să se înțeleagă reciproc,
 ele trebuie să folosească un protocol de comunicare.
@@ -379,13 +379,13 @@ serverului, și \textit{port}-ul ca al doilea parametru, deci:
 telnet example.org 80
 \end{alltt}
 După ce s-a conectat, îi poți cere daemonului ce document vrei, însă trebuie
-să o faci în limbajul HTTP, altfel nu va {\glqq}înțelege{\grqq} ce vrem de la el.
+să o faci în limbajul HTTP, altfel nu va ``înțelege'' ce vrem de la el.
 Altfel spus, folosind analogia cu plicul, noi ca oameni, deoarece
 știm că vrem să comunicăm în HTTP, și deoarece telnet nu are noțiunea
 de \textit{application layer}, avem responsabilitatea de a ne
-{\glqq}împacheta{\grqq} singuri cererea în încă un plic cu formatul specific HTTP,
+``împacheta'' singuri cererea în încă un plic cu formatul specific HTTP,
 plic pe care i-l pasăm lui telnet, care ne va pune plicul
-pe rând în toate celelalte \textit{layere} ({\glqq}plicuri{\grqq}) din modelul OSI aflate
+pe rând în toate celelalte \textit{layere} (``plicuri'') din modelul OSI aflate
 sub \textit{application layer}: presentation, session, transport, network, iar
 electronica (de exemplu placa de rețea) se va ocupa de data link layer și
 physical layer.\footnote{Lucrurile sunt mult mai complexe, telnet
@@ -425,7 +425,7 @@ HTTP (en. \textsl{HTTP response}):
 HTTP/1.1 200 OK
 Server: Apache/2.2.3 (Red Hat)
 Last-Modified: Tue, 15 Nov 2005 13:24:10 GMT
-ETag: {\glqq}b300b4-1b6-4059a80bfd280{\grqq}            
+ETag: ``b300b4-1b6-4059a80bfd280''            
 \nl{1}Accept-Ranges: bytes                        
 Content-Type: text/html; charset=UTF-8      
 Connection: Keep-Alive                      
@@ -443,7 +443,7 @@ Content-Length: 438
   or &quot;example.org&quot; into your web browser.</p>             
 <p>These domain names are reserved for use in documentation and
   are not available for registration.
-	See <a href={\glqq}http://www.rfc-editor.org/rfc/rfc2606.txt{\grqq}>
+	See <a href=``http://www.rfc-editor.org/rfc/rfc2606.txt''>
 	RFC 2606</a>, Section 3.</p>        
 </BODY>                                                                           
 </HTML>
@@ -460,18 +460,18 @@ prin așa-numitele \href{http://en.wikipedia.org/wiki/Request_for_Comments}{RFC}
 
 Folosind analogia cu plicurile, cele șapte niveluri din modelul OSI nu sunt totul:
 protocolul HTTP însuși mai definește încă trei plicuri care trebuie puse în
-{\glqq}plicul{\grqq} cu datele HTTP:
+``plicul'' cu datele HTTP:
 \begin{itemize}
 \item \textsl{HTTP request}
 %, care conține la rândul
-%său două plicuri: prima linie (cea cu {\glqq}GET{\grqq}) \textsl{request line} și
+%său două plicuri: prima linie (cea cu ``GET'') \textsl{request line} și
 %\textsl{request headers} (precum \texttt{Host:})
 \item \textsl{response headers}
 \item \textsl{response body}
 \end{itemize}
-Chiar dacă cele trei {\glqq}segmente{\grqq} sunt scrise fie de client, fie de daemon,
+Chiar dacă cele trei ``segmente'' sunt scrise fie de client, fie de daemon,
 noi privim \textit{întreaga comunicație} ca pe un fișier unitar, și din acest motiv
-putem spune că este constituită din aceste trei segmente ({\glqq}plicuri{\grqq}).
+putem spune că este constituită din aceste trei segmente (``plicuri'').
 
 După ce a primit răspunsul HTML, un browser ar face alte lucruri precum:
 \begin{itemize}
@@ -496,17 +496,17 @@ Gândește-te la aceste implicări și explică-le în 200-300 cuvinte.
 
 Însă clientul nostru telnet nu știe toate aceste lucruri, el nu înțelege
 limbajul de comunicare HTTP pe care l-am folosit,\footnote{Protocolul
-de comunicare este {\glqq}plicul{\grqq} ce corespunde \textsl{application layer} în modelul OSI.}
+de comunicare este ``plicul'' ce corespunde \textsl{application layer} în modelul OSI.}
 cum nu înțelege nici limbajul
 de formatare HTML, în consecință nici nu poate afișa imagini sau executa scripturi Javascript.
 El doar s-a conectat la daemon pe portul dorit de noi, și ne-a oferit posibilitatea
 de a comunica cu el în HTTP pentru a primi codul HTML al paginii.
 
 Dacă în acest moment am vrea să cerem daemonului un alt fișier, și nu cel standard,
-ar trebui să nu-i cerem resursa {\glqq}/{\grqq} (care urmează după {\glqq}GET{\grqq} în cererea anterioară,
+ar trebui să nu-i cerem resursa ``/'' (care urmează după ``GET'' în cererea anterioară,
 și care este numită și \textsl{root}),
 ci numele resursei cu tot cu calea sa absolută. De exemplu, pentru fișierul
-{\glqq}http://example.org/contact.html{\grqq},
+``http://example.org/contact.html'',
 cererea ar arăta astfel:
 
 \begin{verbatim}
@@ -522,7 +522,7 @@ din ele ne referim.
 De exemplu, este posibil ca \texttt{http://example.org} și
 \texttt{http://www.example.org} să fie două site-uri complet diferite, independente, cu
 fișiere diferite. Întâmplător, administratorul care a setat acel apache 2.2.3 (știm că
-acel program cu acea versiune deservește acel site din response header-ul {\glqq}Server{\grqq}) a făcut setările astfel
+acel program cu acea versiune deservește acel site din response header-ul ``Server'') a făcut setările astfel
 încât cele două hostname-uri complet diferite \texttt{example.org} și \texttt{www.example.org}
 să facă referire către același director de pe server. Din acest motiv nu contează
 către ce hostname trimitem cererea, daemonul ne va răspunde cu aceleași fișiere.
@@ -564,7 +564,7 @@ ca acesta să pună un link către mirror-ul tău. Toate fișierele de pe un mir
 deci teoretic nu contează ce mirror alegi, însă este recomandat să alegi un mirror
 apropiat ție din punct de vedere geografic, pentru ca descărcarea să fie mai
 rapidă.} și apasă \texttt{change}. Mirror-ul selectat automat ar trebui să fie unul
-dintre cele mai bune. Apoi selectează versiunea {\glqq}Win32 Binary without crypto{\grqq}.
+dintre cele mai bune. Apoi selectează versiunea ``Win32 Binary without crypto''.
 
 %\begin{figure}[ht!]
 %  \centering
@@ -805,8 +805,8 @@ am setat-o anterior îi spune același lucru SAPI-ului CLI (adică lui \texttt{p
 Acel bloc condițional\footnote{Se numește condițional deoarece ceea ce se află
 în interiorul său este inclus doar dacă condiția este adevărată, numele însuși
 conținând \texttt{If}.}
- \texttt{IfModule} verifică dacă apache are modulul {\glqq}dir{\grqq}, și dacă
-da, setează resursa de start corespunzătoare root-ului (atunci când este accesat {\glqq}/{\grqq}
+ \texttt{IfModule} verifică dacă apache are modulul ``dir'', și dacă
+da, setează resursa de start corespunzătoare root-ului (atunci când este accesat ``/''
 al unui director, așa cum ai văzut în capitolul anterior) fiecărui director. Fișierele
 sunt listate după ordinea priorității, dacă primul nu este găsit, apache va încerca să-l
 deservească pe al doilea.

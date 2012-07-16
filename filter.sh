@@ -3,6 +3,8 @@
 in_message=false
 message=""
 
+echo $TERM
+
 while read line ; do
     if [[ "$line" =~ Warning|Message|Error ]]
     then
@@ -18,7 +20,7 @@ while read line ; do
             color=3
         fi
     else
-        if $in_message ; then
+        if [[ $in_message == true ]] ; then
             message="$message$line"
         fi
     fi

@@ -14,7 +14,10 @@
 \usepackage[xetex,colorlinks]{hyperref}
  
 
+\usepackage{bookman}
 \usepackage{fontspec}
+%\usepackage{xunicode}
+%\setmainfont{Serif}
 
 \usepackage{fancyhdr}
 %for custom blocks
@@ -53,32 +56,30 @@ basicstyle=\ttfamily,%
 keywordstyle=\bfseries,%
 showstringspaces=false,%
 extendedchars}[keywords] 
- \lstset{
-         basicstyle=\footnotesize\ttfamily, % Standardschrift
-         numbers=left,               % Ort der Zeilennummern
-         numberstyle=\tiny,          % Stil der Zeilennummern
-         numbersep=5pt,              % Abstand der Nummern zum Text
-         tabsize=4,                  % Groesse von Tabs
-         extendedchars=true,         %
-         breaklines=true,            % Zeilen werden Umgebrochen
-                frame=b,         
-         showspaces=false,           % Leerzeichen anzeigen ?
-         showtabs=false,             % Tabs anzeigen ?
-         xleftmargin=17pt,
-         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
-		  keywordstyle=\color{Red},
-		stringstyle=\color{OliveGreen},
-		identifierstyle=\color{Blue},
-		frame=shadowbox,
-		rulesepcolor=\color{Gray},
-		escapeinside={\%*}{*)},         % if you want to add a comment within your code
-		mathescape=false
- }
- 
-
+\lstset{%
+    basicstyle=\footnotesize\ttfamily, % Standardschrift
+    numbers=left,               % Ort der Zeilennummern
+    numberstyle=\tiny,          % Stil der Zeilennummern
+    numbersep=5pt,              % Abstand der Nummern zum Text
+    tabsize=4,                  % Groesse von Tabs
+    extendedchars=true,         %
+    breaklines=true,            % Zeilen werden Umgebrochen
+    frame=b,         
+    showtabs=false,             % Tabs anzeigen ?
+    xleftmargin=17pt,
+    showspaces=true,           % Leerzeichen anzeigen ?
+    showstringspaces=true,
+    keywordstyle=\color{Red},
+    stringstyle=\color{OliveGreen},
+    identifierstyle=\color{Blue},
+    frame=shadowbox,
+    rulesepcolor=\color{Gray},
+    escapeinside={\%*}{*)},         % if you want to add a comment within your code
+    mathescape=false
+}
 
 \setlength\marginparwidth{1cm}
-\hypersetup{
+\hypersetup{%
 %    bookmarks=true,         % show bookmarks bar?
     unicode=true,          % non-Latin characters in Acrobat’s bookmarks
     pdftoolbar=true,        % show Acrobat’s toolbar?
@@ -97,7 +98,7 @@ extendedchars}[keywords]
     citecolor=green,        % color of links to bibliography
     filecolor=magenta,      % color of file links
 %    urlcolor=red,           % color of external links
-	linkbordercolor={1 0 0}
+    linkbordercolor={1 0 0}
 }
 
 \renewcommand{\chaptermark}[1]{\markright{#1}{}}
@@ -138,6 +139,19 @@ extendedchars}[keywords]
 \setlength{\headheight}{14.2pt}
 
 \begin{document}
+
+%\setmainfont[Ligatures=TeX]{Linux Libertine O}
+%\setmainfont[
+%    SlantedFont={Linux Libertine Slanted O},
+%    SmallCapsFont={Linux Libertine O},
+%    SmallCapsFeatures={Letters=SmallCaps},
+%    Mapping=tex-text, Numbers=OldStyle, Ligatures={TeX, Common},
+%    Contextuals=WordFinal]{Linux Libertine O}
+
+%\setromanfont[Mapping=tex-text]{Linux Libertine O}
+%\setsansfont[Mapping=tex-text]{DejaVu Sans}
+%\setmonofont[Mapping=tex-text]{Liberation Mono}
+
 \pagestyle{empty}
 
 \include{titlepage}
