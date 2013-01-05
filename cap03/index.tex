@@ -59,8 +59,8 @@ Limbajul PHP nu este at\^at de strict \^in privința tipurilor de date
 acceptate ca parametri sau tipurilor de date returnate de funcții. De aceea
 documentarea semnăturilor funcțiilor noastre ne poate feri pe noi \^inșine
 de greșeli de programare. De exemplu, dacă documentăm o funcție ca return\^and
-{\glqq}int{\grqq}, și la un moment dat, \^in timp ce implementăm acea funcție,
-returnăm un {\glqq}string{\grqq}, atunci e clar că am făcut o greșeală, și cel
+``int'', și la un moment dat, \^in timp ce implementăm acea funcție,
+returnăm un ``string'', atunci e clar că am făcut o greșeală, și cel
 mai probabil greșeala este \^in implementație.
 
 \good{Atunci c\^and decizi să creezi o funcție, mai \^int\^ai analizează logistica
@@ -207,7 +207,7 @@ complexe, chiar dacă acestea îți sunt străine.
 dată o buclă atunci când ai vrut să afișezi reprezentarea
 binară a unui număr întreg. Cu funcții, nu trebuie
 să implementezi acel algoritm decât o singură dată,
-să îl {\glqq}îmbraci{\grqq} într-o funcție, și să apelezi acea
+să îl ``îmbraci'' într-o funcție, și să apelezi acea
 funcție de fiecare dată când ai nevoie de ea. Asta te scapă de
 multă muncă inutilă și cod care nu numai că este repetitiv,
 dar care mai este și greu de citit.
@@ -603,16 +603,16 @@ Programatorul bun va rupe problema mare în subprobleme mai mici.
 Aceste subprobleme pot fi constituite la rândul lor din alte subprobleme.
 
 Vom formaliza acest scenariu, pentru o ilustrare mai clară. Avem o problemă fictivă P.
-Ea constă în rezolvarea problemelor $P_1$, $P_2$ și $P_3$. Aceste subprobleme
-sunt mai puțin complexe decât problema P. $P_1$ la rândul ei poate fi decompusă în alte
-două subprobleme, $P_{1_1}$ și $P_{1_2}$.
+Ea constă în rezolvarea problemelor $P'_1$, $P'_2$ și $P'_3$. Aceste subprobleme
+sunt mai puțin complexe decât problema P. $P'_1$ la rândul ei poate fi decompusă în alte
+două subprobleme, $P'_{1_1}$ și $P'_{1_2}$.
 
-Trecând la analiza subproblemei $P_2$, programatorul realizează că datele pe care
+Trecând la analiza subproblemei $P'_2$, programatorul realizează că datele pe care
 aceasta operează sunt foarte similare cu datele pe care le-ar returna $P_{1_2}$, deci
-practic, făcând abstracție de câteva detalii de implementație, $P_2 = P_{1_2}$.
+practic, făcând abstracție de câteva detalii de implementație, $P'_2 = P_{1_2}$.
 
-Folosind deci algoritmii din $P_{1_2}$, programatorul rezolvă o altă subproblemă a lui $P$,
-și anume $P_2$.
+Folosind deci algoritmii din $P'_{1_2}$, programatorul rezolvă o altă subproblemă a lui $P$,
+și anume $P'_2$.
 
 \attention{Această împărțire (en. \textsl{breaking down}) a problemei se numește \textsl{modularizare}.}
 
@@ -1211,10 +1211,18 @@ de parametri, însă trebuie să fie cel puțin unul.
 Astfel de funcții se numesc funcții variadice (en. \textsl{variadic}).
 
 \begin{Exercise}[title={Crează o funcție variadică}]
+\ExePart
 Caută în manual funcția \texttt{func\_num\_args()} și
 toate funcțiile înrudite cu ea pentru a crea
 o funcție variadică care returnează produsul parametrilor
 pasați.
+
+\ExePart
+Scrie o nouă versiune a funcției care are semnătura
+\begin{verbatim}
+int array_product(...)
+\end{verbatim}
+și care returnează produsul numerelor salvate în array.
 
 % \ExePart
 % 
@@ -2669,7 +2677,7 @@ fișiere. De exemplu hai să ne imaginăm că vrem să facem un guestbook.
 Asta \^inseamnă că utilizatorul intră pe pagina noastră și completează
 c\^ampuri precum \textit{nume} și conținut. Teoretic am putea citi
 aceste informații și le-am putea adăuga la sf\^arșitul unui fișier
-care ar avea funcția de {\glqq}bază de date{\grqq}. Acest
+care ar avea funcția de ``bază de date''. Acest
 fișier ar conține toate impresiile lăsate de toți vizitatorii noștri.
 
 Dar ce facem dacă vrem să edităm o anumită intrare? Ar trebui să
@@ -2680,7 +2688,7 @@ bucata de text pe care o vrem.
 Pentru a structura informațiile dintr-un fișier, e suficient să
 introducem o sintaxă nouă. De exemplu, am putea spune că
 cele două c\^ampuri de date \textit{nume} și \textit{text} sunt separate
-de caracterul \texttt{|}. {\glqq}Baza noastră de date{\grqq} ar
+de caracterul \texttt{|}. ``Baza noastră de date'' ar
 putea arăta astfel:
 \begin{verbatim}
 Flavius|Hello world
@@ -2730,7 +2738,7 @@ sau \textsl{ReiserFS}, iar pentru accesarea transparentă a fișierelor
 de pe un alt calculator conectat prin rețea de nodul curent se
 poate folosi \textsl{NFS} (en. \textsl{Network File System}).
 
-Sub GNU/Linux există însă mai multe tipuri de {\glqq}fișiere{\grqq}:
+Sub GNU/Linux există însă mai multe tipuri de ``fișiere'':
 fișierele normale, directoarele, link-uri simbolice (en. \textsl{symlinks}),
 \textsl{device}, \textsl{named pipe} și \textsl{unix socket}.
 
@@ -2750,7 +2758,7 @@ umask-ul procesului PHP determină drepturile standard de acces
 ale fișierului nou creat. Deasemenea nu uita că utilizatorul sub
 care rulează parserul PHP va fi proprietarul fișierelor create
 programatic.\footnote{De obicei numele utilizatorului din sistem
-este {\glqq}nobody{\grqq}, {\glqq}httpd{\grqq} sau {\glqq}http{\grqq}, dar
+este ``nobody'', ``httpd'' sau ``http'', dar
 nu este recomandat să te bazezi pe astfel de standarde nescrise.}
 Pentru a schimba sau verifica aceste setări, PHP pune la dispoziție
 funcții precum \texttt{umask()} și \texttt{chmod()}.
@@ -2782,7 +2790,7 @@ După ce aceste lucruri au avut loc, conexiunea dintre client și daemon
 este \^inchisă. Din acest motiv, spunem că HTTP este un protocol \textsl{stateless}.
 
 Clientul vine și pleacă după cum poftește, se conectează, \^iși ia datele,
-și apoi pierdem legătura cu el. Putem \^insă să \^ii trimitem niște informații {\glqq}speciale{\grqq}
+și apoi pierdem legătura cu el. Putem \^insă să \^ii trimitem niște informații ``speciale''
 pe care un client (un browser) cooperativ ar trebui să le salveze pe hard disk-ul
 utilizatorului și să ni le trimită iar atunci c\^and se conectează ulterior
 la noi și ne cere ceva. Aceste bucăți de informații se numesc \textsl{cookies}.
@@ -2802,7 +2810,7 @@ setcookie('random',rand(100,999));
 var_dump($_COOKIE);
 \end{lstlisting}
 
-Linia 2 setează un cookie numit {\glqq}random{\grqq}.
+Linia 2 setează un cookie numit ``random''.
 Vom crea o cerere HTTP cu telnet pe portul 80:
 \begin{verbatim}
 GET /cookie.php HTTP/1.1
@@ -2877,7 +2885,7 @@ fie puse la dispoziție de PHP:
 
 
 \subsection{Sessions}
-O formă {\glqq}specială{\grqq} de cookie este așa numita \textsl{session cookie}.
+O formă ``specială'' de cookie este așa numita \textsl{session cookie}.
 O session cookie nu conține informații prețioase pentru un eventual atacator,
 ci un simplu ID unic. Numele cookie-ului care va conține ID-ul poate fi
 obținut sau setat cu \texttt{session\_name()}.
@@ -2973,9 +2981,9 @@ Majoritatea browserelor, numite și \textsl{agenți}, trimit un string
 la fiecare cerere, pe care îl poți accesa prin \texttt{\$\_SERVER['HTTP\_USER\_AGENT']}.
 
 \begin{Exercise}[title={O schemă de autentificare ieșită din comun},difficulty=2]
-Extinde {\glqq}remote file storage{\grqq} cu autentificare.
-Parola va fi acel {\glqq}<nume secret>{\grqq}, iar fiecare {\glqq}nume
-secret{\grqq} va avea un fișier \texttt{uploads/<nume secret>/users.csv}
+Extinde ``remote file storage'' cu autentificare.
+Parola va fi acel ``<nume secret>'', iar fiecare ``nume
+secret'' va avea un fișier \texttt{uploads/<nume secret>/users.csv}
 ce va conține o listă de usernames. La crearea unui nou \texttt{<nume secret>},
 proces numit "înregistrare" pe site-urile pe care le cunoști deja,
 userul va trebui să uploadeze acel fișier \texttt{users.csv}. Nu vor exista
@@ -2985,7 +2993,7 @@ de \^indată ce are credentials \^in \texttt{users.csv}.
 
 \begin{Exercise}[title={Remote file storage cu galerie de imagini}]
 Extinde aplicația de la exercițiul anterior astfel încât să detecteze
-dacă un {\glqq}<nume secret>{\grqq} are doar imagini în el, și dacă
+dacă un ``<nume secret>'' are doar imagini în el, și dacă
 da, să afișeze acel director ca pe o galerie de imagini.
 \end{Exercise}
 

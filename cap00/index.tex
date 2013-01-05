@@ -1,283 +1,304 @@
-\fancyfoot[CO,C] {\thepage}
-\phantomsection
-\addcontentsline{toc}{chapter}{Introducere}
-\chapter*{Introducere}
-
+\introduction{Introducere}
 
 \begin{chapsummary}
-Acest capitol conține informații foarte importante despre cum să
-studiezi, unde să ceri ajutor, cum să raportezi greșeli și în general cum să
-profiți la maxim de materialul prezentat. Recomand citirea sa cu atenție.
+
+Acest capitol conține informații foarte importante despre cum să studiezi, unde
+să ceri ajutor, cum să raportezi greșeli și în general cum să profiți la maxim
+de materialul prezentat. Recomand citirea sa cu atenție.
+
 \end{chapsummary}
 
 În ultimii ani, utilizarea Internetului a crescut rapid. Numărul de dispozitive
 conectate la Internet crește în mod exponențial de la an la an, iar
-web-ul\footnote
-{World Wide Web} a devenit scena principală. Web-ul nu mai este static demult,
-avem rețele sociale,\footnote{hi5, facebook, lastFM, delicious}
+web-ul\footnote{World Wide Web} a devenit scena principală. Web-ul nu mai este
+static demult, avem rețele sociale,\footnote{hi5, facebook, lastFM, delicious}
 feed-uri,\footnote{RSS, Atom} bloguri și microbloguri,\footnote{twitter}
-ș.a.m.d. Observăm că mai toate activitățile noastre informaționale s-au mutat 
+ș.a.m.d. Observăm cum mai toate activitățile noastre informaționale s-au mutat
 pe web.
 
 Însă aceste activități devin din ce în ce mai complexe, la fel ca și
-aplicațiile\footnote{Termenul \glqq aplicație\grqq nu este tocmai corect, în sensul
+aplicațiile\footnote{Termenul ``aplicație'' nu este tocmai corect, în sensul
 tradițional, însă autorul consideră că limba este ceva maleabil, care se
-schimbă în timp în funcție de nevoi.} care le susțin.
-Iar aceste aplicații trebuie dezvoltate de cineva -- de programatori.
+schimbă în timp în funcție de nevoi.} care le susțin.  Iar aceste aplicații
+trebuie dezvoltate de cineva -- de programatori.
 
-PHP este unul dintre cele mai folosite limbaje pentru crearea de aplicații
-web dinamice. Succesul său se datorează în special simplității sale, însă
-acest lucru e cu două tăișuri: pe de o parte este ușor accesibil, pe de
-cealaltă parte poți face foarte ușor greșeli majore.
+PHP este unul dintre cele mai folosite limbaje pentru crearea de aplicații web
+dinamice. Succesul său se datorează în special simplității sale, însă acest
+lucru are două tăișuri: pe de o parte este ușor accesibil, pe de cealaltă parte
+poți face foarte ușor greșeli majore.
 
+% {{{ Section: Scopul acestei cărți
+\section*{Scopul acestei cărți}
 \phantomsection
 \addcontentsline{toc}{section}{Scopul acestei cărți}
-\section*{Scopul acestei cărți}
 
-Pentru a scrie aplicații PHP bune\footnote{performante, sigure, complexe, mentenabile}
-este cerut simțul critic al programatorului,
-însă există o mare problemă: începătorul care alege PHP ca
-primul său limbaj de programare nu are un simț critic dezvoltat sau gândirea analitică
-necesare în programare. În combinație cu accesibilitatea \textit{aparentă}
-a limbajului PHP, acest lucru se dovedește fatal pe \textit{termen lung}.
+Pentru a scrie aplicații PHP bune\footnote{performante, sigure, complexe,
+mentenabile} este cerut simțul critic al programatorului, însă există o mare
+problemă: începătorul care alege PHP ca primul său limbaj de programare nu are
+un simț critic dezvoltat sau gândirea analitică necesare în programare. În
+combinație cu accesibilitatea \textit{aparentă} a limbajului PHP, acest lucru
+se dovedește fatal pe \textit{termen lung}.
 
-Scopul acestei cărți este să-ți dezvolte atât gândirea autonomă, productivă,
-critică, cât și capacitatea de analiză și sinteză, capacități atât de vitale
-în programare.
-%-----------------------------------------------------------------------------
+Scopul acestei cărți este să dezvolte cititorului atât gândirea autonomă,
+productivă, critică, cât și capacitatea de analiză și sinteză, capacități atât
+de vitale în programare.
 
-Lucrarea de față nu este nici pe departe completă -- nici nu vrea să fie.
-Tot ceea ce vrea este să-ți ofere o fundație bună de start. Acest lucru se 
-face punând accent pe \textit{terminologie} și pe explicarea
-\textit{modului de funcționare} a noțiunilor și tehnologiilor prezentate.
+Lucrarea de față nu este nici pe departe completă -- nici nu vrea să fie.  Tot
+ceea ce vrea este să-i ofere cititorului o fundație bună de start. Acest lucru
+se face punând accent pe \textit{terminologie} și pe explicarea \textit{modului
+de funcționare} a noțiunilor și tehnologiilor prezentate.
 
-După cum probabil intuiești deja, scopul acestei cărți este să
-te susțină să devii bun în perspectivă, fiind orientată spre
-viitor, pe termen lung.
+După cum probabil intuiești deja, scopul acestei cărți este de a susține
+cursantul să devină bun în perspectivă, fiind orientată spre viitor, pe termen
+lung, și nu pe satisfacții de moment.
 
+Pentru a putea atinge acest scop într-un mod eficient, autorul scrie și
+îmbunătățește cartea observând cu atenție începători în programare pe care îi
+îndrumă în cadrul unui program de tutelare oferit gratuit de comunitate.
+Această comunitate este formată din \textit{tutori} și cursanți, cursanții mai
+avansați încearcând și ei la rândul lor să îi ajute pe cei mai puțin avansați.
+
+% }}}
+% {{{ Section: De ce am nevoie? Premize
+\section*{De ce am nevoie? Premize}
 \phantomsection
 \addcontentsline{toc}{section}{De ce am nevoie? Premize}
-\section*{De ce am nevoie? Premize}
-Această lucrare pleacă de la premiza că știi deja (X)HTML,\footnote{În
-ciuda credințelor populare, HTML nu este un limbaj de programare.} eventual și CSS, dar
-acesta din urmă nu este necesar pentru înțelegerea lucrurilor prezentate
-sau pentru învățarea PHP. Ar trebui
-studiat oricum, căci fără el nu este posibil \textsl{design}-ul de
-\textsl{website}-uri aspectuoase.
+
+Această lucrare pleacă de la premiza că cititorul știe deja
+(X)HTML,\footnote{În ciuda credințelor populare, HTML nu este un limbaj de
+programare.} eventual și CSS, dar acesta din urmă nu este necesar pentru
+înțelegerea lucrurilor prezentate sau pentru învățarea PHP. Ar trebui studiat
+oricum, căci fără el nu este posibil \textsl{design}-ul de \textsl{website}-uri
+aspectuoase.
+
 Acolo unde va fi nevoie, vor fi prezentate și noțiunile JavaScript\footnote{Un
-limbaj de programare pentru programarea clientului, a \textsl{browser}-ului,
-în contrast cu PHP, cu care se programează \glqq serverul\grqq.
-În ciuda credințelor din folclor, JavaScript și Java sunt limbaje complet
-diferite și de sine stătătoare.} necesare.
+limbaj de programare a clientului, a \textsl{browser}-ului, în contrast cu PHP,
+cu care se programează ``serverul''.  În ciuda credințelor din folclor,
+JavaScript și Java sunt limbaje complet diferite și de sine stătătoare.}
+necesare. Acest lucru se va întâmpla totuși într-un moment din evoluția
+cititorului ca programator în care se consideră că acesta este extrem de
+independent și face față studiului individual al unui nou limbaj. Vor fi expuse
+în primul rând termenii și noțiunile specifice programării în JavaScript pentru
+web.
 
-Un lucru important de care ai nevoie este răbdare. Citește cu
-atenție și încearcă să înțelegi tot, căci informația este comprimată
-și uneori pare să nu aibă nicio aplicabilitate practică, însă e doar o
-iluzie -- tot ce scrie în acest ghid scurt este important. Nu uita că
-\textit{mă rezum doar la fundație, la cunoștințele de bază}.
+Un lucru important de care cititorul are nevoie este răbdare. Citește cu
+atenție și încearcă să înțelegi tot, căci informația este comprimată și uneori
+pare să nu aibă nicio aplicabilitate practică, însă e doar o iluzie -- tot ce
+scrie în acest ghid scurt este important.
 
-Așa cum spune și coperta acestei cărți, plec de la premiza că
-\textit{vrei să devii profesionist în PHP}. Dacă \textit{nu} asta este intenția ta,
-atunci lucrarea de față nu este potrivită pentru tine.
-În particular, în timp ce urmezi această carte pentru prima oară, nu o face
-pentru a-ți rezolva problema ta imediată de care tocmai te-ai lovit, ci
-încearcă să înțelegi noțiunile expuse și să rezolvi exercițiile prezentate.
-Vei vedea că asta îți salvează mult timp și frustrare pe \textit{termen lung},
-și că rezolvarea eventualei probleme imediate de care te-ai lovit este de fapt
-marginală carierei tale de \textit{programator profesionist}.
+\attention{Nu uita că \textit{acest curs se rezumă doar la fundație, la
+cunoștințele de bază}.}
 
-\attention{Ca un viitor profesionist ce ești, citește cu atenție acest material, și
-încearcă să înțelegi nu numai conceptele de care te lovești, ci și
-implicațiile lor. Analizează-le, atât pe el însele, cât și în relație
-cu celelalte concepte introduse. Cu cât sintetizezi mai mult atunci
-când întâlnești ceva nou, cu atât vei ajunge să \textit{jonglezi} cu noțiunile
-învățate mai rapid, lucru care îți va permite să fii inovativ.
+Așa cum spune și coperta acestei cărți, se pleacă de la premiza că
+\textit{cititorul vrea să devină profesionist în PHP}. Dacă \textit{nu} asta
+este intenția sa, atunci lucrarea de față nu este potrivită.
 
-De exemplu, în primul capitol vei învăța despre rețelistică. Întreabă-te
-pe parcursul întregii cărți ce efecte au limitările HTTP asupra posibilităților
-sau asupra securității.}
+Cartea de față nu este potrivită nici pentru cititorii începători în programare
+care au o problemă concretă de programare și care caută o soluție la aceasta.
+Un începător ar trebui să își canalizeze energia încercând să înțeleagă
+noțiunile expuse.  În acest fel se economisește mai mult timp și frustrare
+\textit{pe termen lung}. După parcurgerea cărții, cititorul își va da seama că
+rezolvarea problemei sale imediate este în fapt marginală carierei sale de
+\textit{programator profesionist}.
 
-Un alt lucru de care ai nevoie este stăpânirea limbii române. Experiențele
-noastre cu cursanții ne-au învățat că mulți dintre cei ce aspiră a fi
+\attention{Ca un viitor profesionist, citește cu atenție acest material, și
+    încearcă să înțelegi nu numai conceptele de care te lovești, ci și
+    implicațiile lor. Analizează-le, atât pe el însele, cât și în relație cu
+    celelalte concepte introduse. Cu cât sintetizezi mai mult atunci când
+    întâlnești ceva nou, cu atât vei ajunge să \textit{jonglezi} cu noțiunile
+    învățate mai rapid, lucru care îți va permite să fii inovativ.
+
+    De exemplu, în primul capitol vei învăța despre rețelistică. Întreabă-te pe
+    parcursul întregii cărți ce efecte au limitările HTTP asupra posibilităților
+    sau asupra securității.}
+
+Un alt lucru de care este nevoie este stăpânirea limbii române. Experiențele
+noastre cu cursanții ne-au învățat că mulți dintre cei care aspiră a fi
 programatori nu îndeplinesc această premiză. Unii dintre ei au avut dificultăți
 nu pentru că nu ar ști să vorbească, ci pentru că nu au realizat intensitatea
-cu care punem accent pe acest aspect. Nu te teme, prima fază
-%TODO spune despre stagiile de experiență, aici: novice
-de tutelare are exact acest scop: să te aducă pe linia de plutire.
+cu care punem accent pe acest aspect. Nu te teme, prima fază de
+tutelare\footnote{În cadrul programului de tutelare descris pe \phpro} are
+exact acest scop: să te aducă pe linia de plutire.
 
-Și nu în ultimul rând, ai nevoie de stăpânirea relativ bună a limbii engleze.
-Fără ea oricum nu ai avea succes în programare -- de multe ori va trebui
-să citești documentații în engleză, ba mai bine, să îți documentezi aplicațiile
-în engleză. Apropo de documentație, toate proiectele de succes au o documentație
-bună în engleză. Nu te impacienta dacă nu te simți pregătit să scrii ceva în
-engleză, până la capitolul 3 inclusiv vei avea șansa să îți îmbunătățești engleza
-doar citind.
+Și nu în ultimul rând, este nevoie de stăpânirea relativ bună a limbii engleze.
+Fără ea, un viitor programator oricum nu ar avea succes -- acesta fiind deseori
+confruntat cu necesitatea de a citi documentații în engleză, ba mai mult, să își documenteze
+aplicațiile în engleză. Apropo de documentație, toate proiectele de succes au
+o documentație bună în engleză. Nu te impacienta dacă nu te simți pregătit să
+scrii ceva în engleză, până la capitolul 3 inclusiv vei avea șansa să îți
+îmbunătățești engleza doar citind.
 
+% }}}
+% {{{ Section: Convenții folosite
+\section*{Convenții folosite}
 \phantomsection
 \addcontentsline{toc}{section}{Convenții folosite}
-\section*{Convenții folosite}
-Pentru a-ți face lectura cât mai plăcută, cartea de față respectă anumite
+
+Pentru a face lectura cât mai plăcută, cartea de față respectă anumite
 convenții, atât de natură tipografică, cât și inerente comunității din jurul
-lucrării.
+ei.
 
 În primul rând, pe prima pagină se află un \textsl{link} către pagina de
 start a proiectului. Această pagină va fi numită mereu \textit{pagina \phpro}.
 Următoarea secțiune îți va descrie despre ce este vorba în detaliu.
 
-În al doilea rând, când spun wikipedia, mă refer la versiunea originală
-în engleză a site-ului \url{http://en.wikipedia.org/}. În carte nu voi face referire
-la niciun \textsl{site} în română.
+În al doilea rând, când este menționată wikipedia, textul se referă la
+versiunea originală în engleză a site-ului \url{http://en.wikipedia.org/}. În
+carte nu se va face referire la niciun \textsl{site} în limba română.
 
-
-{\glqq}Pagina PHP{\grqq} și {\glqq}manualul PHP{\grqq} se referă la paginile oficiale \url{http://php.net/}
-și respectiv \url{http://www.php.net/manual/en/}. Demn de menționat este
-că nu voi folosi decât \textit{site}-urile oficiale ale produselor despre
-care vorbesc.
+Expresiile ``pagina PHP'' și ``manualul PHP'' se referă la paginile oficiale
+\url{http://php.net/} și respectiv \url{http://www.php.net/manual/en/}. Demn de
+menționat este că se vor folosi doar \textit{site}-urile oficiale ale
+produselor menționate.
 
 \attention{Urmarea link-urilor, în special cele către wikipedia și către
-manualul PHP, \textit{nu} este
-opțională. Informațiile prezentate în acele pagini \textit{fac parte} din cartea
-de față.}
+manualul PHP, \textit{nu} este opțională. Informațiile prezentate în acele
+pagini \textit{fac parte} din cartea de față.}
 
 Cuvintele importante sunt scrise \textit{cursiv}, termenii și noțiunile
-importante sunt scrise \textsl{înclinat}, iar cuvintele care fac referire
-la nume de funcții, comenzi sau instrucțiuni care trebuie introduse
-într-un fișier sau ca comandă,
-sau cuvinte cheie specifice unui anumit limbaj
-sunt scrise cu font \texttt{neproporțional}\footnote{\href{http://en.wikipedia.org/wiki/Monospaced_font}{monospace}}.
+importante sunt scrise \textsl{înclinat}, iar cuvintele care fac referire la
+nume de funcții, comenzi sau instrucțiuni care trebuie introduse într-un fișier
+sau ca comandă, sau cuvinte cheie specifice unui anumit limbaj sunt scrise cu
+font
+\texttt{neproporțional}\footnote{\url{http://en.wikipedia.org/wiki/Monospaced_font}}.
 
 Apăsările de taste sunt scrise în chenare, astfel \keystroke{ENTER} înseamnă
-să apeși enter o dată, iar \keystroke{CTRL+F} înseamnă să apeși tasta \keystroke{CTRL}
-și în timp ce o ții apăsată, să apeși \keystroke{F}.
+apăsarea o dată a tastei enter, iar \keystroke{CTRL+F} înseamnă apăsarea tastei
+\keystroke{CTRL}, și în timp ce aceasta este ținută apăsată, apăsarea
+adițională a tastei \keystroke{F}.
 
 Codul sursă, de obicei în PHP, va arăta în felul următor:
 
-\vskip 3em
 \begin{lstlisting}[caption={Convenție listare}]
 <?php
+//afiseaza informatii despre PHP
 phpinfo();
 \end{lstlisting}
 
-Numerele de pe marginea stângă reprezintă numerele liniilor de cod corespunzătoare
-și nu trebuie scrise. Ele deservesc unei mai ușoare identificări în explicațiile
-din text.
+Numerele de pe marginea stângă reprezintă numerele liniilor de cod
+corespunzătoare și nu trebuie scrise. Ele deservesc unei mai ușoare
+identificări în explicațiile din text.
 
-Codul sursă va conține și caracterul ’. Acesta trebuie văzute ca
-apostrof. Altfel spus, copierea și lipirea codului sursă prezentat
-nu va funcționa pur și simplu. Acesta trebuie scris de tine însuți, deoarece
-caracterul respectiv este (intenționat) greșit. Procedez astfel pentru
-a împiedica copierea codului sursă. Acesta trebuie înțeles.
+Simbolul \texttt{\raisebox{0.2em}{\Large\textvisiblespace}} trebuie interpretat ca
+spațiu, nu trebuie tastat ca atare. Scopul folosirii acestui simbol este
+îngreunarea copierii codului sursă prezentat. Este bine ca acest cod prezentat
+să fie înțeles, iar cunoștințele să fie aplicate scriind un cod asemănător
+\textit{din minte}.
 
-Atunci când introduc termeni noi, încerc să ofer și traducerea în
-engleză, în paranteză.
-Exemplu: \begin{quote}
-         	Un astfel de atac se numește man in the middle, deoarece atacatorul se află la mijloc, între
-cele două capete (en. \textsl{endpoints}).
-         \end{quote}
-iar la sfârșitul cărții poți găsi o referință a tuturor acestor termeni.
+Atunci când sunt introduși termeni noi, se oferă și traducerea lor în engleză,
+în paranteză.  Exemplu: \begin{quote} Un astfel de atac se numește \textsl{man
+in the middle}, deoarece atacatorul se află la mijloc, între cele două
+capete (en.  \textsl{endpoints}).  \end{quote} iar la sfârșitul cărții se poate
+găsi o referință a tuturor acestor termeni.
 
-Există trei feluri în care marchez paragrafe:
+Există trei marcaje diferite pentru paragrafe:
 
-\attention{Paragrafele care te atenționează asupra unui lucru important
-sunt marcate ca atare, ca cel de față.}
+\attention{Paragrafele care atenționează asupra unui lucru important sunt
+marcate ca atare, ca cel de față.}
 
-\good{În unele locuri vreau să-ți atrag atenția asupra unei practici de programare bune.}
+\good{În unele locuri se atrage atenția asupra unei practici de programare
+bună.}
 
-\bad{În același timp, câteodată îți atrag atenția asupra unor lucruri care, deși sunt posibile, nu ar trebui făcute.}
+\bad{În același timp, câteodată se atrage atenția asupra unor lucruri care,
+deși sunt posibile, nu ar trebui făcute.}
 
-Exercițiile sunt marcate cu un creion, iar numărul de steluțe reprezintă dificultatea lor, între 0 (nicio steluță)
-și 3 (trei steluțe). Exemplu:
+Exercițiile sunt marcate cu un creion, iar numărul de steluțe reprezintă
+dificultatea lor, între 0 (nicio steluță) și 3 (trei steluțe). Exemplu:
 \begin{Exercise*}[title={Exercițiu de dificultate 1},difficulty=1]
-	Eu sunt un enunț.
+
+Eu sunt enunțul unui exercițiu de dificultate 1.
+
 \end{Exercise*}
 
 Exercițiile de dificultate zero necesită doar înțelegerea exemplelor și
-explicațiilor imediat anterioare și mici modificări sau adăugiri.
-Cu cât solicitarea inteligenței și a capacității de sinteză a cursantului
-crește, cu atât crește și numărul steluțelor.
+explicațiilor imediat anterioare și mici modificări sau adăugiri.  Cu cât
+solicitarea inteligenței și a capacității de sinteză a cursantului crește, cu
+atât crește și numărul steluțelor.
 
-La evaluarea dificultății exercițiilor procedez în
-felul următor: în primul rând, plec de la premiza că
-cursantul știe toate noțiunile din capitolul anterior,
-chiar dacă nu le-a sintetizat pe toate. În același timp,
-plec de la premiza că restul capitolelor trecute
-au fost bine sintetizate.
+La evaluarea dificultății exercițiilor se procedează în felul următor: în primul
+rând, se pleacă de la premiza că cursantul știe toate noțiunile din capitolul
+anterior, chiar dacă nu le-a sintetizat pe toate. În același timp, se pleacă de
+la premiza că restul capitolelor trecute au fost bine sintetizate.
 
-\attention{Dacă trebuie să sari cu mai mult de un
-capitol înapoi pentru a revizui ceva, atunci este
-un indiciu că nu ai trecut prin toate stadiile
-de studiu în mod consecvent. Secțiunea următoare
-îți va explica care sunt aceste stadii.}
+\attention{Dacă trebuie să sari cu mai mult de un capitol înapoi pentru
+a revizui ceva, atunci este un indiciu că nu ai trecut prin toate stadiile de
+studiu în mod consecvent. Secțiunea următoare îți va explica care sunt aceste
+stadii.}
 
-%La începutul unui
-%capitol plec de la premiza că cursantul
-%a înțeles deja noțiunile capitolului anterior
-%jonglează deja fără probleme
-%cu noțiunile acoperite de capitolele anterioare. Altfel spus, nu te poți
-%aștepta ca exercițiile dintr-un nou capitol să fie ușoare, dacă
-%nu ai trecut prin toate stadiile unui studiu corect. Următoarea
-%secțiune îți va prezenta aceste stadii și care sunt beneficiile lor.
+Dacă observi încălcări ale acestor convenții, ești rugat să le raportezi pe
+pagina de greșeli a \phpro.
 
-Dacă observi încălcări ale acestor convenții, te rog să le
-raportezi pe pagina de greșeli a \phpro.
+% }}}
+% {{{ Section: Cum să înveți eficient programare
+\section*{Cum să înveți eficient programare}
 \phantomsection
 \addcontentsline{toc}{section}{Cum să înveți eficient programare}
-\section*{Cum să înveți eficient programare}
 
 %TODO at chapter 6: remove this
-Momentan cartea de față nu acoperă încă materia așa cum aș vrea -- nu este completă.
-Însă subiectele abordate sunt acoperite complet, cel puțin la nivel conceptual.
+Momentan cartea de față nu acoperă încă materia așa cum își dorește autorul --
+nu este completă.  Însă subiectele abordate sunt acoperite complet, cel puțin
+la nivel conceptual.
 
-Cartea în sine nu este gândită pentru a fi folosită singură, ci
-în paralel cu comunitatea \phpro. În particular, unele exerciții
-chiar nu sunt gândite pentru a fi rezolvate de cititor singur,
-ci cu susținerea tutorilor de pe \phpro.
+Cartea în sine nu este gândită pentru a fi folosită singură, ci în paralel cu
+cursul gratuit oferit de comunitatea \phpro. În particular, unele exerciții
+chiar nu sunt gândite pentru a fi rezolvate de cititor singur, ci cu susținerea
+tutorilor de pe \phpro.
 
 Pe {\phpro} găsești și ajutor sub formă de idei și indicii pentru rezolvarea
-exercițiilor.
+exercițiilor. Întreabă-i pe ceilalți cursanți sau pe tutori, cel mai probabil
+cineva știe răspunsul.
 
-Învață \textit{terminologia}, înțelege-o și folosește-o. Dacă setul de scule de programare folosite
-este lancea ta de programator, atunci terminologia este vârful lancei.
-Care este diferența dintre un toiag tocit, și o lance fără vârf?
-Exact, nici una. Nu te apuca să foloșesti termeni pe care nu-i înțelegi,
-ci documentează-te înainte. Cu o lance ascuțită:
+\good{Cititorul trebuie să învețe \textit{terminologia}, să o înțeleagă și să
+o folosească.}
+
+Dacă setul de scule de programare folosite este lancea de programator, atunci
+terminologia este vârful lancei.  Care este diferența dintre un toiag tocit, și
+o lance fără vârf?  Exact, nici una. Nu încerca să foloșesti termeni pe care
+nu-i înțelegi, ci documentează-te înainte. Cu o lance ascuțită:
+
 \begin{itemize}
-	\item te vei putea înțelege mai ușor cu alți programatori; tu îi vei înțelege pe ei, și ei pe tine
-	\item pe măsură ce termenii înțeleși de tine devin mai complecși,
-		  vei putea acumula cunoștințe din ce în ce mai complexe bazate pe cele anterioare,
-		  în ritm exponential. La început ți se va pare frustrant, însă dacă vrei să devii bun,
-		  oricum va trebui să înveți termenii odată și-odată. Deci de ce să nu faci totul ca
-		  la carte de la bun început?
-	\item un programator profesionist știe mai mult de un singur limbaj de programare; ai fi
-		  uimit dacă ai afla câți termeni și câte concepte sunt comune multor limbaje. Dacă
-		  știi terminologia, chiar dacă ai învățat-o în (cu) PHP, vei putea trece la un nou
-		  limbaj cu mult mai puține eforturi. Primul limbaj (învățat corect) este cel mai greu,
-		  apoi ți se va pare floare la ureche
+
+    \item te vei putea înțelege mai ușor cu alți programatori; tu îi vei
+    înțelege pe ei, și ei pe tine
+
+    \item pe măsură ce termenii înțeleși de tine devin mai complecși, vei putea
+    acumula cunoștințe din ce în ce mai complexe bazate pe cele anterioare, în
+    ritm exponential. La început ți se va pare frustrant, însă dacă vrei să
+    devii bun, oricum va trebui să înveți termenii odată și-odată. Deci de ce
+    să nu faci totul ca la carte de la bun început?
+
+    \item un programator profesionist știe mai mult de un singur limbaj de
+    programare; ai fi uimit dacă ai afla câți termeni și câte concepte sunt
+    comune multor limbaje. Dacă știi terminologia, chiar dacă ai învățat-o în
+    (cu) PHP, vei putea trece la un nou limbaj cu mult mai puține eforturi.
+    Primul limbaj (învățat corect) este cel mai greu, apoi ți se va pare floare
+    la ureche
+
 \end{itemize}
 
-
-Urmează \href{http://en.wikipedia.org/wiki/Hyperlink}{link}-urile în timp ce
-studiezi;
-acestă carte nu este și nu va fi niciodată {\glqq}completă{\grqq} -- se pleacă de la premiza
-că citești și înțelegi ce se află la acele link-uri \textit{înainte} de a trece
-mai departe.
+Cititorul trebuie să urmeze
+link-urile\footnote{\url{http://en.wikipedia.org/wiki/Hyperlink}} în timp ce
+studiază; acestă carte nu este și nu va fi niciodată ``completă'' -- se pleacă
+de la premiza că cititorul citește și înțelege ce se află la acele link-uri
+\textit{înainte} de a trece mai departe.
 
 Notele de subsol sunt importante; dacă acestea introduc termeni neexplicați
-anterior sau în imediata vecinătate, atunci trebuie reținute și făcute
-legături atunci când termenii respectivi sunt introduși pentru prima oară.
+anterior sau în imediata vecinătate, atunci trebuie reținute și făcute legături
+atunci când termenii respectivi sunt introduși pentru prima oară.
 
-Plec de la premiza că cititorul meu are un anumit nivel de inteligență.
-Asta nu înseamnă că nu iau în serios orice nelămurire. Însă mă aștept
-ca noțiunile prezentate să fie citite cel puțin, și apoi înțelese.
-Nu are rost să citești o carte dacă ... nu o citești cu trup și suflet.
-Atunci când ai o problemă, ia-o gradual, netrecând la următorul stadiu
-până nu îl îndeplinești pe cel anterior.
+Se pleacă de la premiza că cititorul are un anumit nivel de inteligență.  Asta
+nu înseamnă că nu sunt luate în serios orice nelămuriri. Însă este de așteptat
+ca noțiunile prezentate să fie citite cel puțin, și apoi înțelese.  Nu are rost
+să citești o carte dacă ... nu o citești cu trup și suflet.  Atunci când te
+lovești de o problemă de înțelegere, ia-o gradual, netrecând la următorul
+stadiu până nu îl îndeplinești pe cel anterior.
 
-\attention{Stadiile\footnotemark sunt: citire, înțelegere, sinteză, imaginație (jonglarea
-cu noțiunile), inovație.}
-\footnotetext{Noțiunea de
-\textit{stadiu de învățare} este extinderea autorului a sistemului japonez
-shu-ha-ri (en. \textit{retain-detach-transcend}, jp. \jptext{守 破 離}). Detalii pe
+\attention{Stadiile{\footnotemark} sunt: citire, înțelegere, sinteză, imaginație
+(jonglarea cu noțiunile), inovație.}
+
+\footnotetext{Noțiunea de \textit{stadiu de învățare} este extinderea autorului
+a sistemului japonez \textsl{shu-ha-ri} (en. \textit{retain-detach-transcend},
+jp. \jptext{守 破 離}). Detalii pe
 \url{http://www.makigami.info/cms/japanese-learning-system-japan-36}.}
 
 A sintetiza înseamnă a face legături cu toate celelalte noțiuni
@@ -298,14 +319,14 @@ copil. De exemplu, ai văzut-o pe mama ta tăind legumele cu cuțitul.
 Mai târziu, la joacă, ai avut nevoie să tai o ață, și nu aveai decât
 un cuțit în apropiere. Ți-ai dat seama că poți tăia ața cu cuțitul,
 deși nu este o legumă. Altfel spus, ai sintetizat scopul uneltei
-{\glqq}cuțit{\grqq}: să taie ceva.
+``cuțit'': să taie ceva.
 
-Lucrarea de față explică foarte bine noțiunile, de la zero, însă
-sinteza îți este lăsată ție. Motivația mea de a proceda așa este următoarea:
-după cum sugerează subtitlul cărții -- \textit{Pentru începătorii în programare și în PHP care vor să devină profesioniști} -- scopul meu e să te îndrum pe calea profesionalismului.
-Pe de cealaltă parte, sunt un darwinist convins, și dacă nu reușești
-nici să devii profesionist, nici să vezi utilitatea acestei cărți, atunci
-e mai bine așa. Ultimul lucru pe care îl vreau este să te susțin
+Lucrarea de față explică foarte bine noțiunile, de la zero, însă sinteza îți
+este lăsată ție. Motivația mea de a proceda așa este următoarea: după cum
+sugerează subtitlul cărții -- \textit{\thesubtitle} -- scopul meu e să te îndrum
+pe calea profesionalismului.  Pe de cealaltă parte, sunt un darwinist convins,
+și dacă nu reușești nici să devii profesionist, nici să vezi utilitatea acestei
+cărți, atunci e mai bine așa. Ultimul lucru pe care îl vreau este să te susțin
 să devii ceva în care nu ai avea succes.
 
 %TODO uncomment at chap 6
@@ -315,7 +336,7 @@ mai are încă un efect pozitiv asupra viitorului profesionist din tine:
 încât să nu fii nevoit să rescrii același cod iar și iar, doar pentru
 că trebuie să-l personalizezi puțin. Însă pentru a putea face
 codul atât de flexibil încât să-l poți adapta cu ușurință, trebuie
-să prevezi cazuri {\glqq}imprevizibile{\grqq}; altfel spus, să te gândești
+să prevezi cazuri ``imprevizibile''; altfel spus, să te gândești
 la imposibil.
 
 \good{Nu copia pur și simplu exemplele din carte, pentru că riști
@@ -342,7 +363,7 @@ sunt cheia succesului garantat.}
 \phantomsection
 \addcontentsline{toc}{subsection}{Comunitatea}
 \subsection*{Comunitatea}
-\textit{Dezvoltare web cu PHP -- Pentru începătorii în programare și în PHP care vor să devină profesioniști}
+\textit{{\thetitle} -- {\thesubtitle}}
 nu este pur și simplu o carte, ci o comunitate și o serie de servicii pe care
 această comunitate le oferă. Cartea de față constituie doar scheletul, fundația
 studiului. Pentru a beneficia deci de aceste servicii, cititorul cărții
@@ -396,9 +417,11 @@ precum un \textsl{bug tracker} sau un \textsl{revision control system}.
 sub tutela comunității, dovedind astfel că ai potențialul unui
 programator bun.
 
+% }}}
+% {{{ Section: Cum pot ajuta?
+\section*{Cum pot ajuta?}
 \phantomsection
 \addcontentsline{toc}{section}{Cum pot ajuta?}
-\section*{Cum pot ajuta?}
 Atât programatorii experimentați, cât și începătorii, pot ajuta,
 iar ajutorul lor este apreciat în egală măsură.
 
@@ -419,7 +442,7 @@ cel mai probabil explicațiile sau definițiile sunt reluate și șlefuite undev
 În privința calității cărții, există trei mari probleme:
 \begin{itemize}
 \item Nu cred în cacofonii. Consider că propria imaginație e singura vinovată
-dacă {\glqq}vezi{\grqq} alte lucruri când citești. Ca atare, refuz să le corectez.
+dacă ``vezi'' alte lucruri când citești. Ca atare, refuz să le corectez.
 Ba mai rău, corectarea lor prin folosirea virgulei sau reformulări mai mult
 ar îngreuna inteligibilitatea.
 \item Folosesc xenisme. Resursele în limba engleză sunt cele mai acurate și
@@ -434,9 +457,11 @@ cuvintelor inversată, și altfel de greșeli similare. Cauza acestui lucru este
 Corecturile sunt binevenite.
 \end{itemize}
 
+% }}}
+% {{{ Section: O privire de ansamblu a capitolelor
+\section*{O privire de ansamblu a capitolelor}
 \phantomsection
 \addcontentsline{toc}{section}{O privire de ansamblu a capitolelor}
-\section*{O privire de ansamblu a capitolelor}
 %TODO aici vine roadmap-ul
 
 \begin{enumerate}
@@ -454,9 +479,11 @@ la și inclusiv 3rd normal form
 \item Programare orientată pe obiecte -- OOP, concepte generale, câteva patterns
 (helper, strategy, factory, singleton), test-driven development, SPL
 \item ajax, json, servicii (REST, SOAP, XML-RPC), XML, PDO și alte delicii, și ca
-{\glqq}ultima frontiera{\grqq}: php internals.
+``ultima frontiera'': php internals.
 \end{enumerate}
 
 Începând cu capitolul 4 proiectele se vor realiza în echipe, iar tutorii vor avea
 doar rolul de consilieri. Proiectele rezultate astfel vor aparține respectivilor
 programatori, și vor putea fi folosite pentru portofoliile cursanților.
+
+% vim: set foldmarker={{{,}}} foldlevel=0 foldmethod=marker:

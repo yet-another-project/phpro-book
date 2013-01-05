@@ -1,0 +1,32 @@
+\ProvidesPackage{titlepage-phpro}
+\RequirePackage{url}
+\def\@maketitle{%
+  \begin{titlepage}
+       \thispagestyle{empty}
+       \null
+       \vskip 2em%
+       \begin{center}%
+       \textsc{\huge \textnormal{\@title}}
+        \vspace{1em}
+        %\hrule
+        \vspace{3em}
+        %\textit{\textbf{\shorttitle}}
+        %\vspace{3em}
+        \hrule \vspace{3em}
+        \@subtitle
+        \vspace{3em} \hrule
+        \vspace{8em}
+        %\authors \\
+        \@author
+        \vspace{25em}
+        \begin{flushright}
+        \@date
+        \end{flushright}
+       \end{center}
+       \vfill
+       \begin{flushright}
+       O iniţiativă \emph{Yet Another Project}\\
+       Homepage: \url{http://yet-another-project.github.com/}
+       \end{flushright}
+  \end{titlepage}%
+}

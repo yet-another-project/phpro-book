@@ -83,7 +83,7 @@ Observi că pentru a termina procesarea PHP și a afișa din nou totul
 așa cum este (en. \textsl{unparsed}) se folosește \texttt{?>}.
 În acest mod poți porni și opri procesarea PHP de oricâte ori dorești în același fișier.
 La sfârșitul fișierului procesarea este terminată automat, de aceea în exemplele
-anterioare nu a fost nevoie de {\glqq}?>{\grqq}.
+anterioare nu a fost nevoie de ``?>''.
 
 \attention{Mai observă și cum mi-am făcut codul ușor de citit \textsl{indent}ându-l (en.
 \textsl{to indent}), adică am aliniat deschiderea fiecărui tag HTML cu tag-ul
@@ -139,12 +139,12 @@ Mesajul de eroare ne-ar putea părea confuz:\\
 Ceea ce se întâmplă este următorul lucru: PHP citește \texttt{echo}, și deoarece a citit
 și a recunoscut instrucțiunea \texttt{echo}, intră în contextul semantic în care se așteaptă ca următorul
 lucru să fie o valoare, însă nu găsește una, ci întâlnește \texttt{Salut},
-pe care nu-l recunoaște\footnote{De fapt, parserul se blochează la {\glqq}Flavius{\grqq}, însă
+pe care nu-l recunoaște\footnote{De fapt, parserul se blochează la ``Flavius'', însă
 ca să explic asta cum trebuie, ar fi trebuit să fi introdus deja constantele}
 ca și construct al limbajului.
 De aceea ne spune că nu se așteaptă să vadă T\_STRING-ul \texttt{Salut}.
 
-Dar stai puțin, de ce îl numește {\glqq}T\_\textbf{STRING}{\grqq}, dar nu îl acceptă ca string?
+Dar stai puțin, de ce îl numește ``T\_\textbf{STRING}'', dar nu îl acceptă ca string?
 Pentru a înțelege asta, trebuie să privești puțin lucrurile din perspectiva parserului
 PHP. Codul sursă pe care îl scriem în limbajul PHP este folosit ca input pentru
 parser. Acest input scris de noi este citit de PHP ca string, ca un șir de caractere.
@@ -193,7 +193,7 @@ pagină trebuie să fie capabilă să primească date de intrare (\texttt{input}
 pentru a genera date de ieșire (\texttt{output}) pe baza acestora.
 
 De exemplu, să zicem că vrem să facem o pagină care în loc să afișeze
-mereu {\glqq}Salut Flavius{\grqq}, afișează {\glqq}Salut <nume>{\grqq}. Acest input (numele) trebuie
+mereu ``Salut Flavius'', afișează ``Salut <nume>''. Acest input (numele) trebuie
 salvat undeva, altfel nu avem acces la el. Bine ai venit în lumea variabilelor.
 
 O variabilă are trei caracteristici
@@ -230,7 +230,7 @@ Putem spune și că \textit{am salvat valoarea X în variabila Y}. Exemplu:
 \lstinputlisting{cap02/4-hello-var.php}
 
 \attention{\texttt{echo} nu adaugă automat spații niciunde. Este responsabilitatea
-noastră să o facem. PHP chiar nu are noțiunea de {\glqq}cuvinte{\grqq}. Pentru el, un
+noastră să o facem. PHP chiar nu are noțiunea de ``cuvinte''. Pentru el, un
 șir de caractere este un șir de caractere și atât.} 
 
 În cazul de față, variabila \texttt{\$nume} nu prea își are rostul, deoarece o
@@ -259,7 +259,7 @@ valoare intermediară este salvată în variabila \texttt{\$a}.
 
 \textit{Linia 3} afișează valoarea salvată în variabila \texttt{\$a}.
 
-Ne-am fi putut folosi de acea {\glqq}valoare intermediară{\grqq} de pe linia 2 afișand-o direct:
+Ne-am fi putut folosi de acea ``valoare intermediară'' de pe linia 2 afișand-o direct:
 \begin{lstlisting}
 <?php
 echo 'Salut ' . 'Flavius';
@@ -290,7 +290,7 @@ Iar a operației de concatenare este:\\
 <expr1> și <expr2> pot fi orice fel de expresii, fie ele valori constante,
 sau variabile -- deoarece variabilele au și ele o valoare pe care
 o cară cu ele. În urma operației de concatenare rezultă o valoare
-intermediară. Chiar dacă aceasta e {\glqq}invizibilă{\grqq} (deoarece
+intermediară. Chiar dacă aceasta e ``invizibilă'' (deoarece
 PHP o crează în mod transparent pentru noi), ea este tot o valoare ca oricare
 alta, deci poate fi pusă oriunde PHP ne lasă să punem o expresie.
 
@@ -307,7 +307,7 @@ Exemplu:
 \lstinputlisting{cap02/7-concatenare-stringuri.php}
 
 Despre limbajul PHP se spune că este \textsl{dynamically typed}. Asta înseamnă
-că poate (în limitele {\glqq}bunului simț{\grqq}), să convertească automat
+că poate (în limitele ``bunului simț''), să convertească automat
 o valoare de un tip, într-o altă valoare de alt tip, care e cât
 mai apropiată de valorea inițială. Așa se face că deși operatorul
 de concatenare acceptă doar doi parametri de tip string, putem totuși
@@ -374,8 +374,8 @@ Un exemplu cu operații matematice de la simple la complexe:
 Majoritatea lucrurilor ar trebui să-ți fie cunoscute. Liniile
 2-11, 19 și 24 conțin așa-numite comentarii. Există două
 tipuri de comentarii, cele care se întind pe mai multe linii
-și încep cu {\glqq}/*{\grqq} și se termină cu {\glqq}*/{\grqq}. Al doilea tip
-începe cu {\glqq}//{\grqq} și se termină la sfârșitul liniei.
+și încep cu ``/*'' și se termină cu ``*/''. Al doilea tip
+începe cu ``//'' și se termină la sfârșitul liniei.
 
 Menirea unui comentariu este să documenteze sau să marcheze
 anumite lucruri în cod. Când scripturile tale vor deveni foarte complexe,
@@ -446,7 +446,7 @@ $a = 7;
 echo 'a este ',$a,'<br>';
 $a += 2;//sau pe lung $a = $a + 2;
 echo 'a += 2 face ',$a,'<br>';
-$a /= -3;// $a = $a / -3;
+$a /= -3;// $a = $a / 3;
 echo 'a /= -3 este ',$a,'<br>';
 \end{lstlisting}
 
@@ -488,7 +488,7 @@ două ori) o valoare, sau când o valoare trebuie să
 se schimbe de-a lungul execuției scriptului, dinamic
 (căci asta spune însuși termenul de \textit{variabilă}).
 De exemplu, să zicem că vrei să saluți vizitatorul
-cu {\glqq}Bună dimineața{\grqq}, {\glqq}Bună ziua{\grqq} sau {\glqq}Bună seara{\grqq}
+cu ``Bună dimineața'', ``Bună ziua'' sau ``Bună seara''
 în funcție de ora actuală a Bucureștiului.
 
 Deoarece noi folosim acele variabile intermediare
@@ -560,14 +560,14 @@ Deoarece PHP executa toate instrucțiunile exact în ordinea
 Limbajul PHP ne pune la dispoziție constructe pentru a bifurca
 execuția. Îți poți imagina că, atunci când PHP
 execută un cod, se plimbă cu un fel de cursor
-pe deasupra {\glqq}textului{\grqq}. Folosind o astfel de bifurcație
+pe deasupra ``textului''. Folosind o astfel de bifurcație
 i-am putea spune "dacă o condiție C este adevărată, fă
 X, dacă nu (altfel) fă Y" sau la fel de bine
 i-am putea spune "atâta timp cât condiția C
 este adevărată, fă X".
 
-Descrierile în cuvinte de mai sus {\glqq}dacă ... atunci ...{\grqq}
-sau {\glqq}atâta timp cât ...{\grqq} pot fi formalizate în ceea
+Descrierile în cuvinte de mai sus ``dacă ... atunci ...''
+sau ``atâta timp cât ...'' pot fi formalizate în ceea
 ce numim \textsl{limbaj pseudocod}. 
 
 Limbajul pseudocod ne permite să descriem algoritmi
@@ -592,7 +592,7 @@ altfel
 %\nl{4}	afișează 'parola greșită';
 %\end{Verbatim}
 Însă acesta este incomplet! De unde vine
-acea {\glqq}parolă{\grqq} pe care am menționat-o pe linia 1?
+acea ``parolă'' pe care am menționat-o pe linia 1?
 
 Calculatoarele sunt stupide, și la fel este și PHP. Va
 trebui să-i spunem mai întâi că citim acea parolă:
@@ -617,17 +617,17 @@ concepem algoritmi pentru mașini, pe care
 acestea să le urmeze pas cu pas.
 
 Pe linia 2 a algoritmului anterior are loc o bifurcație.
-La rulare, PHP ar decide dacă {\glqq}parola este corectă{\grqq}, și dacă
-da, va trece cu cursorul său {\glqq}de execuție{\grqq} prin \textit{linia 3},
+La rulare, PHP ar decide dacă ``parola este corectă'', și dacă
+da, va trece cu cursorul său ``de execuție'' prin \textit{linia 3},
 altfel va trece prin \textit{linia 5}. 
 
-Te rog fi atent cum indent-area codului reflectă cărei {\glqq}cărări{\grqq}
+Te rog fi atent cum indent-area codului reflectă cărei ``cărări''
 din această bifurcație aparține fiecare din cele două instrucțiuni
-{\glqq}afișează{\grqq}.
+``afișează''.
 
-Să zicem că vrem să afișăm {\glqq}Salut <autentificat|necunoscut>. Ce faci?{\grqq},
-unde algoritmul decide pe baza unui input {\glqq}parolă{\grqq} ce să afișeze, {\glqq}autentificat{\grqq}
-sau {\glqq}necunoscut{\grqq}, însă în ambele cazuri să fie afișat {\glqq}Salut {\grqq} și {\glqq}. Ce faci?{\grqq}.
+Să zicem că vrem să afișăm ``Salut <autentificat|necunoscut>. Ce faci?'',
+unde algoritmul decide pe baza unui input ``parolă'' ce să afișeze, ``autentificat''
+sau ``necunoscut'', însă în ambele cazuri să fie afișat ``Salut '' și ``. Ce faci?''.
 
 Un astfel de algoritm ar putea arăta astfel:
 \begin{lstlisting}[language=pseudocod]
@@ -650,14 +650,14 @@ parola corectă?" va fi executată de fiecare dată.
 
 \begin{Exercise}[title={Execuția liniară conține și verificarea condiției},difficulty=1]
 De ce face parte și verificarea unei condiții din execuția liniară de dinainte și de după
-{\glqq}dacă{\grqq}?
+``dacă''?
 \end{Exercise}
 
 
-Fluxul de execuție este constituit din {\glqq}locurile{\grqq} prin care plimbăm
-acel {\glqq}cursor{\grqq} folosit de PHP pentru a executa fiecare instrucțiune.
+Fluxul de execuție este constituit din ``locurile'' prin care plimbăm
+acel ``cursor'' folosit de PHP pentru a executa fiecare instrucțiune.
 Acest flux este dinamic, se poate schimba la rularea scriptului,
-folosind exact aceste constructe ale limbajului precum {\glqq}dacă{\grqq} sau {\glqq}atâta timp cât{\grqq},
+folosind exact aceste constructe ale limbajului precum ``dacă'' sau ``atâta timp cât'',
 constructe pe care le vom cunoaște în paginile viitoare.
 
 Așa cum putem descrie un algoritm folosindu-ne doar de text, putem
@@ -679,14 +679,14 @@ Regula de bază la interpretarea unei scheme logice
 este să urmezi în mod stupid săgețile, la fel ca și
 coiotul nostru din figura \ref{fig:coyote arrow}.
 
-O schemă logică are doar un singur bloc {\glqq}BEGIN{\grqq}, și unul
-sau mai multe blocuri {\glqq}END{\grqq}. O schemă logică curată
-ar trebui să aibă totuși un singur bloc {\glqq}END{\grqq}
-către care conduc toate {\glqq}cărările{\grqq} de execuție posibile.
+O schemă logică are doar un singur bloc ``BEGIN'', și unul
+sau mai multe blocuri ``END''. O schemă logică curată
+ar trebui să aibă totuși un singur bloc ``END''
+către care conduc toate ``cărările'' de execuție posibile.
 
 Operațiile de input/output sunt puse în paralelograme,
 iar operațiile decizionale sunt puse în romburi și au
-una sau două ieșiri, pentru cazurile {\glqq}DA{\grqq} respectiv {\glqq}NU{\grqq}
+una sau două ieșiri, pentru cazurile ``DA'' respectiv ``NU''
 în care condiția este adevărată sau falsă.
 
 \begin{figure}[ht!]
@@ -729,15 +729,15 @@ a pseudocodului pe care ai găsit-o ca soluție în partea I.
 \section{Tipul de date boolean. Expresii logice}
 \label{sec:tipul de date boolean. Expresii logice}
 
-Secțiunea anterioară a tratat {\glqq}parola este corectă{\grqq} ca ceva
+Secțiunea anterioară a tratat ``parola este corectă'' ca ceva
 de la sine înțeles. Poate pentru noi este ușor de înțeles,
-însă PHP, și algoritmii în general, nu au noțiunea de {\glqq}corect{\grqq}.
+însă PHP, și algoritmii în general, nu au noțiunea de ``corect''.
 
-Ce înseamnă {\glqq}corect{\grqq} de fapt? Cum determinăm noi, oamenii,
+Ce înseamnă ``corect'' de fapt? Cum determinăm noi, oamenii,
 dacă o adresă, un nume, sau în cazul de față o parolă, este corectă?
 Ceea ce facem este de fapt compararea a ceva ce vine din exterior, a
-unui input, cu ceea ce considerăm noi {\glqq}corect{\grqq}, pe baza cunoștințelor
-sau experiențelor {\glqq}salvate{\grqq} în creierul nostru.\footnote{Procesele
+unui input, cu ceea ce considerăm noi ``corect'', pe baza cunoștințelor
+sau experiențelor ``salvate'' în creierul nostru.\footnote{Procesele
 cognitive sunt omise în mod conștient, pentru a simplifica imaginea.}
 
 De exact acest lucru are nevoie și PHP. Bine ai venit în lumea
@@ -747,7 +747,7 @@ Există nenumărați operatori logici. Însă înainte de a trece
 la ei, trebuie să introducem o funcție numită \texttt{var\_dump()}.
 În capitolul următor vei învăța despre funcții pe larg,
 însă deocamdată o mică definiție: \textit{O funcție este
-ca o {\glqq}cutie neagră{\grqq}. O hrănești cu parametri, și ea face ceva cu
+ca o ``cutie neagră''. O hrănești cu parametri, și ea face ceva cu
 acele valori}. În cazul nostru, vom folosi funcția \texttt{var\_dump()}
 în loc de cuvântul cheie \texttt{echo} pentru a afișa atât valoarea
 pe care i-o pasăm ca parametru, cât și tipul său de date. \texttt{echo}
@@ -759,7 +759,7 @@ vrem să vedem neschimbat.
 Toate expresiile logice, care conțin operatori
 logici,\footnote{nu neapărat, dar voi vorbi mai târziu
 despre asta} sunt evaluate și au în final
-fie valoarea {\glqq}adevărat{\grqq}, fie valoarea {\glqq}fals{\grqq}. Deoarece
+fie valoarea ``adevărat'', fie valoarea ``fals''. Deoarece
 expresiile logice sunt atât de importante,\footnote{Există
 chiar și o matematică care le susține.}
 pentru ele există și un tip de date: \textsl{boolean}, sau pe scurt: bool.
@@ -789,7 +789,7 @@ var_dump(FALSE);
 
 Acum că știm cum se folosește o funcție precum \texttt{var\_dump()},
 hai să revenim la ideea noastră inițială: PHP nu știe ce
-înseamnă pentru noi {\glqq}parolă corectă{\grqq}, deci trebuie să confruntăm
+înseamnă pentru noi ``parolă corectă'', deci trebuie să confruntăm
 cele două valori și să decidem dacă ele sunt una și aceeași.
 
 Aici intră operatorul de comparație în joc, \texttt{==}. Acesta
@@ -916,7 +916,7 @@ reprezintă o alternativă. Colocvial recunoaștem disjuncțiile
 după cuvântul \textit{sau}. În practică, am putea spune
 \textit{Dacă plouă sau ninge, atunci îmi iau ghetele}. Nu contează
 care dintre evenimente va avea loc (sau în termeni booleeni: \textit{care dintre
-evenimente {\glqq}vor fi adevărate{\grqq}}), unul sau chiar ambele, disjuncția
+evenimente ``vor fi adevărate''}), unul sau chiar ambele, disjuncția
 va fi în orice caz adevărată.
 
 Având două expresii booleene A și B, fiecare cu una din valorile de
@@ -948,7 +948,7 @@ Formalismul matematic pentru aceeași situație ca mai sus ar arăta astfel:
 \]
 
 Simbolurile matematice pentru disjuncții și conjuncții sunt $\lor$ respectiv $\land$, și se citesc
-{\glqq}sau{\grqq} respectiv {\glqq}și{\grqq}. În PHP, aceste operații sunt făcute de operatorii {\glqq}||{\grqq}, respectiv {\glqq}\&\&{\grqq}.
+``sau'' respectiv ``și''. În PHP, aceste operații sunt făcute de operatorii ``||'', respectiv ``\&\&''.
 
 Toate combinațiile de TRUE și FALSE sunt reprezentate într-un tabel de
 adevăr (en. truth
@@ -1066,7 +1066,7 @@ liniară. Iar ramura \texttt{else} este complet opțională.
 }
 
 Felul în care poate fi folosit constructul \texttt{if} este același cu felul în
-care ai folosit {\glqq}constructul{\grqq} \texttt{dacă} în pseudocod și romburile pentru
+care ai folosit ``constructul'' \texttt{dacă} în pseudocod și romburile pentru
 decizii în scheme logice. Liniile 2, 3 și 10 fac parte din execuția liniară,
 linia 4 din ambele exemple crează bifurcația 'DA' în fluxul de execuție,
 iar linia 7 crează bifurcația 'NU' în al doilea exemplu.
@@ -1074,7 +1074,7 @@ iar linia 7 crează bifurcația 'NU' în al doilea exemplu.
 \good{Fi atent la cum am aliniat instrucțiunile, constructele și acoladele.
 Se numește formatarea codului, și este bine să îți scrii codul formatat
 astfel încât doar din alinierea constructelor, ochiul să poată
-{\glqq}scana{\grqq} și decide cât mai ușor cărei ramuri sau bloc aparține
+``scana'' și decide cât mai ușor cărei ramuri sau bloc aparține
 fiecare instrucțiune, fără a fi nevoit să citești cu atenție
 fiecare LOC.}
 
@@ -1114,7 +1114,7 @@ Desenează schemele logice ale listingurilor
 
 În exemplele anterioare, o variabilă putea satisface o condiție, sau nu.
 Pentru aceste două cazuri am pus instrucțiunile necesare fie în blocul
-{\glqq}if{\grqq}, fie în blocul {\glqq}else{\grqq}.
+``if'', fie în blocul ``else''.
 Există însă cazuri în care o variabilă poate lua o valoare dintr-o colecție de
 două sau mai multe valori, și vrem ca în fiecare caz să fie
 executate anumite instrucțiuni. Să zicem că aplicația noastră
@@ -1133,8 +1133,8 @@ else if('administrator' === $rol) {
   echo 'esti administrator';
 }
 \end{lstlisting}
-Încearcă acest cod de mai multe ori, modificând de fiecare dată valoarea
-variabilei, să vezi pe unde trece fluxul de execuție.
+Încearcă acest cod de mai multe ori, modificând de fiecare dată valorile
+variabilelor, să vezi pe unde trece fluxul de execuție.
 
 PHP pune la dispoziție încă un construct pentru astfel de cazuri: \texttt{elseif}.
 El este contracția unei combinații \texttt{else if}, ca în exemplul de mai sus.
@@ -1172,9 +1172,9 @@ switch($rol) {
 \end{lstlisting}
 Schimbă pe rând valoarea variabilei \texttt{\$rol}. Vei observa că
 fluxul de execuție va potrivi o valoare (liniile 4, 6 sau 8), însă
-fluxul de execuție nu se va opri la blocul {\glqq}case{\grqq} la care a început,
-ci se va {\glqq}prelinge{\grqq} mai departe. Pentru a opri, împiedica fluxul de
-execuție să se extindă către celelalte blocuri {\glqq}case{\grqq}, trebuie să
+fluxul de execuție nu se va opri la blocul ``case'' la care a început,
+ci se va ``prelinge'' mai departe. Pentru a opri, împiedica fluxul de
+execuție să se extindă către celelalte blocuri ``case'', trebuie să
 adaugi instrucțiunea \texttt{break}. De exemplu:
 \begin{lstlisting}
 <?php
@@ -1235,12 +1235,12 @@ Sintaxa generală este:
 \begin{verbatim}
 <condiție> ? <dacă-TRUE> : <dacă-FALSE>;
 \end{verbatim}
-Acest întreg {\glqq}conglomerat{\grqq} va fi înlocuit de
+Acest întreg ``conglomerat'' va fi înlocuit de
 una din expresiile <dacă-TRUE> sau <dacă-FALSE>,
 în funcție de valoarea de adevăr a condiției.
 
 \attention{Asta înseamnă că întregul construct
-poate fi {\glqq}pus{\grqq} oriunde PHP acceptă o expresie.
+poate fi ``pus'' oriunde PHP acceptă o expresie.
 Deoarece <dacă-TRUE> și <dacă-FALSE> sunt ele înseși
 expresii, putem avea deci operații ternare una în alta
 (en. \textit{nested}).}
@@ -1304,7 +1304,7 @@ Schema logică a buclei while arată ca în figura \ref{fig:flowchart while loop
   \label{fig:flowchart while loop}
 \end{figure}
 
-Dacă condiția este din start falsă, atunci se continuă execuția liniară ({\glqq}în jos{\grqq}),
+Dacă condiția este din start falsă, atunci se continuă execuția liniară (``în jos''),
 altfel se trece prin blocul de instrucțiuni (care bineînțeles că poate
 conține mai multe instrucțiuni, sau chiar alte bucle, constructe if/else, switch, ș.a.m.d.).
 După ce instrucțiunile au fost executate, se ajunge iar la verificarea condiției,
@@ -1323,7 +1323,7 @@ La fiecare rulare a buclei, adunăm 1 la valoarea variabilei, și salvăm
 rezultatul în aceeași variabilă. Astfel avansăm de la 1 la 2, de la 2 la 3,
 ș.a.m.d., până la 10. Condiția de oprire va fi ca valoarea variabilei să
 fie mai mică sau egală cu 10. Dacă condiția nu este adevărată, atunci fluxul de execuție
-{\glqq}trece peste{\grqq} blocul while, și se continuă execuția liniară.
+``trece peste'' blocul while, și se continuă execuția liniară.
 
 Schema logică ar arăta ca în figura \ref{fig:while counting}.
 
@@ -1352,7 +1352,7 @@ instrucțiuni.
 În altă ordine de idei, inițial blocul de instrucțiuni
 face parte din execuția liniară. Abia apoi se va decide, în funcție de valoarea
 de adevăr a condiției, dacă se va crea o buclă sau nu. Din asta deducem
-că fluxul de execuție poate trece prin {\glqq}bucla{\grqq} \texttt{do while} fără
+că fluxul de execuție poate trece prin ``bucla'' \texttt{do while} fără
 a face nicio buclă de fapt, fără a sări înapoi nici măcar o dată. Asta s-ar putea
 întâmpla dacă condiția ar fi din start falsă. Însă în contrast cu bucla
 \texttt{while}, blocul de instrucțiuni al buclei \texttt{do while} va fi executat cel
@@ -1368,7 +1368,7 @@ schema logică a buclei \texttt{do while}.
 \begin{Exercise}[title={Numărătoarea din doi în doi cu do while},difficulty=1]
 \ExePart
 Scrie un program care să numere descrescător din 2 în 2, începând de la 23
-și terminând cu un număr negativ impar la alegere, folosind bucla do while.
+și terminând cu un număr negativ la alegere, folosind bucla do while.
 
 \ExePart
 Ce face programul tău și nu este în cerință?
@@ -1617,7 +1617,7 @@ Exercițiul \textit{Meniu de navigare} ți-a introdus subtil avantajele
 array-urilor. Este adevărat că la început codul va fi mult mai
 complex decât un meniu static în HTML, însă după ce ai codul, și
 acesta funcționează, nu trebuie decât să modifici valorile salvate
-în array, într-un loc {\glqq}central{\grqq}, și PHP va genera mereu meniul HTML corespunzător.
+în array, într-un loc ``central'', și PHP va genera mereu meniul HTML corespunzător.
 Nu vei mai avea de-a face cu HTML direct, nu mai mult decât ai descrie un singur element
 \texttt{<li>}, un singur element \texttt{<ul>} sau un singur element \texttt{<a>}.
 Asta este posibil mulțumită proprietății unei bucle de a repeta un bloc de instrucțiuni.
@@ -1625,14 +1625,14 @@ Asta este posibil mulțumită proprietății unei bucle de a repeta un bloc de i
 Ceea ce am făcut în exercițiul anterior
 se numește \textit{inventarea unei structuri de date abstracte} (în cazul
 nostru este un array, pe care
-l-am salvat în \texttt{\$menu}) care emulează ceea ce cunoaștem ca fiind un {\glqq}meniu{\grqq} în {\glqq}viața reală{\grqq}.
+l-am salvat în \texttt{\$menu}) care emulează ceea ce cunoaștem ca fiind un ``meniu'' în ``viața reală''.
 Deși nu este el însuși un meniu, conține toate datele de care avem nevoie
 pentru a genera dinamic un meniu, cu PHP. Aceste date se numesc \textsl{metadate},
 concept pe care l-ai cunoscut la începutul acestui capitol.
 
 \attention{După cum ți-am spus încă de la începutul capitolului, și după
 cum tocmai ai văzut, toate aplicațiile conțin metadate. Ele vin
-deseori {\glqq}împachetate{\grqq} în structuri de date abstracte precum array-ul
+deseori ``împachetate'' în structuri de date abstracte precum array-ul
 salvat în \texttt{\$menu}.}
 \good{Obișnuiește-te cu ideea de a trebui să inventezi date abstracte
 care conțin metadate.
@@ -1786,7 +1786,7 @@ $my_family = array(
 Folosind însă un array asociativ în loc de un array indexat\footnote{Se subînțelege
 că elementele sunt numerotate consecutiv de la 0 la N-1.}, pierdem automat
 din consistența ordonării datelor. O problemă de genul celei ilustrate în
-codul \ref{lst:increment} nu ar mai fi așa ușor rezolvabilă, deoarece {\glqq}\$index+1{\grqq}
+codul \ref{lst:increment} nu ar mai fi așa ușor rezolvabilă, deoarece ``\$index+1''
 nu ar mai exista.
 
 Așadar, când trebuie să concepem o structură de date, trebuie să ne gândim
@@ -1908,7 +1908,7 @@ echo "Salut $nume";
 Pe lângă variabile, în stringurile interpolate
 mai sunt interpretate și
 așa-zisele caractere de control. Aceste caractere
-sunt mai mult sau mai puțin {\glqq}invizibile{\grqq}. Aceste
+sunt mai mult sau mai puțin ``invizibile''. Aceste
 caractere încep cu \textbackslash (en. \textsl{backslash}),
 și sunt urmate de ceva, de obicei de un caracter.
 
@@ -1960,20 +1960,20 @@ apostrofuri, tocmai pentru a diferența caracterul < care are
 o semnificație specială în metalimbajul inventat de noi de
 caracterul '<' care voiai să fie interpretat exact așa cum e.
 Altfel spus, punând caractere între apostrofuri, am spus
-că \textit{acest caracter trebuie {\glqq}scăpat printre degete{\grqq}}, deci
+că \textit{acest caracter trebuie ``scăpat printre degete''}, deci
 nu trebuie interpretat de metalimbaj, si face parte din input/output.
 
 Pentru a înțelege ce înseamnă acest \textit{scăpat printre degete},
 trebuie să înțelegem cum funcționează parsarea în PHP.\footnote{De fapt,
-lexicalizarea, un pas din {\glqq}parsare{\grqq}. Detaliile mai mult l-ar
+lexicalizarea, un pas din ``parsare''. Detaliile mai mult l-ar
 induce în eroare pe cititor.}
 
-Atunci când PHP {\glqq}execută{\grqq} un script, primul lucru pe care îl
+Atunci când PHP ``execută'' un script, primul lucru pe care îl
 face este să citească fișierul PHP scris de noi, caracter
 cu caracter. PHP citește rând pe rând caracterele 'e','c','h','o',
 și deoarece recunoaște acest șir de patru caractere ca fiind
 constructul \texttt{echo}, știe că ce urmează trebuie să
-fie o expresie cu o valoare. Altfel spus, {\glqq}echo{\grqq} pune
+fie o expresie cu o valoare. Altfel spus, ``echo'' pune
 parserul în \textsl{contextul semantic} de a se aștepta la o
 expresie.
 
@@ -1986,7 +1986,7 @@ Hai să vedem ce se întâmplă în cazul următor:
 \begin{lstlisting}
 echo 'You're online';
 \end{lstlisting}
-PHP citește {\glqq}echo{\grqq}, vede spațiul și îl acceptă pe {\glqq}echo{\grqq}
+PHP citește ``echo'', vede spațiul și îl acceptă pe ``echo''
 ca construct al limbajului, apoi vede ' și începe să
 pună, caracter cu caracter, literele Y,o,u într-un nou string.
 Apoi, deoarece a întâlnit încă o dată ', și deoarece tocmai se află
@@ -2006,7 +2006,7 @@ de vedere sintactic.
 În interiorul stringurilor
 simple, delimitate de apostrofuri, caracterul ' are semnificația
 specială de a termina însuși stringul.
-Escaping înseamnă să-l forțăm pe PHP să {\glqq}scape printre degete{\grqq}
+Escaping înseamnă să-l forțăm pe PHP să ``scape printre degete''
 aceste caractere speciale. Pentru a face escaping, vom precede caracterul
 special cu \textbackslash:
 \begin{lstlisting}
@@ -2014,7 +2014,7 @@ special cu \textbackslash:
 echo 'You\'re online';
 \end{lstlisting}
 Astfel PHP, atunci când întâlnește \textbackslash, știe că
-următorul caracter nu trebuie interpretat într-un {\glqq}mod special{\grqq},
+următorul caracter nu trebuie interpretat într-un ``mod special'',
 ci doar adăugat la stringul pe care tocmai îl citește.
 
 În astfel de cazuri poți însă să folosești stringuri interpretate,
@@ -2073,7 +2073,7 @@ echo <<<EOD
 EOD;
 \end{lstlisting}
 
-Avantajele heredoc și nowdowc față de stringurile interpolate sau simple este că
+Avantajele heredoc și nowdoc față de stringurile interpolate sau simple este că
 caracterele " respectiv ' pot fi folosite fără niciun fel de restricție.
 
 \subsection{Constante și alte tipuri de date}
@@ -2109,9 +2109,9 @@ câteva sunt de interes general
 pentru noi deocamdată.
 
 Fiecare sistem de operare  are o reprezentare proprie
-a caracterului {\glqq}linie nouă{\grqq}. Windows folosește {\glqq}{\textbackslash}r{\textbackslash}n{\grqq} (o
-serie de două caractere{\glqq}), Linux are {\grqq}{\textbackslash}n" iar Macintosh folosește
-{\glqq}{\textbackslash}r{\grqq}. Constanta PHP\_EOL va avea mereu valoarea corectă pentru
+a caracterului ``linie nouă''. Windows folosește ``{\textbackslash}r{\textbackslash}n'' (o
+serie de două caractere``), Linux are ''{\textbackslash}n" iar Macintosh folosește
+``{\textbackslash}r''. Constanta PHP\_EOL va avea mereu valoarea corectă pentru
 fiecare sistem de operare.
 
 Alte constante predefinite de interes general sunt PHP\_VERSION, PHP\_OS,
@@ -2170,7 +2170,7 @@ else {
 \end{lstlisting}
 
 De fapt, NULL, TRUE și FALSE sunt constante în PHP, numai că sunt
-{\glqq}întâmplător{\grqq} susținute în mod {\glqq}oficial{\grqq} de PHP.
+``întâmplător'' susținute în mod ``oficial'' de PHP.
 
 \subsubsection{Type casting și convertirea implicită}
 Type casting înseamnă a converti o variabilă care are o valoare
@@ -2278,7 +2278,7 @@ Linia 3 mai întâi evaluează variabila, o afișează cu echo, și apoi
 o incrementează. Faptul că într-adevăr variabila a fost incrementată
 se vede pe linia 4.
 
-În schimb, în cazul operației {\glqq}pre-{\grqq}, mai întâi se face incrementarea sau decrementarea,
+În schimb, în cazul operației ``pre-'', mai întâi se face incrementarea sau decrementarea,
 și apoi rezultatul este pasat lui echo:
 \begin{lstlisting}
 <?php
@@ -2380,7 +2380,7 @@ deoarece \$input conține deja inputul. Atribuirea ar avea rost doar dacă ai fa
 $cantitate = (int) $input;
 \end{lstlisting}
 În astfel de cazuri nu copiezi pur și simplu valoarea dintr-o parte în alta, ci
-o și validezi, deci nu este o {\glqq}copie perfectă{\grqq}.
+o și validezi, deci nu este o ``copie perfectă''.
 
 În afară de asta, copierea fără sens a unor valori dintr-o variabilă în alta mănâncă
 memorie RAM degeaba, care de obicei e limitată.
@@ -2453,7 +2453,7 @@ Având un astfel de set de reguli pe care toți programatorii îl respectă, cod
 sursă devine mai ușor de înțeles și mentenat.
 
 Există câteva standarde larg răspândite, majoritatea având diferite viziuni
-despre ce înseamnă {\glqq}cod ușor de înțeles și mentenat{\grqq}.
+despre ce înseamnă ``cod ușor de înțeles și mentenat''.
 
 Și \textit{Yet Another Project}\footnote{\url{https://github.com/yet-another-project/phpro-book}}
 are un astfel de standard. Acesta a fost deja folosit în mod consistent în codurile
@@ -2535,7 +2535,7 @@ Sintaxa generală este:
 '/path/to/script.php' ['?' <name> '=' <value> ['&' <name> '=' <value>]+ ]
 \end{verbatim}
 În cuvinte: numele resursei este urmat de semnul întrebării, apoi o serie de
-una sau mai multe perechi nume {\glqq}ia valoarea{\grqq} valoare, separate de caracterul
+una sau mai multe perechi nume ``ia valoarea'' valoare, separate de caracterul
 ampersand ('\&').
 
 Deci fă cererea HTTP:
@@ -2584,7 +2584,7 @@ Vizitează adresa \texttt{http://localhost/add.php?a=3\&b=4}.
 Dar oare ce se întâmplă atunci când unul dintre parametri este inexistent?
 Hai să vedem. Vizitează direct \texttt{http://localhost/add.php}. PHP îți
 va spune ce ai greșit. Mesajul în browser este dificil de citit, deci
-folosește opțiunea {\glqq}view source{\grqq} a browserului tău. În firefox, poți apăsa
+folosește opțiunea ``view source'' a browserului tău. În firefox, poți apăsa
 \keystroke{CTRL+U}.
 
 PHP ne spune ceva de genul
@@ -2625,7 +2625,7 @@ Cum se citește linia 2 din listingul \ref{lst:addition}? Începe răspunsul aș
 
 \ExePart
 
-Rescrie condiția într-o formă {\glqq}mai compactă{\grqq} folosind legile lui De Morgan.
+Rescrie condiția într-o formă ``mai compactă'' folosind legile lui De Morgan.
 Explică încă o dată cum se citește această nouă linie de cod, așa cum
 ai făcut în partea I a exercițiului pentru condiția inițială.
 \end{Exercise}
@@ -2705,7 +2705,7 @@ folosind \textsl{variabila intermediară} \$mesaj. Deoarece ea va avea ca valoar
 string, o inițializăm cu valoarea NULL, pe linia 2.
 
 Dacă condiția de pe linia 3 este adevărată, înseamnă că utilizatorul a apăsat
-butonul {\glqq}submit{\grqq}. În acest caz, vrem să procesăm formularul.
+butonul ``submit''. În acest caz, vrem să procesăm formularul.
 
 Indiferent
 dacă formularul a fost trimis sau nu, 
@@ -2727,7 +2727,7 @@ Acea secvență
 din cod validează inputul și setează variabila intermediară \$mesaj în concordanță
 cu acest input, sau cu absența inputului.
 
-Variabila intermediară \$mesaj salvează în ea ceea ce numim {\glqq}informație atomară a aplicației{\grqq}.
+Variabila intermediară \$mesaj salvează în ea ceea ce numim ``informație atomară a aplicației''.
 Se numește așa deoarece, cel puțin în scriptul nostru, constituie o bucățică de informație
 indivizibilă, de sine stătătoare.
 
@@ -2752,7 +2752,7 @@ acolo unde este nevoie, variabile care salvează doar informațiile atomare de l
 aplicației.}
 
 \begin{Exercise}[title={View Logic și Business Logic},difficulty=1]
-Îmbunătățește scriptul scris ca soluție la exercițiul {\glqq}Un calculator complet{\grqq},
+Îmbunătățește scriptul scris ca soluție la exercițiul ``Un calculator complet'',
 adăugând un formular care să fie trimis prin metoda POST în loc de GET.
 
 Datele trimise prin POST sunt puse de PHP în array-ul \texttt{\$\_POST}.
@@ -2813,7 +2813,7 @@ cu același (sub)algoritm.
 Un exemplu pragmatic ar fi să-i cerem utilizatorului să bifeze fructele sale preferate,
 și pe baza lor să afișăm anumite informații despre ele.
 
-În formularul HTML nu va trebui decât să numim câmpurile de input cu {\glqq}[]{\grqq}, exact așa cum
+În formularul HTML nu va trebui decât să numim câmpurile de input cu ``[]'', exact așa cum
 am accesa și array-urile în PHP. Pentru o serie de checkbox-uri am putea avea:
 \begin{lstlisting}[language=HTML]
 <form method="POST">
@@ -2991,7 +2991,7 @@ O dată ajunși la \texttt{v}, nu mai avem simboluri, deci trebuie să sărim
 pe poziția următoare și să adăugăm cantitatea 1.
 
 Cum pe poziția următoare
-se află s (similar cu acel 0 {\glqq}invizibil{\grqq} din baza 10), și deoarece după v
+se află s (similar cu acel 0 ``invizibil'' din baza 10), și deoarece după v
 urmează s, deducem că după \texttt{v} urmează \texttt{ts}, care reprezintă
 deci cantitatea 4. În continuare ar urma
 \texttt{tt}, \texttt{tu}, \texttt{tv}, 
@@ -3074,7 +3074,7 @@ for($i=8*PHP_INT_SIZE-1;$i>=0;$i--) {
 \end{lstlisting}
 
 \attention{În urma operației \textit{shift to right} cu X biți, se pierd cei mai din
-dreapta X biți, iar în partea din stânga X biți (care apar {\glqq}noi{\grqq}) sunt inițializați
+dreapta X biți, iar în partea din stânga X biți (care apar ``noi'') sunt inițializați
 cu zero în cazul numerelor pozitive, iar în cazul numerelor negative cu unu.}
 
 \begin{Exercise}[difficulty=3,title={Cum funcționează afișarea bit cu bit a unui int?}]
@@ -3148,7 +3148,7 @@ care afișează rezultatele operațiilor \texttt{a\&b}, \texttt{a|b}, \texttt{a$
 \texttt{{\texttildelow}a}, \texttt{{\texttildelow}b} și \texttt{(a$>>$b)\&0x1}.
 \end{Exercise}
 
-Operațiile pe biți sunt foarte utile atunci când vrem să setăm atribute booleene {\glqq}da sau nu{\grqq}
+Operațiile pe biți sunt foarte utile atunci când vrem să setăm atribute booleene ``da sau nu''
 pentru anumite proprietăți, drepturi de acces, etc. Avantajul este că aceste câmpuri de biți
 (en. \textsl{bitfields}) sunt foarte compacte, ocupă puțin spațiu.
 
@@ -3249,7 +3249,7 @@ echo $a,' ';
 $b++;
 echo $a;
 \end{lstlisting}
-Conform liniei 3, identificatorul \$b va {\glqq}arăta cu degetul{\grqq} (en. \textsl{point at})
+Conform liniei 3, identificatorul \$b va ``arăta cu degetul'' (en. \textsl{point at})
 către conținutul variabilei \$a. Pe linia 5 incrementăm acea valoare, însă prin prisma
 identificatorului \$b.
 
