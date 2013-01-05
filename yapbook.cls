@@ -111,7 +111,7 @@
 
 %The introductory chapter, which does not really contain information on the
 %matter at stake
-\newcommand*{\introduction}[1]{\cleardoublepage\chapter*{#1}}
+\newcommand*{\introduction}[1]{\cleardoublepage\chapter*{#1}\phantomsection\addcontentsline{toc}{chapter}{#1}}
 
 %chapter intros
 \RequirePackage{framed}
