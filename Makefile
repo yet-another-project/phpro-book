@@ -13,6 +13,9 @@ preview: cedilla
 	$(PDFLATEX) $(PDFFLAGS) "$(PROJECT)-preview.tex" > error.log 2>&1 && \
 	$(PDFLATEX) $(PDFFLAGS) "$(PROJECT)-preview.tex" | ./filter.sh && \
 	mv "$(PROJECT)-preview.pdf" "dezvoltare_web_cu_php-$(shell date +'%d_%m_%Y').pdf"
+tutoring: cedilla
+	$(PDFLATEX) $(PDFFLAGS) "Tutoring.tex" > error.log 2>&1 && \
+	$(PDFLATEX) $(PDFFLAGS) "Tutoring.tex" > error2.log 2>&1
 clean:
 	rm -rf *.{aux,log,out,loe,ilg,ind,idx}
 	find . -type f -name "*~" -exec rm {} \;
