@@ -1,0 +1,491 @@
+\chapter{Baze de date și lucrul în echipă}
+
+\begin{chapsummary}
+În acest capitol vei învăța fundamentele bazelor de date și lucrul într-o echipă de programatori,
+cu toate uneltele necesare și unele \textsl{soft skills} de care are nevoie un programator.
+
+Scopul acestui capitol este să te pregătească pentru exercițiul de la sfârșitul capitolului
+care constă într-un proiect pe care îl vei face într-o echipă.
+Începând cu acest capitol, tutorii {\phpro} mai mult te vor îndruma, te vor consilia, atât
+pe tine individual, doar atunci când ai absolut nevoie, dar mai ales pe întreaga echipă.
+
+Prin urmare, vei fi mult mai independent, dar vei și avea o responsabilitate mai mare --
+cel puțin față de colegii de echipă.
+\end{chapsummary}
+
+\section{Git}
+\subsection{Istoria unui proiect}
+Probabil că până acum te-ai confruntat deja cu următorul scenariu: vrei
+să testezi ceva în programul tău, dar nu ești sigur că schimbarea
+va deveni permanentă.
+
+Cel mai probabil te-ai folosit de comentarii în astfel de cazuri: ai comentat
+o parte din codul sursă și ai scris o nouă implementație dedesubt. Dacă a
+fost vorba de modificări prin mai multe fișiere, probabil ai repetat același
+procedeu pentru fiecare dintre acestea.
+
+Dacă ai avut noroc, schimbările tale au fost bune, și tot ce a trebuit să
+faci în cele din urmă a fost să ștergi implementația veche, comentată,
+și să o lași doar pe cea nouă în loc.
+
+Dacă nu ai avut noroc, ți-ai dat seama că ideea ta nu a fost cea mai grozavă,
+și a trebuit să restaurezi versiunea veche. În urma restaurării, probabil ai
+avut noroc și ai reușit să revii la versiunea veche fără probleme.
+
+Însă cel mai probabil, nu ai avut noroc deloc.
+
+Ei bine, mulțumită unor programe numite \textsl{revision control systems}
+(abv. RCS),
+nu ai nevoie de noroc atunci când codul sursă al proiectului tău evoluează,
+sau când doar vrei să testezi lucruri noi.
+
+Cu un RCS, nu mai e nevoie să lași la voia întâmplării modificările
+aduse codului -- tot ceea ce faci este înregistrat, fiecare schimbare,
+fie ea și cât de mică. Partea bună e că poți reveni la orice versiune
+a codului, oricând, oricum!
+
+Deși ai multe avantaje atunci când folosești un RCS ca un programator singur,
+RCS-urile își dezvoltă adevărata putere atunci când lucrezi în echipă
+cu alți programatori.
+
+Printre cele mai cunoscute RCS-uri se numără \textit{subversion},
+\textit{mercurial}, \textit{bazaar}, \textit{BitKeeper} și \textit{git}.
+
+În acest curs, vei folosi Git. Git s-a născut din necesitatea
+programatorilor kernelului Linux de a-și controla mai organizat
+procesul de dezvoltare.
+
+Spre deosebire de subversion, cu git nu există un server central,
+de aceea git se numește și DRCS, D venind de la \textsl{distributed}.
+
+Pentru o listă a termenilor cei mai importanți citește despre
+\href{http://en.wikipedia.org/wiki/Revision_control}{revision control}.
+
+\subsection{Getting started}
+Sub GNU/Linux, instalarea este destul de simplă: folosește
+package manager-ul distribuției tale pentru a instala pachetul "git".
+
+Pentru Microsoft Windows,
+intră pe pagina oficială\footnote{\url{http://code.google.com/p/msysgit/}}
+și instalează \textit{Full installer for official Git}. La pasul
+\textit{Adjusting your PATH environment}, selectează \textit{Run
+Git from the windows command prompt}. Restul opțiunilor ar trebui
+să fie bune așa cum ți le prezintă installer-ul. Pe desktop ar trebui
+să-ți apară simbolul "git bash".
+
+După ce ai instalat git, urmează cartea ProGit\footnote{\url{http://progit.org}},
+capitolele 1-3. Aceasta îți va prezenta mai toate noțiunile elementare
+despre git.
+
+\begin{Exercise}[title={A taste of git}]
+Dacă ești în programul de tutelare, ai deja cont pe github.com.
+Acest site îți oferă hosting pentru proiectele tale. Intră
+în contact cu noi pe IRC pentru a fi îndrumat.
+
+Crează un nou proiect pe github.com denumit la fel ca username-ul
+tău de pe github.com, iar apoi clonează-l local și experimentează
+cu el.
+
+Pentru lucrul cu repozitoriile hostate pe github, citește instrucțiunile
+de configurare de pe github\footnote{\url{http://help.github.com/}}.
+
+Întreabă-i pe ceilalți cursanți ce lucruri interesante mai poți face
+cu git.
+
+Încearcă să te joci cât mai mult cu acest utilitar, deoarece de acum
+încolo toate proiectele tale vor fi puse sub revision control în git.
+
+Îți amintești probabil și de "gist-ul" unde ți-ai salvat toate soluțiile
+la exerciții până acum. Ei bine, un "gist" nu este nimic altceva decât
+un repozitoriu git. Îl poți clona bine mersi, și opera pe el
+din confortul consolei tale -- nu e nevoie să accesezi interfața
+web pentru a posta ceva.
+
+Crează un fork al cărții, fă mici corecturi acolo unde vezi necesar,
+dacă ai găsit greșeli în carte, învață să faci pull
+requests, să trimiți patchuri, să deschizi issues pe interfața web
+a proiectelor tale pusă la dispoziție de github.
+
+Investește în jur de 40-80 de ore de lectură și de experimente pentru
+a deveni cât de cât rutinat în folosirea acestor sisteme: git
+ca utilitar de sine stătător pe de o parte, și github.com ca
+hosting pentru proiectele tale.
+\end{Exercise}
+
+\section{Baze de date relaționale}
+Bazele de date sunt folosite pentru a salva informații structurate.
+După structura datelor, există două cele mai răspândite forme de
+baze de date:
+\begin{itemize}
+\item relaționale
+\item orientate pe obiecte
+\end{itemize}
+Bazele de date relaționale (abv. \textsl{RDBMS}) se pretează pentru informații "tabelare"
+ce pot avea relații între ele. Cele orientate pe obiecte se pretează
+pentru informații arborescente -- gândește-te la arborescența
+(și recursivitatea) unui document HTML.
+
+
+
+În funcție de modul de acces, pentru ambele tipuri de mai sus există
+iarăși două categorii:
+\begin{itemize}
+\item de sine stătătoare
+\item după arhitectura server-client
+\end{itemize}
+
+Pentru a folosi o bază de date de sine stătătoare nu ai nevoie de un
+server. Baza de date constă într-un fișier care conține toate datele
+și metadatele. Aceste baze de date pot fi trimise ușor altcuiva
+și nu este nevoie decât de un program care știe să opereze pe acea
+bază de date. Un exemplu consacrat pentru astfel de baze de date
+este SQLite.
+
+Bazele de date cu server-client au în mare trei componente:
+\begin{itemize}
+\item fișierul\footnote{în funcție de RDBMS și de alți
+factori, pot fi mai multe fișiere} efectiv în care sunt salvate
+informațiile
+\item daemonul care așteaptă conexiuni de pe internet și
+deservește informații din acele fișiere
+\item clientul care se conectează la server și cere informații
+\end{itemize}
+
+Atunci când clientul cere informații de la un server, clientul
+nu primește toate informațiile, pentru a-și putea alege ce vrea.
+Clientul trimite o cerere într-un limbaj special, cerere pe baza
+căreia serverul generează un răspuns care conține deja informațiile
+dorite de client.
+
+Deși nu este relevant pentru folosirea bazelor de date, e important
+să clarificăm cum funcționează aceste componente, și vom încerca
+să o facem pe baza cunoștințelor pe care le avem deja despre
+protocolul HTTP și programele care îl folosesc.
+
+Clientul DB se conectează la serverul DB printr-un protocol
+de transfer al informațiilor precum TCP/IP, similar cu
+felul în care și un browser se conectează la un daemon HTTP.
+
+Transferul de informații efectiv se face într-un limbaj înțeles
+de aceste două programe -- un protocol -- din nou: analog cu HTTP.
+
+Una dintre diferențele cruciale este însă că acest client nu se
+conectează, trimite o cerere, primește un răspuns, și apoi se
+deconectează. Nu. Acest lucru se întâmplă în cazul protocoalelor
+\textit{stateless} precum HTTP. DBMS-urile în schimb au de obicei
+protocoale \textsl{stateful}, adică se conectează la daemon, și
+aceasta este menținută până la întreruperea ei explicită.
+
+Odată conectat, clientul e pregătit să trimită cereri formulate
+într-un limbaj specific. În cazul RDBMS-urilor, predominant este
+limbajul SQL (en. \textsl{Structural Query Language}
+, citit \texttt{\textipa{si:kw@l}}).% IPA: siːkwəl
+
+Această cerere formulată în limbajul SQL este apoi codată în
+protocolul specific DBMS-ului și trimisă acestuia.
+Faptul că fiecare\footnote{aproape fiecare} DBMS are un protocol
+specific este cauza imposibilității comunicării cu un daemon
+de un tip folosind un client de alt tip\footnote{De exemplu,
+clientul mysql.exe nu poate comunica cu un daemon postgresql.}
+-- în ciuda faptului că limbajul în care e formulată cererea, SQL,
+este același\footnote{Există și aici diferențe între sisteme,
+dar limbajul în sinea lui este același, este standardizat.}.
+
+În acest capitol vei folosi RDBMS-ul MySQL, deoarece este
+cel mai des folosit în conjuncție cu PHP.
+
+\begin{Exercise}[title={Primii pași în baze de date}]
+\ExePart
+
+Instalează-ți daemonul și clientul MySQL. Sub Microsoft
+Windows poți descărca installerul de pe site-ul
+oficial\footnote{Se numește \textit{MySQL Community Server} și se găsește
+la adresa \url{http://dev.mysql.com/}.}.
+
+\ExePart
+
+Operațiile de bază se numesc \textit{create}, \textit{retrieve},
+\textit{update}, \textit{delete}, de aici acronimul \textsl{CRUD}.
+
+Accesează manualul MySQL\footnote{\url{http://dev.mysql.com/doc/}}
+și urmează capitolul \textit{Tutorial}. Sub Windows te vei conecta la daemon
+cu clientul \texttt{mysql.exe}.
+
+Rezervă-ți 40-80 de ore de lucru pentru a învăța să faci operații CRUD.
+\end{Exercise}
+
+\section{Comunicarea cu MySQL din runtime-ul PHP}
+În acest moment știi să faci operații pe baze de date MySQL în limbajul SQL.
+De îndată ce ai o cerere SQL care funcționează direct în clientul MySQL,
+aceasta poate fi trimisă așa cum este către server, iar răspunsul poate fi
+procesat.
+
+Pentru a comunica cu daemonul MySQL, folosim extensia mysqli.
+
+\lstinputlisting[caption={Cereri SQL statice}, label={lst:mysqli-connect}]{cap04/1-mysqli-connect.php}.
+
+În exemplul \ref{lst:mysqli-connect} poți vedea cum ne conectăm la
+baza de date și cum trimitem o cerere SQL și preluăm rezultatele
+generate de acea cerere.
+
+Pentru conectare am folosit un fișier \texttt{dbconn.php}.
+\begin{lstlisting}[caption={dbconn.php}]
+<?php
+return mysqli_connect('localhost', 'username', 'password', 'dbase');
+\end{lstlisting}
+
+Metadatele dicționarelor returnate (aici probabil
+doar \texttt{Database}) sunt exact numele coloanelor cum le-ai fi
+văzut dacă ai fi folosit clientul mysql din linia de comandă.
+
+În general, în PHP, vei dori să generezi dinamic, programatic, stringul
+care conține cererea SQL. Acest lucru se face de obicei pe baza inputului
+provenit direct sau indirect de la utilizator.
+
+De exemplu, am putea avea
+
+\begin{lstlisting}
+$SQL = 'SELECT * FROM `products` WHERE `name` LIKE "%'.$name.'%"';
+\end{lstlisting}
+
+unde variabila \texttt{\$name} are o valoare pusă la dispoziție de utilizator.
+Stringul \texttt{\$SQL} ar putea fi trimis apoi daemonului cu aceeași
+funcție \texttt{mysqli\_query()}.
+
+Putem spune că astfel am \textsl{parametrizat} cererea SQL cu variabila
+\texttt{\$name}.
+
+Dacă ai o greșeală în cererea generată, atunci poți fi
+confruntat cu două tipuri de probleme: fie cererea în sinea sa este corectă
+din punct de vedere sintactic, însă MySQL îți returnează o eroare, fie
+modul în care ai generat cererea este greșit.
+
+În primul caz, problema și rezolvarea sa nu țin de PHP, ci de MySQL.
+Exemplul unei astfel de situații poate fi atunci când încerci să
+selectezi elemente dintr-un tabel inexistent.
+
+În al doilea caz, problema ține de codul PHP pe care l-ai scris
+pentru a genera acea cerere.
+
+De obicei îți poți da seama cu ce fel de problemă te confrunți uitându-te
+la eroarea generată de mysqli, folosind funcția \texttt{mysqli\_error()}.
+
+Până acum am construit cererile SQL integrând valorile concrete - de exemplu
+valoarea variabilei \texttt{\$name} - în cererea SQL. MySQLi permite
+însă separarea cererii efective de datele care parametrizează cererea
+SQL. Acest lucru se face folosind \textsl{prepared statements}.
+
+\lstinputlisting[caption={MySQLi Prepared Statements}, label={lst:mysqli-prep-stmt}]{cap04/2-mysqli-prep-stmt.php}.
+
+Semnele de întrebare din cererea SQL sunt legate (en. \textsl{bounded})
+de variabile cu funcția \texttt{mysqli\_stmt\_bind\_param()}, iar
+cererea rezultată este executată apoi.
+
+\textit{Prepared statements} ne oferă o securitate mai bună, dar și flexibilitate:
+poți reutiliza același \textit{statement}, fiind nevoie doar să schimbi
+valoarea variabilei, și să execuți din nou aceeași secvență de cod. Astfel
+nu mai este nevoie de regenerarea de la zero a cererii SQL, după cum
+vezi pe liniile 14-18 din listingul \ref{lst:mysqli-prep-stmt}.
+
+Ca programatori PHP, am fi tentați să facem mai multe operații
+de cât sunt necesare în PHP. Greșit. Ar trebui să facem toate
+operațiile ce țin de criterii de căutare, sortări, ordonări, grupări,
+folosind SQL. Sistemele de baze de date sunt optimizate pentru aceste
+operații, și trebuie să profităm de asta.
+
+De asemenea, operațiile de bază trebuiesc și ele făcute tot în SQL, acolo
+unde este posibil. De exemplu, suma prețurilor produselor dintr-un
+coș de cumpărături poate fi făcută folosind cereri precum
+
+\begin{lstlisting}
+SELECT SUM(`price`) FROM `cart` WHERE `customer_id` = 42
+\end{lstlisting}
+
+În mod normal o astfel de cerere este mai rapidă decât cererea
+întregii liste de produse și calcularea "manuală" a sumei totale
+în PHP, într-o buclă. Asta bineînțeles numai dacă nu afișezi
+oricum lista de produse, ci efectiv strict prețul total.
+
+\attention{Este important să ne gândim în ce contexte vor fi
+folosite cererile SQL pe care le creăm,
+și în funcție de asta să ne concepem cererile SQL.}
+
+\section{Designul bazelor de date}
+Pentru a-ți ușura munca atunci când creezi baze de date, poți folosi o interfață grafică
+pentru a interacționa cu serverul. O astfel de aplicație este phpMyAdmin.
+Aceasta este o aplicație web scrisă în PHP.
+Urmează pașii
+din documentația sa oficială pentru a o instala.
+
+Înainte de a te apuca de creat baze de date trebuie să te gândești puțin
+la structura informațiilor pe care urmează să le salvezi în baza de date.
+Țin să subliniez: a informațiilor, care nu înseamnă neapărat a bazei de date.
+
+Să zicem că lucrăm la o aplicație pentru administrarea unei firme. Primul
+lucru de care avem nevoie sunt angajați. Acești angajați sunt oameni, deci
+au un nume, o zi de naștere, o adresă și un număr de telefon.
+
+Ca și concept, cam acestea sunt datele, însă trebuie să ne gândim și la cum
+vom dori să lucrăm cu aceste date.
+
+Să zicem că firma noastră pune la dispoziție un mijloc de transport pentru
+a-i aduce pe angajații săi la lucru. Teoretic avem adresa, însă va fi dificil
+să extragem informațiile din ea: avem nevoie de stradă și număr. În funcție de
+ele putem calcula apoi care sunt cele mai bune puncte de întâlnire, deoarece
+evident acest mijloc de transport nu va putea trece pe la fiecare acasă, dacă
+acea adresă nu este în drum.
+
+Concluzia logică e că ceea ce am numit "adresă" trebuie împărțit în două câmpuri:
+stradă și număr. Acest fapt ne duce la \textsl{principiul atomicității}
+%TODO point to Codd
+datelor: fiecare
+câmp trebuie să conțină o singură informație indivizibilă. Același principiu îl
+putem aplica și numelui și numărului de telefon.
+
+În exemplul nostru de mai sus, aceste coloane reprezintă \textsl{domenii}. După
+cum observi, fiecare domeniu are un anumit tip de date, mai ales acum că am
+respectat principiul atomicității: strada este un string, iar numărul este un
+număr. Ba mai mult, este un număr pozitiv.
+
+Este important să stabilim domeniile și tipul lor de date. Dacă este vorba despre
+un domeniu pentru numere, trebuie să stabilim exact intervalul de numere. Dacă
+este vorba despre un string, atunci trebuie să stabilim lungimea maximă, ș.a.m.d.
+În acest fel, chiar dacă un domeniu apare în diferite tabele, toate informațiile
+din baza de date vor fi consistente.
+
+Un alt principiu este cel al evitării redundanței. Redundanța datelor nu este
+bună. Ce se întâmplă dacă primăria orașului decide să redenumească o stradă?
+Va trebui să redenumim toate rândurile din tabelul nostru cu angajați care
+conțin acea stradă. În acest caz, redundanța putea fi evitată ușor dacă
+cream un nou tabel "străzi" în care puneam toate numele de străzi unice.
+
+Tabelul cu angajați nu mai conține deci numele străzilor, care acum se află
+în acest nou tabel. Dar cum facem legătura între un angajat și strada pe care
+locuiește? Pentru acest lucru avem la dispoziție două arme: \textsl{foreign key}
+și \textsl{primary key}.
+
+Aceste \textit{keys} sunt numere întregi. Tabelul cu străzi ar trebui să aibe
+un PK unic numelui de stradă aferent. Teoretic, am putea folosi direct
+numele străzii, este un PK la fel de valid, deoarece acest nume este oricum unic --
+nu există două străzi cu același nume. Însă practic, calculatoarele lucrează
+mai ușor cu numere, care întâmplător ocupă și mai puțin spațiu, deci baza de date
+ar deveni mai compactă. Iar deoarece calculatoarele lucrează mai rapid cu numere,
+și cererile ar deveni mai rapide.
+
+Deci adăugăm o nouă coloană tabelului străzi numită \texttt{ID}, pe care o facem
+PK și pentru ca intrările din această coloană să fie unice o facem 
+\texttt{AUTO\_INCREMENT} și îi adăugăm \texttt{UNIQUE}.
+
+Cum străzile au acum un PK, putem reveni la tabelul cu angajați și pune acolo
+în coloana "stradă" PK-ul străzii aferente din tabelul "străzi". Spunem că
+această coloană este un FK și că referențiem datele dintr-un alt tabel.
+Din acest motiv, bazele de date SQL se numesc baze de date \textsl{relaționale}.
+
+Însă bazele de date relaționale știu mai multe. Misiunea unei baze de date
+nu este numai de a salva, ordona, căuta sau grupa informații, ci și de a ne
+garanta integritatea datelor. Ce se întâmplă dacă ștergem din greșeală (sau nu)
+o stradă pe care încă locuiește un angajat? FK-ul acelui angajat va deveni
+invalid. Cu baze de date putem asigura această integritate prin ceea ce numim
+\textsl{referential integrity}.
+
+În MySQL, atunci când creezi tabelul care va trebui să știe despre integritate
+referențială, va trebui să-i setezi ca \textsl{ENGINE} \textsl{InnoDB}.
+
+Referențierea o vei crea pentru tabelul care face referențierea, deci în scenariul
+de mai sus pentru tabelul "angajați".
+
+\begin{Exercise}[title={Referential Integrity},difficulty=1]
+Crează o bază de date cu integritate referențială, \textit{primary keys} și
+\textit{foreign keys}, ca în scenariul de mai sus. Documentează mai întâi domeniile
+folosite. Setează ca indecși coloanele după care vei căuta în cererile tale
+SQL (deci folosind \texttt{SELECT}).
+
+Crează câteva intrări în această bază de date și export-o în format SQL din phpMyAdmin.
+
+Crează câteva cereri SQL care demonstrează integritatea referențială.
+\end{Exercise}
+
+\subsection{Database Normalization}
+Normalizarea bazelor de date\footnote{\url{http://en.wikipedia.org/wiki/Database_normalization}}
+este o categorisire formală și o 
+extindere a principiilor expuse anterior în designul bazelor de date.
+
+Este suficientă respectarea primelor trei forme normale în aplicațiile
+fără necesități speciale.
+
+\begin{Exercise}[title={Database Normalization}, difficulty=3]
+Crează o bază de date normalizată în 3rd NF cu cel puțin 5 tabele. Crează indecși unici
+și integritate referențială după necesitățile domeniului aplicației pe care îl
+descrii în mod relațional.
+
+Introdu în toate tabelele date de testare.
+
+Demonstrează folosirea a 1-2 \textsl{compound keys}, fie \textsl{primary},
+fie \textsl{unique}, fie ambele.
+
+Crează cereri SQL mai complexe care implică operațiile \texttt{JOIN},
+\texttt{GROUP BY} și \texttt{HAVING} - ultimele două într-un singur query.
+Descrie textual scenariile în care fiecare dintre aceste cereri ar
+fi folosite într-o aplicație care ar face uz de această bază de date.
+\end{Exercise}
+
+\section{Debugging and profiling}
+Până acum, atunci când ai avut o problemă, a trebuit să inspectezi
+fluxul de execuție afișând \texttt{\_\_FILE\_\_} și \texttt{\_\_LINE\_\_},
+iar fluxul de date afișând valorile variabilelor cu \texttt{var\_dump()}.
+
+După ce ai terminat de inspectat ce se întâmplă în secvența de cod cu probleme,
+a trebuit să ștergi apelurile la funcțiile acestea de "debugging".
+
+Pentru a nu mai fi nevoie de aceste modificări, poți folosi un debugger. 
+Unul din ele este \textsl{xdebug} și poate
+fi adăugat în PHP ca extensie.
+
+Pentru a-l putea folosi ușor, instalează-ți și
+\textsl{IDE}-ul\footnote{\url{http://en.wikipedia.org/wiki/Integrated_development_environment}}
+Netbeans, iar pentru a porni ușor o nouă sesiune de debugging în firefox,
+add-on-ul \textit{easy Xdebug}\footnote{\url{https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug/}}.
+
+%TODO: profiling
+
+\section{Lucrul în echipă}
+% Pentru lucrul în echipă:
+% 
+% - învață să lucrezi cu git: http://www.ralfebert.de/tutorials/git/
+% 
+% 
+% - apelează la echipa YAP pentru următorii pași (IRC: irc.freenode.net / #yet-another-project)
+%TODO exercițiu: găsește 1-2 cursanți pe IRC de același nivel, formați o echipă și creați un proiect mai amplu
+
+%tutorul va fi mediatorul vostru, dar nu se va băga peste ideile voastre (cel puțin nu în mod abuziv, ci doar ca să vă prevină greșelile sau să vi le îmbunătățească)
+%dacă e nevoie, fă schimb de numere de telefon sau alte mijloace de comunicare prin voce (ex: skype) cu membrii echipei tale, pentru a înlesni comunicarea
+
+
+\subsection{Norme de comunicare}
+%- atunci când salvezi informații în repo, îi comunici ceva echipei
+% nu numai mesajul, ci și schimbările înseși
+% mesajul trebuie să reflecte exact schimbarea
+%- iar schimbarea trebuie să fie una atomară:
+% fie ea cât de mică, chiar și repararea unei greșeli de exprimare, trebuie să fie salvată
+% într-un commit. Dacă însă ai convenit cu colegii de echipă că vei repara toate greșelile
+% de gramatică dintr-un fișier, sau ai văzut mai multe greșeli în lungul și-n latul proiectului,
+% atunci toate aceste schimbări reprezintă o "schimbare atomară"
+%- un commit nu ar trebui să facă codul neparsabil (invalid dpv. sintactic), iar
+% un push nici atât. De ce? Dacă faci o greșelă sintactică printre acele îmbunătățiri
+% trimise cu push, coechipierii tăi vor trebui să repare greșeala TA pentru a-și putea
+% continua munca la părțile de care sunt EI responsabili - iar asta e frustrant pentru ei.
+%- gândește-te mereu ce vor trebui să facă colegii tăi în urma acțiunilor tale, și fă-le
+% munca cât mai plăcută. VREI ca ei să fie fericiți, nu frustrați, pentru că frustrările
+% lor se vor întoarce împotriva ta!
+%-
+
+\subsection{Norme comportamentale}
+%- nu uita că acum nu mai ești singur. Dacă echipa eșuează, sau mai rău, întregul
+%proiect eșuează, atunci și tu porți o vină, chiar și pentru simplul fapt că nu
+%ai observat greșeli tehnice sau organizatorice în cadrul echipei voastre, sau
+%dacă le-ai observat, pentru că nu ai discutat despre ele cu partenerii tăi de lucru
+
+%nu mai ești responsabil față de tutori, ci față de colegii tăi de echipă. tutorii doar
+%vă consiliază, ca echipă
+
+%the ten commandments of egoless programming

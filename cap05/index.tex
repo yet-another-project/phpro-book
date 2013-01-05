@@ -1,0 +1,49 @@
+\chapter{Securitatea aplicațiilor web}
+
+\begin{chapsummary}
+TODO: Intro
+\end{chapsummary}
+
+\section{Ce înseamnă securitate}
+Securitatea este un subiect dificil deoarece nu există o rețetă
+universal valabilă pentru a crea ceva sigur.
+
+Dar de ce nu există
+o astfel de armă secretă?
+Pentru a înțelege asta, trebuie să înțelegem natura conceptului de
+\textit{a fi sigur}. 
+
+Pentru noi ca programatori, ne interesează în special securitatea
+aplicației. Însă aplicația noastră nu este de sine stătătoare: ea
+se află pe un server care are un sistem de operare, care este conectat
+la Internet, și deseori la o rețea locală centrului de date în
+care se află acest server, iar la acest server unele persoane
+din cadrul firmei ce deține centrul de date pot avea acces fizic.
+
+Și cum ceva ori este sigur, ori nu este, 
+%TODO finish me
+\section{Securitatea la nivelul aplicației}
+%TODO write me
+verificarea inputului, POST forms don't make your app secure,
+security by obscurity
+
+includerea fișierelor, definirea unei constante "guard",
+punerea fișierelor în afara \texttt{htdocs/}
+
+XSS și CSRF
+
+%TODO implicațiile de securitate "http is stateless"
+
+%TODO exercițiu: Al doilea exercițiu de hacking
+TODO: exerciții de hacking. O infrastructură exactă răm\^ane să fie inventată
+pentru scenarii mai complexe. Cel mai probabil cursanții vor primi un
+{\glqq}private key{\grqq}, a.\^i. toate atacurile (simulative, desigur, nu reale)
+vor putea fi traced back.
+
+TODO: exerciții de securizare a scripturilor trecute.
+
+TODO: ne trebuie o evaluare serioasă a vectorilor de atac dacă oferim
+{\glqq}attack gates{\grqq}. Cu siguranță vom verifica IP-ul, și doar către
+IP-ul care folosește private key se vor trimite atacurile (i.e. cursantul
+va folosi serverul phpro pentru a-și ataca propriul server -- proper NAT has to be
+in place on his side).
