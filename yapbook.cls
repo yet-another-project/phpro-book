@@ -230,6 +230,7 @@ extendedchars}[keywords]
 \fancyhf{}
 \fancyhead[RO]{\leftmark}
 \fancyhead[LE]{\rightmark}
+\fancyfoot[CO,CE]{\thepage}
 
 %\rhead{\markright}
 %\renewcommand{\chaptermark}[1]{\markright{#1}{}}
