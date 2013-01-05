@@ -140,9 +140,9 @@
 \makeatletter\def\endExerciseEnv{\termineliste{1}\@EndExeBox\nobreak\vskip .5em\hrule\vskip 1em\needspace{-10\baselineskip}}\makeatother
 
 %indexes
-%\RequirePackage{multind} %TODO
-%\makeindex{en-ro}
-%\newcommand{\engl}[2]{#1 (en. \textsl{#2})\index{en-ro}{#2}}
+\RequirePackage{multind} %TODO
+\makeindex{en-ro}
+\newcommand{\engl}[2]{#1 (en. \textsl{#2})\index{en-ro}{#2}}
 
 %listings
 \RequirePackage{listings}

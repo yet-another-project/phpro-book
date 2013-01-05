@@ -579,7 +579,7 @@ ne exprimăm cât mai clar și punctual, fără omisiuni.
 
 De exemplu, un algoritm de autentificare ar putea
 fi specificat astfel:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 daca parola este corecta
 	afiseaza 'autentificat'
 altfel
@@ -596,7 +596,7 @@ acea ``parolă'' pe care am menționat-o pe linia 1?
 
 Calculatoarele sunt stupide, și la fel este și PHP. Va
 trebui să-i spunem mai întâi că citim acea parolă:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 citeste parola
 daca parola este corecta
 	afiseaza 'autentificat'
@@ -630,7 +630,7 @@ unde algoritmul decide pe baza unui input ``parolă'' ce să afișeze, ``autenti
 sau ``necunoscut'', însă în ambele cazuri să fie afișat ``Salut '' și ``. Ce faci?''.
 
 Un astfel de algoritm ar putea arăta astfel:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 citeste parola
 afiseaza 'Salut '
 daca parola este corecta
@@ -704,7 +704,7 @@ la executarea scriptului.
 \ExePart
 Care sunt greșelile algoritmice din pseudocodul următor?
 
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 daca parola este corecta
 	afiseaza 'autentificat'
 altfel
@@ -3145,7 +3145,7 @@ $(\lnot a \land b) \lor (a \land \lnot b)$,
 Crează un script care acceptă două numere a și b, cu b mai mic sau egal cu 8*PHP\_INT\_SIZE-1, și
 care afișează rezultatele operațiilor \texttt{a\&b}, \texttt{a|b}, \texttt{a$<<$b},
 \texttt{a$>>$b}, \texttt{a{\textasciicircum}b},
-\texttt{{\texttildelow}a}, \texttt{{\texttildelow}b} și \texttt{(a$>>$b)\&0x1}.
+\texttt{{\~{}}a}, \texttt{{\~{}}b} și \texttt{(a$>>$b)\&0x1}.
 \end{Exercise}
 
 Operațiile pe biți sunt foarte utile atunci când vrem să setăm atribute booleene ``da sau nu''
