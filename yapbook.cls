@@ -225,7 +225,13 @@ extendedchars}[keywords]
 \hbadness=10000
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{10pt}
+
+\fancyhf{}
+\fancyhead[RO]{\leftmark}
+\fancyhead[LE]{\rightmark}
+
+%\rhead{\markright}
 %\renewcommand{\chaptermark}[1]{\markright{#1}{}}
 %\renewcommand{\sectionmark}[1]{\markright{#1}{}}
 %\fancyhead[LO,L]{Dezvoltare web cu PHP}
