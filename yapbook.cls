@@ -53,6 +53,14 @@
    \def\thesubtitle{{#1}} %TODO: make useful \thesubtitle, not {\thesubtitle}
 }
 
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+\newenvironment{dedication}
+    {\cleartoleftpage}
+    {\clearpage}
+
 \RequirePackage{styles/\YAPBOOK@style/titlepage}
 \renewcommand*{\maketitle}{
     \@maketitle
