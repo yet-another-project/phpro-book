@@ -71,11 +71,11 @@ L-am putea rescrie la fel de bine doar în HTML static, însă deoarece
 vreau să demonstrez altceva, voi genera totuși mesajul de salut cu PHP:
 \begin{lstlisting}
 <html>
-	<body>
-		<?php
-		echo 'Salut Flavius';
-		?>
-	</body>
+    <body>
+        <?php
+        echo 'Salut Flavius';
+        ?>
+    </body>
 </html>
 \end{lstlisting}
 
@@ -581,15 +581,15 @@ De exemplu, un algoritm de autentificare ar putea
 fi specificat astfel:
 \begin{lstlisting}[language=pseudocode]
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'acces restrictionat'
+    afiseaza 'acces restrictionat'
 \end{lstlisting}
 %\begin{Verbatim}[commandchars=\\\{\}]
 %\nl{1}\textbf{dacă} parola este corectă
-%\nl{2}	afișează 'autentificat';
+%\nl{2} afișează 'autentificat';
 %\nl{3}\textbf{altfel}
-%\nl{4}	afișează 'parola greșită';
+%\nl{4} afișează 'parola greșită';
 %\end{Verbatim}
 Însă acesta este incomplet! De unde vine
 acea ``parolă'' pe care am menționat-o pe linia 1?
@@ -599,9 +599,9 @@ trebui să-i spunem mai întâi că citim acea parolă:
 \begin{lstlisting}[language=pseudocode]
 citeste parola
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'acces restrictionat'
+    afiseaza 'acces restrictionat'
 \end{lstlisting}
 
 Sună stupid, probabil ar trebui să ne așteptăm
@@ -634,9 +634,9 @@ Un astfel de algoritm ar putea arăta astfel:
 citeste parola
 afiseaza 'Salut '
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'necunoscut'
+    afiseaza 'necunoscut'
 afiseaza '. Ce faci?'
 \end{lstlisting}
 
@@ -820,10 +820,10 @@ verificarea adițională a tipului de date, folosind operatorul
 \begin{Exercise}[title={Verifică-ți puterea de a face analogii},difficulty=1]
 Scrie un cod PHP care să afișeze valorile şi tipurile de date a patru comparații stricte:
 \begin{enumerate}
-	\item dintre un int și un string
-	\item dintre un float și un int
-	\item dintre un string și un float
-	\item dintre un bool și un string
+    \item dintre un int și un string
+    \item dintre un float și un int
+    \item dintre un string și un float
+    \item dintre un bool și un string
 \end{enumerate}
 \end{Exercise}
 
@@ -863,16 +863,16 @@ tabelul \ref{tbl:operatori inegalitate}.
 
 \begin{table}[ht!]
   \begin{center}
-  	  \begin{tabular}{| c | l |}
-	  \hline
-	  Operator & Semnificație \\
-	  \hline
-	  \texttt{<}	& mai mic \\
-	  \texttt{>}	& mai mare \\
-	  \texttt{<=}	& mai mic sau egal \\
-	  \texttt{>=}	& mai mare sau egal \\
-	  \hline
-	  \end{tabular}
+      \begin{tabular}{| c | l |}
+      \hline
+      Operator & Semnificație \\
+      \hline
+      \texttt{<}    & mai mic \\
+      \texttt{>}    & mai mare \\
+      \texttt{<=}   & mai mic sau egal \\
+      \texttt{>=}   & mai mare sau egal \\
+      \hline
+      \end{tabular}
   \end{center}
   \caption{Operatorii de inegalitate}
   \label{tbl:operatori inegalitate}
@@ -1065,10 +1065,10 @@ $este_administrator = TRUE;
 if($este_autentificat) {
   echo 'Esti autentificat.';
   if($este_administrator) {
-	  echo 'Esti administrator.';
+      echo 'Esti administrator.';
   }
   else {
-	  echo 'Nu esti administrator.';
+      echo 'Nu esti administrator.';
   }
 }
 else {
@@ -1139,11 +1139,11 @@ variabila, si apoi ':'. Vom rescrie exemplul anterior:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
+      echo 'esti autentificat.';
   case 'moderator':
-	  echo 'esti moderator.';
+      echo 'esti moderator.';
   case 'administrator':
-	  echo 'esti administrator.';
+      echo 'esti administrator.';
 }
 \end{lstlisting}
 Schimbă pe rând valoarea variabilei \texttt{\$rol}. Vei observa că
@@ -1157,12 +1157,12 @@ adaugi instrucțiunea \texttt{break}. De exemplu:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
-	  break;
+      echo 'esti autentificat.';
+      break;
   case 'moderator':
-	  echo 'esti moderator.';
+      echo 'esti moderator.';
   case 'administrator':
-	  echo 'esti administrator.';
+      echo 'esti administrator.';
 }
 echo 'sunt in afara switch-ului';
 \end{lstlisting}
@@ -1181,16 +1181,16 @@ folosi ramificația \texttt{default}, astfel:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
-	  break;
+      echo 'esti autentificat.';
+      break;
   case 'moderator':
-	  echo 'esti moderator.';
-	  break;
+      echo 'esti moderator.';
+      break;
   case 'administrator':
-	  echo 'esti administrator.';
-	  break;
+      echo 'esti administrator.';
+      break;
   default:
-	  echo 'rolul tau este invalid';
+      echo 'rolul tau este invalid';
 }
 echo 'sunt in afara switch-ului';
 \end{lstlisting}
@@ -1389,7 +1389,7 @@ $n = 231;
 
 while(TRUE === TRUE) {
   if(0 === $n%10) {
-	  break;
+      break;
   }
   $n += 1;
 }
@@ -1432,9 +1432,9 @@ $n = 0;
 $sum = 0;
 while($n <= 50) {
   if(0 === $n%3) {
-	  echo $n,' ';
-	  $n += 1;
-	  continue;
+      echo $n,' ';
+      $n += 1;
+      continue;
   }
   $sum += $n;
   $n += 1;
@@ -1674,7 +1674,7 @@ $index_fata = 2;
 
 echo 'Eu sunt ',$names[3],'<br>';
 echo 'Pe fata o cheama ',$names[$index_fata],', inaintea ei este ',
-		  $names[$index_fata-1],' iar dupa ea urmeaza ',$names[$index_fata+1];
+          $names[$index_fata-1],' iar dupa ea urmeaza ',$names[$index_fata+1];
 \end{lstlisting}
 
 Să zicem că avem următoarea situație: avem un array de nume,
@@ -1689,8 +1689,8 @@ $after_me = '<nimeni>';
 
 foreach($names as $index => $name) {
   if($name === $me) {
-	$after_me = $names[$index+1];
-	break;
+    $after_me = $names[$index+1];
+    break;
   }
 }
 
@@ -1718,9 +1718,9 @@ un index explicit. Pentru asta folosim aceeași sintaxă ca
 Inițializarea unui astfel de array ar arăta astfel:
 \begin{lstlisting}
 $fructe = array(
-		  231	=> 'mere',
-		  1		=> 'pere',
-		  1001	=> 'alune'
+          231   => 'mere',
+          1     => 'pere',
+          1001  => 'alune'
 );
 \end{lstlisting}
 Un array cu \textsl{date asociative} se mai numește și \textsl{dicționar}. El asociază
@@ -1735,11 +1735,11 @@ existent în array până în acel moment, și se incrementează cu o unitate.
 De exemplu, în codul:
 \begin{lstlisting}
 $fructe = array(
-		  231	=> 'mere',
-		  1		=> 'pere',
-		  1001	=> 'alune',
-				   'piersici',
-				   'caise'
+          231   => 'mere',
+          1     => 'pere',
+          1001  => 'alune',
+                   'piersici',
+                   'caise'
 );
 \end{lstlisting}
 elementul cu valoarea 'piersici' va fi asociat automat cu indexul 1002, iar 'caise'
@@ -2057,8 +2057,8 @@ caracterele " respectiv ' pot fi folosite fără niciun fel de restricție.
 crează automat pentru noi. Constantele urmează aceleași
 standarde de denumire ca și variabilele, cu două excepții:
 \begin{itemize}
-	\item identificatorul constantei nu este precedat de simbolul \$
-	\item constantele definite de programator nu trebuie să înceapă cu două caractere
+    \item identificatorul constantei nu este precedat de simbolul \$
+    \item constantele definite de programator nu trebuie să înceapă cu două caractere
 underscore, deoarece acestea sunt rezervate pentru adăugiri viitoare în limbaj
 \end{itemize}
 Sintaxa definirii unei constante este
@@ -2658,10 +2658,10 @@ vizitatorului ar putea arăta astfel:
 $mesaj = NULL;
 if(isset($_GET['submit'])) {
   if(isset($_GET['nume']) && $_GET['nume']) {
-	$mesaj = 'Salut '.$_GET['nume'];
+    $mesaj = 'Salut '.$_GET['nume'];
   }
   else {
-	$mesaj = 'Eroare: Nu ai introdus numele.';
+    $mesaj = 'Eroare: Nu ai introdus numele.';
   }
 }
 echo $mesaj;
@@ -2816,7 +2816,7 @@ $fructe = array(
 );
 if(isset($_GET['submit']) && isset($_GET['fructe'])) {
   foreach($_GET['fructe'] as $fruct) {
-	echo '<p>',$fructe[$fruct],'</p>';
+    echo '<p>',$fructe[$fruct],'</p>';
   }
 }
 ?>
