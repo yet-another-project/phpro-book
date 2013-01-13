@@ -149,8 +149,6 @@
 
 %indexes
 \RequirePackage{multind} %TODO
-\makeindex{en-ro}
-\newcommand{\engl}[2]{#1 (en. \textsl{#2})\index{en-ro}{#2}}
 
 %listings
 \RequirePackage{listings}

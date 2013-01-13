@@ -5,3 +5,16 @@
 
 \def \phpro{\href{https://github.com/yet-another-project/phpro-book}{phpro}}
 \def \get{{\texttt{\$\_GET}\kern3pt}}
+
+\usepackage{multind}
+\makeindex{en-ro}
+\newcommand{\engl}[2]{#1 (en. \textsl{#2})\index{en-ro}{#2}}
+\makeindex{term}
+\makeindex{important}
+
+\makeindex{abv}
+%TODO instead:
+%\usepackage[refpage]{nomencl}
+%\renewcommand{\nomname}{\textsl{Lista abreviațiilor}}
+%\renewcommand{\nomname}{}
+%\makenomenclature
