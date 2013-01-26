@@ -25,7 +25,8 @@ PHP în primul şi primul rând. Doar "întâmplător" vei şti şi PHP.
 
 Cartea în sinea sa este aproape inutilă fără sprijinul comunităţii. Noi nu
 oferim doar o simplă carte, ci un program *gratuit* de tutelare care
-s-a dovedit eficient de-a lungul timpului.
+s-a dovedit eficient de-a lungul timpului. Ceea ce nu oferim este un **tutorial
+php** - ci un curs php.
 
 Dacă vrei să participi ca şi cursant la programul de tutelare,
 urmează [ghidul](https://github.com/yet-another-project/phpro-book/wiki/Ghid),
