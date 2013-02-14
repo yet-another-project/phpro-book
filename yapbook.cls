@@ -47,6 +47,8 @@
 %------------------------------------------------------------------------------
 %Semantic structure (and structure in general)
 %------------------------------------------------------------------------------
+\newcommand{\engl}[2]{#1 (en. \textsl{#2})}
+
 \newcommand{\@subtitle}{}
 \newcommand{\subtitle}[1]{
    \renewcommand{\@subtitle}{#1}
