@@ -47,6 +47,7 @@
 %------------------------------------------------------------------------------
 %Semantic structure (and structure in general)
 %------------------------------------------------------------------------------
+%TODO: remove this
 \newcommand{\engl}[2]{#1 (en. \textsl{#2})}
 
 \newcommand{\@subtitle}{}
