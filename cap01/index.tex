@@ -1,16 +1,16 @@
 \chapter{Rețelistică}
 
 \begin{chapsummary}
-Cu PHP controlezi ce se întâmplă pe server,\footnote{În acest
+Cu PHP controlezi ce se întâmplă pe server\footnote{În acest
 capitol vei vedea că termenul ``server'' este deseori folosit greșit,
-ca și în acest paragraf.} server care
+ca și în acest paragraf.}, server care
 este conectat la Internet.
 Deci folosirea PHP este strâns legată
 de rețea. Din acest motiv, înțelegerea noțiunilor fundamentale de
-rețelistică este indispensabilă.\footnote{De exemplu pentru 
+rețelistică este indispensabilă\footnote{De exemplu pentru 
 înțelegerea implicațiilor de securitate, folosirea extensiilor
 precum \textsl{cURL} sau cereri asincrone -- \textsl{AJAX}. Nu îți face griji dacă
-nu înțelegi toți acești termeni deocamdată.}
+nu înțelegi toți acești termeni deocamdată.}.
 Nu voi intra în toate detaliile, doar în ce ai nevoie ca programator
 și pentru a-ți seta mediul de programare în PHP, pentru a crea
 \textsl{website}-uri sigure, și pentru a înțelege noțiunile
@@ -19,46 +19,61 @@ necesare în folosirea extensiilor PHP care lucrează cu rețeaua.
 
 
 \section{Noduri, TCP/IP, rețele}
-\engl[Rețelistica]{networking} se ocupă cu comunicarea între
-așa-zise \engl[noduri]{nodes}. Un nod poate fi un calculator
-personal, un router, un server, practic orice dispozitiv digital
-conectat la rețea.
 
-Înainte de a vedea printr-un exemplu practic prin ce noduri
-din rețea trec informațiile
-atunci când cauți ceva pe \textsl{web} cu google, trebuie să faci
-cunoștință cu câteva definiții generale.
+Rețelistica (en. \textsl{networking}\index{en-ro}{networking}
+\index{term}{rețelistică!networking}) se ocupă cu comunicarea între așa-zise
+noduri (en. \textsl{nodes}\index{en-ro}{node} \index{term}{nod!node}). Un nod
+poate fi un calculator personal, un \textsl{router}, un \textsl{server},
+practic orice dispozitiv digital conectat la rețea (en.
+\textsl{network}\index{en-ro}{network} \index{term}{rețea!network}).
 
-Există două mari tipuri de interfețe pentru interacțiunea cu un 
-\engl[sistem de operare]{operating system}\footnote{abv. OS}:
-%TODO adăugare index termeni și abreviatii
+Înainte de a vedea printr-un exemplu practic prin ce noduri din rețea trec
+informațiile atunci când cauți ceva pe \textsl{web} cu google, trebuie să faci
+cunoștință cu câteva noțiuni din domeniul sistemelor de operare.
 
-%\begin{itemize}
-	%\begin{item} \engl[interfață grafică]{graphical user interface}\footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}}
-                %\abbrev{GUI}{Graphical User Interface}
-                %\important{Graphical User Interface}
-	%\begin{description}
-	%\item Este cea mai comună printre utilizatorii ocazionali, este ușor de utilizat
-	%și nu necesită cunoștințe avansate de IT pentru a o folosi. Însă te
-	%limitează în folosirea programelor
-	%\end{description}
-	%\end{item}
-	
-	%\begin{item}
-    %\engl[linia de comandă]{command line interface}\footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}}
-    %\abbrev{CLI}{Command Line Interface}
-    %\important{Command Line Interface}
-	%\begin{description}
-	%\item Este destinată profesioniștilor. Necesită
-	%cunoștințe mai avansate, însă este mult mai puternică și flexibilă
-	%\end{description}
-	%\end{item}
-%\end{itemize}
-%Sub MS Windows, interfața CLI este cunoscută și ca \textsl{MS-DOS Prompt}. Pentru
-%a-l lansa în execuție, du-te în \texttt{Start -> Run}, și tastează \texttt{cmd}.
-%Apare o fereastră neagră și neprietenoasă. Sub GNU/Linux aceasta este
-%cunoscută sub numele de \textsl{consolă}, \textsl{terminal} sau
-%\textsl{shell} (unul dintre ele fiind \textsl{bash}).
+Există două mari tipuri de interfețe pentru interacțiunea cu un
+sistem de
+\index{abv}{OS|see{Operating System}}
+\index{en-ro}{operating system}\index{term}{sistem de operare!operating system}
+operare\footnote{en. \textsl{Operating System}, abv. \textsl{OS}}:
+
+\begin{itemize}
+
+    \begin{item}
+    interfața grafică (en. \textsl{Graphical User Interface}
+    \index{en-ro}{Graphical User Interface}
+    \index{term}{interfață grafică!Graphical User Interface}
+    \index{abv}{GUI|see{Graphical User Interface}}
+    \footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}})
+    \begin{description}
+    \item Este cea mai comună printre utilizatorii ocazionali, este ușor de
+    utilizat și nu necesită cunoștințe avansate de IT pentru a o folosi.
+    Însă te limitează în folosirea programelor.
+    \end{description}
+    \end{item}
+    
+    \begin{item}
+    linia de comandă (en \textsl{command Line Interface}
+    \index{en-ro}{Command Line Interface}
+    \index{term}{linie de comandă!Command Line Interface}
+    \index{abv}{CLI|see{Command Line Interface}}
+    \footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}})
+    \begin{description}
+    \item Este destinată profesioniștilor. Necesită
+    cunoștințe mai avansate, însă este mult mai puternică și flexibilă.
+    \end{description}
+    \end{item}
+
+\end{itemize}
+
+Sub MS Windows, \textit{CLI} este cunoscută și ca \textsl{MS-DOS Prompt}
+\index{term}{MS-DOS Prompt}. Pentru a-l lansa în execuție, este necesară
+accesarea \texttt{Start -> Run}, și lansarea în execuției a programului
+\texttt{cmd}.  Apare o fereastră neagră și neprietenoasă. Sub GNU/Linux aceasta
+este cunoscută sub numele de \textsl{consolă}, \textsl{terminal}
+\index{term}{consolă|see{terminal}}\index{term}{terminal} sau
+\textsl{shell}\index{term}{shell} (unul dintre ele fiind
+\textsl{bash}\index{term}{bash}).
 
 %Deschide interfața CLI a sistemului tău și introdu comanda
 %\texttt{tracert google.com} pentru Windows sau \texttt{traceroute google.com} pentru 
