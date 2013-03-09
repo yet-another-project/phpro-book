@@ -19,8 +19,8 @@ necesare în folosirea extensiilor PHP care lucrează cu rețeaua.
 
 
 \section{Noduri, TCP/IP, rețele}
-\engl{Rețelistica}{networking} se ocupă cu comunicarea între
-așa-zise \engl{noduri}{nodes}. Un nod poate fi un calculator
+\engl[Rețelistica]{networking} se ocupă cu comunicarea între
+așa-zise \engl[noduri]{nodes}. Un nod poate fi un calculator
 personal, un router, un server, practic orice dispozitiv digital
 conectat la rețea.
 
@@ -30,11 +30,13 @@ atunci când cauți ceva pe \textsl{web} cu google, trebuie să faci
 cunoștință cu câteva definiții generale.
 
 Există două mari tipuri de interfețe pentru interacțiunea cu un 
-\engl{sistem de operare}{operating system}\footnote{abv. OS}:
+\engl[sistem de operare]{operating system}\footnote{abv. OS}:
 %TODO adăugare index termeni și abreviatii
 
 \begin{itemize}
-	\begin{item} \engl{\href{http://en.wikipedia.org/wiki/Graphical_user_interface}{GUI}}{graphical user interface}
+	\begin{item} \engl[interfață grafică]{graphical user interface}\footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}}
+                \abbrev{GUI}{Graphical User Interface}
+                \important{Graphical User Interface}
 	\begin{description}
 	\item Este cea mai comună printre utilizatorii ocazionali, este ușor de utilizat
 	și nu necesită cunoștințe avansate de IT pentru a o folosi. Însă te
@@ -43,7 +45,9 @@ Există două mari tipuri de interfețe pentru interacțiunea cu un
 	\end{item}
 	
 	\begin{item}
-	\engl{\href{http://en.wikipedia.org/wiki/Command-line_interface}{CLI}}{command line interface}
+    \engl[linia de comandă]{command line interface}\footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}}
+    \abbrev{CLI}{Command Line Interface}
+    \important{Command Line Interface}
 	\begin{description}
 	\item Este destinată profesioniștilor. Necesită
 	cunoștințe mai avansate, însă este mult mai puternică și flexibilă
@@ -68,27 +72,27 @@ GNU/Linux. Figura \ref{fig:cli traceroute} îți dă un exemplu de \textsl{outpu
 \end{figure}
 
 După cum vezi, tot ceea ce îi trimit eu lui google.com și ce îmi trimite
-el înapoi trece prin alte 11 noduri din rețea. Dacă un \engl{infractor}{cracker}
+el înapoi trece prin alte 11 noduri din rețea. Dacă un \engl[infractor]{cracker}
 deține controlul asupra unuia dintre aceste noduri,
 poate vedea absolut orice ``vorbesc'' eu cu \texttt{google.com}. Un astfel de atac
-se numește \href{http://en.wikipedia.org/wiki/Man-in-the-middle_attack}{man in the middle},
+se numește \url{http://en.wikipedia.org/wiki/Man-in-the-middle_attack},
 deoarece atacatorul se află la mijloc, între
-cele două \engl{capete}{endpoints}.
+cele două \engl[capete]{endpoints}.
 
 Bineînțeles că nu numai eu aș fi
-victima unui astfel de atacator, ci oricine trimite \engl{pachete de date}{data packets}
+victima unui astfel de atacator, ci oricine trimite \engl[pachete de date]{data packets}
 oricui altcuiva (nu neapărat numai lui \texttt{google.com}), atâta timp cât pachetele
 de date trec prin nodul controlat de el.
 
 Toate nodurile din rețeaua globală numită Internet au o adresă unică numită adresă
-\engl{IP}{internet protocol}. Ea este de forma \texttt{xxx.xxx.xxx.xxx}, unde \texttt{xxx} este un număr
+\engl[IP]{internet protocol}. Ea este de forma \texttt{xxx.xxx.xxx.xxx}, unde \texttt{xxx} este un număr
 între 0 și 255. Unele adrese IP au o semnificație specială. De exemplu, fiecare
 nod are adresa IP \texttt{127.0.0.1}. Ea nu este utilă în Internet, deoarece orice pachet
 de date trimis la acea adresă ajunge înapoi la expeditor, fără nici măcar a trece
 pragul sistemului local. Încearcă de exemplu comanda \texttt{tracert 127.0.0.1}.
 
 Alt bloc de adrese IP speciale sunt toate adresele între \texttt{192.168.0.0} și
-\texttt{192.168.255.255}. Ele sunt rezervate \engl{rețelelor locale}{local area network}.\footnote{abv. LAN}
+\texttt{192.168.255.255}. Ele sunt rezervate \engl[rețelelor locale]{local area network}.\footnote{abv. LAN}
 
 Un astfel de exemplu este chiar rețeaua mea
 locală\footnote{Un bun punct de start este \url{http://en.wikipedia.org/wiki/Private_network}.
@@ -121,7 +125,7 @@ Cele dintâi se numesc \textsl{adrese private}\footnote{le poți numi și ``intr
 analog cu cele publice, ``internet''.}
 sau adrese LAN, cele din urmă sunt în schimb \textsl{adrese publice}.
 
-\attention{Internetul este o rețea de LAN-uri și \engl{WAN-uri}{wide area network} interconectate.
+\attention{Internetul este o rețea de LAN-uri și \engl[WAN-uri]{wide area network} interconectate.
 Asta transformă Internetul în cea mai mare WAN, o rețea globală.}
 
 Dacă nu ai un \textsl{router} la mijloc, între tine și Internet, atunci îți poți vedea adresa IP
@@ -144,7 +148,7 @@ Teoretic, este suficient să știi adresa IP a unui nod pentru a comunica cu el.
 am aflat că una dintre adresele IP ale lui \texttt{google.com} este 74.125.87.104. Deci putem
 intra bine mersi pe adresa \texttt{http://74.125.87.104}.
 
-Însă oamenii nu pot reține ușor numere. De aceea s-a inventat \engl{DNS}{domain name system},
+Însă oamenii nu pot reține ușor numere. De aceea s-a inventat \engl[DNS]{domain name system},
 un sistem care convertește nume precum \texttt{google.com}, în adrese IP. Atunci când introduci
 \texttt{google.com} în browserul tău, acesta trimite o cerere la serverul DNS și primește
 înapoi adresele IP asociate cu \texttt{google.com}. Abia apoi se conectează la acea adresă IP,
@@ -182,14 +186,13 @@ decât spre un domeniu.\footnote{Tehnic este posibil, însă practic poate
 cauza probleme.}
 
 Totuși, din ce este compusă o adresă precum \texttt{www.google.com}?
-\texttt{.com} se numește \engl{TLD}{top level domain}. Ceea ce se află în stânga
+\texttt{.com} se numește \engl[TLD]{top level domain}. Ceea ce se află în stânga
 sa este un \textsl{subdomeniu}, până la următorul punct.
 Astfel, \texttt{google} este un subdomeniu al lui \texttt{.com},
 iar \texttt{www} este un subdomeniu al lui \texttt{.google.com}.
 
 Dacă vrei să ai un domeniu al tău, trebuie să cumperi unul de la
-o firmă numită \href{http://en.wikipedia.org/wiki/Domain_name_registrar}{domain name
-registrar}. Pentru a învăța PHP nu ai nevoie de un domeniu, poți
+o firmă numită \url{http://en.wikipedia.org/wiki/Domain_name_registrar}. Pentru a învăța PHP nu ai nevoie de un domeniu, poți
 face totul pe calculatorul tău personal, așa cum vei vedea în acest capitol.
 
 \section{Protocoale}
@@ -418,7 +421,7 @@ După ea urmează o serie de \textsl{request headers}, precum \texttt{Host} mai 
 
 Request line și request headers împreună sunt cunoscute și ca cererea HTTP (en.
 \textsl{HTTP request}).
-	
+    
 Daemonul îți va răspunde cu un text care arată cam așa, și care constituie răspunsul
 HTTP (en. \textsl{HTTP response}):
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -443,8 +446,8 @@ Content-Length: 438
   or &quot;example.org&quot; into your web browser.</p>             
 <p>These domain names are reserved for use in documentation and
   are not available for registration.
-	See <a href=``http://www.rfc-editor.org/rfc/rfc2606.txt''>
-	RFC 2606</a>, Section 3.</p>        
+    See <a href=``http://www.rfc-editor.org/rfc/rfc2606.txt''>
+    RFC 2606</a>, Section 3.</p>        
 </BODY>                                                                           
 </HTML>
 \end{Verbatim}

@@ -47,6 +47,9 @@
 %------------------------------------------------------------------------------
 %Semantic structure (and structure in general)
 %------------------------------------------------------------------------------
+%TODO: remove this
+\newcommand{\engl}[2]{#1 (en. \textsl{#2})}
+
 \newcommand{\@subtitle}{}
 \newcommand{\subtitle}[1]{
    \renewcommand{\@subtitle}{#1}
@@ -149,8 +152,6 @@
 
 %indexes
 \RequirePackage{multind} %TODO
-\makeindex{en-ro}
-\newcommand{\engl}[2]{#1 (en. \textsl{#2})\index{en-ro}{#2}}
 
 %listings
 \RequirePackage{listings}
@@ -171,8 +172,8 @@ extendedchars}[keywords]
     frame=b,
     showtabs=false,
     xleftmargin=17pt,
-    showspaces=true,
-    showstringspaces=true,
+    showspaces=false,
+    showstringspaces=false,
     keywordstyle=\color{Red},
     stringstyle=\color{OliveGreen},
     identifierstyle=\color{Blue},

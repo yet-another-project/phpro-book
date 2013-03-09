@@ -2,6 +2,66 @@
 \SetWatermarkScale{1}
 
 \usepackage[romanian]{babel}
+\usepackage{xparse}
 
 \def \phpro{\href{https://github.com/yet-another-project/phpro-book}{phpro}}
 \def \get{{\texttt{\$\_GET}\kern3pt}}
+
+\usepackage{multind}
+\makeindex{term}
+\makeindex{en-ro}
+\makeindex{important}
+\makeindex{abv}
+
+%TODO instead:
+%\usepackage[refpage]{nomencl}
+%\renewcommand{\nomname}{\textsl{Lista abreviațiilor}}
+%\renewcommand{\nomname}{}
+%\makenomenclature
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% these stuff are nice and dandy, but they don't cover more complex cases,
+% so we'll use the more verbose \index command every time we need it
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ExplSyntaxOn
+%\NewDocumentCommand{\term}{sm}{
+    %\IfBooleanTF#1
+    %{\index{term}{#2}}
+    %{\index{term}{#2}#2}
+%}
+%\ExplSyntaxOff
+
+
+%% \engl{romana}{engleza} romana (en. engleza)
+%% \engl*{romana}{engleza}
+%% \engl{engleza} \textsl{engleza}
+%% \engl*{engleza} just to index
+
+%\ExplSyntaxOn
+%\NewDocumentCommand{\engl}{som}{
+    %\IfBooleanTF#1
+    %{\IfNoValueTF#2
+        %{\index{en-ro}{#3}\term{#3}}%star and only one arg
+        %{\index{en-ro}{#3}\term{#2!#3}}%star and two args
+        %}%we have a star
+    %{\IfNoValueTF#2
+        %{\textsl{#3}\index{en-ro}{#3}\term{#3}}% no star and one arg
+        %{#2 (en. \textsl{#3})\index{en-ro}{#3}\term{#2!#3}}% no star and two args
+        %}%no star
+%}
+%\ExplSyntaxOff
+
+%\newcommand{\important}[1]{\index{important}{#1}\term{#1}}
+
+
+%\ExplSyntaxOn
+%\NewDocumentCommand{\abbrev}{smm}{
+    %\IfBooleanTF#1
+    %{\index{abv}{#2|see{#3}}\term{#3!#2}}
+    %{#2\index{abv}{#2|see{#3}}\term{#3!#2}}
+%}
+%\ExplSyntaxOff
+
+%%\newcommand{\abbrev}[2]{#1\index{abv}{#1|see{#2}}\term{#2!#1}}
+
