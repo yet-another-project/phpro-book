@@ -1,7 +1,7 @@
 R-CEDILLA=$(shell ./diacritice.sh)
 PDFLATEX=xelatex
-PDFFLAGS=-halt-on-error -interaction=nonstopmode -file-line-error
-PROJECT=Dezvoltare web cu PHP
+PDFFLAGS=-halt-on-error -interaction=nonstopmode -file-line-error -shell-escape
+PROJECT=Dezvoltare-web-cu-PHP
 MAKEINDEX=makeindex
 MAKEINDEXFLAGS=
 NOMENCLATUREFLAGS=-s nomencl.ist
@@ -30,7 +30,7 @@ tutoring: cedilla
 	$(MAKEINDEX) $(MAKEINDEXFLAGS) *.idx && \
 	$(PDFLATEX) $(PDFFLAGS) "Tutoring.tex" > error2.log 2>&1
 clean:
-	rm -rf *.{aux,log,out,loe,ilg,ind,idx}
+	rm -rf *.{aux,log,out,loe,ilg,ind,idx,pyg}
 	find . -type f -name "*~" -exec rm {} \;
 	find . -type f -name "*.aux" -exec rm {} \;
 	rm -rf *.{toc,pdf}
