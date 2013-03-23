@@ -1,29 +1,35 @@
 \chapter{Rețelistică}
 
 \begin{chapsummary}
-Cu PHP controlezi ce se întâmplă pe server\footnote{În acest
-capitol vei vedea că termenul ``server'' este deseori folosit greșit,
-ca și în acest paragraf.}, server care
-este conectat la Internet.
-Deci folosirea PHP este strâns legată
-de rețea. Din acest motiv, înțelegerea noțiunilor fundamentale de
-rețelistică este indispensabilă\footnote{De exemplu pentru 
-înțelegerea implicațiilor de securitate, folosirea extensiilor
-precum \textsl{cURL} sau cereri asincrone -- \textsl{AJAX}. Nu îți face griji dacă
-nu înțelegi toți acești termeni deocamdată.}.
-Nu voi intra în toate detaliile, doar în ce ai nevoie ca programator
-și pentru a-ți seta mediul de programare în PHP, pentru a crea
-\textsl{website}-uri sigure, și pentru a înțelege noțiunile
-necesare în folosirea extensiilor PHP care lucrează cu rețeaua.
-\end{chapsummary}
 
+Cu PHP se operează pe server,\footnote{În acest capitol vei vedea că termenul
+``server'' este deseori folosit greșit, ca și în acest paragraf.} server care
+este conectat la Internet. Deci folosirea PHP este strâns legată de rețea. Din
+acest motiv, înțelegerea noțiunilor fundamentale de rețelistică este
+indispensabilă.\footnote{De exemplu pentru înțelegerea implicațiilor de
+securitate, folosirea extensiilor precum \textsl{cURL} sau cereri asincrone --
+\textsl{AJAX}. Nu îți face griji dacă nu înțelegi toți acești termeni
+deocamdată.} Nu vor fi explicate toate detaliile care ar merita menționate, ci
+doar unele lucruri necesare ca programator și a mediului de programare în PHP,
+pentru a crea \textsl{website}-uri sigure, și pentru a înțelege noțiunile
+necesare în folosirea extensiilor PHP care lucrează cu rețeaua.
+
+\end{chapsummary}
 
 \section{Noduri, TCP/IP, rețele}
 
-Rețelistica (en. \textsl{networking}\index{en-ro}{networking}
-\index{term}{rețelistică!networking}) se ocupă cu comunicarea între așa-zise
-noduri (en. \textsl{nodes}\index{en-ro}{node} \index{term}{nod!node}). Un nod
-poate fi un calculator personal, un \textsl{router}, un \textsl{server},
+Rețelistica (en. \textsl{networking}%
+    \index{en-ro}{networking}
+    \index{term}{rețelistică!networking}%
+    \index{important}{rețelistică}%
+) se ocupă cu comunicarea între așa-zise
+noduri (en. \textsl{nodes}%
+    \index{en-ro}{node}%
+    \index{term}{nod!node}%
+    \index{important}{nod}%
+).
+
+Un nod poate fi un calculator personal, un \textsl{router}, un \textsl{server},
 practic orice dispozitiv digital conectat la rețea (en.
 \textsl{network}\index{en-ro}{network} \index{term}{rețea!network}).
 
@@ -32,19 +38,22 @@ informațiile atunci când cauți ceva pe \textsl{web} cu google, trebuie să fa
 cunoștință cu câteva noțiuni din domeniul sistemelor de operare.
 
 Există două mari tipuri de interfețe pentru interacțiunea cu un
-sistem de
-\index{abv}{OS|see{Operating System}}
-\index{en-ro}{operating system}\index{term}{sistem de operare!operating system}
-operare\footnote{en. \textsl{Operating System}, abv. \textsl{OS}}:
+\textsl{sistem de operare:}
+    \index{abv}{OS|see{Operating System}}%
+    \index{en-ro}{operating system}%
+    \index{term}{sistem de operare!operating system}%
+\footnote{en. \textsl{Operating System}, abv. \textsl{OS}}
 
 \begin{itemize}
 
     \begin{item}
-    interfața grafică (en. \textsl{Graphical User Interface}
-    \index{en-ro}{Graphical User Interface}
-    \index{term}{interfață grafică!Graphical User Interface}
-    \index{abv}{GUI|see{Graphical User Interface}}
-    \footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}})
+    interfața grafică%
+    \footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}}
+    (en. \textsl{Graphical User Interface}%
+    \index{en-ro}{Graphical User Interface}%
+    \index{term}{interfață grafică!Graphical User Interface}%
+    \index{abv}{GUI|see{Graphical User Interface}})%
+    
     \begin{description}
     \item Este cea mai comună printre utilizatorii ocazionali, este ușor de
     utilizat și nu necesită cunoștințe avansate de IT pentru a o folosi.
@@ -53,11 +62,13 @@ operare\footnote{en. \textsl{Operating System}, abv. \textsl{OS}}:
     \end{item}
     
     \begin{item}
-    linia de comandă (en \textsl{command Line Interface}
-    \index{en-ro}{Command Line Interface}
-    \index{term}{linie de comandă!Command Line Interface}
-    \index{abv}{CLI|see{Command Line Interface}}
-    \footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}})
+    linia de comandă%
+    \footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}}
+    (en. \textsl{Command Line Interface}%
+    \index{en-ro}{Command Line Interface}%
+    \index{term}{linie de comandă!Command Line Interface}%
+    \index{abv}{CLI|see{Command Line Interface}})%
+
     \begin{description}
     \item Este destinată profesioniștilor. Necesită
     cunoștințe mai avansate, însă este mult mai puternică și flexibilă.
@@ -66,33 +77,35 @@ operare\footnote{en. \textsl{Operating System}, abv. \textsl{OS}}:
 
 \end{itemize}
 
-Sub MS Windows, \textit{CLI} este cunoscută și ca \textsl{MS-DOS Prompt}
-\index{term}{MS-DOS Prompt}. Pentru a-l lansa în execuție, este necesară
+Sub MS Windows, \textit{CLI} este cunoscută și ca \textsl{MS-DOS Prompt.}
+    \index{term}{MS-DOS Prompt}%
+Pentru a-l lansa în execuție, este necesară
 accesarea \texttt{Start -> Run}, și lansarea în execuției a programului
 \texttt{cmd}.  Apare o fereastră neagră și neprietenoasă. Sub GNU/Linux aceasta
 este cunoscută sub numele de \textsl{consolă}, \textsl{terminal}
-\index{term}{consolă|see{terminal}}\index{term}{terminal} sau
-\textsl{shell}\index{term}{shell} (unul dintre ele fiind
-\textsl{bash}\index{term}{bash}).
+    \index{term}{consolă|see{terminal}}%
+    \index{term}{terminal}
+sau \textsl{shell}%
+    \index{term}{shell}%
+(unul dintre ele fiind \textsl{bash}
+    \index{term}{bash}%
+).
 
-%Deschide interfața CLI a sistemului tău și introdu comanda
-%\texttt{tracert google.com} pentru Windows sau \texttt{traceroute google.com} pentru 
-%GNU/Linux. Figura \ref{fig:cli traceroute} îți dă un exemplu de \textsl{output}.
+Deschide interfața CLI a sistemului și introdu comanda \texttt{tracert
+example.org} pentru Windows sau \texttt{traceroute example.org} pentru
+GNU/Linux.
 
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=300bp]{cap01/traceroute.png}
-  %\caption{Ruta către un nod}
-  %\label{fig:cli traceroute}
-%\end{figure}
+După cum se observă, toate pachetele de date trimise unui anumit nod, trec
+prin alte noduri din rețea. Dacă un \textsl{cracker}
+    \index{en-ro}{cracker}%
+    \index{term}{cracker!infractor}%
+ar deține controlul asupra unui dintre aceste noduri, ar putea vedea tot ce
+``discută'' nodul-sursă cu nodul destinatar. Un astfel de atac se numește
+\textsl{man-in-the-middle}
+    \footnote{\url{http://en.wikipedia.org/wiki/Man-in-the-middle_attack}}
+deoarece atacatorul se află la mijloc, între cele două \textsl{endpoints.}%
+    \index{en-ro}{endpoint}
 
-%După cum vezi, tot ceea ce îi trimit eu lui google.com și ce îmi trimite
-%el înapoi trece prin alte 11 noduri din rețea. Dacă un \engl[infractor]{cracker}
-%deține controlul asupra unuia dintre aceste noduri,
-%poate vedea absolut orice ``vorbesc'' eu cu \texttt{google.com}. Un astfel de atac
-%se numește \url{http://en.wikipedia.org/wiki/Man-in-the-middle_attack},
-%deoarece atacatorul se află la mijloc, între
-%cele două \engl[capete]{endpoints}.
 
 %Bineînțeles că nu numai eu aș fi
 %victima unui astfel de atacator, ci oricine trimite \engl[pachete de date]{data packets}
