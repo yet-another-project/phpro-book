@@ -29,8 +29,7 @@ s-a dovedit eficient de-a lungul timpului. Ceea ce nu oferim este un **tutorial
 php** - ci un curs php.
 
 Dacă vrei să participi ca şi cursant la programul de tutelare,
-urmează [ghidul](https://github.com/yet-another-project/phpro-book/wiki/Ghid),
-în timp ce stai pe [IRC](https://github.com/yet-another-project/phpro-book/wiki/IRC) de vorbă cu noi.
+urmează [ghidul](https://github.com/yet-another-project/phpro-book/wiki/Ghid).
 
 Există nenumărate posibilităţi de a ne ajuta, fie cu corecturi aduse cărţii,
 fie tutelând, fie devenind co-autor, fie cu donaţii. Intră în
