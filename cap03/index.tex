@@ -2114,7 +2114,7 @@ $home = array(
 );
 $about = array(
   'title' => 'Despre mine',
-  'content' => 'despre.php',
+  'content' => 'about.php',
   'menu' => 'no menu yet'
 );
 \end{lstlisting}
@@ -2139,7 +2139,7 @@ $pages = array(
   ),
   'about' => array(
 	'title' => 'Despre mine',
-	'content' => 'despre.php',
+	'content' => 'about.php',
 	'menu' => 'no menu yet'
   )
 );
@@ -2180,7 +2180,7 @@ return array(
   ),
   'about' => array(
 	'title' => 'Despre mine',
-	'content' => 'despre.php'
+	'content' => 'about.php'
   )
 );
 \end{lstlisting}
@@ -2226,7 +2226,7 @@ render('layout.php',$pages[$page]);
 fișiere, care nici măcar nu există încă.
 
 Deci crează mai întâi un subdirector \texttt{pages} și în el două fișiere
-\texttt{home.php} și \texttt{despre.php} cu un conținut HTML
+\texttt{home.php} și \texttt{about.php} cu un conținut HTML
 la alegere. Apoi modifică layout-ul astfel încât să includă fișierul
 pe care-l primește în variabila \texttt{\$content}, în loc să îl afișeze
 direct:
