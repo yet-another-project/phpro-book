@@ -18,15 +18,15 @@ necesare în folosirea extensiilor PHP care lucrează cu rețeaua.
 
 \section{Noduri, TCP/IP, rețele}
 
-Rețelistica (en. \textsl{networking}%
+Rețelistica (en. \textsl{networking}
     \index{en-ro}{networking}
-    \index{term}{rețelistică!networking}%
-    \index{important}{rețelistică}%
+    \index{term}{rețelistică!networking}
+    \index{important}{rețelistică}
 ) se ocupă cu comunicarea între așa-zise
-noduri (en. \textsl{nodes}%
-    \index{en-ro}{node}%
-    \index{term}{nod!node}%
-    \index{important}{nod}%
+noduri (en. \textsl{nodes}
+    \index{en-ro}{node}
+    \index{term}{nod!node}
+    \index{important}{nod}
 ).
 
 Un nod poate fi un calculator personal, un \textsl{router}, un \textsl{server},
@@ -39,20 +39,20 @@ cunoștință cu câteva noțiuni din domeniul sistemelor de operare.
 
 Există două mari tipuri de interfețe pentru interacțiunea cu un
 \textsl{sistem de operare:}
-    \index{abv}{OS|see{Operating System}}%
-    \index{en-ro}{operating system}%
-    \index{term}{sistem de operare!operating system}%
+    \index{abv}{OS|see{Operating System}}
+    \index{en-ro}{operating system}
+    \index{term}{sistem de operare!operating system}
 \footnote{en. \textsl{Operating System}, abv. \textsl{OS}}
 
 \begin{itemize}
 
     \begin{item}
-    interfața grafică%
+    interfața grafică
     \footnote{\url{http://en.wikipedia.org/wiki/Graphical_user_interface}}
-    (en. \textsl{Graphical User Interface}%
-    \index{en-ro}{Graphical User Interface}%
-    \index{term}{interfață grafică!Graphical User Interface}%
-    \index{abv}{GUI|see{Graphical User Interface}})%
+    (en. \textsl{Graphical User Interface}
+    \index{en-ro}{Graphical User Interface}
+    \index{term}{interfață grafică!Graphical User Interface}
+    \index{abv}{GUI|see{Graphical User Interface}})
     
     \begin{description}
     \item Este cea mai comună printre utilizatorii ocazionali, este ușor de
@@ -62,12 +62,12 @@ Există două mari tipuri de interfețe pentru interacțiunea cu un
     \end{item}
     
     \begin{item}
-    linia de comandă%
+    linia de comandă
     \footnote{\url{http://en.wikipedia.org/wiki/Command-line_interface}}
-    (en. \textsl{Command Line Interface}%
-    \index{en-ro}{Command Line Interface}%
-    \index{term}{linie de comandă!Command Line Interface}%
-    \index{abv}{CLI|see{Command Line Interface}})%
+    (en. \textsl{Command Line Interface}
+    \index{en-ro}{Command Line Interface}
+    \index{term}{linie de comandă!Command Line Interface}
+    \index{abv}{CLI|see{Command Line Interface}})
 
     \begin{description}
     \item Este destinată profesioniștilor. Necesită
@@ -78,17 +78,17 @@ Există două mari tipuri de interfețe pentru interacțiunea cu un
 \end{itemize}
 
 Sub MS Windows, \textit{CLI} este cunoscută și ca \textsl{MS-DOS Prompt.}
-    \index{term}{MS-DOS Prompt}%
+    \index{term}{MS-DOS Prompt}
 Pentru a-l lansa în execuție, este necesară
 accesarea \texttt{Start -> Run}, și lansarea în execuției a programului
 \texttt{cmd}.  Apare o fereastră neagră și neprietenoasă. Sub GNU/Linux aceasta
 este cunoscută sub numele de \textsl{consolă}, \textsl{terminal}
-    \index{term}{consolă|see{terminal}}%
+    \index{term}{consolă|see{terminal}}
     \index{term}{terminal}
-sau \textsl{shell}%
-    \index{term}{shell}%
+sau \textsl{shell}
+    \index{term}{shell}
 (unul dintre ele fiind \textsl{bash}
-    \index{term}{bash}%
+    \index{term}{bash}
 ).
 
 Deschide interfața CLI a sistemului și introdu comanda \texttt{tracert
@@ -97,789 +97,789 @@ GNU/Linux.
 
 După cum se observă, toate pachetele de date trimise unui anumit nod, trec
 prin alte noduri din rețea. Dacă un \textsl{cracker}
-    \index{en-ro}{cracker}%
-    \index{term}{cracker!infractor}%
+    \index{en-ro}{cracker}
+    \index{term}{cracker!infractor}
 ar deține controlul asupra unui dintre aceste noduri, ar putea vedea tot ce
 ``discută'' nodul-sursă cu nodul destinatar. Un astfel de atac se numește
 \textsl{man-in-the-middle}
     \footnote{\url{http://en.wikipedia.org/wiki/Man-in-the-middle_attack}}
-deoarece atacatorul se află la mijloc, între cele două \textsl{endpoints.}%
+deoarece atacatorul se află la mijloc, între cele două \textsl{endpoints.}
     \index{en-ro}{endpoint}
 
 
-%Bineînțeles că nu numai eu aș fi
-%victima unui astfel de atacator, ci oricine trimite \engl[pachete de date]{data packets}
-%oricui altcuiva (nu neapărat numai lui \texttt{google.com}), atâta timp cât pachetele
-%de date trec prin nodul controlat de el.
-
-%Toate nodurile din rețeaua globală numită Internet au o adresă unică numită adresă
-%\engl[IP]{internet protocol}. Ea este de forma \texttt{xxx.xxx.xxx.xxx}, unde \texttt{xxx} este un număr
-%între 0 și 255. Unele adrese IP au o semnificație specială. De exemplu, fiecare
-%nod are adresa IP \texttt{127.0.0.1}. Ea nu este utilă în Internet, deoarece orice pachet
-%de date trimis la acea adresă ajunge înapoi la expeditor, fără nici măcar a trece
-%pragul sistemului local. Încearcă de exemplu comanda \texttt{tracert 127.0.0.1}.
-
-%Alt bloc de adrese IP speciale sunt toate adresele între \texttt{192.168.0.0} și
-%\texttt{192.168.255.255}. Ele sunt rezervate \engl[rețelelor locale]{local area network}.\footnote{abv. LAN}
-
-%Un astfel de exemplu este chiar rețeaua mea
-%locală\footnote{Un bun punct de start este \url{http://en.wikipedia.org/wiki/Private_network}.
-%De acolo poți urma link-uri intersante către noțiunile ce urmează a fi introduse,
-%și multe alte lucruri neprezentate aici.}.
-%După cum vezi în figura \ref{fig:cli traceroute},
-%pachetele de date care pleacă de la mine trec mai întâi prin nodul \texttt{192.168.2.1}.
-%Aceasta este adresa \textsl{router}-ului\footnote{\url{http://en.wikipedia.org/wiki/Router}}
-%meu. \textsl{Topologia} rețelei din perspectiva mea
-%arată ca în figura \ref{fig:topologie}.
-
-%\begin{figure}[h]
-  %\centering
-    %\includegraphics[width=100bp]{cap01/Diagram1.png}
-  %\caption{Exemplu de topologie a unui LAN}
-  %\label{fig:topologie}
-%\end{figure}
-
-%Misiunea unui \textsl{router} este să distribuie pachetele
-%pe care le primește altor calculatoare din \textsl{LAN}-ul meu. Asta îmi permite să am acces
-%la Internet cu mai multe calculatoare, însă din exterior \textsl{LAN}-ul este văzut ca
-%având o singură adresă IP: \texttt{84.43.53.126}, și deci ca un singur calculator. Dacă
-%nu puneam acest \textsl{router} între calculatoarele mele și Internet, nu puteam conecta
-%la Internet decât un singur calculator, care avea adresa IP \texttt{84.43.53.126}.
-
-%\sloppy Există deci două tipuri de adrese IP, cele interne rețelei mele, precum \texttt{192.168.2.1}
-%sau \texttt{192.168.2.6} și cele externe rețelei, publice, precum \texttt{84.43.53.126} sau una
-%dintre adresele lui \texttt{google.com}, \texttt{74.125.87.104}.
-%Cele dintâi se numesc \textsl{adrese private}\footnote{le poți numi și ``intranet'',
-%analog cu cele publice, ``internet''.}
-%sau adrese LAN, cele din urmă sunt în schimb \textsl{adrese publice}.
-
-%\attention{Internetul este o rețea de LAN-uri și \engl[WAN-uri]{wide area network} interconectate.
-%Asta transformă Internetul în cea mai mare WAN, o rețea globală.}
-
-%Dacă nu ai un \textsl{router} la mijloc, între tine și Internet, atunci îți poți vedea adresa IP
-%externă prin interfața pusă la dispoziție de sistemul tău de operare. Sub windows, introdu
-%comanda \texttt{ipconfig /all} în CLI, sub GNU/Linux \texttt{ifconfig -a}.
-
-%Dacă însă ai un router la mijloc, și nu știi cum să-i accesezi interfața de configurare,
-%atunci trebuie să îi ceri unui alt calculator de pe Internet să-ți spună ce adresă IP
-%vede el că ai, pentru că ce vede el va fi mereu adresa ta Internet, externă.
-
-%\begin{Exercise}[title={What is my IP Address?},difficulty=1]
-%Caută pe web cu un motor de căutare \textit{what is my ip address} și compară
-%adresa afișată de acea aplicație web cu ce adresă IP îți raportează OS-ul tău.
-%%Din această comparație vei deduce dacă între tine și Internet se află un router sau dacă ești conectat direct la Internet.
-%Ce poți deduce din această comparație, legat de topologia rețelei tale?
-%\end{Exercise}
-
-%\section{Domenii}
-%Teoretic, este suficient să știi adresa IP a unui nod pentru a comunica cu el. De exemplu,
-%am aflat că una dintre adresele IP ale lui \texttt{google.com} este 74.125.87.104. Deci putem
-%intra bine mersi pe adresa \texttt{http://74.125.87.104}.
-
-%Însă oamenii nu pot reține ușor numere. De aceea s-a inventat \engl[DNS]{domain name system},
-%un sistem care convertește nume precum \texttt{google.com}, în adrese IP. Atunci când introduci
-%\texttt{google.com} în browserul tău, acesta trimite o cerere la serverul DNS și primește
-%înapoi adresele IP asociate cu \texttt{google.com}. Abia apoi se conectează la acea adresă IP,
-%și îi cere informații.
-
-%Sub MS Windows îți poți afla serverele DNS cu aceeași comandă \texttt{ipconfig} și parametrul
-%\texttt{/all}. Sub GNU/Linux, acestea se află în mod normal în fișierul \texttt{/etc/resolv.conf}.
-
-%Să presupunem că serverele tale DNS se deconectează de la rețea.\footnote{O glumă
-%comună este să spui că administratorul serverului s-a împiedicat din greșeală de stecher
-%și l-a tras din priză fără să își dea seama.} Atunci nu vei mai putea accesa \texttt{http://google.com},
-%pentru că browserul tău nu mai poate afla adresa IP corespunzătoare. Însă asta nu te împiedică
-%să introduci manual adresa IP, dacă o știi.
-
-%Pentru a afla dacă un nod este conectat la rețea se folosește comanda
-%\texttt{ping}\footnote{o numim comandă, însă în realitate este un program,
-%și se numește \texttt{ping.exe}}, având primul
-%parametru adresa IP pe care vrei să o verifici.
-
-%\begin{Exercise}[title={Ping your DNS server}]
-%Află adresa IP a serverului tău DNS și trimite-i un pachet de date cu \texttt{ping}.\footnote{Acest exercițiu nu trebuie
-%rezolvat în cadrul programului de tutelare, este un exercițiu suplimentar,
-%pentru tine.}
-%\end{Exercise}
-
-%Poți interoga manual serverul DNS cu comanda \texttt{nslookup}
-%(en. \textsl{nameserver lookup}). Exemple:
-%\texttt{nslookup google.com}, \texttt{nslookup 192.0.32.10}.
-%Este deci posibil să afli atât adresele IP pornind de la un nume precum
-%\texttt{google.com}, însă și numele, pornind de la o adresă IP de Internet
-%(nu de intranet).
-%Deși este posibil ca mai multe domenii să \textsl{pointeze} către aceeași
-%adresă IP, o adresă IP nu poate ``pointa'' (prin \textsl{reverse DNS})
-%decât spre un domeniu.\footnote{Tehnic este posibil, însă practic poate
-%cauza probleme.}
-
-%Totuși, din ce este compusă o adresă precum \texttt{www.google.com}?
-%\texttt{.com} se numește \engl[TLD]{top level domain}. Ceea ce se află în stânga
-%sa este un \textsl{subdomeniu}, până la următorul punct.
-%Astfel, \texttt{google} este un subdomeniu al lui \texttt{.com},
-%iar \texttt{www} este un subdomeniu al lui \texttt{.google.com}.
-
-%Dacă vrei să ai un domeniu al tău, trebuie să cumperi unul de la
-%o firmă numită \url{http://en.wikipedia.org/wiki/Domain_name_registrar}. Pentru a învăța PHP nu ai nevoie de un domeniu, poți
-%face totul pe calculatorul tău personal, așa cum vei vedea în acest capitol.
-
-%\section{Protocoale}
-%Internetul este ``făcut'' din așa-numite \textsl{servicii}. Cele mai cunoscute servicii sunt
-%web-ul pentru documente interconectate,\footnote{Prin link-uri.}
-%\textsl{pop3} sau \textsl{imap} pentru e-mail,
-%\textsl{irc} (en. \textsl{internet relay chat}) pentru chat, sau
-%\textsl{ftp} (en. \textsl{file transfer protocol}) pentru transferul de fișiere.
-
-%Pentru a folosi unul dintre aceste servicii, ai nevoie de un program
-%special numit \textsl{client}. Nu există un client care să ``știe'' 
-%să acceseze toate serviciile, pentru
-%că fiecare serviciu este diferit de celelalte. Vom vedea mai târziu de ce.
-
-%Astfel, avem clienți pentru www, clienți pentru ftp, clienți pentru irc, ș.a.m.d.
-
-%Serviciul \textit{world wide web}, sau pe scurt \textit{web}-ul, este atât de răspândit, încât
-%oamenii au dat un nume special clienților www: \textsl{browser}. Există mai multe browsere,
-%create de diferite firme. Printre cele mai cunoscute se numără:
-%\begin{itemize}
-%\item \href{http://en.wikipedia.org/wiki/Firefox}{Firefox}, creat de Mozilla
-%\item \href{http://en.wikipedia.org/wiki/Internet_explorer}{Internet Explorer}, creat de Microsoft
-%\item \href{http://en.wikipedia.org/wiki/Opera_(web_browser)}{Opera}, creat de Opera Software
-%\item \href{http://en.wikipedia.org/wiki/Chrome_(web_browser)}{Google Chrome}, creat de Google
-%\item \href{http://en.wikipedia.org/wiki/Safari_(browser)}{Safari}, creat de Apple
-%\end{itemize}
-
-%Colocvial vorbind, te poți referi la client și
-%ca fiind calculatorul pe care rulează clientul, sau chiar la utilizatorul uman din spate
-%care îi dă instrucții clientului. În explicații voi încerca să nu mă exprim colocvial, ci
-%corect din punct de vedere tehnic.
-
-%În continuare vom clarifica ce se întâmplă atunci când ceri o pagină web cu ajutorul
-%unui browser de la un server.
-
-%Imaginează-ți că un calculator stă conectat la rețea și
-%nu face nimic din ``proprie inițiativă''.
-%Acest calculator se numește \textsl{server}. Pe server, care este
-%\textit{mașina fizică}, rulează \textit{un program} numit \textsl{daemon}.
-%Acesta așteaptă conexiuni din
-%exterior, pe care să le deservească. Administratorul serverului va spune colocvial
-%\textit{the server is up and running}, dar ce vrea să spună de fapt este că \textit{serverul
-%este conectat la Internet iar cel puțin un daemon așteaptă noi conexiuni}.
-
-%Să nu uităm că fiecare serviciu este diferit. Așa cum avem diferiți clienți pentru
-%diferite servicii, tot la fel avem și \textit{daemon}-uri diferite pentru fiecare serviciu.
-
-%Exemple de astfel de \textit{daemon}-uri: \textsl{apache} pentru serviciul
-%www, \textsl{UnrealIRCd} pentru irc,
-%\textsl{postfix} pentru e-mail, ș.a.m.d. Reține că acestea sunt programe, la fel
-%cum este și \texttt{firefox.exe}. În contrast cu asta noțiunile de \textit{client} și
-%\textit{daemon} sunt clasificări
-%generice pentru tipuri de software.
-
-%Ceea ce nu am încetat să sugerez până acum devine evident: cele două părți, clientul
-%serviciului pe care doresc să-l utilizez, și daemonul care e capabil să-i răspundă
-%clientului meu cu informații utile, trebuie să comunice unul cu celălalt.
-
-%Această comunicare dintre cele două programe se va desfășura într-un limbaj comun numit
-%\textsl{protocol}. Fiecare serviciu are un protocol specific lui. Astfel avem un
-%protocol irc pentru serviciul irc, protocolul ftp pentru serviciul ftp,
-%sau protocolul http pentru serviciul web, ș.a.m.d. De aici vine acel ``http://'' care precede
-%orice adresă web. Această adresă se numește
-%\engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Locator}{URL}}{uniform resource locator},
-%o formă de \engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Identifier}{URI}}{uniform resource identifier}.
-
-%De obicei pe un server rulează mai multe \textit{daemon}-uri în paralel și care
-%așteaptă să deservească cereri. Dar cum să știe sistemul de operare al serverului
-%pentru ce daemon este destinat un anumit pachet de date? Din câte știm până acum,
-%nu are cum, pentru că OS-ul nu înțelege noțiunea de ``protocol''. Totuși OS-ul trebuie
-%să paseze datele primite pachet cu pachet daemon-ului corect.
-
-%Pentru a rezolva această problemă fiecare pachet de date este ``însemnat'' cu un \textsl{port}.
-%Un port este un număr între 1 și 65535 care îi permite sistemului de operare să
-%paseze pachetul de date procesului\footnote{Un program care este executat. Gândește-te
-%la ce listează ``task manager''.} corect.
-
-%Atunci când \engl{administratorul serverului}{sysadmin} lansează în execuție un daemon,
-%acesta îi spune OS-ului că \engl{ascultă}{listen}
-%pe un anumit port. Din acel moment, OS-ul
-%``știe'' că acel port îi ``aparține'' acelui daemon. Astfel, sysadmin-ul poate rula
-%pe sistemul său mai mulți daemoni concomitent, chiar și pentru servicii diferite, fără
-%a-și face griji că pachetele de date ar putea ajunge la daemon-urile greșite.
-
-%Important de menționat este și că fiecare serviciu are un port standard. Serviciul www
-%are 80 ca port standard. Astfel, URL-urile \texttt{http://example.com:80} și
-%\texttt{http://example.com} sunt absolut echivalente.
-
-%În toate cele explicate până acum nu am intrat în detalii importante precum
-%\href{http://en.wikipedia.org/wiki/Internet_Protocol_Suite}{TCP/IP}, însă este recomandată citirea și
-%înțelegerea acelor noțiuni, cât și a celorlalte articole pe care le poți urma de acolo.
-%Foarte importantă este și înțelegerea modelului
-%\engl{\href{http://en.wikipedia.org/wiki/OSI_model}{OSI}}{open system
-%interconnection}.
-
-%\subsection{Primul exercițiu de hacking}
-
-%Înainte de a trece la conținutul propriu-zis, vreau să clarific de ce această secțiune
-%folosește termenul \textsl{hacking}.
-
-%În primul rând, pentru a face acest capitol mai
-%atractiv pentru toți cititorii care s-au plictisit de teoria uscată\footnote{Trebuie să
-%recunoaștem că nu a fost deloc uscată.} de rețelistică
-%prezentată până acum,
-%când ei vor de fapt să învețe PHP. Nu este ceva iluzoriu, ceea ce vei face în continuare
-%chiar are de-a face cu hacking. Însă hacking implică mult mai multe\footnote{Și când
-%spun asta, nu exagerez.}
- %cunoștințe -- paginile
-%anterioare doar ți-au prezentat sumar niște concepte de bază.
-
-%În al doilea rând, pentru a-mi crea ocazia de a explica termenul de hacker.
-%În zilele noastre, \textsl{mass-media}, în încercarea sa de a crea\footnote{În
-%sensul de ``a inventa''} senzaționalul,
-%a redefinit \textsl{hacker} ca \textit{infractor}. Însă nu asta este semnificația
-%originală a cuvântului. Un hacker este o persoană care înțelege foarte bine ce
-%face. Poți fi un hacker în orice domeniu, dar atunci când devii un hacker într-un domeniu,
-%știi tot ce mișcă în branșa ta. Un hacker în calculatoare știe totul despre calculatoare,
-%începând de la electronica procesorului, și terminând cu analiza psihologică a
-%omului în relația sa cu
-%calculatorul (sau, pe larg, cu tehnologia în general).\footnote{Cel mai renumit exemplu este
-%\href{http://en.wikipedia.org/wiki/Kevin_Mitnick}{Kevin Mitnick}}
-
-%O altă concepție greșită despre hacking este că înseamnă să intri în sisteme care nu-ți
-%aparțin (\textit{să le spargi}). Nu asta caracterizează hackerul, ci după cum am mai spus,
-%înțelegerea lucrurilor cu care are de-a face. Te poți numi hacker la fel de bine
-%dacă personalizezi un program scris de altcineva pentru nevoile tale. În astfel
-%de cazuri se spune că \textsl{ai hack-uit codul sursă}, că l-ai înțeles mai întâi, pentru
-%a-l putea modifica. După cum vezi, hacking înseamnă \textit{înțelegere}.
-
-%Felul în care aplici această înțelegere depinde de tine. Asta nu îi absolvă pe
-%cei care folosesc ceea ce știu pentru lucruri ilegale să fie catalogați
-%drept infractori. Pe de cealaltă parte, hackerii adevărați reacționează acid
-%când sunt priviți ca niște infractori, deoarece ei
-%știu că \textsl{hacking} este de fapt ceva constructiv și benefic unei minți sănătoase.
-%Ei preferă ca infractorii să fie numiți \textsl{crackeri}, pentru a deosebi binele
-%de rău.
-
-%\vspace{1em}\dotfill\vspace{1em}
-
-%Atunci când introduci un URL într-un browser, acesta face multe lucruri în fundal.
-%Unul dintre cele mai importante lucruri este comunicarea în limbajul
-%\engl{HTTP}{hyper text transfer protocol} cu \textit{daemon}-ul de pe serverul dorit,
-%asta după ce a aflat adresa IP a acestuia de la serverul DNS.
-
-%Noi vrem să facem manual ceea ce ar face un browser automat pentru noi. Pentru asta,
-%avem nevoie de un program numit \texttt{telnet}. Este un program foarte simplu, tot ce
-%face este să stabilească o \textsl{conexiune} cu daemonul, și să-i transmită datele pe care
-%le tastăm.
-
-%O dată ce conexiunea este stabilită, ambele endpoints (daemonul și noi, cu ajutorul
-%clientului telnet) pot scrie la grămadă date. De exemplu dacă noi scriem
-%\begin{verbatim}
-%foo
-%\end{verbatim}
-%și daemonul ne răspunde cu
-%\begin{verbatim}
-%bar
-%\end{verbatim}
-%atunci toate datele comunicate arată ca un fișier cu conținutul:
-%\begin{verbatim}
-%foo
-%bar
-%\end{verbatim}
-
-%Imaginează-ți că două endpoints comunică prin plicuri.
-%Programul care inițiază conexiunea (numit client), scrie datele pe
-%care urmează să le trimită într-un plic.
-
-%Dacă clientul și daemonul doar schimbă date ``așa cum sunt'',
-%așa cum am face cu telnet, atunci doar acest plic este necesar.
-%Însă dacă aplicațiile vor să se înțeleagă reciproc,
-%ele trebuie să folosească un protocol de comunicare.
-%Pentru web, acest protocol este HTTP.
-
-%Acest protocol de comunicare constituie \textit{layer}-ul \textsl{application level}
-%din \href{http://en.wikipedia.org/wiki/OSI_model}{modelul OSI}.\footnote{\url{http://en.wikipedia.org/wiki/OSI_model}}
-
-%În astfel de cazuri, clientul va trebui să pună în plicul nostru încă
-%un plic\footnote{sau mai multe, în funcție de protocolul de comunicare folosit}
-%cu datele structurate specifice protocolului folosit,
-%în cazul nostru cele specifice protocolului HTTP.
-
-%Majoritatea sistemelor de operare moderne vin cu programul telnet preinstalat.
-%Deci deschide interfața CLI și lansează programul, pasându-i ca prim parametru numele
-%serverului, și \textit{port}-ul ca al doilea parametru, deci:
-%\begin{alltt}
-%telnet example.org 80
-%\end{alltt}
-%După ce s-a conectat, îi poți cere daemonului ce document vrei, însă trebuie
-%să o faci în limbajul HTTP, altfel nu va ``înțelege'' ce vrem de la el.
-%Altfel spus, folosind analogia cu plicul, noi ca oameni, deoarece
-%știm că vrem să comunicăm în HTTP, și deoarece telnet nu are noțiunea
-%de \textit{application layer}, avem responsabilitatea de a ne
-%``împacheta'' singuri cererea în încă un plic cu formatul specific HTTP,
-%plic pe care i-l pasăm lui telnet, care ne va pune plicul
-%pe rând în toate celelalte \textit{layere} (``plicuri'') din modelul OSI aflate
-%sub \textit{application layer}: presentation, session, transport, network, iar
-%electronica (de exemplu placa de rețea) se va ocupa de data link layer și
-%physical layer.\footnote{Lucrurile sunt mult mai complexe, telnet
-%singur nu ar putea face astfel de lucruri fără susținere
-%din partea sistemului de operare. Aici am simplificat imaginea
-%pentru o mai ușoară înțelegere.}
-
-%De exemplu, îi vom cere
-%pagina de start:
-%\begin{alltt}
-%GET / HTTP/1.1\Return
-%Host: example.org\Return
-%\Return
-%\end{alltt}
-%\attention{Simbolul \Return înseamnă că trebuie să apeși tasta \keystroke{enter}. Deci pentru a
-%termina cererea HTTP, apeși de două ori \keystroke{enter} la rând.
-%Este posibil ca programul tău telnet să nu afișeze ce tastezi. În acest
-%caz, trebuie să scrii orbește, și să o faci exact ca mai sus, \textit{inclusiv} scrisul cu litere
-%mari/mici.
-%}
-%GET este \engl{metoda HTTP}{http method} pe care o folosim
-%pentru a cere resursa (documentul) dorit.
-
-%Protocolul\footnote{Formatul} HTTP ne dictează că după GET urmează un spațiu
-%și apoi calea către documentul dorit, urmat de protocolul folosit, aici HTTP, un
-%slash, și versiunea protocolului.
-
-%Prima linie \texttt{GET / HTTP/1.1} se numește \textsl{request line}.
-%După ea urmează o serie de \textsl{request headers}, precum \texttt{Host} mai sus.
-
-%Request line și request headers împreună sunt cunoscute și ca cererea HTTP (en.
-%\textsl{HTTP request}).
-    
-%Daemonul îți va răspunde cu un text care arată cam așa, și care constituie răspunsul
-%HTTP (en. \textsl{HTTP response}):
-%\begin{Verbatim}[commandchars=\\\{\}]
-%HTTP/1.1 200 OK
-%Server: Apache/2.2.3 (Red Hat)
-%Last-Modified: Tue, 15 Nov 2005 13:24:10 GMT
-%ETag: ``b300b4-1b6-4059a80bfd280''            
-%\nl{1}Accept-Ranges: bytes                        
-%Content-Type: text/html; charset=UTF-8      
-%Connection: Keep-Alive                      
-%Date: Tue, 15 Dec 2009 11:52:46 GMT         
-%Age: 2528                                   
-%Content-Length: 438
-
-%<HTML>
-%<HEAD>
-  %<TITLE>Example Web Page</TITLE>
-%</HEAD>                          
-%<body>                           
-%\nl{2}<p>You have reached this web page by typing &quot;example.com&quot;,
-%&quot;example.net&quot;,                                            
-  %or &quot;example.org&quot; into your web browser.</p>             
-%<p>These domain names are reserved for use in documentation and
-  %are not available for registration.
-    %See <a href=``http://www.rfc-editor.org/rfc/rfc2606.txt''>
-    %RFC 2606</a>, Section 3.</p>        
-%</BODY>                                                                           
-%</HTML>
-%\end{Verbatim}
-%Întreaga comunicație cu daemonul este deci compusă din trei segmente mari, fiecare separate
-%printr-o linie goală, rezultată din apăsarea de două ori a tastei \keystroke{enter}:
-%\textsl{HTTP request}, \textsl{HTTP response headers} (segmentul (1) din outputul de mai sus),
-%și \textsl{HTTP response body} (segmentul (2)).
-
-%Felul în care se face cererea este parte din specificația
-%limbajului de comunicare HTTP. Acest limbaj, ca și multe altele, au fost stabilite
-%prin așa-numitele \href{http://en.wikipedia.org/wiki/Request_for_Comments}{RFC}-uri
-%(en. \textsl{request for comments}).
-
-%Folosind analogia cu plicurile, cele șapte niveluri din modelul OSI nu sunt totul:
-%protocolul HTTP însuși mai definește încă trei plicuri care trebuie puse în
-%``plicul'' cu datele HTTP:
-%\begin{itemize}
-%\item \textsl{HTTP request}
-%%, care conține la rândul
-%%său două plicuri: prima linie (cea cu ``GET'') \textsl{request line} și
-%%\textsl{request headers} (precum \texttt{Host:})
-%\item \textsl{response headers}
-%\item \textsl{response body}
-%\end{itemize}
-%Chiar dacă cele trei ``segmente'' sunt scrise fie de client, fie de daemon,
-%noi privim \textit{întreaga comunicație} ca pe un fișier unitar, și din acest motiv
-%putem spune că este constituită din aceste trei segmente (``plicuri'').
-
-%După ce a primit răspunsul HTML, un browser ar face alte lucruri precum:
-%\begin{itemize}
-%\item crearea de cereri noi pentru fiecare element care face referire la resurse
-%externe precum imagini, frame-uri, scripturi Javascript, ș.a.m.d. În urma 
-%acestui pas imaginile ar părea că fac parte din document, însă ele sunt de fapt
-%resurse diferite și de sine stătătoare, cu URL-uri diferite.
-%\item executarea scripturilor Javascript
-%\end{itemize}
-
-%Deoarece pentru fiecare resursă externă este necesară crearea unei noi conexiuni
-%TCP/IP și comunicarea cu serverul în limbajul HTTP, protocolul HTTP este
-%un \textsl{protocol stateless}\footnote{\url{http://en.wikipedia.org/wiki/Stateless\_protocol}}.
-
-
-%\begin{Exercise}[title={HTTP e stateless}]
-%Faptul că HTTP este un protocol stateless are implicări majore asupra
-%structurii fundamentale în care îți vei concepe aplicațiile.
-
-%Gândește-te la aceste implicări și explică-le în 200-300 cuvinte.
-%\end{Exercise}
-
-%Însă clientul nostru telnet nu știe toate aceste lucruri, el nu înțelege
-%limbajul de comunicare HTTP pe care l-am folosit,\footnote{Protocolul
-%de comunicare este ``plicul'' ce corespunde \textsl{application layer} în modelul OSI.}
-%cum nu înțelege nici limbajul
-%de formatare HTML, în consecință nici nu poate afișa imagini sau executa scripturi Javascript.
-%El doar s-a conectat la daemon pe portul dorit de noi, și ne-a oferit posibilitatea
-%de a comunica cu el în HTTP pentru a primi codul HTML al paginii.
-
-%Dacă în acest moment am vrea să cerem daemonului un alt fișier, și nu cel standard,
-%ar trebui să nu-i cerem resursa ``/'' (care urmează după ``GET'' în cererea anterioară,
-%și care este numită și \textsl{root}),
-%ci numele resursei cu tot cu calea sa absolută. De exemplu, pentru fișierul
-%``http://example.org/contact.html'',
-%cererea ar arăta astfel:
-
-%\begin{verbatim}
-%GET /contact.html HTTP/1.1
-%Host: example.org
-
-%\end{verbatim}
-
-%Motivul pentru care trebuie să specificăm la ce domeniu ne referim în câmpul
-%(en. \textsl{header field}) \textsl{Host} (aici: \texttt{example.org}) este că un daemon HTTP
-%poate deservi mai multe domenii simultan, și deci trebuie să-i spunem la care
-%din ele ne referim.
-%De exemplu, este posibil ca \texttt{http://example.org} și
-%\texttt{http://www.example.org} să fie două site-uri complet diferite, independente, cu
-%fișiere diferite. Întâmplător, administratorul care a setat acel apache 2.2.3 (știm că
-%acel program cu acea versiune deservește acel site din response header-ul ``Server'') a făcut setările astfel
-%încât cele două hostname-uri complet diferite \texttt{example.org} și \texttt{www.example.org}
-%să facă referire către același director de pe server. Din acest motiv nu contează
-%către ce hostname trimitem cererea, daemonul ne va răspunde cu aceleași fișiere.
-
-%\section{Instalarea mediului de dezvoltare}
-%În această secțiune vom instala cele două scule necesare creării și testării
-%aplicațiilor web, sau mai bine spus, scripturilor PHP. Mă voi limita doar
-%la instrucțiuni pentru Microsoft Windows XP\footnote{Instalarea sub Windows Vista sau 
-%Windows 7 este asemănătoare.}. Instalarea sub GNU/Linux este ușoară: nu trebuie
-%decât să instalezi pachetele de genul \texttt{apache} sau \texttt{httpd}
-%și \texttt{PHP} din repozitoriul
-%pus la dispoziție de distribuția ta, așa cum ai instala orice alt program.
-%Directivele de configurare sunt foarte similare, deci o citire a instrucțiunilor
-%următoare nu este de prisos, chiar dacă folosești GNU/Linux.
-
-%Pașii și instrucțiunile de configurare sunt aceeași,
-%atât pentru windows, cât și pentru GNU/Linux.
-
-%În primul rând, intră pe pagina oficială a daemonului
-%apache\footnote{\url{http://httpd.apache.org/}} și urmează linkul
-%Download a ultimei versiuni, momentan\footnote{08.08.2011} 2.2.19\footnote{Tot
-%timpul este bine să alegi ultima versiune, cea stabilă.}.
-%%Data notata mai sus este data scrierii articolului, nu data publicarii versiunii apache
-
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=400bp]{cap01/Screenshot.png}
-  %\caption{Pagina oficială Apache HTTPD}
-  %\label{fig:httpd homepage}
-%\end{figure}
-
-
-%Alege un \textsl{mirror}\footnote{
-%Un mirror este o oglindire a unor fișiere. Mai multe firme sau instituții au ales
-%să pună la dispoziție oglindiri ale fișierelor de instalare pentru apache. Oricine
-%poate face un mirror, însă e recomandat să înștiințezi autorul oficial, pentru
-%ca acesta să pună un link către mirror-ul tău. Toate fișierele de pe un mirror sunt identice,
-%deci teoretic nu contează ce mirror alegi, însă este recomandat să alegi un mirror
-%apropiat ție din punct de vedere geografic, pentru ca descărcarea să fie mai
-%rapidă.} și apasă \texttt{change}. Mirror-ul selectat automat ar trebui să fie unul
-%dintre cele mai bune. Apoi selectează versiunea ``Win32 Binary without crypto''.
-
-%%\begin{figure}[ht!]
-%%  \centering
-%%    \includegraphics[width=400bp]{cap01/Screenshot-1.png}
-%%  \caption{Setarea inițială apache httpd}
-%%  \label{fig:httpd setup}
-%%\end{figure}
-
-%Introdu datele ca în figura \ref{fig:httpd setup} și treci la pasul următor.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=300bp]{cap01/Screenshot-2.png}
-  %\caption{Setarea inițială apache httpd}
-  %\label{fig:httpd setup}
-%\end{figure}
-
-%Alege modul de instalare \texttt{custom}, deoarece vrem să decidem exact unde și ce
-%se instalează, ca în \ref{fig:httpd check custom setup}.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=250bp]{cap01/Screenshot-3.png}
-  %\caption{Setare personalizată}
-  %\label{fig:httpd check custom setup}
-%\end{figure}
-
-%În figura \ref{fig:httpd components tree} avem un arbore cu toate componentele instalate. \texttt{Apache HTTP Server 2.2.14}
-%este părintele tuturor componentelor. Selectează-l și apasă pe butonul
-%\texttt{Change...} pentru a schimba locul de instalare.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=248bp]{cap01/Screenshot-4.png}
-  %\caption{Setare httpd - Componentele instalate}
-  %\label{fig:httpd components tree}
-%\end{figure}
-
-%Crează un nou director \texttt{C:{\textbackslash}webdev\textbackslash}
-%unde vor fi instalate toate sculele
-%de programare web, introducând manual calea \texttt{C:{\textbackslash}webdev{\textbackslash}apache}
-%exact ca în \ref{fig:httpd custom path}.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=253bp]{cap01/Screenshot-5.png}
-  %\caption{Setare httpd - Calea instalării}
-  %\label{fig:httpd custom path}
-%\end{figure}
-
-%Confirmarea te va aduce la dialogul anterior, iar în partea de jos ar trebui să scrie
-%că programul va fi instalat la acea locație.
-
-%Finalizează instalarea. La vizitarea adresei \url{http://localhost/} ar trebui să
-%vezi mesajul \texttt{It works!}. Asta înseamnă că daemonul apache este setat corect și poate deservi
-%pagini statice în formatul html, iar calculatorul tău este acum un server.
-
-%Noi însă vrem să generăm în mod dinamic cod HTML cu PHP. Deci intră pe pagina oficială
-%PHP\footnote{\url{http://php.net}} și urmează linkul de download,
-%sub \texttt{Windows binaries}\footnote{În părțile ce urmează se folosește
-%versiunea 5.3.6, dar tu trebuie să alegi ultima versiune stabilă. Important este 
-%doar să selectezi versiunea compilată cu VC9, care este thread-safe.}.
-%Selectează tipul de executabil \texttt{VC9 x86 Thread Safe} pentru
-%versiunea PHP 5.3, ca în \ref{fig:php build type}, apoi
-%descarcă arhiva .zip care conține PHP, salvând-o în \texttt{C:{\textbackslash}webdev\textbackslash}.
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=150bp]{cap01/Screenshot-7.png}
-  %\caption{PHP - Tipul \textsl{build}-ului PHP}
-  %\label{fig:php build type}
-%\end{figure}
-
-
-%%\begin{center}
-%%\includegraphics[width=200bp]{cap01/Screenshot-8.png}
-%%\end{center}
-
-%După dezarhivare, conținutul său va arăta ca în Figura \ref{fig:php what you get}.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=200bp]{cap01/Screenshot-9.png}
-  %\caption{PHP - What you get}
-  %\label{fig:php what you get}
-%\end{figure}
-
-%Înainte de a trece la integrarea lui PHP în apache, îți recomand să
-%instalezi un editor text ideal pentru începătorii în programare:
-%\href{http://notepad-plus.sourceforge.net/}{Notepad++}
-%\footnote{\url{http://notepad-plus.sourceforge.net/}}, de pe pagina oficială.
-%%\begin{center}
-%%\includegraphics[width=320bp]{cap01/Screenshot-10.png}
-%%\end{center}
-%%
-%%Descarcă programul de instalare și instalează notepad++:
-%%\begin{center}
-%%\includegraphics[width=350bp]{cap01/Screenshot-11.png}
-%%\end{center}
-
-%\attention{Notepad++ este foarte bun ca editor deoarece, fiind un editor text,
-%vezi exact ce faci, preluând controlul, așa cum ar trebui să o facă
-%orice programator. Pe lângă asta, Notepad++ îți și colorează textul
-%dacă recunoaște limbajul în care scrii acel text, precum PHP sau HTML.}
-
-%\bad{Dacă ești cumva tentat să folosești editoare WYSIWYG\footnote{what
-%you see is what you get} precum Dreamweaver, atunci ar trebui să
-%te oprești acum - programarea nu e pentru tine. De ce? În afară
-%de faptul că un astfel de editor nu te-ar stimula să înveți, ți-ar
-%și crea mai multe probleme. Cu PHP, tu ca programator vei prelua
-%controlul și vei genera HTML. Pe lânga asta, astfel de programe
-%nu sunt destul de puternice ca o minte umană, și mai și generează
-%cod greșit.}
-%\footnotetext{\href{http://en.wikipedia.org/wiki/WYSIWYG}{what you see is what you get}}
-
-%PHP poate fi folosit și ca limbaj de scripting general, nu doar pentru
-%generarea dinamică de HTML. Însă pentru asta trebuie setată calea
-%către directorul php care conține fișierul de configurare \texttt{php.ini},
-%asupra căruia voi reveni puțin mai târziu.
-
-%Sub Windows XP, click dreapta pe \texttt{My Computer} și apoi \texttt{Properties}.
-%Sub Windows 7, în \texttt{start} -> \texttt{run} introdu comanda:
-
-%\texttt{C:{\textbackslash}Windows{\textbackslash}System32{\textbackslash}SystemPropertiesAdvanced.exe}
-
-%Alege tabul \texttt{Advanced}, apoi click pe \texttt{Environment Variables} în partea de jos
-%a dialogului, așa cum vezi în Figura \ref{fig:win adv props}.
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=200bp]{cap01/Screenshot-12.png}
-  %\caption{Proprietățile avansate ale sistemului Windows XP}
-  %\label{fig:win adv props}
-%\end{figure}
-
-%Se va deschide un dialog similar cu cel din Figura \ref{img:win env vars}.
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=180bp]{cap01/Screenshot-13.png}
-  %\caption{Variabilele de mediu ale unui sistem Windows}
-  %\label{img:win env vars}
-%\end{figure}
-
-%Click pe \texttt{New} sub \texttt{System variables}, și introdu datele ca în
-%Figura \ref{img:win new env var}. Această nouă variabilă de mediu
-%îl va ajuta pe PHP să-și găsească fișierul de configurare \texttt{php.ini}.
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=180bp]{cap01/Screenshot-14.png}
-  %\caption{Variabilele de mediu ale unui sistem Windows}
-  %\label{img:win new env var}
-%\end{figure}
-
-%În acest moment, PHP este setat și l-am putea lansa în execuție folosind
-%calea absolută
-%\texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.exe}, ceea ce
-%poate deveni obositor cu timpul. Însă putem integra \texttt{php.exe}
-%în sistem astfel încât să fie recunoscut ca comandă.
-
-%Pentru ca asta să
-%se întâmple, identifică
-%variabila systemului numită \texttt{Path}
-%%\begin{figure}[ht!]
-%%  \centering
-%%    \includegraphics[width=180bp]{cap01/Screenshot-20.png}
-%%  \caption{Variabila de mediu PATH}
-%%  \label{img:win env path}
-%%\end{figure}
-%și adaugă-i la sfârșit:
-%\texttt{;C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}}, ca în
-%Figura \ref{img:win env path}.
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=180bp]{cap01/Screenshot-21.png}
-  %\caption{Variabila de mediu PATH}
-  %\label{img:win env path}
-%\end{figure}
-
-%\attention{Acel ';' de la început este foarte important. \texttt{PATH}
-%conține o listă de directoare în care windows se va uita pe rând atunci
-%când lansezi în execuție un program ca pe o comandă. ';' are rolul
-%de a separa aceste directoare.}
-
-%Un singur lucru mai lipsește: \texttt{php.ini}. Arhiva pe care tocmai
-%ai descărcat-o vine cu două astfel de fișiere, \texttt{php.ini-development} și
-%\texttt{php.ini-production}. Fă o \textit{copie} a fișierului
-%\texttt{php.ini-development} și redenumește-o \texttt{php.ini}.
-
-%Testează dacă ai setat\footnote{Dacă folosești Windows Vista o
-%să ai nevoie de Visual C++ 2008 Redistributable Package pe care îl poți
-%descărca de la adresa \url{http://www.microsoft.com/en-us/download/confirmation.aspx?id=29}}
-%totul cum trebuie deschizând o nouă instanță a promptului ms-dos.
-%Acolo introdu comanda \texttt{php -{}-ini}.
-%Totul este corect dacă php este găsit de sistem, iar comanda de mai sus îți
-%arată \texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.ini}
-%ca \textit{Loaded Configuration File}.
-
-%%Mai multe informații despre PHP ca limbaj de scripting CLI găsești pe
-%%\url{http://www.php-cli.com/}.
-
-%\vspace{1em}
-
-%Acum vom trece la integrarea lui PHP ca modul apache. Vom spune că folosim
-%\engl{SAPI-ul\footnote{\url{http://en.wikipedia.org/wiki/Server_Application_Programming_Interface}}}{server application programming interface}
-%apache2. În directorul în care ai instalat apache este un subdirector de configurare
-%numit sugestiv \texttt{conf/}, unde rezidă toate fișierele de configurare
-%pentru apache.
-
-%Fișierul principal de configurare  al apache se numește \texttt{httpd.conf}. Este singurul
-%fișier încărcat automat de apache pentru a citi configurația, celelalte fișiere
-%trebuie incluse folosind directiva \texttt{Include} din acest fișier
-%principal (en. \textsl{the master configuration file}). Liniile care încep
-%cu caracterul diez (\#) sunt comentarii, iar conținutul lor nu este luat
-%în considerare, chiar dacă conține directive de configurare valide.
-
-%Deschide \texttt{httpd.conf} cu notepad++ și adaugă-i la sfârșit
-%(combinația \keystroke{CTRL+END}) directiva
-%\texttt{Include conf/extra/httpd-php.conf}
-%apoi crează un nou fișier cu \keystroke{CTRL+N} cu acest conținut:
-%\begin{verbatim}
-%LoadModule php5_module "C:/webdev/php-5.3.6/php5apache2_2.dll"
-%AddType application/x-httpd-php .php
-%PHPIniDir "C:/webdev/php-5.3.6"
-
-%<IfModule dir_module>
-    %DirectoryIndex index.php index.html
-%</IfModule>
-%\end{verbatim}
-
-%Acum apasă \keystroke{CTRL+S} și salvează-l ca \texttt{httpd-php.conf}
-%în directorul
-%C:\texttt{{\textbackslash}webdev{\textbackslash}apache{\textbackslash}conf{\textbackslash}extra{\textbackslash}}
-
-%Directiva \texttt{LoadModule} îi spune să încarce un fișier ca modul apache. \texttt{AddType}
-%îl instruiește să interpreteze fișiere ce se termină în .php ca 
-%\texttt{application/x-httpd-php}, care este un tip 
-%\engl{MIME\footnote{\url{http://en.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions}}}{multipurpose internet mail extension}.
-%\texttt{PHPIniDir} îi spune lui PHP (de data asta modulului PHP) unde își găsește fișierul
-%de configurare \texttt{php.ini}, așa cum variabila de mediu \texttt{PHPRC} pe care
-%am setat-o anterior îi spune același lucru SAPI-ului CLI (adică lui \texttt{php.exe}).
-
-%Acel bloc condițional\footnote{Se numește condițional deoarece ceea ce se află
-%în interiorul său este inclus doar dacă condiția este adevărată, numele însuși
-%conținând \texttt{If}.}
- %\texttt{IfModule} verifică dacă apache are modulul ``dir'', și dacă
-%da, setează resursa de start corespunzătoare root-ului (atunci când este accesat ``/''
-%al unui director, așa cum ai văzut în capitolul anterior) fiecărui director. Fișierele
-%sunt listate după ordinea priorității, dacă primul nu este găsit, apache va încerca să-l
-%deservească pe al doilea.
-
-%\attention{O altă directivă importantă din \texttt{httpd.conf} este
-%\texttt{DocumentRoot}. Acesta îi spune lui apache de unde
-%să deservească fișiere. În mod standard, acest director se numește
-%\texttt{htdocs} -- \textsl{hypertext documents}.}
-
-%Acum că avem totul setat, restartează daemonul httpd, în caz că e pornit, pentru a prelua
-%toate schimbările din \texttt{httpd.conf} și fișierele incluse de acesta. Ar fi trebuit să-i
-%dăm restart și dacă am fi modificat configurația php din \texttt{php.ini}.
-
-%Pentru a verifica instalarea și configurarea lui PHP ca modul apache, crează un nou fișier
-%și salvează-l ca 
-%\texttt{C:{\textbackslash}webdev{\textbackslash}apache{\textbackslash}htdocs{\textbackslash}info.php}
-%. Apoi introdu următorul text, numit și cod sursă (în limbajul PHP):
-%\lstinputlisting[caption={phpinfo() furnizează toate informațiile despre instalarea PHP curentă}]{cap01/info.php}
-%și salvează-l. 
-
-%Acum intră pe adresa \url{http://localhost/info.php}. Ar trebui să vezi ceva similar cu Figura \ref{img:php phpinfo}.
-
-%\begin{figure}[ht!]
-  %\centering
-    %\includegraphics[width=300bp]{cap01/Screenshot-15.png}
-  %\caption{Informații afișate de un apel la phpinfo()}
-  %\label{img:php phpinfo}
-%\end{figure}
-
-%Felicitări, acum ai PHP instalat și poți învăța programare, fie folosindu-l pentru programare web
-%ca modul apache, fie folosindu-l ca limbaj de scripting universal folosind SAPI-ul CLI (programul \texttt{php.exe}).
-
-%SAPI-urile există tocmai pentru a ușura integrarea lui PHP în toate aceste medii: pentru web putem folosi
-%un SAPI specific daemonului folosit, de exemplu pentru apache avem SAPI-ul php5apache2\_2.dll.
-%Acest fișier DLL reprezintă însă doar interfața (SAPI-ul, așa cum îi spune și numele de \textsl{interface})
-%de comunicare dintre apache și "adevăratul PHP".
-
-%Pe același calapod, \texttt{php.exe} reprezintă interfața de comunicare dintre promptul ms-dos
-%(sau shell, într-un sistem *NIX) și același "adevărat PHP" ca și în cazul apache. Altfel spus,
-%ambele, atât \texttt{php.exe}, cât și \texttt{php5apache2\_2.dll} sunt două SAPI-uri,
-%fiecare destinate integrării lui PHP în mediile lor specifice de execuție a scripturilor PHP.
-
-%În capitolul următor ne vom uita mai îndeaproape la limbajul PHP.
+Bineînțeles că nu numai eu aș fi
+victima unui astfel de atacator, ci oricine trimite \engl{pachete de date}{data packets}
+oricui altcuiva (nu neapărat numai lui \texttt{google.com}), atâta timp cât pachetele
+de date trec prin nodul controlat de el.
+
+Toate nodurile din rețeaua globală numită Internet au o adresă unică numită adresă
+\engl{IP}{internet protocol}. Ea este de forma \texttt{xxx.xxx.xxx.xxx}, unde \texttt{xxx} este un număr
+între 0 și 255. Unele adrese IP au o semnificație specială. De exemplu, fiecare
+nod are adresa IP \texttt{127.0.0.1}. Ea nu este utilă în Internet, deoarece orice pachet
+de date trimis la acea adresă ajunge înapoi la expeditor, fără nici măcar a trece
+pragul sistemului local. Încearcă de exemplu comanda \texttt{tracert 127.0.0.1}.
+
+Alt bloc de adrese IP speciale sunt toate adresele între \texttt{192.168.0.0} și
+\texttt{192.168.255.255}. Ele sunt rezervate \engl{rețelelor locale}{local area network}.\footnote{abv. LAN}
+
+Un astfel de exemplu este chiar rețeaua mea
+locală\footnote{Un bun punct de start este \url{http://en.wikipedia.org/wiki/Private_network}.
+De acolo poți urma link-uri intersante către noțiunile ce urmează a fi introduse,
+și multe alte lucruri neprezentate aici.}.
+După cum vezi în figura \ref{fig:cli traceroute},
+pachetele de date care pleacă de la mine trec mai întâi prin nodul \texttt{192.168.2.1}.
+Aceasta este adresa \textsl{router}-ului\footnote{\url{http://en.wikipedia.org/wiki/Router}}
+meu. \textsl{Topologia} rețelei din perspectiva mea
+arată ca în figura \ref{fig:topologie}.
+
+\begin{figure}[h]
+ \centering
+   \includegraphics[width=100bp]{cap01/Diagram1.png}
+ \caption{Exemplu de topologie a unui LAN}
+ \label{fig:topologie}
+\end{figure}
+
+Misiunea unui \textsl{router} este să distribuie pachetele
+pe care le primește altor calculatoare din \textsl{LAN}-ul meu. Asta îmi permite să am acces
+la Internet cu mai multe calculatoare, însă din exterior \textsl{LAN}-ul este văzut ca
+având o singură adresă IP: \texttt{84.43.53.126}, și deci ca un singur calculator. Dacă
+nu puneam acest \textsl{router} între calculatoarele mele și Internet, nu puteam conecta
+la Internet decât un singur calculator, care avea adresa IP \texttt{84.43.53.126}.
+
+\sloppy Există deci două tipuri de adrese IP, cele interne rețelei mele, precum \texttt{192.168.2.1}
+sau \texttt{192.168.2.6} și cele externe rețelei, publice, precum \texttt{84.43.53.126} sau una
+dintre adresele lui \texttt{google.com}, \texttt{74.125.87.104}.
+Cele dintâi se numesc \textsl{adrese private}\footnote{le poți numi și ``intranet'',
+analog cu cele publice, ``internet''.}
+sau adrese LAN, cele din urmă sunt în schimb \textsl{adrese publice}.
+
+\attention{Internetul este o rețea de LAN-uri și \engl{WAN-uri}{wide area network} interconectate.
+Asta transformă Internetul în cea mai mare WAN, o rețea globală.}
+
+Dacă nu ai un \textsl{router} la mijloc, între tine și Internet, atunci îți poți vedea adresa IP
+externă prin interfața pusă la dispoziție de sistemul tău de operare. Sub windows, introdu
+comanda \texttt{ipconfig /all} în CLI, sub GNU/Linux \texttt{ifconfig -a}.
+
+Dacă însă ai un router la mijloc, și nu știi cum să-i accesezi interfața de configurare,
+atunci trebuie să îi ceri unui alt calculator de pe Internet să-ți spună ce adresă IP
+vede el că ai, pentru că ce vede el va fi mereu adresa ta Internet, externă.
+
+\begin{Exercise}[title={What is my IP Address?},difficulty=1]
+Caută pe web cu un motor de căutare \textit{what is my ip address} și compară
+adresa afișată de acea aplicație web cu ce adresă IP îți raportează OS-ul tău.
+Din această comparație vei deduce dacă între tine și Internet se află un router sau dacă ești conectat direct la Internet.
+Ce poți deduce din această comparație, legat de topologia rețelei tale?
+\end{Exercise}
+
+\section{Domenii}
+Teoretic, este suficient să știi adresa IP a unui nod pentru a comunica cu el. De exemplu,
+am aflat că una dintre adresele IP ale lui \texttt{google.com} este 74.125.87.104. Deci putem
+intra bine mersi pe adresa \texttt{http://74.125.87.104}.
+
+Însă oamenii nu pot reține ușor numere. De aceea s-a inventat \engl{DNS}{domain name system},
+un sistem care convertește nume precum \texttt{google.com}, în adrese IP. Atunci când introduci
+\texttt{google.com} în browserul tău, acesta trimite o cerere la serverul DNS și primește
+înapoi adresele IP asociate cu \texttt{google.com}. Abia apoi se conectează la acea adresă IP,
+și îi cere informații.
+
+Sub MS Windows îți poți afla serverele DNS cu aceeași comandă \texttt{ipconfig} și parametrul
+\texttt{/all}. Sub GNU/Linux, acestea se află în mod normal în fișierul \texttt{/etc/resolv.conf}.
+
+Să presupunem că serverele tale DNS se deconectează de la rețea.\footnote{O glumă
+comună este să spui că administratorul serverului s-a împiedicat din greșeală de stecher
+și l-a tras din priză fără să își dea seama.} Atunci nu vei mai putea accesa \texttt{http://google.com},
+pentru că browserul tău nu mai poate afla adresa IP corespunzătoare. Însă asta nu te împiedică
+să introduci manual adresa IP, dacă o știi.
+
+Pentru a afla dacă un nod este conectat la rețea se folosește comanda
+\texttt{ping}\footnote{o numim comandă, însă în realitate este un program,
+și se numește \texttt{ping.exe}}, având primul
+parametru adresa IP pe care vrei să o verifici.
+
+\begin{Exercise}[title={Ping your DNS server}]
+Află adresa IP a serverului tău DNS și trimite-i un pachet de date cu \texttt{ping}.\footnote{Acest exercițiu nu trebuie
+rezolvat în cadrul programului de tutelare, este un exercițiu suplimentar,
+pentru tine.}
+\end{Exercise}
+
+Poți interoga manual serverul DNS cu comanda \texttt{nslookup}
+(en. \textsl{nameserver lookup}). Exemple:
+\texttt{nslookup google.com}, \texttt{nslookup 192.0.32.10}.
+Este deci posibil să afli atât adresele IP pornind de la un nume precum
+\texttt{google.com}, însă și numele, pornind de la o adresă IP de Internet
+(nu de intranet).
+Deși este posibil ca mai multe domenii să \textsl{pointeze} către aceeași
+adresă IP, o adresă IP nu poate ``pointa'' (prin \textsl{reverse DNS})
+decât spre un domeniu.\footnote{Tehnic este posibil, însă practic poate
+cauza probleme.}
+
+Totuși, din ce este compusă o adresă precum \texttt{www.google.com}?
+\texttt{.com} se numește \engl{TLD}{top level domain}. Ceea ce se află în stânga
+sa este un \textsl{subdomeniu}, până la următorul punct.
+Astfel, \texttt{google} este un subdomeniu al lui \texttt{.com},
+iar \texttt{www} este un subdomeniu al lui \texttt{.google.com}.
+
+Dacă vrei să ai un domeniu al tău, trebuie să cumperi unul de la
+o firmă numită \url{http://en.wikipedia.org/wiki/Domain_name_registrar}. Pentru a învăța PHP nu ai nevoie de un domeniu, poți
+face totul pe calculatorul tău personal, așa cum vei vedea în acest capitol.
+
+\section{Protocoale}
+Internetul este ``făcut'' din așa-numite \textsl{servicii}. Cele mai cunoscute servicii sunt
+web-ul pentru documente interconectate,\footnote{Prin link-uri.}
+\textsl{pop3} sau \textsl{imap} pentru e-mail,
+\textsl{irc} (en. \textsl{internet relay chat}) pentru chat, sau
+\textsl{ftp} (en. \textsl{file transfer protocol}) pentru transferul de fișiere.
+
+Pentru a folosi unul dintre aceste servicii, ai nevoie de un program
+special numit \textsl{client}. Nu există un client care să ``știe'' 
+să acceseze toate serviciile, pentru
+că fiecare serviciu este diferit de celelalte. Vom vedea mai târziu de ce.
+
+Astfel, avem clienți pentru www, clienți pentru ftp, clienți pentru irc, ș.a.m.d.
+
+Serviciul \textit{world wide web}, sau pe scurt \textit{web}-ul, este atât de răspândit, încât
+oamenii au dat un nume special clienților www: \textsl{browser}. Există mai multe browsere,
+create de diferite firme. Printre cele mai cunoscute se numără:
+\begin{itemize}
+\item \href{http://en.wikipedia.org/wiki/Firefox}{Firefox}, creat de Mozilla
+\item \href{http://en.wikipedia.org/wiki/Internet_explorer}{Internet Explorer}, creat de Microsoft
+\item \href{http://en.wikipedia.org/wiki/Opera_(web_browser)}{Opera}, creat de Opera Software
+\item \href{http://en.wikipedia.org/wiki/Chrome_(web_browser)}{Google Chrome}, creat de Google
+\item \href{http://en.wikipedia.org/wiki/Safari_(browser)}{Safari}, creat de Apple
+\end{itemize}
+
+Colocvial vorbind, te poți referi la client și
+ca fiind calculatorul pe care rulează clientul, sau chiar la utilizatorul uman din spate
+care îi dă instrucții clientului. În explicații voi încerca să nu mă exprim colocvial, ci
+corect din punct de vedere tehnic.
+
+În continuare vom clarifica ce se întâmplă atunci când ceri o pagină web cu ajutorul
+unui browser de la un server.
+
+Imaginează-ți că un calculator stă conectat la rețea și
+nu face nimic din ``proprie inițiativă''.
+Acest calculator se numește \textsl{server}. Pe server, care este
+\textit{mașina fizică}, rulează \textit{un program} numit \textsl{daemon}.
+Acesta așteaptă conexiuni din
+exterior, pe care să le deservească. Administratorul serverului va spune colocvial
+\textit{the server is up and running}, dar ce vrea să spună de fapt este că \textit{serverul
+este conectat la Internet iar cel puțin un daemon așteaptă noi conexiuni}.
+
+Să nu uităm că fiecare serviciu este diferit. Așa cum avem diferiți clienți pentru
+diferite servicii, tot la fel avem și \textit{daemon}-uri diferite pentru fiecare serviciu.
+
+Exemple de astfel de \textit{daemon}-uri: \textsl{apache} pentru serviciul
+www, \textsl{UnrealIRCd} pentru irc,
+\textsl{postfix} pentru e-mail, ș.a.m.d. Reține că acestea sunt programe, la fel
+cum este și \texttt{firefox.exe}. În contrast cu asta noțiunile de \textit{client} și
+\textit{daemon} sunt clasificări
+generice pentru tipuri de software.
+
+Ceea ce nu am încetat să sugerez până acum devine evident: cele două părți, clientul
+serviciului pe care doresc să-l utilizez, și daemonul care e capabil să-i răspundă
+clientului meu cu informații utile, trebuie să comunice unul cu celălalt.
+
+Această comunicare dintre cele două programe se va desfășura într-un limbaj comun numit
+\textsl{protocol}. Fiecare serviciu are un protocol specific lui. Astfel avem un
+protocol irc pentru serviciul irc, protocolul ftp pentru serviciul ftp,
+sau protocolul http pentru serviciul web, ș.a.m.d. De aici vine acel ``http://'' care precede
+orice adresă web. Această adresă se numește
+\engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Locator}{URL}}{uniform resource locator},
+o formă de \engl{\href{http://en.wikipedia.org/wiki/Uniform_Resource_Identifier}{URI}}{uniform resource identifier}.
+
+De obicei pe un server rulează mai multe \textit{daemon}-uri în paralel și care
+așteaptă să deservească cereri. Dar cum să știe sistemul de operare al serverului
+pentru ce daemon este destinat un anumit pachet de date? Din câte știm până acum,
+nu are cum, pentru că OS-ul nu înțelege noțiunea de ``protocol''. Totuși OS-ul trebuie
+să paseze datele primite pachet cu pachet daemon-ului corect.
+
+Pentru a rezolva această problemă fiecare pachet de date este ``însemnat'' cu un \textsl{port}.
+Un port este un număr între 1 și 65535 care îi permite sistemului de operare să
+paseze pachetul de date procesului\footnote{Un program care este executat. Gândește-te
+la ce listează ``task manager''.} corect.
+
+Atunci când \engl{administratorul serverului}{sysadmin} lansează în execuție un daemon,
+acesta îi spune OS-ului că \engl{ascultă}{listen}
+pe un anumit port. Din acel moment, OS-ul
+``știe'' că acel port îi ``aparține'' acelui daemon. Astfel, sysadmin-ul poate rula
+pe sistemul său mai mulți daemoni concomitent, chiar și pentru servicii diferite, fără
+a-și face griji că pachetele de date ar putea ajunge la daemon-urile greșite.
+
+Important de menționat este și că fiecare serviciu are un port standard. Serviciul www
+are 80 ca port standard. Astfel, URL-urile \texttt{http://example.com:80} și
+\texttt{http://example.com} sunt absolut echivalente.
+
+În toate cele explicate până acum nu am intrat în detalii importante precum
+\href{http://en.wikipedia.org/wiki/Internet_Protocol_Suite}{TCP/IP}, însă este recomandată citirea și
+înțelegerea acelor noțiuni, cât și a celorlalte articole pe care le poți urma de acolo.
+Foarte importantă este și înțelegerea modelului
+\engl{\href{http://en.wikipedia.org/wiki/OSI_model}{OSI}}{open system
+interconnection}.
+
+\subsection{Primul exercițiu de hacking}
+
+Înainte de a trece la conținutul propriu-zis, vreau să clarific de ce această secțiune
+folosește termenul \textsl{hacking}.
+
+În primul rând, pentru a face acest capitol mai
+atractiv pentru toți cititorii care s-au plictisit de teoria uscată\footnote{Trebuie să
+recunoaștem că nu a fost deloc uscată.} de rețelistică
+prezentată până acum,
+când ei vor de fapt să învețe PHP. Nu este ceva iluzoriu, ceea ce vei face în continuare
+chiar are de-a face cu hacking. Însă hacking implică mult mai multe\footnote{Și când
+spun asta, nu exagerez.}
+cunoștințe -- paginile
+anterioare doar ți-au prezentat sumar niște concepte de bază.
+
+În al doilea rând, pentru a-mi crea ocazia de a explica termenul de hacker.
+În zilele noastre, \textsl{mass-media}, în încercarea sa de a crea\footnote{În
+sensul de ``a inventa''} senzaționalul,
+a redefinit \textsl{hacker} ca \textit{infractor}. Însă nu asta este semnificația
+originală a cuvântului. Un hacker este o persoană care înțelege foarte bine ce
+face. Poți fi un hacker în orice domeniu, dar atunci când devii un hacker într-un domeniu,
+știi tot ce mișcă în branșa ta. Un hacker în calculatoare știe totul despre calculatoare,
+începând de la electronica procesorului, și terminând cu analiza psihologică a
+omului în relația sa cu
+calculatorul (sau, pe larg, cu tehnologia în general).\footnote{Cel mai renumit exemplu este
+\href{http://en.wikipedia.org/wiki/Kevin_Mitnick}{Kevin Mitnick}}
+
+O altă concepție greșită despre hacking este că înseamnă să intri în sisteme care nu-ți
+aparțin (\textit{să le spargi}). Nu asta caracterizează hackerul, ci după cum am mai spus,
+înțelegerea lucrurilor cu care are de-a face. Te poți numi hacker la fel de bine
+dacă personalizezi un program scris de altcineva pentru nevoile tale. În astfel
+de cazuri se spune că \textsl{ai hack-uit codul sursă}, că l-ai înțeles mai întâi, pentru
+a-l putea modifica. După cum vezi, hacking înseamnă \textit{înțelegere}.
+
+Felul în care aplici această înțelegere depinde de tine. Asta nu îi absolvă pe
+cei care folosesc ceea ce știu pentru lucruri ilegale să fie catalogați
+drept infractori. Pe de cealaltă parte, hackerii adevărați reacționează acid
+când sunt priviți ca niște infractori, deoarece ei
+știu că \textsl{hacking} este de fapt ceva constructiv și benefic unei minți sănătoase.
+Ei preferă ca infractorii să fie numiți \textsl{crackeri}, pentru a deosebi binele
+de rău.
+
+\vspace{1em}\dotfill\vspace{1em}
+
+Atunci când introduci un URL într-un browser, acesta face multe lucruri în fundal.
+Unul dintre cele mai importante lucruri este comunicarea în limbajul
+\engl{HTTP}{hyper text transfer protocol} cu \textit{daemon}-ul de pe serverul dorit,
+asta după ce a aflat adresa IP a acestuia de la serverul DNS.
+
+Noi vrem să facem manual ceea ce ar face un browser automat pentru noi. Pentru asta,
+avem nevoie de un program numit \texttt{telnet}. Este un program foarte simplu, tot ce
+face este să stabilească o \textsl{conexiune} cu daemonul, și să-i transmită datele pe care
+le tastăm.
+
+O dată ce conexiunea este stabilită, ambele endpoints (daemonul și noi, cu ajutorul
+clientului telnet) pot scrie la grămadă date. De exemplu dacă noi scriem
+\begin{verbatim}
+foo
+\end{verbatim}
+și daemonul ne răspunde cu
+\begin{verbatim}
+bar
+\end{verbatim}
+atunci toate datele comunicate arată ca un fișier cu conținutul:
+\begin{verbatim}
+foo
+bar
+\end{verbatim}
+
+Imaginează-ți că două endpoints comunică prin plicuri.
+Programul care inițiază conexiunea (numit client), scrie datele pe
+care urmează să le trimită într-un plic.
+
+Dacă clientul și daemonul doar schimbă date ``așa cum sunt'',
+așa cum am face cu telnet, atunci doar acest plic este necesar.
+Însă dacă aplicațiile vor să se înțeleagă reciproc,
+ele trebuie să folosească un protocol de comunicare.
+Pentru web, acest protocol este HTTP.
+
+Acest protocol de comunicare constituie \textit{layer}-ul \textsl{application level}
+din \href{http://en.wikipedia.org/wiki/OSI_model}{modelul OSI}.\footnote{\url{http://en.wikipedia.org/wiki/OSI_model}}
+
+În astfel de cazuri, clientul va trebui să pună în plicul nostru încă
+un plic\footnote{sau mai multe, în funcție de protocolul de comunicare folosit}
+cu datele structurate specifice protocolului folosit,
+în cazul nostru cele specifice protocolului HTTP.
+
+Majoritatea sistemelor de operare moderne vin cu programul telnet preinstalat.
+Deci deschide interfața CLI și lansează programul, pasându-i ca prim parametru numele
+serverului, și \textit{port}-ul ca al doilea parametru, deci:
+\begin{alltt}
+telnet example.org 80
+\end{alltt}
+După ce s-a conectat, îi poți cere daemonului ce document vrei, însă trebuie
+să o faci în limbajul HTTP, altfel nu va ``înțelege'' ce vrem de la el.
+Altfel spus, folosind analogia cu plicul, noi ca oameni, deoarece
+știm că vrem să comunicăm în HTTP, și deoarece telnet nu are noțiunea
+de \textit{application layer}, avem responsabilitatea de a ne
+``împacheta'' singuri cererea în încă un plic cu formatul specific HTTP,
+plic pe care i-l pasăm lui telnet, care ne va pune plicul
+pe rând în toate celelalte \textit{layere} (``plicuri'') din modelul OSI aflate
+sub \textit{application layer}: presentation, session, transport, network, iar
+electronica (de exemplu placa de rețea) se va ocupa de data link layer și
+physical layer.\footnote{Lucrurile sunt mult mai complexe, telnet
+singur nu ar putea face astfel de lucruri fără susținere
+din partea sistemului de operare. Aici am simplificat imaginea
+pentru o mai ușoară înțelegere.}
+
+De exemplu, îi vom cere
+pagina de start:
+\begin{alltt}
+GET / HTTP/1.1\Return
+Host: example.org\Return
+\Return
+\end{alltt}
+\attention{Simbolul \Return înseamnă că trebuie să apeși tasta \keystroke{enter}. Deci pentru a
+termina cererea HTTP, apeși de două ori \keystroke{enter} la rând.
+Este posibil ca programul tău telnet să nu afișeze ce tastezi. În acest
+caz, trebuie să scrii orbește, și să o faci exact ca mai sus, \textit{inclusiv} scrisul cu litere
+mari/mici.
+}
+GET este \engl{metoda HTTP}{http method} pe care o folosim
+pentru a cere resursa (documentul) dorit.
+
+Protocolul\footnote{Formatul} HTTP ne dictează că după GET urmează un spațiu
+și apoi calea către documentul dorit, urmat de protocolul folosit, aici HTTP, un
+slash, și versiunea protocolului.
+
+Prima linie \texttt{GET / HTTP/1.1} se numește \textsl{request line}.
+După ea urmează o serie de \textsl{request headers}, precum \texttt{Host} mai sus.
+
+Request line și request headers împreună sunt cunoscute și ca cererea HTTP (en.
+\textsl{HTTP request}).
+   
+Daemonul îți va răspunde cu un text care arată cam așa, și care constituie răspunsul
+HTTP (en. \textsl{HTTP response}):
+\begin{Verbatim}[commandchars=\\\{\}]
+HTTP/1.1 200 OK
+Server: Apache/2.2.3 (Red Hat)
+Last-Modified: Tue, 15 Nov 2005 13:24:10 GMT
+ETag: ``b300b4-1b6-4059a80bfd280''            
+\nl{1}Accept-Ranges: bytes                        
+Content-Type: text/html; charset=UTF-8      
+Connection: Keep-Alive                      
+Date: Tue, 15 Dec 2009 11:52:46 GMT         
+Age: 2528                                   
+Content-Length: 438
+
+<HTML>
+<HEAD>
+ <TITLE>Example Web Page</TITLE>
+</HEAD>                          
+<body>                           
+\nl{2}<p>You have reached this web page by typing &quot;example.com&quot;,
+&quot;example.net&quot;,                                            
+ or &quot;example.org&quot; into your web browser.</p>             
+<p>These domain names are reserved for use in documentation and
+ are not available for registration.
+   See <a href=``http://www.rfc-editor.org/rfc/rfc2606.txt''>
+   RFC 2606</a>, Section 3.</p>        
+</BODY>                                                                           
+</HTML>
+\end{Verbatim}
+Întreaga comunicație cu daemonul este deci compusă din trei segmente mari, fiecare separate
+printr-o linie goală, rezultată din apăsarea de două ori a tastei \keystroke{enter}:
+\textsl{HTTP request}, \textsl{HTTP response headers} (segmentul (1) din outputul de mai sus),
+și \textsl{HTTP response body} (segmentul (2)).
+
+Felul în care se face cererea este parte din specificația
+limbajului de comunicare HTTP. Acest limbaj, ca și multe altele, au fost stabilite
+prin așa-numitele \href{http://en.wikipedia.org/wiki/Request_for_Comments}{RFC}-uri
+(en. \textsl{request for comments}).
+
+Folosind analogia cu plicurile, cele șapte niveluri din modelul OSI nu sunt totul:
+protocolul HTTP însuși mai definește încă trei plicuri care trebuie puse în
+``plicul'' cu datele HTTP:
+\begin{itemize}
+\item \textsl{HTTP request}
+, care conține la rândul
+său două plicuri: prima linie (cea cu ``GET'') \textsl{request line} și
+\textsl{request headers} (precum \texttt{Host:})
+\item \textsl{response headers}
+\item \textsl{response body}
+\end{itemize}
+Chiar dacă cele trei ``segmente'' sunt scrise fie de client, fie de daemon,
+noi privim \textit{întreaga comunicație} ca pe un fișier unitar, și din acest motiv
+putem spune că este constituită din aceste trei segmente (``plicuri'').
+
+După ce a primit răspunsul HTML, un browser ar face alte lucruri precum:
+\begin{itemize}
+\item crearea de cereri noi pentru fiecare element care face referire la resurse
+externe precum imagini, frame-uri, scripturi Javascript, ș.a.m.d. În urma 
+acestui pas imaginile ar părea că fac parte din document, însă ele sunt de fapt
+resurse diferite și de sine stătătoare, cu URL-uri diferite.
+\item executarea scripturilor Javascript
+\end{itemize}
+
+Deoarece pentru fiecare resursă externă este necesară crearea unei noi conexiuni
+TCP/IP și comunicarea cu serverul în limbajul HTTP, protocolul HTTP este
+un \textsl{protocol stateless}\footnote{\url{http://en.wikipedia.org/wiki/Stateless\_protocol}}.
+
+
+\begin{Exercise}[title={HTTP e stateless}]
+Faptul că HTTP este un protocol stateless are implicări majore asupra
+structurii fundamentale în care îți vei concepe aplicațiile.
+
+Gândește-te la aceste implicări și explică-le în 200-300 cuvinte.
+\end{Exercise}
+
+Însă clientul nostru telnet nu știe toate aceste lucruri, el nu înțelege
+limbajul de comunicare HTTP pe care l-am folosit,\footnote{Protocolul
+de comunicare este ``plicul'' ce corespunde \textsl{application layer} în modelul OSI.}
+cum nu înțelege nici limbajul
+de formatare HTML, în consecință nici nu poate afișa imagini sau executa scripturi Javascript.
+El doar s-a conectat la daemon pe portul dorit de noi, și ne-a oferit posibilitatea
+de a comunica cu el în HTTP pentru a primi codul HTML al paginii.
+
+Dacă în acest moment am vrea să cerem daemonului un alt fișier, și nu cel standard,
+ar trebui să nu-i cerem resursa ``/'' (care urmează după ``GET'' în cererea anterioară,
+și care este numită și \textsl{root}),
+ci numele resursei cu tot cu calea sa absolută. De exemplu, pentru fișierul
+``http://example.org/contact.html'',
+cererea ar arăta astfel:
+
+\begin{verbatim}
+GET /contact.html HTTP/1.1
+Host: example.org
+
+\end{verbatim}
+
+Motivul pentru care trebuie să specificăm la ce domeniu ne referim în câmpul
+(en. \textsl{header field}) \textsl{Host} (aici: \texttt{example.org}) este că un daemon HTTP
+poate deservi mai multe domenii simultan, și deci trebuie să-i spunem la care
+din ele ne referim.
+De exemplu, este posibil ca \texttt{http://example.org} și
+\texttt{http://www.example.org} să fie două site-uri complet diferite, independente, cu
+fișiere diferite. Întâmplător, administratorul care a setat acel apache 2.2.3 (știm că
+acel program cu acea versiune deservește acel site din response header-ul ``Server'') a făcut setările astfel
+încât cele două hostname-uri complet diferite \texttt{example.org} și \texttt{www.example.org}
+să facă referire către același director de pe server. Din acest motiv nu contează
+către ce hostname trimitem cererea, daemonul ne va răspunde cu aceleași fișiere.
+
+\section{Instalarea mediului de dezvoltare}
+În această secțiune vom instala cele două scule necesare creării și testării
+aplicațiilor web, sau mai bine spus, scripturilor PHP. Mă voi limita doar
+la instrucțiuni pentru Microsoft Windows XP\footnote{Instalarea sub Windows Vista sau 
+Windows 7 este asemănătoare.}. Instalarea sub GNU/Linux este ușoară: nu trebuie
+decât să instalezi pachetele de genul \texttt{apache} sau \texttt{httpd}
+și \texttt{PHP} din repozitoriul
+pus la dispoziție de distribuția ta, așa cum ai instala orice alt program.
+Directivele de configurare sunt foarte similare, deci o citire a instrucțiunilor
+următoare nu este de prisos, chiar dacă folosești GNU/Linux.
+
+Pașii și instrucțiunile de configurare sunt aceeași,
+atât pentru windows, cât și pentru GNU/Linux.
+
+În primul rând, intră pe pagina oficială a daemonului
+apache\footnote{\url{http://httpd.apache.org/}} și urmează linkul
+Download a ultimei versiuni, momentan\footnote{08.08.2011} 2.2.19\footnote{Tot
+timpul este bine să alegi ultima versiune, cea stabilă.}.
+Data notata mai sus este data scrierii articolului, nu data publicarii versiunii apache
+
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=400bp]{cap01/Screenshot.png}
+ \caption{Pagina oficială Apache HTTPD}
+ \label{fig:httpd homepage}
+\end{figure}
+
+
+Alege un \textsl{mirror}\footnote{
+Un mirror este o oglindire a unor fișiere. Mai multe firme sau instituții au ales
+să pună la dispoziție oglindiri ale fișierelor de instalare pentru apache. Oricine
+poate face un mirror, însă e recomandat să înștiințezi autorul oficial, pentru
+ca acesta să pună un link către mirror-ul tău. Toate fișierele de pe un mirror sunt identice,
+deci teoretic nu contează ce mirror alegi, însă este recomandat să alegi un mirror
+apropiat ție din punct de vedere geografic, pentru ca descărcarea să fie mai
+rapidă.} și apasă \texttt{change}. Mirror-ul selectat automat ar trebui să fie unul
+dintre cele mai bune. Apoi selectează versiunea ``Win32 Binary without crypto''.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=400bp]{cap01/Screenshot-1.png}
+  \caption{Setarea inițială apache httpd}
+  \label{fig:httpd setup}
+\end{figure}
+
+Introdu datele ca în figura \ref{fig:httpd setup} și treci la pasul următor.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=300bp]{cap01/Screenshot-2.png}
+ \caption{Setarea inițială apache httpd}
+ \label{fig:httpd setup}
+\end{figure}
+
+Alege modul de instalare \texttt{custom}, deoarece vrem să decidem exact unde și ce
+se instalează, ca în \ref{fig:httpd check custom setup}.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=250bp]{cap01/Screenshot-3.png}
+ \caption{Setare personalizată}
+ \label{fig:httpd check custom setup}
+\end{figure}
+
+În figura \ref{fig:httpd components tree} avem un arbore cu toate componentele instalate. \texttt{Apache HTTP Server 2.2.14}
+este părintele tuturor componentelor. Selectează-l și apasă pe butonul
+\texttt{Change...} pentru a schimba locul de instalare.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=248bp]{cap01/Screenshot-4.png}
+ \caption{Setare httpd - Componentele instalate}
+ \label{fig:httpd components tree}
+\end{figure}
+
+Crează un nou director \texttt{C:{\textbackslash}webdev\textbackslash}
+unde vor fi instalate toate sculele
+de programare web, introducând manual calea \texttt{C:{\textbackslash}webdev{\textbackslash}apache}
+exact ca în \ref{fig:httpd custom path}.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=253bp]{cap01/Screenshot-5.png}
+ \caption{Setare httpd - Calea instalării}
+ \label{fig:httpd custom path}
+\end{figure}
+
+Confirmarea te va aduce la dialogul anterior, iar în partea de jos ar trebui să scrie
+că programul va fi instalat la acea locație.
+
+Finalizează instalarea. La vizitarea adresei \url{http://localhost/} ar trebui să
+vezi mesajul \texttt{It works!}. Asta înseamnă că daemonul apache este setat corect și poate deservi
+pagini statice în formatul html, iar calculatorul tău este acum un server.
+
+Noi însă vrem să generăm în mod dinamic cod HTML cu PHP. Deci intră pe pagina oficială
+PHP\footnote{\url{http://php.net}} și urmează linkul de download,
+sub \texttt{Windows binaries}\footnote{În părțile ce urmează se folosește
+versiunea 5.3.6, dar tu trebuie să alegi ultima versiune stabilă. Important este 
+doar să selectezi versiunea compilată cu VC9, care este thread-safe.}.
+Selectează tipul de executabil \texttt{VC9 x86 Thread Safe} pentru
+versiunea PHP 5.3, ca în \ref{fig:php build type}, apoi
+descarcă arhiva .zip care conține PHP, salvând-o în \texttt{C:{\textbackslash}webdev\textbackslash}.
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=150bp]{cap01/Screenshot-7.png}
+ \caption{PHP - Tipul \textsl{build}-ului PHP}
+ \label{fig:php build type}
+\end{figure}
+
+
+\begin{center}
+\includegraphics[width=200bp]{cap01/Screenshot-8.png}
+\end{center}
+
+După dezarhivare, conținutul său va arăta ca în Figura \ref{fig:php what you get}.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=200bp]{cap01/Screenshot-9.png}
+ \caption{PHP - What you get}
+ \label{fig:php what you get}
+\end{figure}
+
+Înainte de a trece la integrarea lui PHP în apache, îți recomand să
+instalezi un editor text ideal pentru începătorii în programare:
+\href{http://notepad-plus.sourceforge.net/}{Notepad++}
+\footnote{\url{http://notepad-plus.sourceforge.net/}}, de pe pagina oficială.
+\begin{center}
+\includegraphics[width=320bp]{cap01/Screenshot-10.png}
+\end{center}
+
+Descarcă programul de instalare și instalează notepad++:
+\begin{center}
+\includegraphics[width=350bp]{cap01/Screenshot-11.png}
+\end{center}
+
+\attention{Notepad++ este foarte bun ca editor deoarece, fiind un editor text,
+vezi exact ce faci, preluând controlul, așa cum ar trebui să o facă
+orice programator. Pe lângă asta, Notepad++ îți și colorează textul
+dacă recunoaște limbajul în care scrii acel text, precum PHP sau HTML.}
+
+\bad{Dacă ești cumva tentat să folosești editoare WYSIWYG\footnote{what
+you see is what you get} precum Dreamweaver, atunci ar trebui să
+te oprești acum - programarea nu e pentru tine. De ce? În afară
+de faptul că un astfel de editor nu te-ar stimula să înveți, ți-ar
+și crea mai multe probleme. Cu PHP, tu ca programator vei prelua
+controlul și vei genera HTML. Pe lânga asta, astfel de programe
+nu sunt destul de puternice ca o minte umană, și mai și generează
+cod greșit.}
+\footnotetext{\href{http://en.wikipedia.org/wiki/WYSIWYG}{what you see is what you get}}
+
+PHP poate fi folosit și ca limbaj de scripting general, nu doar pentru
+generarea dinamică de HTML. Însă pentru asta trebuie setată calea
+către directorul php care conține fișierul de configurare \texttt{php.ini},
+asupra căruia voi reveni puțin mai târziu.
+
+Sub Windows XP, click dreapta pe \texttt{My Computer} și apoi \texttt{Properties}.
+Sub Windows 7, în \texttt{start} -> \texttt{run} introdu comanda:
+
+\texttt{C:{\textbackslash}Windows{\textbackslash}System32{\textbackslash}SystemPropertiesAdvanced.exe}
+
+Alege tabul \texttt{Advanced}, apoi click pe \texttt{Environment Variables} în partea de jos
+a dialogului, așa cum vezi în Figura \ref{fig:win adv props}.
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=200bp]{cap01/Screenshot-12.png}
+ \caption{Proprietățile avansate ale sistemului Windows XP}
+ \label{fig:win adv props}
+\end{figure}
+
+Se va deschide un dialog similar cu cel din Figura \ref{img:win env vars}.
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=180bp]{cap01/Screenshot-13.png}
+ \caption{Variabilele de mediu ale unui sistem Windows}
+ \label{img:win env vars}
+\end{figure}
+
+Click pe \texttt{New} sub \texttt{System variables}, și introdu datele ca în
+Figura \ref{img:win new env var}. Această nouă variabilă de mediu
+îl va ajuta pe PHP să-și găsească fișierul de configurare \texttt{php.ini}.
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=180bp]{cap01/Screenshot-14.png}
+ \caption{Variabilele de mediu ale unui sistem Windows}
+ \label{img:win new env var}
+\end{figure}
+
+În acest moment, PHP este setat și l-am putea lansa în execuție folosind
+calea absolută
+\texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.exe}, ceea ce
+poate deveni obositor cu timpul. Însă putem integra \texttt{php.exe}
+în sistem astfel încât să fie recunoscut ca comandă.
+
+Pentru ca asta să
+se întâmple, identifică
+variabila systemului numită \texttt{Path}
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=180bp]{cap01/Screenshot-20.png}
+  \caption{Variabila de mediu PATH}
+  \label{img:win env path}
+\end{figure}
+și adaugă-i la sfârșit:
+\texttt{;C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}}, ca în
+Figura \ref{img:win env path}.
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=180bp]{cap01/Screenshot-21.png}
+ \caption{Variabila de mediu PATH}
+ \label{img:win env path}
+\end{figure}
+
+\attention{Acel ';' de la început este foarte important. \texttt{PATH}
+conține o listă de directoare în care windows se va uita pe rând atunci
+când lansezi în execuție un program ca pe o comandă. ';' are rolul
+de a separa aceste directoare.}
+
+Un singur lucru mai lipsește: \texttt{php.ini}. Arhiva pe care tocmai
+ai descărcat-o vine cu două astfel de fișiere, \texttt{php.ini-development} și
+\texttt{php.ini-production}. Fă o \textit{copie} a fișierului
+\texttt{php.ini-development} și redenumește-o \texttt{php.ini}.
+
+Testează dacă ai setat\footnote{Dacă folosești Windows Vista o
+să ai nevoie de Visual C++ 2008 Redistributable Package pe care îl poți
+descărca de la adresa \url{http://www.microsoft.com/en-us/download/confirmation.aspx?id=29}}
+totul cum trebuie deschizând o nouă instanță a promptului ms-dos.
+Acolo introdu comanda \texttt{php -{}-ini}.
+Totul este corect dacă php este găsit de sistem, iar comanda de mai sus îți
+arată \texttt{C:{\textbackslash}webdev{\textbackslash}php-5.3.6{\textbackslash}php.ini}
+ca \textit{Loaded Configuration File}.
+
+Mai multe informații despre PHP ca limbaj de scripting CLI găsești pe
+\url{http://www.php-cli.com/}.
+
+\vspace{1em}
+
+Acum vom trece la integrarea lui PHP ca modul apache. Vom spune că folosim
+\engl{SAPI-ul\footnote{\url{http://en.wikipedia.org/wiki/Server_Application_Programming_Interface}}}{server application programming interface}
+apache2. În directorul în care ai instalat apache este un subdirector de configurare
+numit sugestiv \texttt{conf/}, unde rezidă toate fișierele de configurare
+pentru apache.
+
+Fișierul principal de configurare  al apache se numește \texttt{httpd.conf}. Este singurul
+fișier încărcat automat de apache pentru a citi configurația, celelalte fișiere
+trebuie incluse folosind directiva \texttt{Include} din acest fișier
+principal (en. \textsl{the master configuration file}). Liniile care încep
+cu caracterul diez (\#) sunt comentarii, iar conținutul lor nu este luat
+în considerare, chiar dacă conține directive de configurare valide.
+
+Deschide \texttt{httpd.conf} cu notepad++ și adaugă-i la sfârșit
+(combinația \keystroke{CTRL+END}) directiva
+\texttt{Include conf/extra/httpd-php.conf}
+apoi crează un nou fișier cu \keystroke{CTRL+N} cu acest conținut:
+\begin{verbatim}
+LoadModule php5_module "C:/webdev/php-5.3.6/php5apache2_2.dll"
+AddType application/x-httpd-php .php
+PHPIniDir "C:/webdev/php-5.3.6"
+
+<IfModule dir_module>
+   DirectoryIndex index.php index.html
+</IfModule>
+\end{verbatim}
+
+Acum apasă \keystroke{CTRL+S} și salvează-l ca \texttt{httpd-php.conf}
+în directorul
+C:\texttt{{\textbackslash}webdev{\textbackslash}apache{\textbackslash}conf{\textbackslash}extra{\textbackslash}}
+
+Directiva \texttt{LoadModule} îi spune să încarce un fișier ca modul apache. \texttt{AddType}
+îl instruiește să interpreteze fișiere ce se termină în .php ca 
+\texttt{application/x-httpd-php}, care este un tip 
+\engl{MIME\footnote{\url{http://en.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions}}}{multipurpose internet mail extension}.
+\texttt{PHPIniDir} îi spune lui PHP (de data asta modulului PHP) unde își găsește fișierul
+de configurare \texttt{php.ini}, așa cum variabila de mediu \texttt{PHPRC} pe care
+am setat-o anterior îi spune același lucru SAPI-ului CLI (adică lui \texttt{php.exe}).
+
+Acel bloc condițional\footnote{Se numește condițional deoarece ceea ce se află
+în interiorul său este inclus doar dacă condiția este adevărată, numele însuși
+conținând \texttt{If}.}
+\texttt{IfModule} verifică dacă apache are modulul ``dir'', și dacă
+da, setează resursa de start corespunzătoare root-ului (atunci când este accesat ``/''
+al unui director, așa cum ai văzut în capitolul anterior) fiecărui director. Fișierele
+sunt listate după ordinea priorității, dacă primul nu este găsit, apache va încerca să-l
+deservească pe al doilea.
+
+\attention{O altă directivă importantă din \texttt{httpd.conf} este
+\texttt{DocumentRoot}. Acesta îi spune lui apache de unde
+să deservească fișiere. În mod standard, acest director se numește
+\texttt{htdocs} -- \textsl{hypertext documents}.}
+
+Acum că avem totul setat, restartează daemonul httpd, în caz că e pornit, pentru a prelua
+toate schimbările din \texttt{httpd.conf} și fișierele incluse de acesta. Ar fi trebuit să-i
+dăm restart și dacă am fi modificat configurația php din \texttt{php.ini}.
+
+Pentru a verifica instalarea și configurarea lui PHP ca modul apache, crează un nou fișier
+și salvează-l ca 
+\texttt{C:{\textbackslash}webdev{\textbackslash}apache{\textbackslash}htdocs{\textbackslash}info.php}
+. Apoi introdu următorul text, numit și cod sursă (în limbajul PHP):
+\lstinputlisting[caption={phpinfo() furnizează toate informațiile despre instalarea PHP curentă}]{cap01/info.php}
+și salvează-l. 
+
+Acum intră pe adresa \url{http://localhost/info.php}. Ar trebui să vezi ceva similar cu Figura \ref{img:php phpinfo}.
+
+\begin{figure}[ht!]
+ \centering
+   \includegraphics[width=300bp]{cap01/Screenshot-15.png}
+ \caption{Informații afișate de un apel la phpinfo()}
+ \label{img:php phpinfo}
+\end{figure}
+
+Felicitări, acum ai PHP instalat și poți învăța programare, fie folosindu-l pentru programare web
+ca modul apache, fie folosindu-l ca limbaj de scripting universal folosind SAPI-ul CLI (programul \texttt{php.exe}).
+
+SAPI-urile există tocmai pentru a ușura integrarea lui PHP în toate aceste medii: pentru web putem folosi
+un SAPI specific daemonului folosit, de exemplu pentru apache avem SAPI-ul php5apache2\_2.dll.
+Acest fișier DLL reprezintă însă doar interfața (SAPI-ul, așa cum îi spune și numele de \textsl{interface})
+de comunicare dintre apache și "adevăratul PHP".
+
+Pe același calapod, \texttt{php.exe} reprezintă interfața de comunicare dintre promptul ms-dos
+(sau shell, într-un sistem *NIX) și același "adevărat PHP" ca și în cazul apache. Altfel spus,
+ambele, atât \texttt{php.exe}, cât și \texttt{php5apache2\_2.dll} sunt două SAPI-uri,
+fiecare destinate integrării lui PHP în mediile lor specifice de execuție a scripturilor PHP.
+
+În capitolul următor ne vom uita mai îndeaproape la limbajul PHP.
