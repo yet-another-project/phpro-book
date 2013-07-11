@@ -71,11 +71,11 @@ L-am putea rescrie la fel de bine doar în HTML static, însă deoarece
 vreau să demonstrez altceva, voi genera totuși mesajul de salut cu PHP:
 \begin{lstlisting}
 <html>
-	<body>
-		<?php
-		echo 'Salut Flavius';
-		?>
-	</body>
+    <body>
+        <?php
+        echo 'Salut Flavius';
+        ?>
+    </body>
 </html>
 \end{lstlisting}
 
@@ -274,8 +274,8 @@ variabila aflată în stânga atribuirii. Datorită acestei ordini spunem că
 operația de \engl{atribuire}{assignment} este \textsl{right-associative}.
 
 \textit{Linia 5}: Datorită asociativității de dreapta a operației de atribuire,
-într-o atribuire putem folosi o variabilă precum \texttt{\$a} în partea dreaptă, genera
-o valoare temporară pe care o atribuim tot variabilei \texttt{\$a}, suprascriind
+într-o atribuire putem folosi o variabilă precum \texttt{\$a} în partea dreaptă
+pentru a genera o valoare temporară pe care o atribuim tot variabilei \texttt{\$a}, suprascriind
 valoarea sa inițială. Dacă am fi știut că mai avem nevoie de nume ca valoare
 de sine stătătoare, pe linia 5 ar fi trebuit să introducem o nouă variabilă
 căreia să-i atribuim noua valoare,
@@ -446,7 +446,7 @@ $a = 7;
 echo 'a este ',$a,'<br>';
 $a += 2;//sau pe lung $a = $a + 2;
 echo 'a += 2 face ',$a,'<br>';
-$a /= -3;// $a = $a / 3;
+$a /= -3;// $a = $a / -3;
 echo 'a /= -3 este ',$a,'<br>';
 \end{lstlisting}
 
@@ -579,29 +579,29 @@ ne exprimăm cât mai clar și punctual, fără omisiuni.
 
 De exemplu, un algoritm de autentificare ar putea
 fi specificat astfel:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'acces restrictionat'
+    afiseaza 'acces restrictionat'
 \end{lstlisting}
 %\begin{Verbatim}[commandchars=\\\{\}]
 %\nl{1}\textbf{dacă} parola este corectă
-%\nl{2}	afișează 'autentificat';
+%\nl{2} afișează 'autentificat';
 %\nl{3}\textbf{altfel}
-%\nl{4}	afișează 'parola greșită';
+%\nl{4} afișează 'parola greșită';
 %\end{Verbatim}
 Însă acesta este incomplet! De unde vine
 acea ``parolă'' pe care am menționat-o pe linia 1?
 
 Calculatoarele sunt stupide, și la fel este și PHP. Va
 trebui să-i spunem mai întâi că citim acea parolă:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 citeste parola
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'acces restrictionat'
+    afiseaza 'acces restrictionat'
 \end{lstlisting}
 
 Sună stupid, probabil ar trebui să ne așteptăm
@@ -630,13 +630,13 @@ unde algoritmul decide pe baza unui input ``parolă'' ce să afișeze, ``autenti
 sau ``necunoscut'', însă în ambele cazuri să fie afișat ``Salut '' și ``. Ce faci?''.
 
 Un astfel de algoritm ar putea arăta astfel:
-\begin{lstlisting}[language=pseudocod]
+\begin{lstlisting}[language=pseudocode]
 citeste parola
 afiseaza 'Salut '
 daca parola este corecta
-	afiseaza 'autentificat'
+    afiseaza 'autentificat'
 altfel
-	afiseaza 'necunoscut'
+    afiseaza 'necunoscut'
 afiseaza '. Ce faci?'
 \end{lstlisting}
 
@@ -700,31 +700,7 @@ Revenim asupra definiției fluxului de execuție, folosindu-ne de scheme logice 
 \textit{fluxul de execuție} este constituit din săgețile concrete parcurse de PHP
 la executarea scriptului.
 
-\begin{Exercise}[difficulty=2,title={Găsește eroarea de logică}]
-\ExePart
-Care sunt greșelile algoritmice din pseudocodul următor?
-
-\begin{lstlisting}[language=pseudocod]
-daca parola este corecta
-	afiseaza 'autentificat'
-altfel
-	afiseaza 'parola este gresita'
-afiseaza 'aceasta este o informatie secreta '
-afiseaza 'vizibila doar utilizatorilor autentificati'
-\end{lstlisting}
-
-Identifică-le, explică-le în cuvinte, și rescrie pseudocodul corect.
-
-Folosește-ți intuiția pentru a determina ce ar trebui
-să facă un astfel de algoritm și ce nu, pe baza outputului.
-
-\ExePart
-Desenează două scheme logice\footnote{Poți folosi programul
-\href{http://projects.gnome.org/dia/}{Dia}.}, una pentru pseudocodul (greșit)
-din partea I a exercițiului, și una pentru varianta corectă
-a pseudocodului pe care ai găsit-o ca soluție în partea I.
-\end{Exercise}
-
+\input{cap02/ex_gaseste_eroarea_de_logica}
 
 \section{Tipul de date boolean. Expresii logice}
 \label{sec:tipul de date boolean. Expresii logice}
@@ -841,15 +817,7 @@ de evaluarea egalității celor două valori constante.
 verificarea adițională a tipului de date, folosind operatorul
 \texttt{===}.
 
-\begin{Exercise}[title={Verifică-ți puterea de a face analogii},difficulty=1]
-Scrie un cod PHP care să afișeze valorile a patru comparații stricte:
-\begin{enumerate}
-	\item dintre un int și un string
-	\item dintre un float și un int
-	\item dintre un string și un float
-	\item dintre un bool și un string
-\end{enumerate}
-\end{Exercise}
+\input{cap02/ex_verifica-ti_puterea_de_a_face_analogii}
 
 \begin{Exercise}[title={Am sintetizat corect noțiunea de \textit{expresie}?},difficulty=2]
 \ExePart
@@ -887,16 +855,16 @@ tabelul \ref{tbl:operatori inegalitate}.
 
 \begin{table}[ht!]
   \begin{center}
-  	  \begin{tabular}{| c | l |}
-	  \hline
-	  Operator & Semnificație \\
-	  \hline
-	  \texttt{<}	& mai mic \\
-	  \texttt{>}	& mai mare \\
-	  \texttt{<=}	& mai mic sau egal \\
-	  \texttt{>=}	& mai mare sau egal \\
-	  \hline
-	  \end{tabular}
+      \begin{tabular}{| c | l |}
+      \hline
+      Operator & Semnificație \\
+      \hline
+      \texttt{<}    & mai mic \\
+      \texttt{>}    & mai mare \\
+      \texttt{<=}   & mai mic sau egal \\
+      \texttt{>=}   & mai mare sau egal \\
+      \hline
+      \end{tabular}
   \end{center}
   \caption{Operatorii de inegalitate}
   \label{tbl:operatori inegalitate}
@@ -1089,10 +1057,10 @@ $este_administrator = TRUE;
 if($este_autentificat) {
   echo 'Esti autentificat.';
   if($este_administrator) {
-	  echo 'Esti administrator.';
+      echo 'Esti administrator.';
   }
   else {
-	  echo 'Nu esti administrator.';
+      echo 'Nu esti administrator.';
   }
 }
 else {
@@ -1133,8 +1101,8 @@ else if('administrator' === $rol) {
   echo 'esti administrator';
 }
 \end{lstlisting}
-Încearcă acest cod de mai multe ori, modificând de fiecare dată valorile
-variabilelor, să vezi pe unde trece fluxul de execuție.
+Încearcă acest cod de mai multe ori, modificând de fiecare dată valoarea
+variabilei, să vezi pe unde trece fluxul de execuție.
 
 PHP pune la dispoziție încă un construct pentru astfel de cazuri: \texttt{elseif}.
 El este contracția unei combinații \texttt{else if}, ca în exemplul de mai sus.
@@ -1163,11 +1131,11 @@ variabila, si apoi ':'. Vom rescrie exemplul anterior:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
+      echo 'esti autentificat.';
   case 'moderator':
-	  echo 'esti moderator.';
+      echo 'esti moderator.';
   case 'administrator':
-	  echo 'esti administrator.';
+      echo 'esti administrator.';
 }
 \end{lstlisting}
 Schimbă pe rând valoarea variabilei \texttt{\$rol}. Vei observa că
@@ -1181,12 +1149,12 @@ adaugi instrucțiunea \texttt{break}. De exemplu:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
-	  break;
+      echo 'esti autentificat.';
+      break;
   case 'moderator':
-	  echo 'esti moderator.';
+      echo 'esti moderator.';
   case 'administrator':
-	  echo 'esti administrator.';
+      echo 'esti administrator.';
 }
 echo 'sunt in afara switch-ului';
 \end{lstlisting}
@@ -1205,16 +1173,16 @@ folosi ramificația \texttt{default}, astfel:
 $rol = 'administrator';
 switch($rol) {
   case 'autentificat':
-	  echo 'esti autentificat.';
-	  break;
+      echo 'esti autentificat.';
+      break;
   case 'moderator':
-	  echo 'esti moderator.';
-	  break;
+      echo 'esti moderator.';
+      break;
   case 'administrator':
-	  echo 'esti administrator.';
-	  break;
+      echo 'esti administrator.';
+      break;
   default:
-	  echo 'rolul tau este invalid';
+      echo 'rolul tau este invalid';
 }
 echo 'sunt in afara switch-ului';
 \end{lstlisting}
@@ -1334,13 +1302,7 @@ Schema logică ar arăta ca în figura \ref{fig:while counting}.
   \label{fig:while counting}
 \end{figure}
 
-\begin{Exercise}[title={Numărătoarea din 1 în 1 cu while},difficulty=1]
-\ExePart
-Implementează algoritmul din figura \ref{fig:while counting} în limbajul PHP.
-
-\ExePart
-Întrebare capcană: Ce valori va lua pe rând variabila \$var?
-\end{Exercise}
+\input{cap02/ex_numaratoarea_din_1_in_1_cu_while}
 
 \texttt{Do while} este foarte asemănătoare cu bucla \texttt{while},
 diferența fiind că blocul de instrucțiuni va fi executat cel
@@ -1368,7 +1330,7 @@ schema logică a buclei \texttt{do while}.
 \begin{Exercise}[title={Numărătoarea din doi în doi cu do while},difficulty=1]
 \ExePart
 Scrie un program care să numere descrescător din 2 în 2, începând de la 23
-și terminând cu un număr negativ la alegere, folosind bucla do while.
+și terminând cu un număr negativ impar la alegere, folosind bucla do while.
 
 \ExePart
 Ce face programul tău și nu este în cerință?
@@ -1413,7 +1375,7 @@ $n = 231;
 
 while(TRUE === TRUE) {
   if(0 === $n%10) {
-	  break;
+      break;
   }
   $n += 1;
 }
@@ -1456,9 +1418,9 @@ $n = 0;
 $sum = 0;
 while($n <= 50) {
   if(0 === $n%3) {
-	  echo $n,' ';
-	  $n += 1;
-	  continue;
+      echo $n,' ';
+      $n += 1;
+      continue;
   }
   $sum += $n;
   $n += 1;
@@ -1698,7 +1660,7 @@ $index_fata = 2;
 
 echo 'Eu sunt ',$names[3],'<br>';
 echo 'Pe fata o cheama ',$names[$index_fata],', inaintea ei este ',
-		  $names[$index_fata-1],' iar dupa ea urmeaza ',$names[$index_fata+1];
+          $names[$index_fata-1],' iar dupa ea urmeaza ',$names[$index_fata+1];
 \end{lstlisting}
 
 Să zicem că avem următoarea situație: avem un array de nume,
@@ -1713,8 +1675,8 @@ $after_me = '<nimeni>';
 
 foreach($names as $index => $name) {
   if($name === $me) {
-	$after_me = $names[$index+1];
-	break;
+    $after_me = $names[$index+1];
+    break;
   }
 }
 
@@ -1742,9 +1704,9 @@ un index explicit. Pentru asta folosim aceeași sintaxă ca
 Inițializarea unui astfel de array ar arăta astfel:
 \begin{lstlisting}
 $fructe = array(
-		  231	=> 'mere',
-		  1		=> 'pere',
-		  1001	=> 'alune'
+          231   => 'mere',
+          1     => 'pere',
+          1001  => 'alune'
 );
 \end{lstlisting}
 Un array cu \textsl{date asociative} se mai numește și \textsl{dicționar}. El asociază
@@ -1759,11 +1721,11 @@ existent în array până în acel moment, și se incrementează cu o unitate.
 De exemplu, în codul:
 \begin{lstlisting}
 $fructe = array(
-		  231	=> 'mere',
-		  1		=> 'pere',
-		  1001	=> 'alune',
-				   'piersici',
-				   'caise'
+          231   => 'mere',
+          1     => 'pere',
+          1001  => 'alune',
+                   'piersici',
+                   'caise'
 );
 \end{lstlisting}
 elementul cu valoarea 'piersici' va fi asociat automat cu indexul 1002, iar 'caise'
@@ -2081,8 +2043,8 @@ caracterele " respectiv ' pot fi folosite fără niciun fel de restricție.
 crează automat pentru noi. Constantele urmează aceleași
 standarde de denumire ca și variabilele, cu două excepții:
 \begin{itemize}
-	\item identificatorul constantei nu este precedat de simbolul \$
-	\item constantele definite de programator nu trebuie să înceapă cu două caractere
+    \item identificatorul constantei nu este precedat de simbolul \$
+    \item constantele definite de programator nu trebuie să înceapă cu două caractere
 underscore, deoarece acestea sunt rezervate pentru adăugiri viitoare în limbaj
 \end{itemize}
 Sintaxa definirii unei constante este
@@ -2599,8 +2561,8 @@ a-ți sparge site-ul.
 
 Din acest motiv vrem să verificăm mai întâi
 dacă cheile 'a' respectiv 'b' există într-adevăr în \get\ \textit{înainte}
-de a accesa acei membri ai array-ului. Dacă ambii membri 'a'
-și 'b' nu sunt prezenți, atunci afișăm un mesaj de eroare,
+de a accesa acei membri ai array-ului. Dacă oricare dintre membrii 'a'
+sau 'b' nu sunt prezenți, atunci afișăm un mesaj de eroare,
 altfel facem calculele, pentru că avem cu ce. În acest fel,
 orice ar introduce un eventual atacator, acesta nu ar
 vedea informații importante pentru el pe care noi nu vrem
@@ -2682,10 +2644,10 @@ vizitatorului ar putea arăta astfel:
 $mesaj = NULL;
 if(isset($_GET['submit'])) {
   if(isset($_GET['nume']) && $_GET['nume']) {
-	$mesaj = 'Salut '.$_GET['nume'];
+    $mesaj = 'Salut '.$_GET['nume'];
   }
   else {
-	$mesaj = 'Eroare: Nu ai introdus numele.';
+    $mesaj = 'Eroare: Nu ai introdus numele.';
   }
 }
 echo $mesaj;
@@ -2840,7 +2802,7 @@ $fructe = array(
 );
 if(isset($_GET['submit']) && isset($_GET['fructe'])) {
   foreach($_GET['fructe'] as $fruct) {
-	echo '<p>',$fructe[$fruct],'</p>';
+    echo '<p>',$fructe[$fruct],'</p>';
   }
 }
 ?>
@@ -3145,7 +3107,7 @@ $(\lnot a \land b) \lor (a \land \lnot b)$,
 Crează un script care acceptă două numere a și b, cu b mai mic sau egal cu 8*PHP\_INT\_SIZE-1, și
 care afișează rezultatele operațiilor \texttt{a\&b}, \texttt{a|b}, \texttt{a$<<$b},
 \texttt{a$>>$b}, \texttt{a{\textasciicircum}b},
-\texttt{{\texttildelow}a}, \texttt{{\texttildelow}b} și \texttt{(a$>>$b)\&0x1}.
+\texttt{{\~{}}a}, \texttt{{\~{}}b} și \texttt{(a$>>$b)\&0x1}.
 \end{Exercise}
 
 Operațiile pe biți sunt foarte utile atunci când vrem să setăm atribute booleene ``da sau nu''
@@ -3261,7 +3223,7 @@ se reflectă și asupra valorii variabilei \$a pe linia 6.
 
 \begin{Exercise}[title={Terminologie},difficulty=1]
 În acest capitol ai învățat o grămadă de termeni noi.
-Folosind cuprinsul de la pagina \pageref{cuprins},
+Folosind cuprinsul cărții,
 ia fiecare secțiune a acestui capitol la rând, și la fiecare
 scrie \textit{cel puțin} un cuvânt sau expresie,
 fie el în română sau în engleză. La termenii în română,

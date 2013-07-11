@@ -1,0 +1,7 @@
+- "semantic tex" is awkward, use explicit commands for indexes
+- move exercises out of master .tex
+- include exercises in Tutoring doc
+- move listings out of .tex into .php
+
+- formal speech
+- proof reading
